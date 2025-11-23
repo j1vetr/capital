@@ -156,18 +156,13 @@ export function Footer() {
                 <Link href="/kvkk">
                   <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">KVKK</a>
                 </Link>
-                <div className="hidden md:flex items-center gap-2 text-sm text-slate-500 border-l border-slate-800 pl-8">
-                   <ShieldCheck className="h-4 w-4 text-primary" />
-                   <span className="font-medium text-slate-400">SSL Güvenli Bağlantı</span>
+                <div className="hidden md:flex items-center gap-2 text-sm border-l border-slate-800 pl-8">
+                   <a href="https://toov.com.tr" target="_blank" rel="noopener noreferrer" className="font-medium text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group">
+                     <span className="group-hover:text-red-500 transition-colors">TOOV &lt;3</span>
+                     <span className="opacity-70 group-hover:opacity-100">tarafından yapılmıştır</span>
+                   </a>
                 </div>
             </div>
-        </div>
-        
-        {/* Designer Credit */}
-        <div className="w-full text-center mt-8 pt-4 border-t border-slate-900/50">
-            <a href="https://toov.com.tr" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-600 hover:text-primary transition-colors font-medium tracking-widest uppercase opacity-50 hover:opacity-100">
-                Design: TOOV &lt;3
-            </a>
         </div>
       </div>
     </footer>
