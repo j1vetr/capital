@@ -129,14 +129,14 @@ export default function Services() {
                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Lashing Hizmeti?</span>
                  </h2>
                  <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                   Yanlış veya yetersiz sabitleme, milyonlarca dolarlık hasarlara ve ciddi güvenlik risklerine yol açabilir. Profesyonel lashing, sadece bir önlem değil, ticaretinizin sigortasıdır.
+                   Yanlış veya yetersiz sabitleme, milyonlarca dolarlık hasarlara ve ciddi güvenlik risklerine yol açabilir. Profesyonel lashing, sadece bir önlem değil, güvenli ticaretin temelidir.
                  </p>
                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                    {[
                      "Sıfır Hasar Riski",
                      "Uluslararası Sertifikasyon",
                      "7/24 Operasyon",
-                     "Sigorta Garantisi"
+                     "Uzman Mühendis Kadrosu"
                    ].map((item, i) => (
                      <div key={i} className="flex items-center gap-3 text-white bg-white/5 p-4 rounded-xl border border-white/10">
                        <Shield className="text-primary h-5 w-5" />

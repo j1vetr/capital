@@ -63,7 +63,7 @@ export function Features() {
               {[
                 { title: "7/24 Operasyon", desc: "Kesintisiz liman hizmeti", icon: Clock },
                 { title: "Uluslararası Sertifika", desc: "CTU & CSS Code uyumlu", icon: Globe2 },
-                { title: "Sigorta Garantisi", desc: "Tüm operasyonlarda tam güvence", icon: ShieldCheck },
+                { title: "Risk Yönetimi", desc: "Tüm operasyonlarda maksimum güvenlik", icon: ShieldCheck },
                 { title: "Raporlama", desc: "Detaylı survey ve fotoğraflama", icon: BarChart3 },
               ].map((item, i) => (
                 <motion.div 

@@ -110,7 +110,7 @@ export const servicesData: ServiceData[] = [
       "Proje bazlı özel mühendislik çözümleri",
       "Gabari dışı yük uzmanlığı",
       "Yüksek tonaj kapasiteli ekipman kullanımı",
-      "Risk analizi ve sigorta süreçlerine destek",
+      "Risk analizi ve güvenli operasyon desteği",
       "Anahtar teslim proje yönetimi"
     ],
     features: [
@@ -244,7 +244,7 @@ export const servicesData: ServiceData[] = [
       "Tekne taşıma konusunda uzman ekip",
       "Gövdeye zarar vermeyen özel ekipmanlar",
       "Kişiye özel cradle (beşik) üretimi",
-      "Sigorta firmalarıyla uyumlu çalışma"
+      "Uluslararası taşıma standartlarına uyum"
     ],
     features: [
       "Yumuşak dokulu polyester sapanlar",
