@@ -48,23 +48,23 @@ export function Features() {
           <div className="relative">
              <div className="grid grid-cols-2 gap-6">
                <div className="space-y-6 mt-16">
-                 <div className="bg-white p-8 rounded-3xl shadow-2xl border-l-8 border-primary transform hover:-translate-y-2 transition-transform duration-300">
+                 <div className="bg-white p-8 rounded-3xl shadow-2xl border-l-8 border-primary transform hover:-translate-y-2 transition-transform duration-300 h-[280px] flex flex-col justify-center">
                    <h3 className="text-5xl font-black text-slate-900 mb-2 tracking-tighter">10+</h3>
                    <p className="text-slate-500 uppercase font-bold text-xs tracking-widest">Yıllık Tecrübe</p>
                  </div>
-                 <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-white/10 text-white transform hover:-translate-y-2 transition-transform duration-300">
+                 <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-white/10 text-white transform hover:-translate-y-2 transition-transform duration-300 h-[280px] flex flex-col justify-center">
                    <Shield className="h-12 w-12 mb-6 text-primary drop-shadow-[0_0_10px_rgba(56,170,225,0.6)]" />
                    <h3 className="text-xl font-bold uppercase mb-2">Güvenli Operasyon</h3>
                    <p className="text-slate-400 text-sm">ISG standartlarında sıfır kaza hedefi.</p>
                  </div>
                </div>
                <div className="space-y-6">
-                 <div className="bg-gradient-to-br from-primary to-blue-600 p-8 rounded-3xl shadow-2xl shadow-primary/20 text-white transform hover:-translate-y-2 transition-transform duration-300">
+                 <div className="bg-gradient-to-br from-primary to-blue-600 p-8 rounded-3xl shadow-2xl shadow-primary/20 text-white transform hover:-translate-y-2 transition-transform duration-300 h-[280px] flex flex-col justify-center">
                    <Anchor className="h-12 w-12 mb-6 text-white/90" />
                    <h3 className="text-xl font-bold uppercase mb-2">Uzman Kadro</h3>
                    <p className="text-blue-100 text-sm">Sertifikalı lashing personeli.</p>
                  </div>
-                 <div className="bg-white p-8 rounded-3xl shadow-2xl border-l-8 border-slate-800 transform hover:-translate-y-2 transition-transform duration-300">
+                 <div className="bg-white p-8 rounded-3xl shadow-2xl border-l-8 border-slate-800 transform hover:-translate-y-2 transition-transform duration-300 h-[280px] flex flex-col justify-center">
                    <h3 className="text-5xl font-black text-slate-900 mb-2 tracking-tighter">5K+</h3>
                    <p className="text-slate-500 uppercase font-bold text-xs tracking-widest">Başarılı Proje</p>
                  </div>
