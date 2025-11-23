@@ -57,7 +57,7 @@ export default function About() {
               alt="Capital Lashing Team" 
               className="w-full h-full object-cover opacity-30"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/50 to-slate-50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900" />
           </div>
           
           <div className="container px-4 md:px-6 relative z-20 pt-20 text-center">
