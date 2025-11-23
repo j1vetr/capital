@@ -79,7 +79,7 @@ export default function About() {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative py-32 bg-slate-900 overflow-hidden">
+        <section className="relative h-[500px] flex items-center bg-slate-900 overflow-hidden">
           <div className="absolute inset-0 z-0">
              <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent z-10" />
              <img 
@@ -89,7 +89,7 @@ export default function About() {
              />
           </div>
           
-          <div className="container px-4 md:px-6 relative z-20">
+          <div className="container px-4 md:px-6 relative z-20 pt-20">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

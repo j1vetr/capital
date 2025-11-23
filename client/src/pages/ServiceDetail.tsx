@@ -59,7 +59,7 @@ export default function ServiceDetail() {
       <Navbar />
       
       {/* Hero Section */}
-      <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[450px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={bgImage}
@@ -68,7 +68,7 @@ export default function ServiceDetail() {
           />
           <div className="absolute inset-0 bg-slate-900/70" />
         </div>
-        <div className="container relative z-10 px-4 md:px-6 text-center">
+        <div className="container relative z-10 px-4 md:px-6 text-center pt-24">
           <div className="inline-flex items-center gap-2 text-white/80 mb-4 text-sm font-medium uppercase tracking-wider">
             <Link href="/" className="hover:text-primary transition-colors">Ana Sayfa</Link>
             <ChevronRight className="h-4 w-4" />
