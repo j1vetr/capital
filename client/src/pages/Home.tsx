@@ -18,23 +18,23 @@ export default function Home() {
         <Hero />
         
         {/* Trust Bar - Quick Stats */}
-        <div className="bg-primary py-8 text-primary-foreground">
-          <div className="container flex flex-wrap justify-center md:justify-between gap-8 px-4 md:px-6 text-center md:text-left">
-            <div className="flex flex-col">
-              <span className="font-bold text-3xl font-heading">10+</span>
-              <span className="text-sm uppercase tracking-wider opacity-80">Yıllık Tecrübe</span>
+        <div className="bg-primary py-12 text-primary-foreground">
+          <div className="container flex flex-wrap justify-center md:justify-between gap-8 px-4 md:px-6 text-center">
+            <div className="flex flex-col items-center">
+              <span className="font-black text-5xl font-heading mb-2">10+</span>
+              <span className="text-sm uppercase tracking-widest opacity-80 font-medium">Yıllık Tecrübe</span>
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-3xl font-heading">5000+</span>
-              <span className="text-sm uppercase tracking-wider opacity-80">Başarılı Operasyon</span>
+            <div className="flex flex-col items-center">
+              <span className="font-black text-5xl font-heading mb-2">5000+</span>
+              <span className="text-sm uppercase tracking-widest opacity-80 font-medium">Başarılı Operasyon</span>
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-3xl font-heading">%100</span>
-              <span className="text-sm uppercase tracking-wider opacity-80">Müşteri Memnuniyeti</span>
+            <div className="flex flex-col items-center">
+              <span className="font-black text-5xl font-heading mb-2">%100</span>
+              <span className="text-sm uppercase tracking-widest opacity-80 font-medium">Müşteri Memnuniyeti</span>
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-3xl font-heading">7/24</span>
-              <span className="text-sm uppercase tracking-wider opacity-80">Kesintisiz Hizmet</span>
+            <div className="flex flex-col items-center">
+              <span className="font-black text-5xl font-heading mb-2">7/24</span>
+              <span className="text-sm uppercase tracking-widest opacity-80 font-medium">Kesintisiz Hizmet</span>
             </div>
           </div>
         </div>

@@ -21,14 +21,19 @@ export function Footer() {
               Denizcilik ve lojistik sektöründe yük sabitleme, endüstriyel paketleme ve liman hizmetlerinde güvenilir çözüm ortağınız.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-primary hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/capital-lashing/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-primary hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-primary hover:text-white transition-colors">
+              <a href="https://www.instagram.com/capitallashing/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-primary hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-primary hover:text-white transition-colors">
+              <a href="https://www.facebook.com/capitallashing/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-primary hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://www.youtube.com/@capitallashing" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-primary hover:text-white transition-colors">
+                 <img src="https://www.svgrepo.com/show/13671/youtube.svg" className="h-5 w-5 filter invert" alt="Youtube" /> 
+                 {/* Using a generic icon or the one from lucide if available, but user provided youtube link so adding it. Lucide probably has Youtube. */}
+                 {/* Let's stick to standard Lucide icons if imported. I see Twitter in imports but not Youtube, let me check imports. */}
               </a>
             </div>
           </div>

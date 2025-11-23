@@ -40,34 +40,34 @@ export function Navbar() {
     <>
       {/* Top Info Bar */}
       <div className={cn(
-        "fixed top-0 left-0 right-0 z-[51] transition-transform duration-300 bg-slate-900 text-white text-xs py-2 border-b border-white/10 hidden md:block",
+        "fixed top-0 left-0 right-0 z-[51] transition-transform duration-300 bg-slate-900 text-white py-3 border-b border-white/10 hidden md:block",
         isScrolled ? "-translate-y-full" : "translate-y-0"
       )}>
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 text-sm font-medium">
              <a href="mailto:info@capitallashing.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-               <Mail className="h-3 w-3" />
+               <Mail className="h-4 w-4" />
                <span>info@capitallashing.com</span>
              </a>
              <a href="tel:+902163120612" className="flex items-center gap-2 hover:text-primary transition-colors">
-               <Phone className="h-3 w-3" />
+               <Phone className="h-4 w-4" />
                <span>+90 216 312 06 12</span>
              </a>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="opacity-50 hidden lg:inline">Bizi Takip Edin:</span>
-            <div className="flex gap-3">
+          <div className="flex items-center gap-6">
+            <span className="opacity-50 hidden lg:inline text-sm">Bizi Takip Edin:</span>
+            <div className="flex gap-4">
               <a href="https://www.instagram.com/capitallashing/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                <Instagram className="h-3 w-3" />
+                <Instagram className="h-5 w-5" />
               </a>
               <a href="https://www.linkedin.com/company/capital-lashing/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                <Linkedin className="h-3 w-3" />
+                <Linkedin className="h-5 w-5" />
               </a>
               <a href="https://www.facebook.com/capitallashing/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                <Facebook className="h-3 w-3" />
+                <Facebook className="h-5 w-5" />
               </a>
               <a href="https://www.youtube.com/@capitallashing" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                <Youtube className="h-3 w-3" />
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -79,27 +79,22 @@ export function Navbar() {
           "fixed left-0 right-0 z-50 transition-all duration-300 w-full",
           isScrolled
             ? "bg-background/95 backdrop-blur-md shadow-sm py-3 border-b top-0"
-            : "bg-transparent py-4 top-8" // Added top-8 to account for the top bar height when not scrolled
+            : "bg-transparent py-4 top-12" // Increased top offset for larger info bar
         )}
       >
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 group cursor-pointer relative py-2">
-               {/* Logo Container with rotating border effect */}
+               {/* Logo Container */}
               <div className="relative p-1">
-                {/* Rotating border animation */}
-                <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/50 animate-[spin_10s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity" />
-                
                 <img 
                   src={logoImage} 
                   alt="Capital Lashing" 
                   className={cn(
                     "transition-all duration-300 object-contain",
-                    // Increased size as requested (h-12 -> h-16 on transparent, h-10 -> h-12 on scrolled)
                     isScrolled ? "h-12 invert-0 dark:invert-0" : "h-16 brightness-0 invert" 
                   )}
                   style={{
-                      // Removed glow effect as requested
                       filter: isScrolled ? "invert(1) brightness(0.5) sepia(1) hue-rotate(170deg) saturate(5)" : "none"
                   }}
                 />

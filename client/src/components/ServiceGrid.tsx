@@ -22,17 +22,15 @@ export function ServiceGrid() {
   };
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-24 bg-slate-50">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground uppercase tracking-tight">
-              Hizmetlerimiz
-            </h2>
-            <div className="h-1 w-20 bg-primary mt-4" />
-          </div>
-          <p className="text-muted-foreground max-w-xl text-lg leading-relaxed">
-            Liman sahasından gemi ambarına, fabrika çıkışından varış noktasına kadar tüm lojistik süreçlerinizde yük güvenliğini sağlıyoruz.
+        <div className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground uppercase tracking-tight mb-6">
+            Hizmetlerimiz
+          </h2>
+          <div className="h-1.5 w-24 bg-primary rounded-full mb-6" />
+          <p className="text-muted-foreground text-xl leading-relaxed">
+            Liman sahasından gemi ambarına, fabrika çıkışından varış noktasına kadar tüm lojistik süreçlerinizde yük güvenliğini en üst düzeyde sağlıyoruz.
           </p>
         </div>
 
