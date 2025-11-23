@@ -22,7 +22,7 @@ export function ServiceGrid() {
   };
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-white">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-heading font-black text-foreground uppercase tracking-tight mb-6">
@@ -34,42 +34,46 @@ export function ServiceGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.slice(0, 6).map((service) => {
             const bgImage = getImage(service.image);
             return (
-              <Card key={service.id} className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-card h-full flex flex-col">
-                <div className="h-48 overflow-hidden relative bg-slate-800">
+              <Card key={service.id} className="group overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 bg-white flex flex-col h-full hover:-translate-y-1 rounded-xl">
+                <div className="h-64 overflow-hidden relative bg-slate-100">
                   {bgImage ? (
                     <img 
                       src={bgImage} 
                       alt={service.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-secondary/10">
-                      <service.icon className="h-16 w-16 text-muted-foreground/20" />
+                    <div className="w-full h-full flex items-center justify-center bg-slate-100">
+                      <service.icon className="h-20 w-20 text-slate-300" />
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
-                  <div className="absolute bottom-4 left-4 bg-primary text-primary-foreground p-2 rounded-sm">
-                    <service.icon className="h-6 w-6" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-70 transition-opacity" />
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <div className="bg-primary text-white p-3 rounded-lg mb-4 inline-flex shadow-lg">
+                      <service.icon className="h-6 w-6" />
+                    </div>
                   </div>
                 </div>
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-xl font-bold font-heading uppercase text-primary group-hover:text-foreground transition-colors">
+                <CardHeader className="pt-6 pb-2 px-6">
+                  <CardTitle className="text-2xl font-bold font-heading uppercase text-slate-900 group-hover:text-primary transition-colors">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow flex flex-col justify-between">
-                  <CardDescription className="text-base mb-6 line-clamp-3">
+                <CardContent className="px-6 pb-6 flex-grow flex flex-col">
+                  <CardDescription className="text-base mb-6 line-clamp-3 text-slate-600 leading-relaxed">
                     {service.shortDescription}
                   </CardDescription>
-                  <Link href={`/services/${service.id}`}>
-                    <Button variant="link" className="p-0 h-auto font-semibold group-hover:translate-x-2 transition-transform text-foreground cursor-pointer">
-                      İncele <ArrowRight className="ml-2 h-4 w-4 text-primary" />
-                    </Button>
-                  </Link>
+                  <div className="mt-auto">
+                    <Link href={`/services/${service.id}`}>
+                      <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-colors uppercase font-bold tracking-wide">
+                        Detayları İncele
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             );

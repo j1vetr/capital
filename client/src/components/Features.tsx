@@ -1,72 +1,69 @@
-import { CheckCircle2, Clock, Globe2, Shield, Award, BarChart3 } from "lucide-react";
-
-const features = [
-  {
-    icon: Clock,
-    title: "7/24 Operasyon",
-    description: "Liman süreçlerinin durmadığını biliyoruz. Ekibimiz günün her saati operasyona hazır."
-  },
-  {
-    icon: Shield,
-    title: "Maksimum Güvenlik",
-    description: "Uluslararası standartlarda (CTU Code, CSS Code) lashing uygulamaları ve sertifikalı ekipmanlar."
-  },
-  {
-    icon: Globe2,
-    title: "Global Standartlar",
-    description: "Dünya genelinde kabul gören sigorta ve denetim standartlarına tam uyumluluk."
-  },
-  {
-    icon: Award,
-    title: "Uzman Kadro",
-    description: "Yılların deneyimine sahip, sertifikalı lashing personeli ve mühendis denetimi."
-  },
-  {
-    icon: CheckCircle2,
-    title: "Eksiksiz Ekipman",
-    description: "Her tonajda yük için uygun zincir, spanzet, air bag ve takoz stoklarımız mevcuttur."
-  },
-  {
-    icon: BarChart3,
-    title: "Raporlama",
-    description: "Her operasyon sonrası fotoğraflı ve detaylı teknik raporlama hizmeti."
-  }
-];
+import { CheckCircle2, Clock, Globe2, Shield, Award, BarChart3, ShieldCheck, Anchor } from "lucide-react";
 
 export function Features() {
   return (
-    <section className="py-24 bg-secondary text-secondary-foreground relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 uppercase">
-            Neden <span className="text-primary">Capital Lashing?</span>
-          </h2>
-          <p className="text-secondary-foreground/70 text-lg">
-            Sadece yükünüzü sabitlemiyoruz; operasyonel risklerinizi minimize edip, ticaretinizin sürekliliğini güvence altına alıyoruz.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-lg hover:bg-white/10 transition-colors group"
-            >
-              <div className="bg-primary/20 p-3 rounded-md w-fit mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-                <feature.icon className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold font-heading mb-3 uppercase tracking-wide text-white">
-                {feature.title}
-              </h3>
-              <p className="text-secondary-foreground/70 leading-relaxed">
-                {feature.description}
-              </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold uppercase tracking-wider text-sm mb-6">
+              <Award className="h-4 w-4" />
+              <span>Neden Capital Lashing?</span>
             </div>
-          ))}
+            <h2 className="text-4xl md:text-5xl font-heading font-black mb-8 uppercase text-slate-900 leading-tight">
+              Operasyonel <br/>
+              <span className="text-primary">Mükemmellik</span>
+            </h2>
+            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+              Lojistik süreçlerinizin en kritik halkası olan yük güvenliğinde, sıfır hata prensibiyle çalışıyoruz. Global standartlarda ekipman ve uzman kadromuzla riskleri ortadan kaldırıyoruz.
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                { title: "7/24 Operasyon", desc: "Kesintisiz liman hizmeti", icon: Clock },
+                { title: "Uluslararası Sertifika", desc: "CTU & CSS Code uyumlu", icon: Globe2 },
+                { title: "Sigorta Garantisi", desc: "Tüm operasyonlarda tam güvence", icon: ShieldCheck },
+                { title: "Raporlama", desc: "Detaylı survey ve fotoğraflama", icon: BarChart3 },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4">
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-slate-100 text-primary">
+                    <item.icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold font-heading text-slate-900 uppercase text-sm">{item.title}</h4>
+                    <p className="text-slate-500 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="relative">
+             <div className="grid grid-cols-2 gap-4">
+               <div className="space-y-4 mt-12">
+                 <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-primary">
+                   <h3 className="text-4xl font-black text-slate-900 mb-2">10+</h3>
+                   <p className="text-slate-500 uppercase font-medium text-sm">Yıllık Tecrübe</p>
+                 </div>
+                 <div className="bg-slate-900 p-8 rounded-2xl shadow-lg text-white">
+                   <Shield className="h-10 w-10 mb-4 text-primary" />
+                   <h3 className="text-xl font-bold uppercase mb-2">Güvenli Operasyon</h3>
+                   <p className="text-slate-400 text-sm">ISG standartlarında sıfır kaza hedefi.</p>
+                 </div>
+               </div>
+               <div className="space-y-4">
+                 <div className="bg-primary p-8 rounded-2xl shadow-lg text-white">
+                   <Anchor className="h-10 w-10 mb-4 text-white" />
+                   <h3 className="text-xl font-bold uppercase mb-2">Uzman Kadro</h3>
+                   <p className="text-blue-100 text-sm">Sertifikalı lashing personeli.</p>
+                 </div>
+                 <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-slate-900">
+                   <h3 className="text-4xl font-black text-slate-900 mb-2">5K+</h3>
+                   <p className="text-slate-500 uppercase font-medium text-sm">Başarılı Proje</p>
+                 </div>
+               </div>
+             </div>
+          </div>
         </div>
       </div>
     </section>
