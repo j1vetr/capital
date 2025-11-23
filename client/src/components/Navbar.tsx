@@ -108,7 +108,7 @@ export function Navbar() {
               <NavigationMenuList className="gap-1">
                 <NavigationMenuItem>
                   <Link href="/">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-base", isScrolled ? "text-foreground" : "text-white")}>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
                       Ana Sayfa
                     </NavigationMenuLink>
                   </Link>
@@ -116,14 +116,14 @@ export function Navbar() {
 
                 <NavigationMenuItem>
                    <Link href="/about">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-base", isScrolled ? "text-foreground" : "text-white")}>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
                       Hakkımızda
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={cn("bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-base data-[state=open]:bg-transparent", isScrolled ? "text-foreground" : "text-white")}>
+                  <NavigationMenuTrigger className={cn("bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm data-[state=open]:bg-transparent", isScrolled ? "text-foreground" : "text-white")}>
                     Hizmetler
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white">
@@ -155,7 +155,7 @@ export function Navbar() {
 
                 <NavigationMenuItem>
                   <Link href="/projects">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-base", isScrolled ? "text-foreground" : "text-white")}>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
                       Projeler
                     </NavigationMenuLink>
                   </Link>
@@ -163,7 +163,7 @@ export function Navbar() {
                 
                 <NavigationMenuItem>
                    <Link href="/contact">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-base", isScrolled ? "text-foreground" : "text-white")}>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
                       İletişim
                     </NavigationMenuLink>
                   </Link>
