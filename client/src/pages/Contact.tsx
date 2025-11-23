@@ -26,7 +26,7 @@ export default function Contact() {
             alt="Contact Hero"
             className="w-full h-full object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
         </div>
         <div className="container relative z-10 px-4 md:px-6 text-center pt-32">
            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/80 font-medium uppercase tracking-wider text-xs mb-6">
