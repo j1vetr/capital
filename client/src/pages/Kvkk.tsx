@@ -20,10 +20,7 @@ export default function Kvkk() {
         <div className="container px-4 md:px-6 py-24 relative z-10 max-w-4xl mx-auto">
           
           {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-6 border border-primary/20">
-              <Shield className="h-8 w-8" />
-            </div>
+          <div className="text-center mb-16 pt-24">
             <h1 className="text-3xl md:text-5xl font-heading font-black text-white mb-4 uppercase tracking-tight">
               KVKK Aydınlatma Metni
             </h1>
