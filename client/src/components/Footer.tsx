@@ -1,5 +1,6 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Anchor, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import logoImage from "@assets/logo-white-text.webp";
 
 export function Footer() {
   return (
@@ -10,15 +11,11 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <Anchor className="h-8 w-8 text-primary" />
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-2xl leading-none tracking-tight uppercase text-white">
-                  Capital
-                </span>
-                <span className="font-heading font-bold text-2xl leading-none tracking-tight uppercase text-primary">
-                  Lashing
-                </span>
-              </div>
+               <img 
+                src={logoImage} 
+                alt="Capital Lashing" 
+                className="h-12 object-contain"
+              />
             </div>
             <p className="text-secondary-foreground/60 text-sm leading-relaxed mb-6">
               Denizcilik ve lojistik sektöründe yük sabitleme, endüstriyel paketleme ve liman hizmetlerinde güvenilir çözüm ortağınız.
@@ -73,27 +70,27 @@ export function Footer() {
             <h4 className="font-heading font-bold text-lg mb-6 uppercase text-white">Hizmetler</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/services">
+                <Link href="/services/gemi-proje-lashing">
                   <span className="text-secondary-foreground/60 hover:text-primary transition-colors text-sm cursor-pointer">Gemi & Konteyner Lashing</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services">
+                <Link href="/services/proje-kargo-lashing">
                   <span className="text-secondary-foreground/60 hover:text-primary transition-colors text-sm cursor-pointer">Proje Kargo Lashing</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services">
+                <Link href="/services/flat-rack-lashing">
                   <span className="text-secondary-foreground/60 hover:text-primary transition-colors text-sm cursor-pointer">Flat Rack Sabitleme</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services">
+                <Link href="/services/shrink-wrap">
                   <span className="text-secondary-foreground/60 hover:text-primary transition-colors text-sm cursor-pointer">Shrink Wrap Paketleme</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services">
+                <Link href="/services/sandiklama">
                   <span className="text-secondary-foreground/60 hover:text-primary transition-colors text-sm cursor-pointer">Endüstriyel Sandıklama</span>
                 </Link>
               </li>

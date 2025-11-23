@@ -1,68 +1,24 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Anchor, Ship, Package, Box, Container, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-
-const services = [
-  {
-    id: "container-lashing",
-    title: "Konteyner Lashing",
-    description: "Uluslararası standartlarda gemi içi ve üstü konteyner sabitleme hizmetleri.",
-    icon: Container,
-    image: "@assets/generated_images/container_lashing_detail_shot.png"
-  },
-  {
-    id: "project-cargo",
-    title: "Proje Kargo Lashing",
-    description: "Ağır tonajlı ve gabari dışı yüklerin özel ekipmanlarla sabitlenmesi.",
-    icon: Anchor,
-    image: "@assets/generated_images/project_cargo_being_secured.png"
-  },
-  {
-    id: "shrink-wrap",
-    title: "Shrink Wrap Paketleme",
-    description: "Endüstriyel makineler ve ürünler için korozyon önleyici profesyonel paketleme.",
-    icon: Package,
-    image: "@assets/generated_images/industrial_shrink_wrap_packaging.png"
-  },
-  {
-    id: "yacht-lashing",
-    title: "Tekne & Yat Lashing",
-    description: "Deniz araçlarının güvenli transferi için özel cradle ve sabitleme sistemleri.",
-    icon: Ship,
-    image: "@assets/generated_images/luxury_yacht_transport_lashing.png"
-  },
-  {
-    id: "crating",
-    title: "Endüstriyel Sandıklama",
-    description: "ISPM-15 standartlarında ahşap sandıklama ve koruyucu ambalajlama.",
-    icon: Box,
-    image: null 
-  },
-  {
-    id: "flat-rack",
-    title: "Flat Rack (FR) Lashing",
-    description: "Özel ekipman gerektiren yüklerin flat rack konteynerlere sabitlenmesi.",
-    icon: ShieldCheck,
-    image: null
-  }
-];
-
+import { servicesData } from "@/data/services";
+import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.png";
 import containerImg from "@assets/generated_images/container_lashing_detail_shot.png";
 import projectImg from "@assets/generated_images/project_cargo_being_secured.png";
 import shrinkImg from "@assets/generated_images/industrial_shrink_wrap_packaging.png";
 import yachtImg from "@assets/generated_images/luxury_yacht_transport_lashing.png";
 
 export function ServiceGrid() {
-  // Map images manually since importing dynamic paths is tricky in Vite without glob
-  const getImage = (id: string) => {
-    switch(id) {
-      case "container-lashing": return containerImg;
-      case "project-cargo": return projectImg;
-      case "shrink-wrap": return shrinkImg;
-      case "yacht-lashing": return yachtImg;
-      default: return null;
-    }
+  // Map images manually 
+  const getImage = (imgName: string | null) => {
+    if (!imgName) return null;
+    if (imgName.includes("container")) return containerImg;
+    if (imgName.includes("project")) return projectImg;
+    if (imgName.includes("shrink")) return shrinkImg;
+    if (imgName.includes("yacht")) return yachtImg;
+    if (imgName.includes("hero")) return heroImage;
+    return null;
   };
 
   return (
@@ -81,8 +37,8 @@ export function ServiceGrid() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => {
-            const bgImage = getImage(service.id);
+          {servicesData.slice(0, 6).map((service) => {
+            const bgImage = getImage(service.image);
             return (
               <Card key={service.id} className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 bg-card h-full flex flex-col">
                 <div className="h-48 overflow-hidden relative bg-slate-800">
@@ -109,9 +65,9 @@ export function ServiceGrid() {
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col justify-between">
                   <CardDescription className="text-base mb-6 line-clamp-3">
-                    {service.description}
+                    {service.shortDescription}
                   </CardDescription>
-                  <Link href={`/services`}>
+                  <Link href={`/services/${service.id}`}>
                     <Button variant="link" className="p-0 h-auto font-semibold group-hover:translate-x-2 transition-transform text-foreground cursor-pointer">
                       İncele <ArrowRight className="ml-2 h-4 w-4 text-primary" />
                     </Button>

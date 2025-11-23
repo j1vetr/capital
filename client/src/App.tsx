@@ -7,13 +7,16 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Services from "@/pages/Services";
 import Contact from "@/pages/Contact";
+import ServiceDetail from "@/pages/ServiceDetail";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/services" component={Services} />
+      <Route path="/services/:id" component={ServiceDetail} />
       <Route path="/contact" component={Contact} />
+      
       {/* Placeholder routes for now */}
       <Route path="/about" component={Home} /> 
       <Route path="/projects" component={Home} />
