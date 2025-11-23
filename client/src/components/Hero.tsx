@@ -93,12 +93,12 @@ export function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="h-14 px-8 text-lg uppercase font-bold tracking-wide shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all hover:scale-105">
-                  Hemen Teklif Al <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="h-12 px-6 text-base uppercase font-bold tracking-wide shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all hover:scale-105">
+                  Hemen Teklif Al <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/services">
-                <Button size="lg" variant="outline" className="h-14 px-8 text-lg text-white border-white/30 hover:bg-white/10 hover:text-white uppercase font-bold tracking-wide backdrop-blur-sm hover:scale-105 transition-all">
+                <Button size="lg" variant="outline" className="h-12 px-6 text-base text-white border-white/30 hover:bg-white/10 hover:text-white uppercase font-bold tracking-wide backdrop-blur-sm hover:scale-105 transition-all">
                   Hizmetleri İncele
                 </Button>
               </Link>
