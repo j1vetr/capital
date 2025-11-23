@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck, Heart } from "lucide-react";
 import logoImage from "@assets/logo-white-text.webp";
 
 export function Footer() {
@@ -158,7 +158,7 @@ export function Footer() {
                 </Link>
                 <div className="hidden md:flex items-center gap-2 text-sm border-l border-slate-800 pl-8">
                    <a href="https://toov.com.tr" target="_blank" rel="noopener noreferrer" className="font-medium text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group">
-                     <span className="group-hover:text-red-500 transition-colors">TOOV &lt;3</span>
+                     <span className="flex items-center gap-1 group-hover:text-red-500 transition-colors">TOOV <Heart className="h-3 w-3 fill-current" /></span>
                      <span className="opacity-70 group-hover:opacity-100">tarafından yapılmıştır</span>
                    </a>
                 </div>
