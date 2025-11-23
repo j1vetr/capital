@@ -17,13 +17,35 @@ export const servicesData: ServiceData[] = [
     title: "Gemi Proje Lashing",
     shortDescription: "Gemi ambarı ve güverte üstü ağır tonajlı proje yüklerinin sabitlenmesi.",
     fullDescription: `
-      Capital Lashing olarak, gemi proje kargo lashing operasyonlarında uluslararası standartlarda hizmet sunuyoruz. 
-      Ağır tonajlı, gabari dışı ve hassas yüklerin deniz taşımacılığı sırasında maruz kalacağı statik ve dinamik kuvvetlere karşı güvenliğini sağlıyoruz.
+      ### Gemi Proje Kargo Lashing Hizmetinde Uzman Çözümler
+
+      Capital Lashing olarak, deniz taşımacılığının en kritik ve riskli operasyonlarından biri olan **Gemi Proje Kargo Lashing** alanında, uluslararası standartlarda ve %100 güvenli çözümler sunuyoruz. "Sıfır Hata" prensibiyle yaklaşılması gereken bu operasyonlar, sıradan bir yük sabitleme işleminin çok ötesinde, derin mühendislik bilgisi ve saha tecrübesi gerektirir.
+
+      #### Neden Proje Kargo Lashing Kritik Öneme Sahiptir?
       
-      CSS Code (Code of Safe Practice for Cargo Stowage and Securing) standartlarına uygun olarak yapılan hesaplamalarla, yükün gemi üzerindeki en güvenli pozisyonunu belirliyor ve en uygun bağlama ekipmanlarını kullanıyoruz.
-      Trafo, jeneratör, türbin, iş makineleri, fabrika ekipmanları gibi yüksek değerli yüklerinizi, okyanus aşırı seferlerde bile güvence altına alıyoruz.
+      Proje yükleri (türbinler, jeneratörler, trafolar, yatlar, iş makineleri, fabrika kazanları vb.) standart konteynerlere sığmayan, ağırlık merkezleri değişkenlik gösteren ve genellikle milyonlarca dolar değerinde olan yüklerdir. Bu yüklerin okyanus aşırı seferlerde maruz kalacağı kuvvetler (yalpa, baş-kıç vurma, savrulma) muazzamdır.
       
-      Mühendislik ekibimiz, yükün ağırlık merkezi, geminin stabilitesi ve rotadaki hava koşullarını dikkate alarak detaylı bir lashing planı hazırlar. Bu plan doğrultusunda sertifikalı saha personelimiz operasyonu gerçekleştirir.
+      Yanlış veya yetersiz yapılan bir lashing işlemi;
+      *   Yükün denize düşmesine,
+      *   Gemi stabilitesinin bozulmasına,
+      *   Ciddi maddi kayıplara ve hatta can kayıplarına yol açabilir.
+
+      Bu nedenle Capital Lashing, her bir proje yükü için **CSS Code (Code of Safe Practice for Cargo Stowage and Securing)** kurallarına tam uyumlu, gemi kaptanı ve survey onaylı özel lashing projeleri geliştirir.
+
+      #### Operasyonel Sürecimiz Nasıl İşler?
+
+      1.  **Ön Keşif ve Analiz:** Yükün teknik çizimleri, ağırlık merkezi (CoG), kaldırma noktaları (lifting points) ve lashing noktaları incelenir.
+      2.  **Mühendislik Hesaplamaları:** Gemi stabilitesi, rota üzerindeki hava/deniz koşulları ve ivmelenme kuvvetleri hesaplanarak, gerekli lashing kapasitesi belirlenir.
+      3.  **Malzeme Seçimi:** Yükün tonajına uygun sertifikalı çelik halatlar, gerdirmeler (turnbuckle), zincirler ve özel kaynak aparatları (d-ring, stopper plate) seçilir.
+      4.  **Uygulama:** Sertifikalı ve deneyimli lashing personelimiz (lasher), hazırlanan plana sadık kalarak sabitleme işlemini gerçekleştirir.
+      5.  **Destekleme ve Takozlama:** Yükün kaymasını önlemek için ahşap takozlama (dunnage) ve kaynaklı stoper uygulamaları yapılır.
+      6.  **Raporlama ve Sertifikasyon:** İşlem sonunda detaylı fotoğraflı survey raporu ve lashing sertifikası düzenlenerek gemi kaptanına ve müşteriye teslim edilir.
+
+      #### Kullandığımız Teknolojiler ve Standartlar
+      
+      Operasyonlarımızda sadece **DNV-GL, Bureau Veritas veya Lloyd's Register** onaylı, kopma testleri yapılmış ekipmanlar kullanıyoruz. Yükünüzün güvenliği için şansa yer bırakmıyor, bilimin ve tecrübenin ışığında hareket ediyoruz.
+
+      Gemi üstü (on-deck) veya ambar içi (under-deck) fark etmeksizin, en zorlu deniz koşullarında bile yükünüzün varış limanına hasarsız ulaşması bizim garantimiz altındadır.
     `,
     icon: Anchor,
     image: "hero_image_of_a_cargo_ship_at_port.png",
