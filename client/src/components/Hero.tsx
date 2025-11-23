@@ -70,9 +70,6 @@ export function Hero() {
         <span className="text-xs uppercase tracking-widest">Keşfet</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent" />
       </motion.div>
-
-      {/* Gradient Fade at Bottom for seamless transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
     </div>
   );
 }
