@@ -86,7 +86,7 @@ export default function ServiceDetail() {
                 <span className="text-primary font-bold">{service.title}</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-black text-white uppercase mb-8 leading-[0.9] tracking-tighter">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white uppercase mb-8 leading-[0.9] tracking-tighter">
                 {service.title.split(' ').map((word, i) => (
                   <span key={i} className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white/80 pb-2">
                     {word}
