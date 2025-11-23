@@ -13,7 +13,7 @@ export function Footer() {
       <div className="container px-4 md:px-6 relative z-10">
         
         {/* Top Section: Brand & CTA */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12 border-b border-slate-800 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-8 border-b border-slate-800 pb-8">
             {/* Brand Column */}
             <div className="lg:col-span-4 space-y-8">
                 <Link href="/">
@@ -141,7 +141,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-4">
             <p className="text-sm text-slate-500 font-medium">
                 © {new Date().getFullYear()} Capital Lashing & Port Services. Tüm Hakları Saklıdır.
             </p>
