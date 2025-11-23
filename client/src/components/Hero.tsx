@@ -17,8 +17,9 @@ export function Hero() {
       setIsGlitching(true);
       let step = 0;
       const targetText = "CAPITAL";
-      const duration = 1500; // Increased duration for slower effect
-      const fps = 15; // Reduced FPS for less chaotic glitch
+      const startText = "GÜVENİN";
+      const duration = 1500; 
+      const fps = 20;
       const steps = duration / (1000 / fps);
       
       interval = setInterval(() => {
@@ -28,21 +29,16 @@ export function Hero() {
           setDisplayText("CAPITAL");
           setIsGlitching(false);
         } else {
-          // Glitch effect: random characters mixed with target characters
-          // Less randomness for smoother transition
           const progress = step / steps;
+          // Calculate how many characters should be from target text based on progress
           const glitched = targetText.split("").map((char, i) => {
-             // As progress increases, show more of the target "CAPITAL"
-             if (Math.random() < progress) {
-               return char; 
+             // If we're past the "flip point" for this character index, show target
+             // Add some randomness so they don't flip strictly one by one
+             if (progress > (i / targetText.length) + (Math.random() * 0.2 - 0.1)) {
+               return char;
              }
-             // Show current "GÜVENİN" char or random char sparingly
-             if (Math.random() < 0.3) {
-                return chars[Math.floor(Math.random() * chars.length)];
-             }
-             // Keep showing original chars mostly at start
-             const original = "GÜVENİN";
-             return original[i] || char;
+             // Otherwise show start text char
+             return startText[i] || char;
           }).join("");
           setDisplayText(glitched);
         }
