@@ -2,9 +2,53 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import heroVideo from "@assets/generated_videos/cinematic_industrial_port_scene_with_shipping_containers.mp4";
 
 export function Hero() {
+  const [displayText, setDisplayText] = useState("GÜVENİN");
+  const [isGlitching, setIsGlitching] = useState(false);
+
+  useEffect(() => {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+    let interval: NodeJS.Timeout;
+    
+    const startGlitch = () => {
+      setIsGlitching(true);
+      let step = 0;
+      const targetText = "CAPITAL";
+      const duration = 1000; // 1 second glitch duration
+      const fps = 30;
+      const steps = duration / (1000 / fps);
+      
+      interval = setInterval(() => {
+        step++;
+        if (step >= steps) {
+          clearInterval(interval);
+          setDisplayText("CAPITAL");
+          setIsGlitching(false);
+        } else {
+          // Glitch effect: random characters mixed with target characters
+          const glitched = targetText.split("").map((char, i) => {
+            if (Math.random() < 0.5) {
+              return chars[Math.floor(Math.random() * chars.length)];
+            }
+            return char;
+          }).join("");
+          setDisplayText(glitched);
+        }
+      }, 1000 / fps);
+    };
+
+    // Start animation after 2 seconds
+    const timer = setTimeout(startGlitch, 2000);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video with Overlay */}
@@ -35,8 +79,11 @@ export function Hero() {
             </div>
             
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
-              Lojistikte <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Güvenin</span><br />
-              Çelik İmzası
+              LASHINGDE <br className="md:hidden" />
+              <span className={`inline-block min-w-[200px] transition-colors duration-100 ${isGlitching ? 'text-red-500 skew-x-12 scale-110' : 'text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400'}`}>
+                {displayText}
+              </span> <br className="md:hidden" />
+              İMZASI
             </h1>
             
             <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
