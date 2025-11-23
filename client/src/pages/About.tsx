@@ -82,10 +82,13 @@ export default function About() {
               </div>
             </motion.div>
           </div>
+          
+          {/* Gradient Fade to match next section */}
+          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10" />
         </section>
 
         {/* Story Section with Floating Images */}
-        <section className="py-24 relative overflow-hidden bg-white">
+        <section className="py-24 relative overflow-hidden bg-white -mt-12 pt-32 z-20">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div className="relative">
