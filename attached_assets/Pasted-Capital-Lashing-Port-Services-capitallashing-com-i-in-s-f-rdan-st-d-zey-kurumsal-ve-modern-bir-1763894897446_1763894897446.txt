@@ -1,0 +1,127 @@
+Capital Lashing & Port Services (capitallashing.com) için sıfırdan, üst düzey kurumsal ve modern bir web sitesi tasarla ve hazırla. Marka; denizcilik, liman, lojistik ve proje kargo alanında yük sabitleme (lashing), konteyner/gemi lashing, proje kargo lashing, brandalama, shrink wrap paketleme, sandıklama ve yat/tekne lashing hizmetleri veren B2B bir firmadır. Site, güven veren ağır sanayi/denizcilik çizgisinde olacak; abartı değil “premium ve ciddi” hissi verecek. Hafif, şık animasyonlar ve akıcı geçişler kullan; gösterişli değil, profesyonel bir dinamizm.
+
+Genel stil ve his:
+
+Kurumsal, net, premium, “uluslararası liman operasyonu” havası.
+
+Okunabilirlik yüksek, ferah boşluklar, güçlü başlıklar.
+
+Hafif animasyon: girişte yumuşak fade/slide, kartlarda hafif hover canlanması, sayfa geçişlerinde akış hissi. Gözü yormasın.
+
+Foto/video dili: liman, gemi güvertesi, konteyner, ağır yük, zincir/ratchet/kuşak, shrink wrap sahneleri. Mümkünse hero’da kısa loop video hissi.
+
+İçerik dili Türkçe, profesyonel ve kendinden emin. Teknik jargon yerinde ama anlaşılır.
+
+Site haritası / menü:
+
+Ana Sayfa
+
+Hakkımızda
+
+Hizmetler
+
+Gemi Proje Lashing
+
+Konteyner Lashing
+
+Proje Kargo Lashing
+
+Flat Rack (FR) Lashing
+
+Brandalama
+
+Shrink Wrap Paketleme
+
+Sandıklama
+
+Tekne & Yat Lashing
+
+Yük Sabitleme (genel)
+
+Referanslar / Projeler (tamamlanan işlerden galeri ve kısa özetler)
+
+Blog / Bilgi Merkezi (sektörel içerikler)
+
+İletişim
+
+Ana Sayfa bölümleri:
+
+Hero (üst alan):
+Büyük başlık: “Yükünüz Güvende, Operasyonunuz Sorunsuz.” gibi güven odaklı.
+Alt metin: liman, gemi, proje kargo ve konteyner operasyonlarında uluslararası standartlarda lashing ve paketleme.
+2 güçlü CTA: “Teklif Al” ve “Hizmetleri İncele”.
+
+Hızlı Güven Barı:
+3-4 kısa madde: 7/24 operasyon, deneyimli ekip, uluslararası standartlar, proje kargo uzmanlığı.
+
+Hizmet Kartları Grid:
+Her hizmet için ikon + 2 satır açıklama. Kartlar hover’da hafif canlansın.
+
+Neden Capital Lashing?:
+Kısa paragraf + 4-6 avantaj kutusu (güvenlik, hız, saha tecrübesi, ekipman, planlama, raporlama).
+
+Öne Çıkan Projeler/Referanslar:
+Kaydırmalı görsel galeri. Her projede 1 satır iş özeti.
+
+Operasyon Akışı:
+“Keşif → Planlama → Uygulama → Kontrol & Raporlama” gibi 4 adımlı akış.
+
+CTA Bandı:
+“Projenizi konuşalım” + hızlı teklif formu.
+
+Footer:
+Kısa şirket özeti, hizmet linkleri, iletişim:
+Telefon: +90 216 312 06 12
+E-posta: info@capitallashing.com
+
+Konum: İstanbul / Sancaktepe (varsa şube alanı da eklenebilir)
+Sosyal ikonlar.
+
+Hakkımızda sayfası:
+
+Firma hikâyesi, misyon-vizyon, değerler.
+
+“Saha gücü ve standartlarımız” bölümü.
+
+Ekip/operasyon fotoğraflarıyla güven artır.
+
+Hizmet detay sayfaları:
+
+Her hizmet için ayrı sayfa:
+
+Üstte hero + hizmetin net tanımı.
+
+“Nerede kullanılır / hangi yükler”
+
+“Nasıl çalışıyoruz” (kısa adımlar)
+
+Güvenlik & standart vurgu
+
+Mini görsel galeri
+
+Sayfa sonunda CTA: “Bu hizmet için teklif al”.
+
+Referanslar / Projeler:
+
+Filtrelenebilir galeri: Gemi, konteyner, proje kargo, paketleme.
+
+Her projede: yük tipi, lokasyon, kısa çözüm anlatımı.
+
+Blog:
+
+B2B odaklı bilgi merkezi görünümü.
+
+Kategori bazlı liste (Lashing, Paketleme, Proje Kargo, Güvenlik).
+
+Kart tasarımı temiz ve kurumsal.
+
+İletişim:
+
+Tek sayfada net iletişim.
+
+Form + harita + telefon/mail.
+
+“Hızlı teklif” alanı: yük tipi, lokasyon, tarih, kısa not.
+
+Amaç:
+Ziyaretçiye ilk 5 saniyede “bu firma işi biliyor, güvenilir ve büyük ölçekli operasyon yapar” hissi vermek. Tasarım hem modern hem sektörün ağırlığına uygun olsun. Siteyi eksiksiz, canlıya hazır şekilde üret.
