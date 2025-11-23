@@ -13,7 +13,7 @@ export function Footer() {
       <div className="container px-4 md:px-6 relative z-10">
         
         {/* Top Section: Brand & CTA */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 border-b border-slate-800 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12 border-b border-slate-800 pb-12">
             {/* Brand Column */}
             <div className="lg:col-span-4 space-y-8">
                 <Link href="/">
