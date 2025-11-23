@@ -34,12 +34,12 @@ export function Hero() {
               <span className="text-sm font-medium text-white/90 uppercase tracking-widest">Global Lashing Çözümleri</span>
             </div>
             
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
               Lojistikte <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Güvenin</span><br />
               Çelik İmzası
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
+            <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
               Denizcilik ve ağır sanayi operasyonlarında, uluslararası standartlarda yük sabitleme ve koruma hizmetleriyle ticaretinizi güvence altına alıyoruz.
             </p>
 
