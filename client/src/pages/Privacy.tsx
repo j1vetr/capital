@@ -5,6 +5,7 @@ import { ShieldCheck, Lock, FileText } from "lucide-react";
 
 export default function Privacy() {
   useEffect(() => {
+    document.title = "Gizlilik Politikası | Capital Lashing";
     window.scrollTo(0, 0);
   }, []);
 

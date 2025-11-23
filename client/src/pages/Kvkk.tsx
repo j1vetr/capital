@@ -5,6 +5,7 @@ import { Shield, Lock, Eye, FileText } from "lucide-react";
 
 export default function Kvkk() {
   useEffect(() => {
+    document.title = "KVKK Aydınlatma Metni | Capital Lashing";
     window.scrollTo(0, 0);
   }, []);
 

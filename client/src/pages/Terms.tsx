@@ -5,6 +5,7 @@ import { FileText, AlertCircle, Scale, Gavel } from "lucide-react";
 
 export default function Terms() {
   useEffect(() => {
+    document.title = "Kullanım Koşulları | Capital Lashing";
     window.scrollTo(0, 0);
   }, []);
 

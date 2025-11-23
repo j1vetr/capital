@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { motion } from "framer-motion";
 import { Shield, Target, Users, TrendingUp, Heart, Lightbulb, CheckCircle2, HelpCircle, Award, Globe, Truck } from "lucide-react";
+import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -14,6 +15,11 @@ import portWorkersImg from "@assets/generated_images/port_workers_checking_cargo
 import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.png";
 
 export default function About() {
+  useEffect(() => {
+    document.title = "Hakkımızda | Capital Lashing";
+    window.scrollTo(0, 0);
+  }, []);
+
   const stats = [
     { value: "15+", label: "Yıllık Tecrübe" },
     { value: "2500+", label: "Tamamlanan Proje" },
