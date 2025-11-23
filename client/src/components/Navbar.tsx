@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Mail, Phone, Instagram, Linkedin, Facebook, Youtube } from "lucide-react";
+import { Menu, X, Mail, Phone, Instagram, Linkedin, Facebook, Youtube, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import {
   NavigationMenu,
@@ -173,10 +173,18 @@ export function Navbar() {
 
             <Link href="/contact">
               <Button 
-                variant={isScrolled ? "default" : "secondary"} 
-                className={cn("ml-2 uppercase font-bold tracking-wider hidden lg:flex", !isScrolled && "bg-white text-primary hover:bg-gray-100")}
+                className={cn(
+                  "ml-4 uppercase font-black tracking-widest hidden lg:flex h-12 px-8 rounded-full relative overflow-hidden group transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(56,170,225,0.6)]",
+                  isScrolled 
+                    ? "bg-primary text-white hover:bg-blue-600" 
+                    : "bg-white text-primary hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-white"
+                )}
               >
-                Teklif Al
+                <span className="relative z-10 flex items-center gap-2">
+                  Teklif Al
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
               </Button>
             </Link>
           </div>
