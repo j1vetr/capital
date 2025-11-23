@@ -78,32 +78,35 @@ export default function About() {
       <Navbar />
       
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="relative h-[400px] flex items-center bg-slate-900 overflow-hidden">
+        {/* Hero Section - Page Header Style */}
+        <section className="relative h-[450px] flex items-center justify-center bg-slate-900 overflow-hidden">
           <div className="absolute inset-0 z-0">
              <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent z-10" />
              <img 
                src={portWorkersImg} 
                alt="Capital Lashing Team" 
-               className="w-full h-full object-cover opacity-50"
+               className="w-full h-full object-cover opacity-40"
              />
           </div>
           
-          <div className="container px-4 md:px-6 relative z-20 pt-20">
+          <div className="container px-4 md:px-6 relative z-20 text-center pt-32">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="max-w-3xl"
+              className="max-w-4xl mx-auto"
             >
-              <div className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary font-bold uppercase tracking-widest text-sm mb-6 border border-primary/20">
-                Hakkımızda
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/80 font-medium uppercase tracking-wider text-xs mb-6">
+                <span>Ana Sayfa</span>
+                <span className="text-primary">•</span>
+                <span className="text-primary font-bold">Hakkımızda</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-heading font-black text-white mb-6 leading-tight">
-                Yüklerinizin Güvenli Taşımacılığı İçin <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Biz Buradayız!</span>
+              
+              <h1 className="text-4xl md:text-6xl font-heading font-black text-white mb-6 leading-tight uppercase tracking-tight">
+                Yüklerinizin <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Güvenliği</span> <br/>
+                Bizim İşimiz
               </h1>
-              <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
+              <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
                 Capital Lashing, yüklerinizin güvenli taşınması için öncü lashing hizmetleri sunan uzman bir firmadır.
               </p>
             </motion.div>

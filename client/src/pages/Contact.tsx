@@ -19,7 +19,7 @@ export default function Contact() {
       <Navbar />
       
       {/* Page Header */}
-      <div className="relative h-[400px] flex items-center justify-center overflow-hidden bg-slate-900">
+      <div className="relative h-[450px] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
@@ -28,7 +28,12 @@ export default function Contact() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
         </div>
-        <div className="container relative z-10 px-4 md:px-6 text-center pt-20">
+        <div className="container relative z-10 px-4 md:px-6 text-center pt-32">
+           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/80 font-medium uppercase tracking-wider text-xs mb-6">
+              <span>Ana Sayfa</span>
+              <span className="text-primary">•</span>
+              <span className="text-primary font-bold">İletişim</span>
+           </div>
            <h1 className="text-4xl md:text-6xl font-heading font-black uppercase text-white mb-6 tracking-tight">
             İletişim
           </h1>
@@ -38,11 +43,11 @@ export default function Contact() {
         </div>
       </div>
 
-      <main className="flex-grow">
+      <main className="flex-grow bg-slate-50">
         {/* Main Contact Content */}
         <section className="py-24 relative overflow-hidden">
-           {/* Background Accents */}
-           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 -z-10" />
+           {/* Background Accents - Removed white gaps by using bg-slate-50 on main */}
+           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 -z-10" />
            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 -z-10" />
 
            <div className="container px-4 md:px-6">
