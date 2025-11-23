@@ -143,7 +143,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8">
             <p className="text-sm text-slate-500 font-medium">
-                © {new Date().getFullYear()} Capital Lashing & Port Services. Tüm hakları saklıdır.
+                © {new Date().getFullYear()} Capital Lashing & Port Services. Tüm Hakları Saklıdır.
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-2">
