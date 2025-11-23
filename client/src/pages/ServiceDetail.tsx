@@ -281,11 +281,6 @@ export default function ServiceDetail() {
                       Teklif İste
                     </Button>
                   </Link>
-                  
-                  <div className="flex items-center justify-center gap-2 text-slate-400 text-sm font-medium">
-                    <Zap className="h-4 w-4 text-yellow-500" />
-                    <span>Ortalama yanıt süresi: 15 dk</span>
-                  </div>
                 </div>
 
               </div>
