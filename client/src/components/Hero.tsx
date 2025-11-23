@@ -17,8 +17,8 @@ export function Hero() {
       setIsGlitching(true);
       let step = 0;
       const targetText = "CAPITAL";
-      const duration = 1000; // 1 second glitch duration
-      const fps = 30;
+      const duration = 1500; // Increased duration for slower effect
+      const fps = 15; // Reduced FPS for less chaotic glitch
       const steps = duration / (1000 / fps);
       
       interval = setInterval(() => {
@@ -29,11 +29,20 @@ export function Hero() {
           setIsGlitching(false);
         } else {
           // Glitch effect: random characters mixed with target characters
+          // Less randomness for smoother transition
+          const progress = step / steps;
           const glitched = targetText.split("").map((char, i) => {
-            if (Math.random() < 0.5) {
-              return chars[Math.floor(Math.random() * chars.length)];
-            }
-            return char;
+             // As progress increases, show more of the target "CAPITAL"
+             if (Math.random() < progress) {
+               return char; 
+             }
+             // Show current "GÜVENİN" char or random char sparingly
+             if (Math.random() < 0.3) {
+                return chars[Math.floor(Math.random() * chars.length)];
+             }
+             // Keep showing original chars mostly at start
+             const original = "GÜVENİN";
+             return original[i] || char;
           }).join("");
           setDisplayText(glitched);
         }
