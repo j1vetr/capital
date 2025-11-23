@@ -123,193 +123,197 @@ export default function ServiceDetail() {
         </motion.div>
       </div>
 
-      <main className="flex-grow">
+      <main className="flex-grow bg-slate-50">
         
-        {/* 2. Introduction & Key Benefits (Sticky Sidebar Layout) */}
-        <section className="py-24 bg-white relative">
-          <div className="container px-4 md:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+        {/* 2. Content & Layout Redesign */}
+        <div className="container px-4 md:px-6 py-20 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            {/* LEFT COLUMN: Main Content */}
+            <div className="lg:col-span-8">
               
-              {/* Left Content (Article) */}
-              <div className="lg:col-span-7 space-y-12">
-                {/* Introduction Text */}
-                <div className="prose prose-lg prose-slate max-w-none">
-                   {/* Custom rendering for markdown-like description */}
-                   {service.fullDescription.split('\n').map((line, i) => {
-                     if (line.trim().startsWith('### ')) {
-                       return <h3 key={i} className="text-3xl font-heading font-bold text-slate-900 uppercase mt-12 mb-6">{line.replace('### ', '')}</h3>
-                     }
-                     if (line.trim().startsWith('#### ')) {
-                       return <h4 key={i} className="text-xl font-heading font-bold text-slate-800 mt-8 mb-4 flex items-center gap-2"><span className="w-2 h-2 bg-primary rounded-full"></span>{line.replace('#### ', '')}</h4>
-                     }
-                     if (line.trim().startsWith('* ')) {
-                       return <li key={i} className="ml-4 list-disc text-slate-600 mb-2 pl-2 marker:text-primary">{line.replace('* ', '')}</li>
-                     }
-                     // Numbered lists
-                     if (/^\d\./.test(line.trim())) {
-                        return (
-                          <div key={i} className="flex gap-4 mb-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <div className="flex-shrink-0 w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-sm">
-                              {line.trim().split('.')[0]}
-                            </div>
-                            <p className="m-0 text-slate-700">{line.trim().replace(/^\d\.\s\*\*/, '').replace(/\*\*:/, '').replace(/\*\*/g, '')}</p>
-                          </div>
-                        )
-                     }
+              {/* Introduction - Lead Paragraph */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-12"
+              >
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 leading-tight mb-6">
+                  {service.shortDescription}
+                </h2>
+                <div className="h-1.5 w-24 bg-primary rounded-full mb-8" />
+              </motion.div>
 
-                     return <p key={i} className="text-slate-600 leading-relaxed mb-4 text-lg">{line}</p>
-                   })}
-                </div>
-
-                {/* Why Choose Us Grid */}
-                <div className="bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
-                   <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                   <div className="relative z-10">
-                     <h3 className="text-2xl font-heading font-bold mb-8 uppercase flex items-center gap-3">
-                       <Shield className="h-8 w-8 text-primary" />
-                       Neden Capital Lashing?
-                     </h3>
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                       {service.benefits.map((benefit, i) => (
-                         <div key={i} className="flex items-start gap-4">
-                           <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-0.5" />
-                           <span className="text-blue-50 font-medium leading-snug">{benefit}</span>
-                         </div>
-                       ))}
-                     </div>
-                   </div>
-                </div>
-              </div>
-
-              {/* Right Sidebar (Sticky) */}
-              <div className="lg:col-span-5 space-y-8 relative">
-                <div className="sticky top-24 space-y-8">
-                  
-                  {/* Technical Specs Card */}
-                  <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="p-3 bg-white rounded-xl shadow-sm text-primary">
-                         <service.icon className="h-6 w-6" />
-                      </div>
-                      <h3 className="text-lg font-bold uppercase text-slate-900">Teknik Özellikler</h3>
-                    </div>
-                    <ul className="space-y-4">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm text-slate-600 pb-4 border-b border-slate-100 last:border-0 last:pb-0">
-                          <div className="h-1.5 w-1.5 bg-primary rounded-full mt-2 shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* CTA Card */}
-                  <div className="bg-gradient-to-br from-primary to-blue-600 rounded-2xl p-8 text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
-                    <div className="relative z-10">
-                      <h3 className="text-2xl font-heading font-bold uppercase mb-2">Projenizi Başlatalım</h3>
-                      <p className="text-blue-100 mb-6 text-sm leading-relaxed">
-                        Uzman ekibimiz yükünüzü incelesin, uluslararası standartlarda en güvenli taşıma planını oluştursun.
-                      </p>
+              {/* Description Content */}
+              <div className="prose prose-lg prose-slate max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-slate-900 prose-p:text-slate-600 prose-p:leading-relaxed prose-a:text-primary prose-strong:text-slate-900 prose-li:marker:text-primary mb-16">
+                 {/* Custom rendering for markdown-like description */}
+                 {service.fullDescription.split('\n').map((line, i) => {
+                   const trimmed = line.trim();
+                   if (!trimmed) return null;
+                   
+                   if (trimmed.startsWith('### ')) {
+                     return <h3 key={i} className="text-2xl mt-12 mb-6 pb-4 border-b border-slate-200">{trimmed.replace('### ', '')}</h3>
+                   }
+                   if (trimmed.startsWith('#### ')) {
+                     return <h4 key={i} className="text-xl mt-8 mb-4 text-primary">{trimmed.replace('#### ', '')}</h4>
+                   }
+                   if (trimmed.startsWith('* ')) {
+                     return (
+                       <div key={i} className="flex items-start gap-3 mb-4 pl-2">
+                         <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-0.5" />
+                         <p className="m-0 text-slate-700 font-medium">{trimmed.replace('* ', '')}</p>
+                       </div>
+                     )
+                   }
+                   // Numbered lists styled as cards
+                   if (/^\d\./.test(trimmed)) {
+                      const [num, ...rest] = trimmed.split('.');
+                      const content = rest.join('.').trim().replace(/^\*\*/, '').replace(/\*\*:/, ':').replace(/\*\*/g, '');
+                      const [title, desc] = content.includes(':') ? content.split(':') : [content, ''];
                       
-                      <Link href={`/contact?service=${service.id}`}>
-                        <Button className="w-full bg-white text-primary hover:bg-blue-50 font-bold uppercase tracking-wide h-12 shadow-lg">
-                          Hemen Teklif Al
-                        </Button>
-                      </Link>
+                      return (
+                        <div key={i} className="flex gap-4 mb-6 p-6 bg-white rounded-xl shadow-sm border border-slate-100 hover:border-primary/30 transition-colors group">
+                          <div className="flex-shrink-0 w-10 h-10 bg-slate-100 text-slate-500 rounded-lg flex items-center justify-center font-black text-lg group-hover:bg-primary group-hover:text-white transition-colors">
+                            {num}
+                          </div>
+                          <div>
+                            <h5 className="font-bold text-slate-900 mb-1">{title}</h5>
+                            {desc && <p className="m-0 text-slate-500 text-sm leading-normal">{desc}</p>}
+                          </div>
+                        </div>
+                      )
+                   }
 
-                      <div className="mt-6 pt-6 border-t border-white/20 flex items-center justify-between">
-                        <div className="text-xs text-blue-100 uppercase font-bold tracking-widest">Acil Destek</div>
-                        <a href="tel:+902163120612" className="font-bold text-lg hover:text-blue-200 transition-colors">
-                          +90 216 312 06 12
-                        </a>
+                   return <p key={i} className="mb-6">{line}</p>
+                 })}
+              </div>
+
+              {/* Visual Benefits Grid */}
+              <div className="mb-20">
+                <h3 className="text-2xl font-heading font-bold text-slate-900 uppercase mb-8 flex items-center gap-3">
+                  <Shield className="h-8 w-8 text-primary" />
+                  Hizmet Avantajları
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {service.benefits.map((benefit, i) => (
+                    <motion.div 
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                      className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                    >
+                      <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                        <CheckCircle2 className="h-6 w-6" />
                       </div>
-                    </div>
-                  </div>
+                      <p className="font-bold text-slate-800 text-lg leading-snug group-hover:text-primary transition-colors">{benefit}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
 
-                  {/* Other Services Mini List */}
-                  <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm">
-                     <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Diğer Hizmetler</h4>
-                     <div className="space-y-2">
-                       {servicesData.filter(s => s.id !== service.id).slice(0, 4).map(s => (
-                         <Link key={s.id} href={`/services/${s.id}`}>
-                           <a className="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 transition-colors group">
-                             <span className="text-sm font-bold text-slate-700 group-hover:text-primary transition-colors">{s.title}</span>
-                             <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-primary transition-colors" />
-                           </a>
-                         </Link>
-                       ))}
+              {/* Process Timeline */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-heading font-bold text-slate-900 uppercase mb-10 flex items-center gap-3">
+                  <FileText className="h-8 w-8 text-primary" />
+                  Operasyon Süreci
+                </h3>
+                <div className="relative border-l-2 border-slate-200 pl-8 ml-4 space-y-12">
+                   {[
+                     { title: "Talep & Keşif", desc: "Yükün detayları incelenir, gerekiyorsa yerinde keşif yapılır." },
+                     { title: "Mühendislik & Planlama", desc: "Lashing hesaplamaları yapılır ve malzeme listesi çıkarılır." },
+                     { title: "Operasyon", desc: "Uzman ekip tarafından sabitleme işlemi gerçekleştirilir." },
+                     { title: "Kontrol & Teslimat", desc: "Son kontroller yapılır ve survey raporu ile teslim edilir." }
+                   ].map((step, i) => (
+                     <div key={i} className="relative">
+                       <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 border-white bg-primary shadow-sm" />
+                       <h4 className="text-lg font-bold text-slate-900 mb-2 uppercase">{step.title}</h4>
+                       <p className="text-slate-600">{step.desc}</p>
                      </div>
-                  </div>
-
+                   ))}
                 </div>
               </div>
 
             </div>
-          </div>
-        </section>
 
-        {/* 3. Process / Visual Break Section */}
-        <section className="py-24 bg-slate-50 overflow-hidden">
-          <div className="container px-4 md:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-heading font-black text-slate-900 uppercase mb-4">Operasyonel Mükemmellik</h2>
-              <p className="text-slate-500">
-                Her adımda titizlikle uyguladığımız kalite kontrol süreçleri ile riskleri sıfıra indiriyoruz.
-              </p>
-            </div>
+            {/* RIGHT COLUMN: Sticky Sidebar */}
+            <div className="lg:col-span-4">
+              <div className="sticky top-24 space-y-8">
+                
+                {/* Featured Image Card */}
+                <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 relative group h-64">
+                  <img src={bgImage} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-60" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-xs font-bold uppercase tracking-widest mb-1 text-primary">Görsel</p>
+                    <p className="font-bold text-lg">{service.title}</p>
+                  </div>
+                </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               {[
-                 { icon: FileText, title: "Analiz & Planlama", desc: "Yükün teknik özellikleri incelenir, CSS Code standartlarına göre lashing planı ve malzeme listesi hazırlanır." },
-                 { icon: Anchor, title: "Profesyonel Uygulama", desc: "Sertifikalı ekipmanlar ve uzman personel ile plana uygun sabitleme işlemi gerçekleştirilir." },
-                 { icon: CheckCircle2, title: "Survey & Raporlama", desc: "Yapılan işlem kontrol edilir, fotoğraflanır ve uluslararası geçerliliği olan survey raporu sunulur." }
-               ].map((step, i) => (
-                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                      <step.icon className="h-8 w-8" />
+                {/* Technical Specs Box */}
+                <div className="bg-slate-900 text-white rounded-2xl p-8 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-6">
+                      <Anchor className="h-6 w-6 text-primary" />
+                      <h3 className="text-lg font-bold uppercase">Teknik Detaylar</h3>
                     </div>
-                    <div className="absolute top-8 right-8 text-6xl font-black text-slate-100 -z-10 select-none font-heading">0{i+1}</div>
-                    <h3 className="text-xl font-bold font-heading text-slate-900 uppercase mb-4">{step.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{step.desc}</p>
-                 </div>
-               ))}
+                    <div className="space-y-4">
+                      {service.features.map((feature, i) => (
+                        <div key={i} className="flex items-start gap-3 pb-4 border-b border-white/10 last:border-0 last:pb-0">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          <span className="text-slate-300 text-sm font-medium leading-relaxed">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quick Contact */}
+                <div className="bg-white rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 p-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">Hemen Teklif Alın</h3>
+                  <p className="text-slate-500 text-sm mb-6">Projeniz için en uygun çözümü 2 saat içinde sunalım.</p>
+                  
+                  <Link href={`/contact?service=${service.id}`}>
+                    <Button className="w-full h-12 font-bold uppercase bg-primary hover:bg-blue-600 shadow-lg shadow-primary/20 mb-4">
+                      Teklif İste
+                    </Button>
+                  </Link>
+                  
+                  <div className="flex items-center justify-center gap-2 text-slate-400 text-sm font-medium">
+                    <Zap className="h-4 w-4 text-yellow-500" />
+                    <span>Ortalama yanıt süresi: 15 dk</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Bottom CTA Strip */}
+        <section className="bg-slate-900 py-16 border-t border-white/10">
+          <div className="container px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-heading font-black text-white uppercase mb-2">
+                Sorularınız mı var?
+              </h2>
+              <p className="text-slate-400">Uzman ekibimiz tüm teknik sorularınızı yanıtlamaya hazır.</p>
+            </div>
+            <div className="flex gap-4">
+               <a href="tel:+902163120612" className="px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-colors">
+                 +90 216 312 06 12
+               </a>
+               <Link href="/contact">
+                 <a className="px-8 py-4 rounded-xl bg-primary text-white font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-primary/20">
+                   Bize Ulaşın
+                 </a>
+               </Link>
             </div>
           </div>
-        </section>
-
-        {/* 4. Big CTA Section */}
-        <section className="py-24 bg-slate-900 relative overflow-hidden">
-           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
-           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-slate-900 to-slate-900"></div>
-           
-           <div className="container px-4 md:px-6 relative z-10 text-center">
-             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary font-bold uppercase tracking-wider text-sm mb-8 border border-primary/20">
-               <Zap className="h-4 w-4" />
-               <span>7/24 Operasyon</span>
-             </div>
-             <h2 className="text-4xl md:text-6xl font-heading font-black text-white uppercase mb-8 leading-tight max-w-4xl mx-auto">
-               Yükünüzün Değerini Biliyor, <br/>
-               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Onu En İyi Biz Koruyoruz.</span>
-             </h2>
-             <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-light">
-               Dünyanın her limanında, en zorlu yüklerde bile Capital Lashing güvencesiyle tanışın.
-             </p>
-             
-             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-               <Link href="/contact">
-                 <Button size="lg" className="h-16 px-10 text-xl uppercase font-bold tracking-wide bg-primary hover:bg-blue-600 shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all">
-                   Hemen Teklif Al
-                 </Button>
-               </Link>
-               <a href="tel:+902163120612">
-                 <Button size="lg" variant="outline" className="h-16 px-10 text-xl uppercase font-bold tracking-wide text-white border-white/20 hover:bg-white/10 hover:text-white">
-                   Bizi Arayın
-                 </Button>
-               </a>
-             </div>
-           </div>
         </section>
 
       </main>
