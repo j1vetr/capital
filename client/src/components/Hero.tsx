@@ -79,7 +79,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
               LASHINGDE <br className="md:hidden" />
               <span className={`inline-block min-w-[200px] transition-colors duration-100 ${isGlitching ? 'text-red-500 skew-x-12 scale-110' : 'text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400'}`}>
                 {displayText}
@@ -91,14 +91,14 @@ export function Hero() {
               Denizcilik ve ağır sanayi operasyonlarında, uluslararası standartlarda yük sabitleme ve koruma hizmetleriyle ticaretinizi güvence altına alıyoruz.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
               <Link href="/contact">
-                <Button size="lg" className="h-12 px-6 text-base uppercase font-bold tracking-wide shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all hover:scale-105">
+                <Button size="lg" className="w-full sm:w-auto h-10 sm:h-12 px-6 text-sm sm:text-base uppercase font-bold tracking-wide shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all hover:scale-105">
                   Hemen Teklif Al <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/services">
-                <Button size="lg" variant="outline" className="h-12 px-6 text-base text-white border-white/30 hover:bg-white/10 hover:text-white uppercase font-bold tracking-wide backdrop-blur-sm hover:scale-105 transition-all">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto h-10 sm:h-12 px-6 text-sm sm:text-base text-white border-white/30 hover:bg-white/10 hover:text-white uppercase font-bold tracking-wide backdrop-blur-sm hover:scale-105 transition-all">
                   Hizmetleri İncele
                 </Button>
               </Link>
