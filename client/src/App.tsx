@@ -8,17 +8,18 @@ import Home from "@/pages/Home";
 import Services from "@/pages/Services";
 import Contact from "@/pages/Contact";
 import ServiceDetail from "@/pages/ServiceDetail";
+import About from "@/pages/About";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
       <Route path="/services/:id" component={ServiceDetail} />
       <Route path="/contact" component={Contact} />
       
       {/* Placeholder routes for now */}
-      <Route path="/about" component={Home} /> 
       <Route path="/projects" component={Home} />
       <Route path="/blog" component={Home} />
       
