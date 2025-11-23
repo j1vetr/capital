@@ -79,10 +79,6 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm">
-              <span className="text-sm font-medium text-white/90 uppercase tracking-widest">Global Lashing Çözümleri</span>
-            </div>
-            
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
               LASHINGDE <br className="md:hidden" />
               <span className={`inline-block min-w-[200px] transition-colors duration-100 ${isGlitching ? 'text-red-500 skew-x-12 scale-110' : 'text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400'}`}>
