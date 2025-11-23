@@ -49,7 +49,7 @@ export function Footer() {
             </div>
 
             {/* Links Column 1 */}
-            <div className="lg:col-span-2 lg:col-start-6">
+            <div className="lg:col-span-2">
                 <h4 className="text-white font-bold text-lg mb-8 relative inline-block">
                     Hızlı Erişim
                     <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
