@@ -153,6 +153,9 @@ export function Footer() {
                 <Link href="/terms">
                   <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Kullanım Koşulları</a>
                 </Link>
+                <Link href="/kvkk">
+                  <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">KVKK</a>
+                </Link>
                 <div className="hidden md:flex items-center gap-2 text-sm text-slate-500 border-l border-slate-800 pl-8">
                    <ShieldCheck className="h-4 w-4 text-primary" />
                    <span className="font-medium text-slate-400">SSL Güvenli Bağlantı</span>

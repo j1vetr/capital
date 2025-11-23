@@ -11,6 +11,7 @@ import ServiceDetail from "@/pages/ServiceDetail";
 import About from "@/pages/About";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
+import Kvkk from "@/pages/Kvkk";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
+      <Route path="/kvkk" component={Kvkk} />
       
       {/* Placeholder routes for now */}
       <Route path="/projects" component={Home} />
