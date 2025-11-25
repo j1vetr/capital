@@ -48,6 +48,9 @@ export function ServiceGrid() {
                       src={bgImage} 
                       alt={`${service.title} Hizmeti - Profesyonel Yük Sabitleme`}
                       title={`${service.title} Hizmeti Detayları`}
+                      loading="lazy"
+                      width="400"
+                      height="300"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   ) : (
