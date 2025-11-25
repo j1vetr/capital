@@ -60,11 +60,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_7.webp",
     ],
     benefits: [
-      "IMO ve CSS Code standartlarına tam uyum",
-      "Sertifikalı lashing ekipmanları (DNV-GL, BV)",
-      "Mühendislik hesaplamaları ve lashing planı",
-      "7/24 Operasyon ve survey raporlama",
-      "Global limanlarda hizmet ağı"
+      "IMO Ve CSS Code Uyumu",
+      "Sertifikalı Lashing Ekipmanları",
+      "Mühendislik Hesaplamaları",
+      "7/24 Operasyon Ve Raporlama"
     ],
     features: [
       "Çelik halat ve zincir lashing uygulamaları",
@@ -98,11 +97,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/konteyner-lashing/konteyner-lashing_7.webp",
     ],
     benefits: [
-      "Konteyner hasar önleyici sabitleme",
-      "Hava yastığı (airbag) uygulamaları",
-      "Gümrük ve liman kurallarına uygunluk",
-      "Maliyet etkin çözümler",
-      "Hızlı operasyon süresi"
+      "Hasar Önleyici Sabitleme",
+      "Profesyonel Airbag Uygulamaları",
+      "Gümrük Ve Liman Uyumu",
+      "Maliyet Etkin Çözümler"
     ],
     features: [
       "Polyester spanzet ve kompozit şerit kullanımı",
@@ -130,11 +128,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/proje-kargo-lashing/proje-kargo-lashing_2.webp",
     ],
     benefits: [
-      "Proje bazlı özel mühendislik çözümleri",
-      "Gabari dışı yük uzmanlığı",
-      "Yüksek tonaj kapasiteli ekipman kullanımı",
-      "Risk analizi ve güvenli operasyon",
-      "Anahtar teslim proje yönetimi"
+      "Özel Mühendislik Çözümleri",
+      "Gabari Dışı Yük Uzmanlığı",
+      "Yüksek Tonaj Ekipmanları",
+      "Risk Analizi Ve Güvenlik"
     ],
     features: [
       "Flat Rack ve Open Top konteyner uygulamaları",
@@ -168,10 +165,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/flat-rack-lashing/flat-rack-lashing_9.webp",
     ],
     benefits: [
-      "Gemi onayı garantili lashing",
-      "Deniz aşırı taşımalara uygunluk",
-      "Hızlı ve güvenilir operasyon",
-      "Brandalama ile tam koruma"
+      "Gemi Onayı Garantili Lashing",
+      "Deniz Aşırı Taşıma Uyumu",
+      "Hızlı Ve Güvenilir Operasyon",
+      "Brandalama İle Tam Koruma"
     ],
     features: [
       "Overheight ve Overwidth yükleme uzmanlığı",
@@ -200,10 +197,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/brandalama/brandalama_4.webp",
     ],
     benefits: [
-      "Tam koruma sağlayan su geçirmez malzeme",
-      "UV ışınlarına dayanıklılık",
-      "Yüke özel ölçü ve formda uygulama",
-      "Korozyon önleyici etki"
+      "Su Geçirmez Tam Koruma",
+      "UV Işınlarına Dayanıklılık",
+      "Yüke Özel Ölçü Ve Form",
+      "Korozyon Önleyici Etki"
     ],
     features: [
       "Ağır hizmet tipi PVC branda",
@@ -236,10 +233,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/shrink-wrap/shrink-wrap_7.webp",
     ],
     benefits: [
-      "Mükemmel sızdırmazlık ve koruma",
-      "Aerodinamik yapı (karayolu için)",
-      "VCI katkılı korozyon önleme",
-      "Estetik ve profesyonel görünüm"
+      "Mükemmel Sızdırmazlık Ve Koruma",
+      "Aerodinamik Yapı",
+      "VCI Katkılı Korozyon Önleme",
+      "Estetik Ve Profesyonel Görünüm"
     ],
     features: [
       "Yüksek mikronlu endüstriyel shrink film",
@@ -268,10 +265,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/sandiklama/sandiklama_4.webp",
     ],
     benefits: [
-      "ISPM-15 sertifikalı ahşap malzeme",
-      "Yüke özel tasarım ve üretim",
-      "Darbeye ve baskıya dayanıklı yapı",
-      "Kolay elleçleme (forklift/vinç)"
+      "ISPM-15 Sertifikalı Malzeme",
+      "Yüke Özel Tasarım Ve Üretim",
+      "Darbeye Dayanıklı Yapı",
+      "Kolay Elleçleme İmkanı"
     ],
     features: [
       "OSB, Kontrplak veya Masif ahşap seçenekleri",
@@ -304,10 +301,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_7.webp",
     ],
     benefits: [
-      "Tekne taşıma uzmanlığı",
-      "Gövde koruyucu özel ekipmanlar",
-      "Özel üretim beşik (cradle) sistemi",
-      "Uluslararası standartlara uyum"
+      "Tekne Taşıma Uzmanlığı",
+      "Gövde Koruyucu Ekipmanlar",
+      "Özel Üretim Beşik Sistemi",
+      "Uluslararası Standartlara Uyum"
     ],
     features: [
       "Yumuşak dokulu polyester sapanlar",
