@@ -32,12 +32,15 @@ function Router() {
   );
 }
 
+import { FloatingContact } from "@/components/FloatingContact";
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Router />
+        <FloatingContact />
       </TooltipProvider>
     </QueryClientProvider>
   );
