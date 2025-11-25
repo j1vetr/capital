@@ -10,17 +10,6 @@ import shrinkImg from "@assets/generated_images/industrial_shrink_wrap_packaging
 import yachtImg from "@assets/generated_images/luxury_yacht_transport_lashing.png";
 
 export function ServiceGrid() {
-  // Map images manually 
-  const getImage = (imgName: string | null) => {
-    if (!imgName) return null;
-    if (imgName.includes("container")) return containerImg;
-    if (imgName.includes("project")) return projectImg;
-    if (imgName.includes("shrink")) return shrinkImg;
-    if (imgName.includes("yacht")) return yachtImg;
-    if (imgName.includes("hero")) return heroImage;
-    return null;
-  };
-
   return (
     <section className="py-24 bg-gradient-to-b from-white to-slate-50 relative">
       {/* Background decoration */}
@@ -39,7 +28,18 @@ export function ServiceGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.slice(0, 6).map((service) => {
-            const bgImage = getImage(service.image);
+            // Use image from service data if available, otherwise fallback to generated images for specific IDs
+            let bgImage = service.image;
+            
+            // Fallback logic for services that might not have image property set yet in all contexts
+            if (!bgImage) {
+               if (service.id === "gemi-proje-lashing") bgImage = heroImage;
+               else if (service.id === "konteyner-lashing") bgImage = containerImg;
+               else if (service.id === "proje-kargo-lashing") bgImage = projectImg;
+               else if (service.id === "shrink-wrap") bgImage = shrinkImg;
+               else if (service.id === "tekne-yat-lashing") bgImage = yachtImg;
+            }
+
             return (
               <Card key={service.id} className="group overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white flex flex-col h-full hover:-translate-y-2 rounded-2xl">
                 <div className="h-64 overflow-hidden relative bg-slate-100">
