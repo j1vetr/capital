@@ -33,11 +33,13 @@ function Router() {
 }
 
 import { FloatingContact } from "@/components/FloatingContact";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <ScrollToTop />
         <Toaster />
         <Router />
         <FloatingContact />
