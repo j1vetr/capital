@@ -44,31 +44,29 @@ export default function Home() {
         <ServiceGrid />
         <Features />
         
-        {/* Operational Flow - Redesigned */}
-        <section className="py-32 bg-slate-100 relative overflow-hidden">
-          {/* Top Divider (Optional, but let's focus on bottom for now or keep it clean) */}
-          
+        {/* Operational Flow - Redesigned Blue Focus */}
+        <section className="py-32 bg-primary relative overflow-hidden">
           {/* Bg decoration */}
-          <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-70 pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
           
           {/* Decorative blobs */}
-          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] bg-white/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-3xl pointer-events-none" />
 
           <div className="container px-4 md:px-6 relative z-10">
              <div className="flex flex-col items-center text-center mb-20 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-heading font-black uppercase text-slate-900 mb-6">
-                Nasıl <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Çalışıyoruz?</span>
+              <h2 className="text-4xl md:text-5xl font-heading font-black uppercase text-white mb-6">
+                Nasıl Çalışıyoruz?
               </h2>
-              <div className="h-1.5 w-24 bg-gradient-to-r from-primary to-blue-600 rounded-full mb-6" />
-              <p className="text-slate-500 text-xl leading-relaxed">
+              <div className="h-1.5 w-24 bg-white rounded-full mb-6 opacity-50" />
+              <p className="text-blue-50 text-xl leading-relaxed">
                 Her yük bizim için özel bir projedir. Uluslararası standartlarda, planlı ve raporlanabilir iş akışımız.
               </p>
             </div>
 
             <div className="relative mb-12">
               {/* Connecting Line (Desktop) */}
-              <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-slate-200 via-primary/30 to-slate-200 -translate-y-1/2 z-0" />
+              <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-white/20 -translate-y-1/2 z-0" />
 
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
                 {[
@@ -77,20 +75,17 @@ export default function Home() {
                   { step: "03", title: "Uygulama", desc: "Sertifikalı ekibimizle güvenli sabitleme." },
                   { step: "04", title: "Raporlama", desc: "Fotoğraflı detaylı teknik rapor sunumu." }
                 ].map((item, i) => (
-                  <div key={i} className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 text-center group hover:-translate-y-3 transition-all duration-300 hover:shadow-2xl hover:border-primary/20 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary/100 transition-all duration-500" />
-                    <div className="w-20 h-20 bg-slate-50 border border-slate-100 text-primary rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-8 shadow-sm group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <div key={i} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 text-center group hover:-translate-y-3 transition-all duration-300 hover:bg-white hover:shadow-2xl relative overflow-hidden">
+                    <div className="w-20 h-20 bg-white text-primary rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-8 shadow-lg group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                       {item.step}
                     </div>
-                    <h3 className="text-xl font-bold font-heading mb-3 text-slate-900 uppercase group-hover:text-primary transition-colors">{item.title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="text-xl font-bold font-heading mb-3 text-white uppercase group-hover:text-slate-900 transition-colors">{item.title}</h3>
+                    <p className="text-blue-50 text-sm leading-relaxed group-hover:text-slate-500 transition-colors">{item.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-
-          {/* Bottom Lashing Rope Separator - REMOVED, now handled by ContactSection knot */}
         </section>
 
         <ContactSection />
