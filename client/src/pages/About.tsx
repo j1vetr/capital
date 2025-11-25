@@ -10,9 +10,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import teamMeetingImg from "@assets/generated_images/modern_corporate_office_team_meeting.png";
-import portWorkersImg from "@assets/generated_images/port_workers_checking_cargo_safety.png";
-import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.png";
+import teamImg from "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_1.webp";
+import portImg from "/assets/images/services/konteyner-lashing/konteyner-lashing_7.webp";
+import heroImage from "/assets/images/services/flat-rack-lashing/flat-rack-lashing_2.webp";
 
 export default function About() {
   useEffect(() => {
@@ -59,9 +59,9 @@ export default function About() {
         <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-slate-900">
           <div className="absolute inset-0 z-0">
             <img 
-              src={portWorkersImg} 
-              alt="Capital Lashing Team" 
-              className="w-full h-full object-cover opacity-30"
+              src={heroImage} 
+              alt="Capital Lashing Port Operations" 
+              className="w-full h-full object-cover opacity-40"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900" />
           </div>
@@ -99,8 +99,8 @@ export default function About() {
                 <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl -z-10" />
                 
                 <div className="relative z-10 grid grid-cols-2 gap-4">
-                  <img src={teamMeetingImg} alt="Team" className="rounded-2xl shadow-xl w-full h-64 object-cover translate-y-8" />
-                  <img src={heroImage} alt="Port" className="rounded-2xl shadow-xl w-full h-64 object-cover -translate-y-8" />
+                  <img src={teamImg} alt="Project Lashing Operation" className="rounded-2xl shadow-xl w-full h-64 object-cover translate-y-8" />
+                  <img src={portImg} alt="Port Lashing Services" className="rounded-2xl shadow-xl w-full h-64 object-cover -translate-y-8" />
                 </div>
                 
                 {/* Experience Badge */}
