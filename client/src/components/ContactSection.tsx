@@ -6,7 +6,19 @@ import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
 
 export function ContactSection() {
   return (
-    <section className="py-24 bg-white border-t border-slate-100">
+    <section className="py-24 bg-slate-100 border-t border-slate-100/50 relative">
+      {/* Knot Divider */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+        <div className="bg-slate-100 p-4 rounded-full shadow-lg border border-slate-200">
+           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#38aae1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="drop-shadow-md">
+             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+             <path d="M12.57 6.93c-1.41-1.41-3.71-1.41-5.12 0-1.41 1.41-1.41 3.71 0 5.12l6.36 6.36"/>
+             <path d="M16.81 11.43l-6.36-6.36c-1.41-1.41-3.71-1.41-5.12 0"/>
+             <path d="M11.43 16.81l6.36-6.36c1.41-1.41 1.41-3.71 0-5.12-1.41-1.41-3.71-1.41-5.12 0"/>
+           </svg>
+        </div>
+      </div>
+
       <div className="container px-4 md:px-6">
         <div className="bg-slate-900 rounded-3xl overflow-hidden shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-5">
