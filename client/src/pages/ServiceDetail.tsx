@@ -42,17 +42,8 @@ export default function ServiceDetail() {
     );
   }
 
-  const getImage = (imgName: string | null) => {
-    if (!imgName) return heroImage;
-    if (imgName.includes("hero")) return heroImage;
-    if (imgName.includes("container")) return containerImg;
-    if (imgName.includes("project")) return projectImg;
-    if (imgName.includes("shrink")) return shrinkImg;
-    if (imgName.includes("yacht")) return yachtImg;
-    return heroImage;
-  };
-
-  const bgImage = getImage(service.image);
+  // Determine background image: use service.image if available, otherwise fallback
+  const bgImage = service.image || heroImage;
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans selection:bg-primary/30">
