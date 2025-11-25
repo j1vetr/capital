@@ -66,10 +66,10 @@ export const servicesData: ServiceData[] = [
       "7/24 Operasyon Ve Raporlama"
     ],
     features: [
-      "Çelik halat ve zincir lashing uygulamaları",
-      "Ağır tonajlı yükler için özel kaynak sabitleme (welding)",
-      "Ahşap takozlama ve destekleme (dunnage)",
-      "Yük dağılımı ve zemin mukavemet hesaplamaları"
+      "Çelik Halat Ve Zincir Lashing",
+      "Özel Kaynak Sabitleme (Welding)",
+      "Ahşap Takozlama (Dunnage)",
+      "Mukavemet Hesaplamaları"
     ]
   },
   {
@@ -103,10 +103,10 @@ export const servicesData: ServiceData[] = [
       "Maliyet Etkin Çözümler"
     ],
     features: [
-      "Polyester spanzet ve kompozit şerit kullanımı",
-      "ISPM-15 standartlarında ahşap takozlama",
-      "Konteyner kapı önü güvenlik ağları",
-      "Araç lastik sabitleme sistemleri"
+      "Polyester Spanzet Ve Kompozit",
+      "ISPM-15 Ahşap Takozlama",
+      "Kapı Önü Güvenlik Ağları",
+      "Araç Lastik Sabitleme"
     ]
   },
   {
@@ -134,10 +134,10 @@ export const servicesData: ServiceData[] = [
       "Risk Analizi Ve Güvenlik"
     ],
     features: [
-      "Flat Rack ve Open Top konteyner uygulamaları",
-      "Lowbed araç üstü lashing",
-      "Vagon üstü sabitleme",
-      "Ağır yük kaydırma ve yerleştirme (Skidding/Jack-up)"
+      "Flat Rack Ve Open Top Uygulama",
+      "Lowbed Araç Üstü Lashing",
+      "Vagon Üstü Sabitleme",
+      "Ağır Yük Kaydırma (Skidding)"
     ]
   },
   {
@@ -171,10 +171,10 @@ export const servicesData: ServiceData[] = [
       "Brandalama İle Tam Koruma"
     ],
     features: [
-      "Overheight ve Overwidth yükleme uzmanlığı",
-      "Collapsible Flat Rack kullanımı",
-      "Çelik halat ve gerdirmeli sabitleme",
-      "Koruyucu köşe bent ve şilteler"
+      "Overheight Yükleme Uzmanlığı",
+      "Collapsible Flat Rack",
+      "Çelik Halat Ve Gerdirmeli",
+      "Koruyucu Köşe Bentler"
     ]
   },
   {
@@ -203,10 +203,10 @@ export const servicesData: ServiceData[] = [
       "Korozyon Önleyici Etki"
     ],
     features: [
-      "Ağır hizmet tipi PVC branda",
-      "Halkalı ve kuşaklı bağlama sistemi",
-      "Havalandırma kapakları (nem oluşumunu engellemek için)",
-      "Şeffaf pencereli branda seçenekleri"
+      "Ağır Hizmet Tipi PVC Branda",
+      "Halkalı Bağlama Sistemi",
+      "Havalandırma Kapakları",
+      "Şeffaf Pencereli Seçenekler"
     ]
   },
   {
@@ -239,10 +239,10 @@ export const servicesData: ServiceData[] = [
       "Estetik Ve Profesyonel Görünüm"
     ],
     features: [
-      "Yüksek mikronlu endüstriyel shrink film",
-      "Fermuarlı kapı uygulaması (kontrol ve bakım için)",
-      "Nem alıcı paket ilavesi",
-      "Havalandırma menfezleri"
+      "Yüksek Mikronlu Shrink Film",
+      "Fermuarlı Kapı Uygulaması",
+      "Nem Alıcı Paket İlavesi",
+      "Havalandırma Menfezleri"
     ]
   },
   {
@@ -271,10 +271,10 @@ export const servicesData: ServiceData[] = [
       "Kolay Elleçleme İmkanı"
     ],
     features: [
-      "OSB, Kontrplak veya Masif ahşap seçenekleri",
-      "Nem bariyerli folyo kaplama (iç)",
-      "Şok emici taban uygulamaları",
-      "Modüler ve demonte sandık seçenekleri"
+      "OSB, Kontrplak Veya Masif",
+      "Nem Bariyerli Folyo Kaplama",
+      "Şok Emici Taban",
+      "Modüler Sandık Seçenekleri"
     ]
   },
   {
@@ -307,10 +307,10 @@ export const servicesData: ServiceData[] = [
       "Uluslararası Standartlara Uyum"
     ],
     features: [
-      "Yumuşak dokulu polyester sapanlar",
-      "Kauçuk destekli takozlama",
-      "Tekne formuna uygun shrink wrap kaplama",
-      "Direk ve donanım demontaj/montaj desteği"
+      "Yumuşak Dokulu Polyester Sapan",
+      "Kauçuk Destekli Takozlama",
+      "Forma Uygun Shrink Wrap",
+      "Donanım Demontaj Desteği"
     ]
   },
 ];
