@@ -194,7 +194,7 @@ export default function About() {
               Projeniz için en uygun çözümü üretmek üzere uzmanlarımız sizi bekliyor.
             </p>
             <div className="flex justify-center gap-4">
-              <a href="/contact" className="px-8 py-4 bg-white text-primary font-bold uppercase tracking-wide rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
+              <a href="/iletisim" className="px-8 py-4 bg-white text-primary font-bold uppercase tracking-wide rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
                 İletişime Geçin
               </a>
             </div>

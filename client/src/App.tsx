@@ -18,11 +18,11 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/services" component={Services} />
-      <Route path="/services/:id" component={ServiceDetail} />
-      <Route path="/projects" component={Projects} />
-      <Route path="/contact" component={Contact} />
+      <Route path="/hakkimizda" component={About} />
+      <Route path="/hizmetler" component={Services} />
+      <Route path="/hizmetler/:id" component={ServiceDetail} />
+      <Route path="/projeler" component={Projects} />
+      <Route path="/iletisim" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/kvkk" component={Kvkk} />

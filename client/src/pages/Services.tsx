@@ -65,7 +65,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Link href={`/services/${service.id}`}>
+                <Link href={`/hizmetler/${service.id}`}>
                   <a className="group block">
                     <div className={`flex flex-col lg:flex-row ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 group-hover:border-primary/30`}>
                       
@@ -157,7 +157,7 @@ export default function Services() {
                    <p className="text-slate-300 mb-8">
                      Yükünüzün detaylarını bizimle paylaşın, mühendislerimiz en uygun sabitleme planını ve fiyat teklifini 2 saat içinde hazırlasın.
                    </p>
-                   <Link href="/contact">
+                   <Link href="/iletisim">
                      <Button className="w-full h-12 text-lg font-bold uppercase bg-white text-slate-900 hover:bg-primary hover:text-white transition-colors">
                        Teklif Formunu Doldur
                      </Button>

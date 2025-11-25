@@ -325,7 +325,7 @@ export default function Projects() {
                 <p className="text-slate-500 mb-6 text-sm leading-relaxed flex-grow">
                   {project.desc}
                 </p>
-                <Link href="/contact">
+                <Link href="/iletisim">
                   <a className="inline-flex items-center text-sm font-bold text-primary hover:text-blue-700 transition-colors uppercase tracking-wide mt-auto">
                     Detaylı Bilgi <ArrowRight className="ml-2 h-4 w-4" />
                   </a>

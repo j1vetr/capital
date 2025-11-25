@@ -17,10 +17,10 @@ import logoImage from "@assets/logo-white-text.webp";
 
 const navLinks = [
   { name: "Ana Sayfa", href: "/" },
-  { name: "Hakkımızda", href: "/about" },
+  { name: "Hakkımızda", href: "/hakkimizda" },
   // Hizmetler will be handled separately
-  { name: "Projeler", href: "/projects" },
-  { name: "İletişim", href: "/contact" },
+  { name: "Projeler", href: "/projeler" },
+  { name: "İletişim", href: "/iletisim" },
 ];
 
 export function Navbar() {
@@ -115,7 +115,7 @@ export function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                   <Link href="/about">
+                   <Link href="/hakkimizda">
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
                       Hakkımızda
                     </NavigationMenuLink>
@@ -130,7 +130,7 @@ export function Navbar() {
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white rounded-md shadow-lg border border-border/10">
                       {servicesData.map((service) => (
                         <li key={service.id}>
-                          <Link href={`/services/${service.id}`}>
+                          <Link href={`/hizmetler/${service.id}`}>
                             <NavigationMenuLink asChild>
                               <a
                                 className={cn(
@@ -154,7 +154,7 @@ export function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/projects">
+                  <Link href="/projeler">
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
                       Projeler
                     </NavigationMenuLink>
@@ -162,7 +162,7 @@ export function Navbar() {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                   <Link href="/contact">
+                   <Link href="/iletisim">
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
                       İletişim
                     </NavigationMenuLink>
@@ -171,7 +171,7 @@ export function Navbar() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link href="/contact">
+            <Link href="/iletisim">
               <Button 
                 className={cn(
                   "ml-4 uppercase font-black tracking-widest hidden lg:flex h-12 px-8 rounded-full relative overflow-hidden group transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(56,170,225,0.6)]",
@@ -211,7 +211,7 @@ export function Navbar() {
                     Ana Sayfa
                   </a>
                 </Link>
-                <Link href="/about">
+                <Link href="/hakkimizda">
                   <a className="text-lg font-bold py-3 px-4 rounded-md hover:bg-muted transition-colors text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
                     Hakkımızda
                   </a>
@@ -221,7 +221,7 @@ export function Navbar() {
                   <div className="text-sm font-medium text-muted-foreground mb-2 uppercase tracking-wider">Hizmetler</div>
                   <div className="pl-2 border-l-2 border-primary/20 space-y-2">
                     {servicesData.map((service) => (
-                      <Link key={service.id} href={`/services/${service.id}`}>
+                      <Link key={service.id} href={`/hizmetler/${service.id}`}>
                         <a 
                           className="block py-2 text-base font-medium text-foreground hover:text-primary"
                           onClick={() => setIsMobileMenuOpen(false)}
@@ -233,19 +233,19 @@ export function Navbar() {
                   </div>
                 </div>
 
-                <Link href="/projects">
+                <Link href="/projeler">
                   <a className="text-lg font-bold py-3 px-4 rounded-md hover:bg-muted transition-colors text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
                     Projeler
                   </a>
                 </Link>
-                 <Link href="/contact">
+                 <Link href="/iletisim">
                   <a className="text-lg font-bold py-3 px-4 rounded-md hover:bg-muted transition-colors text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
                     İletişim
                   </a>
                 </Link>
 
               <div className="pt-4 mt-2 border-t">
-                <Link href="/contact">
+                <Link href="/iletisim">
                   <Button className="w-full uppercase font-bold py-6" onClick={() => setIsMobileMenuOpen(false)}>
                     Teklif Al
                   </Button>

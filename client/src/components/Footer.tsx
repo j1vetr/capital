@@ -57,10 +57,10 @@ export function Footer() {
                 <ul className="space-y-4">
                     {[
                         { name: "Ana Sayfa", href: "/" },
-                        { name: "Hakkımızda", href: "/about" },
-                        { name: "Hizmetler", href: "/services" },
-                        { name: "Referanslar", href: "/projects" },
-                        { name: "İletişim", href: "/contact" }
+                        { name: "Hakkımızda", href: "/hakkimizda" },
+                        { name: "Hizmetler", href: "/hizmetler" },
+                        { name: "Referanslar", href: "/projeler" },
+                        { name: "İletişim", href: "/iletisim" }
                     ].map((link) => (
                         <li key={link.name}>
                             <Link href={link.href}>
@@ -82,11 +82,11 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-4">
                     {[
-                        { name: "Gemi & Proje Lashing", href: "/services/gemi-proje-lashing" },
-                        { name: "Konteyner Lashing", href: "/services/konteyner-lashing" },
-                        { name: "Proje Kargo", href: "/services/proje-kargo-lashing" },
-                        { name: "Shrink Wrap", href: "/services/shrink-wrap" },
-                        { name: "Endüstriyel Sandıklama", href: "/services/sandiklama" },
+                        { name: "Gemi & Proje Lashing", href: "/hizmetler/gemi-proje-lashing" },
+                        { name: "Konteyner Lashing", href: "/hizmetler/konteyner-lashing" },
+                        { name: "Proje Kargo", href: "/hizmetler/proje-kargo-lashing" },
+                        { name: "Shrink Wrap", href: "/hizmetler/shrink-wrap" },
+                        { name: "Endüstriyel Sandıklama", href: "/hizmetler/sandiklama" },
                     ].map((link) => (
                         <li key={link.name}>
                             <Link href={link.href}>

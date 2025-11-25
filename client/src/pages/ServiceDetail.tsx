@@ -14,7 +14,7 @@ import shrinkImg from "@assets/generated_images/industrial_shrink_wrap_packaging
 import yachtImg from "@assets/generated_images/luxury_yacht_transport_lashing.png";
 
 export default function ServiceDetail() {
-  const [match, params] = useRoute("/services/:id");
+  const [match, params] = useRoute("/hizmetler/:id");
   const serviceId = params?.id;
   const service = servicesData.find(s => s.id === serviceId);
 
@@ -72,7 +72,7 @@ export default function ServiceDetail() {
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/90 font-medium uppercase tracking-wider text-xs mb-8">
                 <Link href="/" className="hover:text-primary transition-colors">Ana Sayfa</Link>
                 <span className="text-primary">•</span>
-                <Link href="/services" className="hover:text-primary transition-colors">Hizmetler</Link>
+                <Link href="/hizmetler" className="hover:text-primary transition-colors">Hizmetler</Link>
                 <span className="text-primary">•</span>
                 <span className="text-primary font-bold">{service.title}</span>
               </div>
@@ -88,7 +88,7 @@ export default function ServiceDetail() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link href={`/contact?service=${service.id}`}>
+                <Link href={`/iletisim?service=${service.id}`}>
                   <Button size="lg" className="h-14 px-8 text-lg uppercase font-bold tracking-wide shadow-xl shadow-primary/20 hover:scale-105 transition-all">
                     Hemen Teklif Al <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -100,6 +100,7 @@ export default function ServiceDetail() {
             </motion.div>
           </div>
         </div>
+
 
         {/* Scroll Indicator */}
         <motion.div 
@@ -299,7 +300,7 @@ export default function ServiceDetail() {
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Hemen Teklif Alın</h3>
                   <p className="text-slate-500 text-sm mb-6">Projeniz için en uygun çözümü 2 saat içinde sunalım.</p>
                   
-                  <Link href={`/contact?service=${service.id}`}>
+                  <Link href={`/iletisim?service=${service.id}`}>
                     <Button className="w-full h-12 font-bold uppercase bg-primary hover:bg-blue-600 shadow-lg shadow-primary/20 mb-4">
                       Teklif İste
                     </Button>
@@ -325,7 +326,7 @@ export default function ServiceDetail() {
                <a href="tel:+902163120612" className="px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-colors">
                  +90 216 312 06 12
                </a>
-               <Link href="/contact">
+               <Link href="/iletisim">
                  <a className="px-8 py-4 rounded-xl bg-primary text-white font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-primary/20">
                    Bize Ulaşın
                  </a>

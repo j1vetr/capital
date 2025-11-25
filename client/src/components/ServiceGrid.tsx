@@ -78,7 +78,7 @@ export function ServiceGrid() {
                     {service.shortDescription}
                   </CardDescription>
                   <div className="mt-auto">
-                    <Link href={`/services/${service.id}`}>
+                    <Link href={`/hizmetler/${service.id}`}>
                       <Button variant="outline" className="w-full border-slate-200 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 uppercase font-bold tracking-wide py-6 rounded-xl group/btn">
                         Detayları İncele <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>

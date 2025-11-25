@@ -92,12 +92,12 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
-              <Link href="/contact">
+              <Link href="/iletisim">
                 <Button size="lg" className="w-full sm:w-auto h-10 sm:h-12 px-6 text-sm sm:text-base uppercase font-bold tracking-wide shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all hover:scale-105">
                   Hemen Teklif Al <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/services">
+              <Link href="/hizmetler">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto h-10 sm:h-12 px-6 text-sm sm:text-base text-white border-white/30 hover:bg-white/10 hover:text-white uppercase font-bold tracking-wide backdrop-blur-sm hover:scale-105 transition-all">
                   Hizmetleri İncele
                 </Button>
