@@ -141,40 +141,51 @@ export default function ServiceDetail() {
                    const trimmed = line.trim();
                    if (!trimmed) return null;
                    
-                   if (trimmed.startsWith('### ')) {
-                     return <h3 key={i} className="text-2xl mt-12 mb-6 pb-4 border-b border-slate-200">{trimmed.replace('### ', '')}</h3>
-                   }
-                   if (trimmed.startsWith('#### ')) {
-                     return <h4 key={i} className="text-xl mt-8 mb-4 text-primary">{trimmed.replace('#### ', '')}</h4>
-                   }
-                   if (trimmed.startsWith('* ')) {
+                   // Helper to parse bold text
+                  const parseBold = (text: string) => {
+                     const parts = text.split(/(\*\*.*?\*\*)/g);
+                     return parts.map((part, i) => {
+                       if (part.startsWith('**') && part.endsWith('**')) {
+                         return <strong key={i} className="font-bold text-slate-900">{part.slice(2, -2)}</strong>;
+                       }
+                       return part;
+                     });
+                  };
+
+                  if (trimmed.startsWith('### ')) {
+                    return <h3 key={i} className="text-2xl mt-12 mb-6 pb-4 border-b border-slate-200">{parseBold(trimmed.replace('### ', ''))}</h3>
+                  }
+                  if (trimmed.startsWith('#### ')) {
+                    return <h4 key={i} className="text-xl mt-8 mb-4 text-primary">{parseBold(trimmed.replace('#### ', ''))}</h4>
+                  }
+                  if (trimmed.startsWith('* ')) {
+                    return (
+                      <div key={i} className="flex items-start gap-3 mb-4 pl-2">
+                        <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-0.5" />
+                        <p className="m-0 text-slate-700 font-medium">{parseBold(trimmed.replace('* ', ''))}</p>
+                      </div>
+                    )
+                  }
+                  // Numbered lists styled as cards
+                  if (/^\d\./.test(trimmed)) {
+                     const [num, ...rest] = trimmed.split('.');
+                     const content = rest.join('.').trim().replace(/^\*\*/, '').replace(/\*\*:/, ':').replace(/\*\*/g, '');
+                     const [title, desc] = content.includes(':') ? content.split(':') : [content, ''];
+                     
                      return (
-                       <div key={i} className="flex items-start gap-3 mb-4 pl-2">
-                         <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-0.5" />
-                         <p className="m-0 text-slate-700 font-medium">{trimmed.replace('* ', '')}</p>
+                       <div key={i} className="flex gap-4 mb-6 p-6 bg-white rounded-xl shadow-sm border border-slate-100 hover:border-primary/30 transition-colors group">
+                         <div className="flex-shrink-0 w-10 h-10 bg-slate-100 text-slate-500 rounded-lg flex items-center justify-center font-black text-lg group-hover:bg-primary group-hover:text-white transition-colors">
+                           {num}
+                         </div>
+                         <div>
+                           <h5 className="font-bold text-slate-900 mb-1">{parseBold(title)}</h5>
+                           {desc && <p className="m-0 text-slate-500 text-sm leading-normal">{parseBold(desc)}</p>}
+                         </div>
                        </div>
                      )
-                   }
-                   // Numbered lists styled as cards
-                   if (/^\d\./.test(trimmed)) {
-                      const [num, ...rest] = trimmed.split('.');
-                      const content = rest.join('.').trim().replace(/^\*\*/, '').replace(/\*\*:/, ':').replace(/\*\*/g, '');
-                      const [title, desc] = content.includes(':') ? content.split(':') : [content, ''];
-                      
-                      return (
-                        <div key={i} className="flex gap-4 mb-6 p-6 bg-white rounded-xl shadow-sm border border-slate-100 hover:border-primary/30 transition-colors group">
-                          <div className="flex-shrink-0 w-10 h-10 bg-slate-100 text-slate-500 rounded-lg flex items-center justify-center font-black text-lg group-hover:bg-primary group-hover:text-white transition-colors">
-                            {num}
-                          </div>
-                          <div>
-                            <h5 className="font-bold text-slate-900 mb-1">{title}</h5>
-                            {desc && <p className="m-0 text-slate-500 text-sm leading-normal">{desc}</p>}
-                          </div>
-                        </div>
-                      )
-                   }
+                  }
 
-                   return <p key={i} className="mb-6">{line}</p>
+                  return <p key={i} className="mb-6">{parseBold(line)}</p>
                  })}
               </div>
 
