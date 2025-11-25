@@ -7,6 +7,7 @@ export interface ServiceData {
   fullDescription: string;
   icon: any;
   image: string | null;
+  gallery?: string[];
   benefits: string[];
   features: string[];
 }
@@ -48,7 +49,16 @@ export const servicesData: ServiceData[] = [
       Gemi üstü (on-deck) veya ambar içi (under-deck) fark etmeksizin, en zorlu deniz koşullarında bile yükünüzün varış limanına hasarsız ulaşması bizim garantimiz altındadır.
     `,
     icon: Anchor,
-    image: "hero_image_of_a_cargo_ship_at_port.png",
+    image: "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_1.webp",
+    gallery: [
+      "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_1.webp",
+      "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_2.webp",
+      "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_3.webp",
+      "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_4.webp",
+      "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_5.webp",
+      "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_6.webp",
+      "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_7.webp",
+    ],
     benefits: [
       "IMO ve CSS Code Standartlarına Tam Uyum",
       "Sertifikalı Lashing Ekipmanları (DNV-GL, Bureau Veritas onaylı)",
@@ -77,7 +87,16 @@ export const servicesData: ServiceData[] = [
       Otomobil, iş makinesi ve tekne gibi araçların konteyner içine yüklenmesi ve sabitlenmesi konusunda uzmanlaşmış ekibimiz, özel aparatlar ve teknikler kullanır.
     `,
     icon: Container,
-    image: "container_lashing_detail_shot.png",
+    image: "/assets/images/services/konteyner-lashing/konteyner-lashing_1.webp",
+    gallery: [
+      "/assets/images/services/konteyner-lashing/konteyner-lashing_1.webp",
+      "/assets/images/services/konteyner-lashing/konteyner-lashing_2.webp",
+      "/assets/images/services/konteyner-lashing/konteyner-lashing_3.webp",
+      "/assets/images/services/konteyner-lashing/konteyner-lashing_4.webp",
+      "/assets/images/services/konteyner-lashing/konteyner-lashing_5.webp",
+      "/assets/images/services/konteyner-lashing/konteyner-lashing_6.webp",
+      "/assets/images/services/konteyner-lashing/konteyner-lashing_7.webp",
+    ],
     benefits: [
       "Konteyner hasarlarını önleyen profesyonel sabitleme",
       "Hava yastığı (Airbag) uygulamaları",
@@ -105,7 +124,11 @@ export const servicesData: ServiceData[] = [
       Gerekirse yük için özel çelik konstrüksiyon beşikler veya taşıma aparatları tasarlayıp imal ediyoruz.
     `,
     icon: HardHat,
-    image: "project_cargo_being_secured.png",
+    image: "/assets/images/services/proje-kargo-lashing/proje-kargo-lashing_1.webp",
+    gallery: [
+      "/assets/images/services/proje-kargo-lashing/proje-kargo-lashing_1.webp",
+      "/assets/images/services/proje-kargo-lashing/proje-kargo-lashing_2.webp",
+    ],
     benefits: [
       "Proje bazlı özel mühendislik çözümleri",
       "Gabari dışı yük uzmanlığı",
@@ -132,7 +155,18 @@ export const servicesData: ServiceData[] = [
       Liman sahasında veya fabrika dolumlarında gerçekleştirdiğimiz bu operasyonlar, gemi kaptanı ve survey firmaları tarafından onaylanacak standartlardadır.
     `,
     icon: ShieldCheck,
-    image: null, // Fallback to icon
+    image: "/assets/images/services/flat-rack-lashing/flat-rack-lashing_1.webp",
+    gallery: [
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_1.webp",
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_2.webp",
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_3.webp",
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_4.webp",
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_5.webp",
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_6.webp",
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_7.webp",
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_8.webp",
+      "/assets/images/services/flat-rack-lashing/flat-rack-lashing_9.webp",
+    ],
     benefits: [
       "Gemi onayı garantili lashing",
       "Deniz aşırı taşımalara uygunluk",
@@ -158,7 +192,13 @@ export const servicesData: ServiceData[] = [
       Özellikle uzun süreli deniz yolculuklarında korozyon ve nem hasarını önlemek için brandalama hayati önem taşır.
     `,
     icon: Package,
-    image: null,
+    image: "/assets/images/services/brandalama/brandalama_1.webp",
+    gallery: [
+      "/assets/images/services/brandalama/brandalama_1.webp",
+      "/assets/images/services/brandalama/brandalama_2.webp",
+      "/assets/images/services/brandalama/brandalama_3.webp",
+      "/assets/images/services/brandalama/brandalama_4.webp",
+    ],
     benefits: [
       "Tam koruma sağlayan su geçirmez malzeme",
       "UV ışınlarına dayanıklılık",
@@ -185,7 +225,16 @@ export const servicesData: ServiceData[] = [
       Özellikle deniz aşırı ihracat yüklemelerinde, VCI (Uçucu Korozyon Önleyici) teknolojisi ile birleştirilerek paslanmaya karşı kesin çözüm sunar.
     `,
     icon: Package,
-    image: "industrial_shrink_wrap_packaging.png",
+    image: "/assets/images/services/shrink-wrap/shrink-wrap_1.webp",
+    gallery: [
+      "/assets/images/services/shrink-wrap/shrink-wrap_1.webp",
+      "/assets/images/services/shrink-wrap/shrink-wrap_2.webp",
+      "/assets/images/services/shrink-wrap/shrink-wrap_3.webp",
+      "/assets/images/services/shrink-wrap/shrink-wrap_4.webp",
+      "/assets/images/services/shrink-wrap/shrink-wrap_5.webp",
+      "/assets/images/services/shrink-wrap/shrink-wrap_6.webp",
+      "/assets/images/services/shrink-wrap/shrink-wrap_7.webp",
+    ],
     benefits: [
       "Mükemmel sızdırmazlık ve koruma",
       "Aerodinamik yapı (karayolu taşımaları için)",
@@ -212,7 +261,13 @@ export const servicesData: ServiceData[] = [
       Gerekli tüm ısıl işlem (fumigasyon) süreçleri tamamlanmış ve damgalanmış ahşap malzemeler kullanılır.
     `,
     icon: Box,
-    image: null,
+    image: "/assets/images/services/sandiklama/sandiklama_1.webp",
+    gallery: [
+      "/assets/images/services/sandiklama/sandiklama_1.webp",
+      "/assets/images/services/sandiklama/sandiklama_2.webp",
+      "/assets/images/services/sandiklama/sandiklama_3.webp",
+      "/assets/images/services/sandiklama/sandiklama_4.webp",
+    ],
     benefits: [
       "ISPM-15 sertifikalı ahşap malzeme",
       "Yüke özel tasarım ve üretim",
@@ -239,7 +294,16 @@ export const servicesData: ServiceData[] = [
       Shrink wrap kaplama ile birleştirildiğinde, tekneniz varış limanına fabrikadan çıktığı gibi ulaşır.
     `,
     icon: Ship,
-    image: "luxury_yacht_transport_lashing.png",
+    image: "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_1.webp",
+    gallery: [
+      "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_1.webp",
+      "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_2.webp",
+      "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_3.webp",
+      "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_4.webp",
+      "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_5.webp",
+      "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_6.webp",
+      "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_7.webp",
+    ],
     benefits: [
       "Tekne taşıma konusunda uzman ekip",
       "Gövdeye zarar vermeyen özel ekipmanlar",
@@ -265,7 +329,29 @@ export const servicesData: ServiceData[] = [
       EN 12195 standartlarına uygun yük güvenliği hesaplamaları yaparak, trafik güvenliğini tehlikeye atacak riskleri ortadan kaldırıyoruz.
     `,
     icon: Truck,
-    image: null,
+    image: "/assets/images/services/deniz-asiri/deniz-asiri_1.webp",
+    gallery: [
+      "/assets/images/services/deniz-asiri/deniz-asiri_1.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_2.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_3.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_4.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_5.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_6.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_7.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_8.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_9.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_10.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_11.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_12.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_13.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_14.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_15.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_16.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_17.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_18.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_19.webp",
+      "/assets/images/services/deniz-asiri/deniz-asiri_20.webp",
+    ],
     benefits: [
       "Tüm taşıma modları için çözüm",
       "Karayolu denetimlerine uygunluk",

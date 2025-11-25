@@ -236,6 +236,28 @@ export default function ServiceDetail() {
                 </div>
               </div>
 
+              {/* Gallery Section */}
+              {service.gallery && service.gallery.length > 0 && (
+                <div className="mb-20">
+                  <h3 className="text-2xl font-heading font-bold text-slate-900 uppercase mb-8 flex items-center gap-3">
+                    <Zap className="h-8 w-8 text-primary" />
+                    Operasyon Görselleri
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {service.gallery.map((img, i) => (
+                      <div key={i} className={`rounded-xl overflow-hidden shadow-sm border border-slate-100 group h-64 ${i === 0 ? 'md:col-span-2 md:h-96' : ''}`}>
+                        <img 
+                          src={img} 
+                          alt={`${service.title} - ${i+1}`} 
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
             </div>
 
             {/* RIGHT COLUMN: Sticky Sidebar */}
