@@ -60,11 +60,11 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_7.webp",
     ],
     benefits: [
-      "IMO ve CSS Code Standartlarına Tam Uyum",
-      "Sertifikalı Lashing Ekipmanları (DNV-GL, Bureau Veritas onaylı)",
-      "Mühendislik Hesaplamaları ve Lashing Planı",
-      "7/24 Operasyon ve Survey Raporlama",
-      "Global Limanlarda Hizmet Ağı"
+      "IMO ve CSS Code standartlarına tam uyum",
+      "Sertifikalı lashing ekipmanları (DNV-GL, BV)",
+      "Mühendislik hesaplamaları ve lashing planı",
+      "7/24 Operasyon ve survey raporlama",
+      "Global limanlarda hizmet ağı"
     ],
     features: [
       "Çelik halat ve zincir lashing uygulamaları",
@@ -98,8 +98,8 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/konteyner-lashing/konteyner-lashing_7.webp",
     ],
     benefits: [
-      "Konteyner hasarlarını önleyen profesyonel sabitleme",
-      "Hava yastığı (Airbag) uygulamaları",
+      "Konteyner hasar önleyici sabitleme",
+      "Hava yastığı (airbag) uygulamaları",
       "Gümrük ve liman kurallarına uygunluk",
       "Maliyet etkin çözümler",
       "Hızlı operasyon süresi"
@@ -133,7 +133,7 @@ export const servicesData: ServiceData[] = [
       "Proje bazlı özel mühendislik çözümleri",
       "Gabari dışı yük uzmanlığı",
       "Yüksek tonaj kapasiteli ekipman kullanımı",
-      "Risk analizi ve güvenli operasyon desteği",
+      "Risk analizi ve güvenli operasyon",
       "Anahtar teslim proje yönetimi"
     ],
     features: [
@@ -171,7 +171,7 @@ export const servicesData: ServiceData[] = [
       "Gemi onayı garantili lashing",
       "Deniz aşırı taşımalara uygunluk",
       "Hızlı ve güvenilir operasyon",
-      "Brandalam ile tam koruma seçeneği"
+      "Brandalama ile tam koruma"
     ],
     features: [
       "Overheight ve Overwidth yükleme uzmanlığı",
@@ -237,9 +237,8 @@ export const servicesData: ServiceData[] = [
     ],
     benefits: [
       "Mükemmel sızdırmazlık ve koruma",
-      "Aerodinamik yapı (karayolu taşımaları için)",
+      "Aerodinamik yapı (karayolu için)",
       "VCI katkılı korozyon önleme",
-      "Hırsızlık ve kurcalamaya karşı caydırıcılık",
       "Estetik ve profesyonel görünüm"
     ],
     features: [
@@ -272,7 +271,7 @@ export const servicesData: ServiceData[] = [
       "ISPM-15 sertifikalı ahşap malzeme",
       "Yüke özel tasarım ve üretim",
       "Darbeye ve baskıya dayanıklı yapı",
-      "Kolay elleçleme (forklift ve vinç için uygun)"
+      "Kolay elleçleme (forklift/vinç)"
     ],
     features: [
       "OSB, Kontrplak veya Masif ahşap seçenekleri",
@@ -305,10 +304,10 @@ export const servicesData: ServiceData[] = [
       "/assets/images/services/tekne-yat-lashing/tekne-yat-lashing_7.webp",
     ],
     benefits: [
-      "Tekne taşıma konusunda uzman ekip",
-      "Gövdeye zarar vermeyen özel ekipmanlar",
-      "Kişiye özel cradle (beşik) üretimi",
-      "Uluslararası taşıma standartlarına uyum"
+      "Tekne taşıma uzmanlığı",
+      "Gövde koruyucu özel ekipmanlar",
+      "Özel üretim beşik (cradle) sistemi",
+      "Uluslararası standartlara uyum"
     ],
     features: [
       "Yumuşak dokulu polyester sapanlar",
