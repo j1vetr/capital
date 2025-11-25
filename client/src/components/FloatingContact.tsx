@@ -93,9 +93,12 @@ export function FloatingContact() {
           </>
         )}
         
-        {/* Pulse effect */}
+        {/* Subtle Glow/Pulse effect */}
         {!isOpen && (
-          <span className="absolute inset-0 rounded-full animate-ping bg-primary/20 pointer-events-none" />
+          <>
+            <span className="absolute inset-0 rounded-full bg-primary/20 animate-pulse pointer-events-none scale-110" />
+            <span className="absolute inset-0 rounded-full shadow-[0_0_15px_rgba(56,170,225,0.5)] animate-pulse pointer-events-none" />
+          </>
         )}
       </Button>
     </div>
