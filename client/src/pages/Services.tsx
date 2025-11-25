@@ -74,7 +74,8 @@ export default function Services() {
                         <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10" />
                         <img 
                           src={service.image || heroImage} 
-                          alt={service.title} 
+                          alt={`${service.title} Hizmeti - Capital Lashing`}
+                          title={`${service.title} Hakkında Detaylı Bilgi`}
                           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute top-6 left-6 z-20 w-12 h-12 bg-white/90 backdrop-blur rounded-xl flex items-center justify-center text-primary shadow-lg">

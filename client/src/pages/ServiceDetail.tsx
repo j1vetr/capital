@@ -248,7 +248,8 @@ export default function ServiceDetail() {
                       <div key={i} className={`rounded-xl overflow-hidden shadow-sm border border-slate-100 group h-64 ${i === 0 ? 'md:col-span-2 md:h-96' : ''}`}>
                         <img 
                           src={img} 
-                          alt={`${service.title} - ${i+1}`} 
+                          alt={`${service.title} Operasyon Görseli ${i+1} - Capital Lashing`} 
+                          title={`${service.title} Referans Uygulama ${i+1}`}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                           loading="lazy"
                         />
