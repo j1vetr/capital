@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck, Heart } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck } from "lucide-react";
 import logoImage from "@assets/logo-white-text.webp";
 
 export function Footer() {
@@ -156,11 +156,24 @@ export function Footer() {
                 <Link href="/kvkk">
                   <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">KVKK</a>
                 </Link>
-                <div className="hidden md:flex items-center gap-2 text-sm border-l border-slate-800 pl-8">
-                   <a href="https://toov.com.tr" target="_blank" rel="noopener noreferrer" className="font-medium text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group">
-                     <span className="flex items-center gap-1 group-hover:text-red-500 transition-colors">TOOV <Heart className="h-3 w-3 fill-current" /></span>
-                     <span className="opacity-70 group-hover:opacity-100">tarafından yapılmıştır</span>
-                   </a>
+                <div className="hidden md:flex items-center gap-3 text-sm border-l border-slate-800 pl-8">
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-slate-600">
+                    Geliştirici:
+                  </span>
+                  <a
+                    href="https://toov.com.tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center"
+                    title="TOOV – Yazılım & Dijital Çözümler"
+                  >
+                    <img
+                      src="/toov-logo.png"
+                      alt="TOOV"
+                      className="h-6 w-auto opacity-40 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(56,170,225,0.7)]"
+                    />
+                    <span className="absolute -inset-2 rounded-lg bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
+                  </a>
                 </div>
             </div>
         </div>
