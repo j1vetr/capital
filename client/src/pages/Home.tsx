@@ -50,7 +50,7 @@ export default function Home() {
         <Features />
         
         {/* ── Nasıl Çalışıyoruz – Award-level redesign ── */}
-        <section className="py-28 md:py-40 bg-slate-950 relative overflow-hidden">
+        <section className="py-28 md:py-40 bg-slate-900 relative overflow-hidden">
 
           {/* Subtle dot grid */}
           <div className="absolute inset-0 bg-[radial-gradient(#38aae1_1px,transparent_1px)] [background-size:52px_52px] opacity-[0.04] pointer-events-none" />
