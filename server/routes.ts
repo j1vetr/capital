@@ -10,6 +10,7 @@ const contactSchema = z.object({
   contact: z.string().min(3, "İletişim bilgisi zorunludur"),
   service: z.string().min(1, "Hizmet seçimi zorunludur"),
   message: z.string().min(10, "Mesaj en az 10 karakter olmalı"),
+  recaptchaToken: z.string().min(1, "reCAPTCHA doğrulaması zorunludur"),
 });
 
 function createTransporter() {
@@ -25,6 +26,20 @@ function createTransporter() {
       rejectUnauthorized: false,
     },
   });
+}
+
+async function verifyRecaptcha(token: string): Promise<boolean> {
+  try {
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+    });
+    const data = await res.json() as { success: boolean; score?: number };
+    return data.success;
+  } catch {
+    return false;
+  }
 }
 
 // Admin e-mail template (dark, professional)
@@ -59,9 +74,8 @@ function adminEmailHtml(data: z.infer<typeof contactSchema>): string {
           <!-- Header -->
           <tr>
             <td style="background:linear-gradient(135deg,#38aae1,#1d6ea8);padding:40px 40px 32px;border-radius:16px 16px 0 0;text-align:center;">
-              <img src="https://capitallashing.com/logo.webp" alt="Capital Lashing" style="height:48px;margin-bottom:16px;filter:brightness(0) invert(1);" />
               <div style="display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:6px 18px;margin-bottom:16px;">
-                <span style="color:rgba(255,255,255,0.9);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Yeni Teklif Talebi</span>
+                <span style="color:rgba(255,255,255,0.9);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">🚢 Yeni Teklif Talebi</span>
               </div>
               <h1 style="margin:0;color:#ffffff;font-size:26px;font-weight:900;letter-spacing:-0.5px;">Teklif İsteği Alındı</h1>
             </td>
@@ -157,19 +171,15 @@ function customerEmailHtml(name: string, serviceName: string): string {
           <!-- Header -->
           <tr>
             <td style="background:linear-gradient(135deg,#38aae1,#1d6ea8);padding:48px 40px 40px;border-radius:16px 16px 0 0;text-align:center;">
-              <img src="https://capitallashing.com/logo.webp" alt="Capital Lashing" style="height:48px;margin-bottom:24px;filter:brightness(0) invert(1);" />
-              <div style="width:64px;height:64px;background:rgba(255,255,255,0.15);border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;">
-                <span style="font-size:28px;">✓</span>
-              </div>
-              <h1 style="margin:0 0 8px;color:#ffffff;font-size:26px;font-weight:900;">Talebiniz Alındı!</h1>
-              <p style="margin:0;color:rgba(255,255,255,0.8);font-size:15px;">En kısa sürede sizinle iletişime geçeceğiz.</p>
+              <div style="width:72px;height:72px;background:rgba(255,255,255,0.2);border-radius:50%;margin:0 auto 20px;line-height:72px;font-size:32px;">✅</div>
+              <h1 style="margin:0 0 8px;color:#ffffff;font-size:28px;font-weight:900;">Talebiniz Alındı!</h1>
+              <p style="margin:0;color:rgba(255,255,255,0.85);font-size:16px;">En kısa sürede sizinle iletişime geçeceğiz.</p>
             </td>
           </tr>
 
           <!-- Body -->
           <tr>
             <td style="background:#ffffff;padding:40px;">
-
               <p style="margin:0 0 24px;color:#334155;font-size:16px;line-height:1.7;">
                 Sayın <strong>${name}</strong>,
               </p>
@@ -179,48 +189,43 @@ function customerEmailHtml(name: string, serviceName: string): string {
 
               <!-- Info Box -->
               <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px;margin-bottom:32px;">
-                <p style="margin:0 0 16px;color:#334155;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Bizi Doğrudan Arayabilirsiniz</p>
+                <p style="margin:0 0 16px;color:#334155;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Bizi Doğrudan Arayabilirsiniz</p>
                 <table width="100%" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td style="padding:8px 0;border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;">
                       <span style="color:#64748b;font-size:14px;">📞 Telefon</span>
                       <span style="float:right;color:#38aae1;font-weight:700;font-size:14px;">+90 216 312 06 12</span>
                     </td>
                   </tr>
                   <tr>
-                    <td style="padding:8px 0;border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;">
                       <span style="color:#64748b;font-size:14px;">✉️ E-Posta</span>
                       <span style="float:right;color:#38aae1;font-weight:700;font-size:14px;">info@capitallashing.com</span>
                     </td>
                   </tr>
                   <tr>
-                    <td style="padding:8px 0;">
-                      <span style="color:#64748b;font-size:14px;">🕐 Çalışma Saatleri</span>
-                      <span style="float:right;color:#334155;font-weight:600;font-size:14px;">7/24 Operasyonel Destek</span>
+                    <td style="padding:10px 0;">
+                      <span style="color:#64748b;font-size:14px;">🕐 Destek</span>
+                      <span style="float:right;color:#334155;font-weight:600;font-size:14px;">7/24 Operasyonel</span>
                     </td>
                   </tr>
                 </table>
               </div>
 
               <!-- CTA -->
-              <div style="text-align:center;margin-bottom:8px;">
+              <div style="text-align:center;">
                 <a href="https://capitallashing.com" style="display:inline-block;background:linear-gradient(135deg,#38aae1,#1d6ea8);color:#ffffff;text-decoration:none;padding:14px 40px;border-radius:100px;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">
                   Web Sitemizi Ziyaret Edin
                 </a>
               </div>
-
             </td>
           </tr>
 
           <!-- Footer -->
           <tr>
             <td style="background:#f8fafc;padding:24px 40px;border-radius:0 0 16px 16px;text-align:center;border-top:1px solid #e2e8f0;">
-              <p style="margin:0 0 8px;color:#94a3b8;font-size:12px;">
-                <strong style="color:#64748b;">Capital Lashing & Port Services</strong>
-              </p>
-              <p style="margin:0;color:#cbd5e1;font-size:11px;">
-                Abdurrahmangazi Mah. Ebubekir Cad. No:26, Sancaktepe / İstanbul
-              </p>
+              <p style="margin:0 0 6px;color:#64748b;font-size:13px;font-weight:700;">Capital Lashing &amp; Port Services</p>
+              <p style="margin:0;color:#94a3b8;font-size:12px;">Abdurrahmangazi Mah. Ebubekir Cad. No:26, Sancaktepe / İstanbul</p>
             </td>
           </tr>
 
@@ -233,18 +238,24 @@ function customerEmailHtml(name: string, serviceName: string): string {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  
+
   app.post("/api/contact", async (req, res) => {
     try {
       const parsed = contactSchema.safeParse(req.body);
       if (!parsed.success) {
-        return res.status(400).json({ 
-          error: "Geçersiz form verisi", 
-          details: parsed.error.errors 
+        return res.status(400).json({
+          error: "Geçersiz form verisi",
+          details: parsed.error.errors,
         });
       }
 
       const data = parsed.data;
+
+      // Verify reCAPTCHA
+      const captchaOk = await verifyRecaptcha(data.recaptchaToken);
+      if (!captchaOk) {
+        return res.status(400).json({ error: "reCAPTCHA doğrulaması başarısız. Lütfen tekrar deneyin." });
+      }
 
       const serviceMap: Record<string, string> = {
         "gemi-proje-lashing": "Gemi & Proje Lashing",
@@ -270,7 +281,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         html: adminEmailHtml(data),
       });
 
-      // Try to send customer confirmation (best effort – if contact is email)
+      // Send customer confirmation if contact looks like an email
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (emailRegex.test(data.contact)) {
         await transporter.sendMail({
