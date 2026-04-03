@@ -141,41 +141,51 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-4">
-            <p className="text-sm text-slate-500 font-medium">
-                © {new Date().getFullYear()} Capital Lashing & Port Services. Tüm Hakları Saklıdır.
-            </p>
-            
-            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-2">
-                <Link href="/privacy">
-                  <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Gizlilik Politikası</a>
-                </Link>
-                <Link href="/terms">
-                  <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Kullanım Koşulları</a>
-                </Link>
-                <Link href="/kvkk">
-                  <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">KVKK</a>
-                </Link>
-                <div className="hidden md:flex items-center gap-3 text-sm border-l border-slate-800 pl-8">
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-slate-600">
-                    Geliştirici:
-                  </span>
-                  <a
-                    href="https://toov.com.tr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative flex items-center"
-                    title="TOOV – Yazılım & Dijital Çözümler"
-                  >
-                    <img
-                      src="/toov-logo.png"
-                      alt="TOOV"
-                      className="h-6 w-auto opacity-40 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(56,170,225,0.7)]"
-                    />
-                    <span className="absolute -inset-2 rounded-lg bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
-                  </a>
-                </div>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-4">
+
+          {/* Copyright - mobilde ortada */}
+          <p className="text-sm text-slate-500 font-medium text-center md:text-left order-2 md:order-1">
+            © {new Date().getFullYear()} Capital Lashing & Port Services. Tüm Hakları Saklıdır.
+          </p>
+
+          {/* Sağ grup: linkler + TOOV */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 order-1 md:order-2">
+
+            {/* Yasal linkler */}
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
+              <Link href="/privacy">
+                <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Gizlilik Politikası</a>
+              </Link>
+              <Link href="/terms">
+                <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Kullanım Koşulları</a>
+              </Link>
+              <Link href="/kvkk">
+                <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">KVKK</a>
+              </Link>
             </div>
+
+            {/* TOOV Geliştirici */}
+            <div className="flex items-center gap-2 sm:border-l sm:border-slate-800 sm:pl-6">
+              <span className="text-xs font-bold tracking-[0.2em] uppercase text-slate-600">
+                Geliştirici:
+              </span>
+              <a
+                href="https://toov.com.tr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center"
+                title="TOOV – Yazılım & Dijital Çözümler"
+              >
+                <img
+                  src="/toov-logo.png"
+                  alt="TOOV"
+                  className="h-5 w-auto opacity-40 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(56,170,225,0.7)]"
+                />
+                <span className="absolute -inset-2 rounded-lg bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
+              </a>
+            </div>
+
+          </div>
         </div>
       </div>
     </footer>
