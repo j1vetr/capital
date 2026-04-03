@@ -1,116 +1,134 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Phone, Mail, Clock, Zap } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
+import { motion } from "framer-motion";
+
+const INFO = [
+  {
+    icon: Phone,
+    label: "Bizi Arayın",
+    value: "+90 216 312 06 12",
+    href: "tel:+902163120612",
+    color: "bg-primary/10 text-primary",
+  },
+  {
+    icon: Mail,
+    label: "E-Posta",
+    value: "info@capitallashing.com",
+    href: "mailto:info@capitallashing.com",
+    color: "bg-sky-100 text-sky-600",
+  },
+  {
+    icon: Clock,
+    label: "Operasyon",
+    value: "7/24 – 365 Gün",
+    href: null,
+    color: "bg-emerald-100 text-emerald-600",
+  },
+];
 
 export function ContactSection() {
   return (
-    <section className="py-24 bg-white border-t border-slate-100 relative">
-      <div className="container px-4 md:px-6">
-        <div className="bg-slate-900 rounded-3xl overflow-hidden shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-5">
-            
-            {/* Left: Info */}
-            <div className="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-between relative overflow-hidden">
-               {/* Pattern bg */}
-               <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                 <div className="absolute -right-10 -top-10 w-64 h-64 rounded-full border-2 border-white"></div>
-                 <div className="absolute -right-20 -top-20 w-96 h-96 rounded-full border-2 border-white"></div>
-               </div>
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
+      {/* Ambient */}
+      <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-primary/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-[80px] pointer-events-none translate-y-1/2 -translate-x-1/3" />
 
-               <div className="relative z-10">
-                 <h3 className="text-3xl font-heading font-black uppercase mb-6 leading-tight">
-                   Projenizi<br/>Başlatalım
-                 </h3>
-                 <p className="text-blue-100 mb-12 text-lg">
-                   Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli taşıma planını oluştursun.
-                 </p>
-                 
-                 <div className="space-y-6">
-                   <div className="flex items-center gap-4">
-                     <div className="bg-white/20 p-3 rounded-full">
-                       <Phone className="h-5 w-5" />
-                     </div>
-                     <div>
-                       <p className="text-xs text-blue-200 uppercase font-bold tracking-wider">Bizi Arayın</p>
-                       <p className="text-lg font-bold">+90 216 312 06 12</p>
-                     </div>
-                   </div>
-                   
-                   <div className="flex items-center gap-4">
-                     <div className="bg-white/20 p-3 rounded-full">
-                       <Mail className="h-5 w-5" />
-                     </div>
-                     <div>
-                       <p className="text-xs text-blue-200 uppercase font-bold tracking-wider">E-Posta Gönderin</p>
-                       <p className="text-lg font-bold">info@capitallashing.com</p>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+      <div className="container px-4 md:px-6 relative z-10">
 
-               <div className="mt-12 relative z-10">
-                 <p className="text-sm text-blue-100 opacity-80">
-                   © Capital Lashing 7/24 Operasyon Merkezi
-                 </p>
-               </div>
-            </div>
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-bold tracking-[0.2em] uppercase mb-5">
+            <Zap className="h-3 w-3" /> Hızlı Teklif
+          </span>
+          <h2 className="text-3xl md:text-5xl font-heading font-black uppercase text-slate-900 mb-4 leading-none">
+            Projenizi <span className="text-primary">Başlatalım</span>
+          </h2>
+          <p className="text-slate-500 text-lg max-w-xl mx-auto">
+            Formu doldurun, 2 saat içinde uzman ekibimizden dönüş alın.
+          </p>
+        </motion.div>
 
-            {/* Right: Form */}
-            <div className="lg:col-span-3 p-10 md:p-16 bg-white">
-              <div className="max-w-lg">
-                <h3 className="text-2xl font-heading font-bold text-slate-900 uppercase mb-8">Hızlı Teklif Formu</h3>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">Ad Soyad</label>
-                      <Input className="bg-slate-50 border-slate-200 h-12" placeholder="İsim Soyisim" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">Firma</label>
-                      <Input className="bg-slate-50 border-slate-200 h-12" placeholder="Firma Unvanı" />
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">İletişim</label>
-                      <Input className="bg-slate-50 border-slate-200 h-12" placeholder="Telefon veya E-posta" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">Hizmet</label>
-                      <Select>
-                        <SelectTrigger className="bg-slate-50 border-slate-200 h-12">
-                          <SelectValue placeholder="Seçiniz" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="container">Konteyner Lashing</SelectItem>
-                          <SelectItem value="project">Proje Kargo</SelectItem>
-                          <SelectItem value="shrink">Shrink Wrap</SelectItem>
-                          <SelectItem value="other">Diğer</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
+        {/* Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="max-w-6xl mx-auto"
+        >
+          <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/8 border border-slate-100 overflow-hidden grid grid-cols-1 lg:grid-cols-5">
 
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">Detaylar</label>
-                    <Textarea 
-                      placeholder="Yük hakkında kısa bilgi..." 
-                      className="min-h-[100px] bg-slate-50 border-slate-200 resize-none"
-                    />
-                  </div>
+            {/* ── Left Panel ── */}
+            <div className="lg:col-span-2 bg-slate-950 p-10 md:p-14 flex flex-col justify-between relative overflow-hidden">
+              {/* Decorative circles */}
+              <div className="absolute -right-16 -top-16 w-64 h-64 rounded-full border border-white/5 pointer-events-none" />
+              <div className="absolute -right-28 -top-28 w-96 h-96 rounded-full border border-white/[0.03] pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-                  <Button size="lg" className="w-full h-14 text-lg uppercase font-bold tracking-wide bg-slate-900 hover:bg-slate-800">
-                    Teklifi Gönder <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </form>
+              <div className="relative z-10">
+                {/* Mini badge */}
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/15 border border-primary/25 rounded-full text-primary text-[10px] font-black tracking-[0.2em] uppercase mb-8">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  İletişim
+                </span>
+
+                <h3 className="text-3xl md:text-4xl font-heading font-black uppercase text-white leading-tight mb-5">
+                  Hemen<br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-sky-300">
+                    İletişime<br />Geçin
+                  </span>
+                </h3>
+                <p className="text-slate-400 text-base leading-relaxed mb-12">
+                  Uzman ekibimiz yükünüzü incelesin, en güvenli ve uygun fiyatlı taşıma planını oluştursun.
+                </p>
+
+                {/* Info items */}
+                <div className="space-y-5">
+                  {INFO.map((item) => {
+                    const Icon = item.icon;
+                    const content = (
+                      <div className="flex items-center gap-4 group">
+                        <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center text-white shrink-0 group-hover:bg-primary/20 group-hover:border-primary/30 transition-colors duration-300">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-black tracking-[0.2em] uppercase text-slate-500 mb-0.5">{item.label}</p>
+                          <p className="text-white font-bold text-sm group-hover:text-primary transition-colors duration-300">{item.value}</p>
+                        </div>
+                      </div>
+                    );
+                    return item.href ? (
+                      <a key={item.label} href={item.href}>{content}</a>
+                    ) : (
+                      <div key={item.label}>{content}</div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="relative z-10 mt-12 pt-8 border-t border-white/5">
+                <p className="text-xs text-slate-600 font-medium">
+                  © {new Date().getFullYear()} Capital Lashing & Port Services
+                </p>
               </div>
             </div>
 
+            {/* ── Right Panel: Form ── */}
+            <div className="lg:col-span-3 p-10 md:p-14">
+              <h4 className="text-xl font-heading font-black uppercase text-slate-900 mb-8 tracking-tight">
+                Teklif Formu
+              </h4>
+              <ContactForm />
+            </div>
+
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
