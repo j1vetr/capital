@@ -69,20 +69,12 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <span className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 border border-primary/25 rounded-full text-primary text-xs font-bold tracking-[0.25em] uppercase mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                Sürecimiz
-              </span>
-              <h2 className="text-5xl sm:text-6xl md:text-8xl font-heading font-black uppercase leading-none mb-6">
-                <span className="text-white">Nasıl</span>
-                <br />
+              <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase leading-none">
+                <span className="text-white">Nasıl </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-sky-300">
                   Çalışıyoruz?
                 </span>
               </h2>
-              <p className="text-slate-400 text-lg max-w-lg leading-relaxed">
-                İlk temastan sertifikaya kadar sorunsuz bir operasyon için izlediğimiz 4 adım
-              </p>
             </motion.div>
 
             {/* ── Steps ── */}
