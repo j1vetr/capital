@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
@@ -13,7 +14,6 @@ const heroImage = "/assets/images/services/gemi-proje-lashing/gemi-proje-lashing
 
 export default function Projects() {
   useEffect(() => {
-    document.title = "Referanslar & Projeler | Capital Lashing";
     window.scrollTo(0, 0);
   }, []);
 
@@ -263,6 +263,15 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans">
+      <SEO
+        title="Referanslar & Tamamlanan Projeler | Capital Lashing"
+        description="Capital Lashing'in tamamladığı lashing ve port hizmetleri projeleri. Endüstriyel ekipman, tekne, proje kargo ve konteyner lashing referansları. Fotoğraflı gerçek operasyonlar."
+        canonical="https://capitallashing.com/projeler"
+        breadcrumbs={[
+          { name: "Ana Sayfa", url: "https://capitallashing.com" },
+          { name: "Projeler", url: "https://capitallashing.com/projeler" },
+        ]}
+      />
       <Navbar />
       
       {/* Hero */}

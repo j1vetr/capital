@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
+import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Shield, Target, Users, TrendingUp, Heart, Lightbulb, CheckCircle2, HelpCircle, Award, Globe, Truck } from "lucide-react";
 import { useEffect } from "react";
@@ -16,7 +17,6 @@ import heroImage from "/assets/images/services/flat-rack-lashing/flat-rack-lashi
 
 export default function About() {
   useEffect(() => {
-    document.title = "Hakkımızda | Capital Lashing";
     window.scrollTo(0, 0);
   }, []);
 
@@ -52,6 +52,15 @@ export default function About() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans selection:bg-primary/30">
+      <SEO
+        title="Hakkımızda | Capital Lashing & Port Services – 10 Yıllık Deneyim"
+        description="Capital Lashing; 10+ yıllık tecrübesi, 5.000+ tamamlanmış operasyonu ve DNV-GL onaylı ekipmanlarıyla Türkiye'nin lider lashing ve liman hizmetleri firmasıdır."
+        canonical="https://capitallashing.com/hakkimizda"
+        breadcrumbs={[
+          { name: "Ana Sayfa", url: "https://capitallashing.com" },
+          { name: "Hakkımızda", url: "https://capitallashing.com/hakkimizda" },
+        ]}
+      />
       <Navbar />
       
       <main className="flex-grow">

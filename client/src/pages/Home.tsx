@@ -4,15 +4,18 @@ import { ServiceGrid } from "@/components/ServiceGrid";
 import { Features } from "@/components/Features";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 export default function Home() {
-  useEffect(() => {
-    document.title = "Capital Lashing & Port Services | Profesyonel Yük Sabitleme";
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans">
+      <SEO
+        title="Capital Lashing & Port Services | İstanbul Lashing Firması – Yük Sabitleme"
+        description="İstanbul merkezli lashing ve liman hizmetleri firması. Gemi proje lashing, konteyner sabitleme, shrink wrap, sandıklama. DNV-GL onaylı ekipman, 7/24 operasyon. Teklif alın."
+        canonical="https://capitallashing.com"
+        type="local_business"
+        breadcrumbs={[{ name: "Ana Sayfa", url: "https://capitallashing.com" }]}
+      />
       <Navbar />
       <main className="flex-grow">
         <Hero />
@@ -58,32 +61,25 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-heading font-black uppercase text-white mb-6">
                 Nasıl Çalışıyoruz?
               </h2>
-              <div className="h-1.5 w-24 bg-white rounded-full mb-6 opacity-50" />
-              <p className="text-blue-50 text-xl leading-relaxed">
-                Her yük bizim için özel bir projedir. Uluslararası standartlarda, planlı ve raporlanabilir iş akışımız.
+              <div className="h-1.5 w-24 bg-white/30 rounded-full mb-8" />
+              <p className="text-xl text-white/80 leading-relaxed">
+                Güvenli ve sorunsuz operasyon için izlediğimiz 4 temel adım
               </p>
             </div>
 
-            <div className="relative mb-12">
-              {/* Connecting Line (Desktop) */}
-              <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-white/20 -translate-y-1/2 z-0" />
-
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
-                {[
-                  { step: "01", title: "Keşif & Analiz", desc: "Yükün teknik özelliklerinin ve risklerin incelenmesi." },
-                  { step: "02", title: "Planlama", desc: "Mühendislik hesapları ve ekipman seçimi." },
-                  { step: "03", title: "Uygulama", desc: "Sertifikalı ekibimizle güvenli sabitleme." },
-                  { step: "04", title: "Raporlama", desc: "Fotoğraflı detaylı teknik rapor sunumu." }
-                ].map((item, i) => (
-                  <div key={i} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 text-center group hover:-translate-y-3 transition-all duration-300 hover:bg-white hover:shadow-2xl relative overflow-hidden">
-                    <div className="w-20 h-20 bg-white text-primary rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-8 shadow-lg group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                      {item.step}
-                    </div>
-                    <h3 className="text-xl font-bold font-heading mb-3 text-white uppercase group-hover:text-slate-900 transition-colors">{item.title}</h3>
-                    <p className="text-blue-50 text-sm leading-relaxed group-hover:text-slate-500 transition-colors">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { num: "01", title: "Talep & Keşif", desc: "Yük detaylarınızı alır, gerekirse saha keşfi yaparız." },
+                { num: "02", title: "Mühendislik", desc: "Lashing hesaplamaları ve malzeme planı hazırlanır." },
+                { num: "03", title: "Operasyon", desc: "Sertifikalı ekip sahadaki uygulamayı gerçekleştirir." },
+                { num: "04", title: "Sertifikasyon", desc: "Fotoğraflı rapor ve lashing sertifikası teslim edilir." },
+              ].map((step) => (
+                <div key={step.num} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/20 transition-colors">
+                  <div className="text-5xl font-black text-white/20 mb-4">{step.num}</div>
+                  <h3 className="text-xl font-bold text-white uppercase mb-3">{step.title}</h3>
+                  <p className="text-white/70 leading-relaxed text-sm">{step.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

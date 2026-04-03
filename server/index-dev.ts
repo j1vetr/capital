@@ -7,6 +7,7 @@ import { nanoid } from "nanoid";
 import { createServer as createViteServer, createLogger } from "vite";
 
 import runApp from "./app";
+import { getMetaForPath, buildMetaHtml } from "./seo";
 
 import viteConfig from "../vite.config";
 
@@ -51,6 +52,17 @@ export async function setupVite(app: Express, server: Server) {
         `src="/src/main.tsx"`,
         `src="/src/main.tsx?v=${nanoid()}"`,
       );
+
+      // Server-side SEO meta injection
+      try {
+        const pathname = url.split("?")[0];
+        const meta = getMetaForPath(pathname);
+        const metaHtml = buildMetaHtml(meta);
+        template = template.replace("<!-- SEO_PLACEHOLDER -->", metaHtml);
+      } catch {
+        template = template.replace("<!-- SEO_PLACEHOLDER -->", "");
+      }
+
       const page = await vite.transformIndexHtml(url, template);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {

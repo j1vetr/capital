@@ -1,12 +1,19 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, ChevronRight, Shield, Anchor, FileText, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronRight, Shield, Anchor, FileText, Zap, HelpCircle } from "lucide-react";
 import { Link, useRoute } from "wouter";
 import { servicesData } from "@/data/services";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.png";
 import containerImg from "@assets/generated_images/container_lashing_detail_shot.png";
 import projectImg from "@assets/generated_images/project_cargo_being_secured.png";
@@ -20,7 +27,6 @@ export default function ServiceDetail() {
 
   useEffect(() => {
     if (service) {
-      document.title = `${service.title} - Capital Lashing & Port Services`;
       window.scrollTo(0, 0);
     }
   }, [service]);
@@ -47,6 +53,20 @@ export default function ServiceDetail() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans selection:bg-primary/30">
+      <SEO
+        title={service.seoTitle}
+        description={service.metaDescription}
+        canonical={`https://capitallashing.com/hizmetler/${service.id}`}
+        type="service"
+        serviceName={service.title}
+        serviceDescription={service.shortDescription}
+        faq={service.faq}
+        breadcrumbs={[
+          { name: "Ana Sayfa", url: "https://capitallashing.com" },
+          { name: "Hizmetler", url: "https://capitallashing.com/hizmetler" },
+          { name: service.title, url: `https://capitallashing.com/hizmetler/${service.id}` },
+        ]}
+      />
       <Navbar />
       
       {/* 1. Immersive Hero Section */}
@@ -312,6 +332,60 @@ export default function ServiceDetail() {
 
           </div>
         </div>
+
+        {/* Port/Location Coverage */}
+        {service.ports && service.ports.length > 0 && (
+          <div className="bg-primary/5 border-y border-primary/10 py-8">
+            <div className="container px-4 md:px-6">
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="text-sm font-bold text-slate-500 uppercase tracking-widest shrink-0">
+                  Hizmet Bölgeleri:
+                </div>
+                {service.ports.map(port => (
+                  <span key={port} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-primary/20 text-slate-700 text-sm font-semibold rounded-full shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                    {port}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* FAQ Section */}
+        {service.faq && service.faq.length > 0 && (
+          <div className="bg-white border-t border-slate-100 py-20">
+            <div className="container px-4 md:px-6 max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-10">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <HelpCircle className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-heading font-black uppercase text-slate-900">
+                    Sıkça Sorulan Sorular
+                  </h2>
+                  <p className="text-slate-500 text-sm">{service.title} hakkında merak edilenler</p>
+                </div>
+              </div>
+              <Accordion type="single" collapsible className="space-y-3">
+                {service.faq.map((item, i) => (
+                  <AccordionItem
+                    key={i}
+                    value={`faq-${i}`}
+                    className="bg-slate-50 border border-slate-200 rounded-xl px-6 data-[state=open]:border-primary/30 data-[state=open]:bg-primary/5 transition-colors"
+                  >
+                    <AccordionTrigger className="text-left font-bold text-slate-900 hover:no-underline hover:text-primary py-5 text-base">
+                      {item.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-slate-600 leading-relaxed pb-5 text-base">
+                      {item.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        )}
 
         {/* Bottom CTA Strip */}
         <section className="bg-slate-900 py-16 border-t border-white/10">

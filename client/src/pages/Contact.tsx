@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { useEffect, useRef, useState } from "react";
 import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.png";
 import { Button } from "@/components/ui/button";
@@ -96,7 +97,6 @@ export default function Contact() {
   const selectedService = watch("service");
 
   useEffect(() => {
-    document.title = "İletişim | Capital Lashing";
     window.scrollTo(0, 0);
 
     const params = new URLSearchParams(window.location.search);
@@ -143,6 +143,15 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans">
+      <SEO
+        title="İletişim & Teklif Talebi | Capital Lashing – 7/24 Destek"
+        description="Capital Lashing ile iletişime geçin. Teklif talebi, acil operasyon desteği: +90 216 312 06 12 | info@capitallashing.com. Sancaktepe / İstanbul ofisimiz. 7/24 yanınızdayız."
+        canonical="https://capitallashing.com/iletisim"
+        breadcrumbs={[
+          { name: "Ana Sayfa", url: "https://capitallashing.com" },
+          { name: "İletişim", url: "https://capitallashing.com/iletisim" },
+        ]}
+      />
       <Navbar />
 
       {/* Page Header */}
