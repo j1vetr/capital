@@ -7,9 +7,10 @@ channel = "stable-24_05"
 packages = ["imagemagick"]
 
 [deployment]
-deploymentTarget = "static"
+deploymentTarget = "autoscale"
 build = ["npm", "run", "build"]
 publicDir = "dist/public"
+run = ["node", "./dist/index.cjs"]
 
 [[ports]]
 localPort = 5000
@@ -36,8 +37,18 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npm run dev:client"
+args = "npm run dev"
 waitForPort = 5000
 
 [agent]
-mockupState = "MOCKUP"
+mockupState = "FULLSTACK"
+
+[userenv]
+
+[userenv.shared]
+SMTP_HOST = "mail.toov.com.tr"
+SMTP_PORT = "465"
+SMTP_SECURE = "true"
+SMTP_USER = "no-reply@toov.com.tr"
+SMTP_FROM = "no-reply@toov.com.tr"
+ADMIN_EMAIL = "info@capitallashing.com"
