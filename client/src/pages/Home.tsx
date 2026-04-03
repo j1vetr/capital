@@ -5,6 +5,8 @@ import { Features } from "@/components/Features";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+import { motion } from "framer-motion";
+import { SearchCheck, Ruler, HardHat, BadgeCheck } from "lucide-react";
 
 export default function Home() {
   return (
@@ -47,40 +49,146 @@ export default function Home() {
         <ServiceGrid />
         <Features />
         
-        {/* Operational Flow - Redesigned Blue Focus */}
-        <section className="py-32 bg-primary relative overflow-hidden">
-          {/* Bg decoration */}
-          <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
-          
-          {/* Decorative blobs */}
-          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[800px] h-[800px] bg-white/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-3xl pointer-events-none" />
+        {/* ── Nasıl Çalışıyoruz – Award-level redesign ── */}
+        <section className="py-28 md:py-40 bg-slate-950 relative overflow-hidden">
+
+          {/* Subtle dot grid */}
+          <div className="absolute inset-0 bg-[radial-gradient(#38aae1_1px,transparent_1px)] [background-size:52px_52px] opacity-[0.04] pointer-events-none" />
+
+          {/* Ambient glows */}
+          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="container px-4 md:px-6 relative z-10">
-             <div className="flex flex-col items-center text-center mb-20 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-heading font-black uppercase text-white mb-6">
-                Nasıl Çalışıyoruz?
-              </h2>
-              <div className="h-1.5 w-24 bg-white/30 rounded-full mb-8" />
-              <p className="text-xl text-white/80 leading-relaxed">
-                Güvenli ve sorunsuz operasyon için izlediğimiz 4 temel adım
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { num: "01", title: "Talep & Keşif", desc: "Yük detaylarınızı alır, gerekirse saha keşfi yaparız." },
-                { num: "02", title: "Mühendislik", desc: "Lashing hesaplamaları ve malzeme planı hazırlanır." },
-                { num: "03", title: "Operasyon", desc: "Sertifikalı ekip sahadaki uygulamayı gerçekleştirir." },
-                { num: "04", title: "Sertifikasyon", desc: "Fotoğraflı rapor ve lashing sertifikası teslim edilir." },
-              ].map((step) => (
-                <div key={step.num} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/20 transition-colors">
-                  <div className="text-5xl font-black text-white/20 mb-4">{step.num}</div>
-                  <h3 className="text-xl font-bold text-white uppercase mb-3">{step.title}</h3>
-                  <p className="text-white/70 leading-relaxed text-sm">{step.desc}</p>
+            {/* ── Header ── */}
+            <motion.div
+              className="flex flex-col items-center text-center mb-20 md:mb-28"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 border border-primary/25 rounded-full text-primary text-xs font-bold tracking-[0.25em] uppercase mb-8">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                Sürecimiz
+              </span>
+              <h2 className="text-5xl sm:text-6xl md:text-8xl font-heading font-black uppercase leading-none mb-6">
+                <span className="text-white">Nasıl</span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-sky-300">
+                  Çalışıyoruz?
+                </span>
+              </h2>
+              <p className="text-slate-400 text-lg max-w-lg leading-relaxed">
+                İlk temastan sertifikaya kadar sorunsuz bir operasyon için izlediğimiz 4 adım
+              </p>
+            </motion.div>
+
+            {/* ── Steps ── */}
+            {(() => {
+              const steps = [
+                {
+                  num: "01",
+                  icon: SearchCheck,
+                  title: "Talep & Keşif",
+                  desc: "Yük detaylarınızı alır, gerekirse sahaya giderek ölçüm ve keşif yaparız. İlk temasınızdan itibaren 24 saat içinde geri dönüş garantisi.",
+                  color: "from-primary to-sky-400",
+                },
+                {
+                  num: "02",
+                  icon: Ruler,
+                  title: "Mühendislik",
+                  desc: "IMO CSS Code'a uygun lashing hesaplamaları ve malzeme planı hazırlanır. DNV-GL onaylı donanım seçimi yapılır.",
+                  color: "from-sky-400 to-blue-500",
+                },
+                {
+                  num: "03",
+                  icon: HardHat,
+                  title: "Operasyon",
+                  desc: "Sertifikalı lasher ekibimiz belirtilen saatte sahadaki uygulamayı eksiksiz gerçekleştirir. 7/24 operasyon kapasitesi.",
+                  color: "from-blue-500 to-indigo-500",
+                },
+                {
+                  num: "04",
+                  icon: BadgeCheck,
+                  title: "Sertifikasyon",
+                  desc: "Operasyon sonrası fotoğraflı rapor ve uluslararası geçerli lashing sertifikası dijital olarak teslim edilir.",
+                  color: "from-indigo-500 to-primary",
+                },
+              ];
+
+              return (
+                <div className="relative">
+
+                  {/* Connector line — desktop only */}
+                  <div className="hidden lg:block absolute top-[56px] left-[12.5%] right-[12.5%] h-px">
+                    <div className="w-full h-full bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0" />
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/60 to-primary/0"
+                      initial={{ scaleX: 0, opacity: 0 }}
+                      whileInView={{ scaleX: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.2, delay: 0.3, ease: "easeInOut" }}
+                      style={{ transformOrigin: "left" }}
+                    />
+                  </div>
+
+                  {/* Vertical connector — mobile/tablet */}
+                  <div className="lg:hidden absolute left-8 sm:left-[10%] top-16 bottom-16 w-px bg-gradient-to-b from-primary/0 via-primary/40 to-primary/0" />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-4">
+                    {steps.map((step, i) => {
+                      const Icon = step.icon;
+                      return (
+                        <motion.div
+                          key={step.num}
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.65, delay: i * 0.14, ease: [0.22, 1, 0.36, 1] }}
+                          className="group relative flex flex-col lg:items-center lg:text-center pl-20 sm:pl-24 lg:pl-0"
+                        >
+                          {/* Giant watermark number */}
+                          <span
+                            className="absolute -top-4 lg:top-auto lg:-bottom-6 left-0 lg:left-1/2 lg:-translate-x-1/2 text-[96px] lg:text-[140px] font-black leading-none select-none pointer-events-none text-white/[0.025] group-hover:text-white/[0.06] transition-colors duration-700"
+                          >
+                            {step.num}
+                          </span>
+
+                          {/* Icon circle — sits on the connector line */}
+                          <div className="relative mb-8 self-start lg:self-center">
+                            <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-110 group-hover:shadow-primary/40 transition-all duration-500`}>
+                              <Icon className="h-6 w-6 text-white" strokeWidth={1.8} />
+                            </div>
+                            {/* Pulse ring */}
+                            <span className="absolute inset-0 rounded-2xl bg-primary/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          </div>
+
+                          {/* Step label */}
+                          <span className="text-[10px] font-black tracking-[0.3em] uppercase text-primary/60 mb-2 group-hover:text-primary transition-colors duration-300">
+                            Adım {step.num}
+                          </span>
+
+                          {/* Title */}
+                          <h3 className="text-xl font-heading font-black uppercase text-white mb-3 group-hover:text-primary transition-colors duration-300">
+                            {step.title}
+                          </h3>
+
+                          {/* Divider */}
+                          <div className="w-8 h-0.5 bg-primary/40 mb-4 group-hover:w-16 group-hover:bg-primary transition-all duration-500 lg:mx-auto" />
+
+                          {/* Description */}
+                          <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                            {step.desc}
+                          </p>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })()}
           </div>
         </section>
 
