@@ -42,11 +42,15 @@
           color: white;
         }
         .loader-logo {
-          font-size: 2rem;
-          font-weight: 900;
-          letter-spacing: -0.05em;
-          margin-bottom: 1.5rem;
-          text-transform: uppercase;
+          max-width: 250px;
+          margin-bottom: 2rem;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .loader-logo img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+          filter: brightness(0) invert(1);
         }
         .loader-spinner {
           width: 40px;
@@ -59,9 +63,15 @@
         @keyframes spin {
           to { transform: rotate(360deg); }
         }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: .7; }
+        }
       </style>
       <div class="initial-loader">
-        <div class="loader-logo">Capital Lashing</div>
+        <div class="loader-logo">
+          <img src="/attached_assets/logo-white-text.webp" alt="Capital Lashing Logo" />
+        </div>
         <div class="loader-spinner"></div>
         <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;">
           Capital Lashing & Port Services - Profesyonel Yük Sabitleme ve Liman Hizmetleri
