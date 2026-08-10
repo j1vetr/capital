@@ -41,6 +41,13 @@ export async function setupVite(app: Express, server: Server) {
     const url = req.originalUrl;
 
     try {
+      const [rawPath, query] = url.split("?");
+      if (rawPath.length > 1 && rawPath.endsWith("/")) {
+        const normalized = rawPath.replace(/\/+$/, "") || "/";
+        res.redirect(301, normalized + (query ? `?${query}` : ""));
+        return;
+      }
+
       const clientTemplate = path.resolve(
         import.meta.dirname,
         "..",
@@ -64,10 +71,19 @@ export async function setupVite(app: Express, server: Server) {
         template = template.replace("<!-- SEO_PLACEHOLDER -->", metaHtml);
         if (isEnglishPath(pathname)) {
           template = template.replace(`<html lang="tr">`, `<html lang="en">`);
+          template = template.replace(
+            `<meta property="og:locale" content="tr_TR" />`,
+            `<meta property="og:locale" content="en_US" />`,
+          );
         }
       } catch {
         template = template.replace("<!-- SEO_PLACEHOLDER -->", "");
       }
+
+      // Server-side render the page body
+      const { render } = await vite.ssrLoadModule("/src/entry-server.tsx");
+      const bodyHtml = render(pathname) as string;
+      template = template.replace("<!-- SSR_BODY -->", bodyHtml);
 
       const page = await vite.transformIndexHtml(url, template);
       res.status(known ? 200 : 404).set({ "Content-Type": "text/html" }).end(page);

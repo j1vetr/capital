@@ -1,1 +1,2 @@
 - [SEO decisions](seo-architecture.md) — forbidden schema fields, route catalog sync rule, no em dash or semicolon in content.
+- [SSR prerender setup](ssr-prerender.md) — single route catalog from sitemap entries; wouter Link needs asChild over <a>; recaptcha must be ssr.noExternal.

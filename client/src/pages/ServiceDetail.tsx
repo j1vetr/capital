@@ -444,7 +444,7 @@ export default function ServiceDetail() {
                <a href="tel:+902163120612" className="px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-colors">
                  +90 216 312 06 12
                </a>
-               <Link href="/iletisim">
+               <Link href="/iletisim" asChild>
                  <a className="px-8 py-4 rounded-xl bg-primary text-white font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-primary/20">
                    Bize Ulaşın
                  </a>

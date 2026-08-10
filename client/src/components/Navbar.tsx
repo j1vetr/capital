@@ -108,19 +108,15 @@ export function Navbar() {
             <NavigationMenu>
               <NavigationMenuList className="gap-1">
                 <NavigationMenuItem>
-                  <Link href="/">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
-                      Ana Sayfa
-                    </NavigationMenuLink>
-                  </Link>
+                  <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
+                    <Link href="/">Ana Sayfa</Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                   <Link href="/hakkimizda">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
-                      Hakkımızda
-                    </NavigationMenuLink>
-                  </Link>
+                   <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
+                    <Link href="/hakkimizda">Hakkımızda</Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -131,13 +127,13 @@ export function Navbar() {
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white rounded-md shadow-lg border border-border/10">
                       {servicesData.map((service) => (
                         <li key={service.id}>
-                          <Link href={`/hizmetler/${service.id}`}>
-                            <NavigationMenuLink asChild>
-                              <a
-                                className={cn(
-                                  "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary focus:bg-slate-50 focus:text-primary cursor-pointer group"
-                                )}
-                              >
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={`/hizmetler/${service.id}`}
+                              className={cn(
+                                "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-50 hover:text-primary focus:bg-slate-50 focus:text-primary cursor-pointer group"
+                              )}
+                            >
                                 <div className="text-sm font-bold leading-none text-slate-800 group-hover:text-primary mb-1 flex items-center gap-2 uppercase">
                                   <service.icon className="h-4 w-4 text-primary" />
                                   {service.title}
@@ -145,9 +141,8 @@ export function Navbar() {
                                 <p className="line-clamp-2 text-xs leading-snug text-slate-500">
                                   {service.shortDescription}
                                 </p>
-                              </a>
-                            </NavigationMenuLink>
-                          </Link>
+                            </Link>
+                          </NavigationMenuLink>
                         </li>
                       ))}
                     </ul>
@@ -155,19 +150,15 @@ export function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/projeler">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
-                      Projeler
-                    </NavigationMenuLink>
-                  </Link>
+                  <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
+                    <Link href="/projeler">Projeler</Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                   <Link href="/iletisim">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
-                      İletişim
-                    </NavigationMenuLink>
-                  </Link>
+                   <NavigationMenuLink asChild className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-primary uppercase tracking-wide font-bold cursor-pointer text-sm", isScrolled ? "text-foreground" : "text-white")}>
+                    <Link href="/iletisim">İletişim</Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -209,12 +200,12 @@ export function Navbar() {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b shadow-lg animate-in slide-in-from-top-5 max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col p-4 gap-2">
-               <Link href="/">
+               <Link href="/" asChild>
                   <a className="text-lg font-bold py-3 px-4 rounded-md hover:bg-muted transition-colors text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
                     Ana Sayfa
                   </a>
                 </Link>
-                <Link href="/hakkimizda">
+                <Link href="/hakkimizda" asChild>
                   <a className="text-lg font-bold py-3 px-4 rounded-md hover:bg-muted transition-colors text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
                     Hakkımızda
                   </a>
@@ -224,7 +215,7 @@ export function Navbar() {
                   <div className="text-sm font-medium text-muted-foreground mb-2 uppercase tracking-wider">Hizmetler</div>
                   <div className="pl-2 border-l-2 border-primary/20 space-y-2">
                     {servicesData.map((service) => (
-                      <Link key={service.id} href={`/hizmetler/${service.id}`}>
+                      <Link key={service.id} href={`/hizmetler/${service.id}`} asChild>
                         <a 
                           className="block py-2 text-base font-medium text-foreground hover:text-primary"
                           onClick={() => setIsMobileMenuOpen(false)}
@@ -236,12 +227,12 @@ export function Navbar() {
                   </div>
                 </div>
 
-                <Link href="/projeler">
+                <Link href="/projeler" asChild>
                   <a className="text-lg font-bold py-3 px-4 rounded-md hover:bg-muted transition-colors text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
                     Projeler
                   </a>
                 </Link>
-                 <Link href="/iletisim">
+                 <Link href="/iletisim" asChild>
                   <a className="text-lg font-bold py-3 px-4 rounded-md hover:bg-muted transition-colors text-foreground" onClick={() => setIsMobileMenuOpen(false)}>
                     İletişim
                   </a>

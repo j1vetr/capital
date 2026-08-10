@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-8 border-b border-slate-800 pb-8">
             {/* Brand Column */}
             <div className="lg:col-span-4 space-y-8">
-                <Link href="/">
+                <Link href="/" asChild>
                   <a className="block">
                     <img 
                       src={logoImage} 
@@ -92,7 +92,7 @@ export function Footer() {
                         { name: "Endüstriyel Sandıklama", href: "/hizmetler/sandiklama" },
                     ].map((link) => (
                         <li key={link.name}>
-                            <Link href={link.href}>
+                            <Link href={link.href} asChild>
                                 <a className="text-slate-400 hover:text-primary transition-colors flex items-center gap-2 group text-sm font-medium">
                                     <ArrowRight className="h-3 w-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
                                     {link.name}
@@ -156,13 +156,13 @@ export function Footer() {
 
             {/* Yasal linkler */}
             <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
-              <Link href="/privacy">
+              <Link href="/privacy" asChild>
                 <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Gizlilik Politikası</a>
               </Link>
-              <Link href="/terms">
+              <Link href="/terms" asChild>
                 <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">Kullanım Koşulları</a>
               </Link>
-              <Link href="/kvkk">
+              <Link href="/kvkk" asChild>
                 <a className="text-sm text-slate-500 hover:text-white transition-colors font-medium">KVKK</a>
               </Link>
             </div>

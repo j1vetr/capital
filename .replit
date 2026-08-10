@@ -13,6 +13,14 @@ publicDir = "dist/public"
 run = ["node", "./dist/index.cjs"]
 
 [[ports]]
+localPort = 3111
+externalPort = 3001
+
+[[ports]]
+localPort = 3112
+externalPort = 3003
+
+[[ports]]
 localPort = 5000
 externalPort = 80
 

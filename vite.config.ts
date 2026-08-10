@@ -36,6 +36,9 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
+  ssr: {
+    noExternal: ["react-google-recaptcha", "react-async-script"],
+  },
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,

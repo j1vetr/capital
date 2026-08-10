@@ -286,7 +286,7 @@ export default function Projects() {
         </div>
         <div className="container relative z-10 px-4 md:px-6 text-center pt-20">
            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/80 font-medium uppercase tracking-wider text-xs mb-6">
-              <Link href="/">
+              <Link href="/" asChild>
                 <a className="hover:text-primary transition-colors">Ana Sayfa</a>
               </Link>
               <span className="text-primary">•</span>
@@ -334,7 +334,7 @@ export default function Projects() {
                 <p className="text-slate-500 mb-6 text-sm leading-relaxed flex-grow">
                   {project.desc}
                 </p>
-                <Link href="/iletisim">
+                <Link href="/iletisim" asChild>
                   <a className="inline-flex items-center text-sm font-bold text-primary hover:text-blue-700 transition-colors uppercase tracking-wide mt-auto">
                     Detaylı Bilgi <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
