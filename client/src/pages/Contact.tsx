@@ -5,6 +5,9 @@ import { useEffect } from "react";
 import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.png";
 import { Phone, Mail, MapPin, Globe2 } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
+import { Button } from "@/components/ui/button";
+import { BUSINESS } from "@shared/business";
+import { Link } from "wouter";
 
 export default function Contact() {
   useEffect(() => {
@@ -31,11 +34,11 @@ export default function Contact() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
         </div>
         <div className="container relative z-10 px-4 md:px-6 text-center pt-32">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/80 font-medium uppercase tracking-wider text-xs mb-6">
-            <span>Ana Sayfa</span>
-            <span className="text-primary">•</span>
-            <span className="text-primary font-bold">İletişim</span>
-          </div>
+          <nav aria-label="breadcrumb" className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/80 font-medium uppercase tracking-wider text-xs mb-6">
+            <Link href="/" className="hover:text-primary transition-colors">Ana Sayfa</Link>
+            <span className="text-primary" aria-hidden="true">•</span>
+            <span className="text-primary font-bold" aria-current="page">İletişim</span>
+          </nav>
           <h1 className="text-4xl md:text-6xl font-heading font-black uppercase text-white mb-6 tracking-tight">İletişim</h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
             7/24 Operasyonel destek ve teklif talepleriniz için bize ulaşın.
@@ -59,8 +62,8 @@ export default function Contact() {
                   </div>
                   <h3 className="text-xl font-bold font-heading text-slate-900 mb-2">Telefon</h3>
                   <p className="text-slate-500 text-sm mb-4">7/24 Acil Destek Hattı</p>
-                  <a href="tel:+902163120612" className="text-2xl font-bold text-primary hover:text-blue-700 transition-colors block">
-                    +90 216 312 06 12
+                  <a href={`tel:${BUSINESS.phone.e164}`} className="text-2xl font-bold text-primary hover:text-blue-700 transition-colors block">
+                    {BUSINESS.phone.display}
                   </a>
                 </div>
 
@@ -70,8 +73,8 @@ export default function Contact() {
                   </div>
                   <h3 className="text-xl font-bold font-heading text-slate-900 mb-2">E-Posta</h3>
                   <p className="text-slate-500 text-sm mb-4">Teklif ve bilgi talepleri için</p>
-                  <a href="mailto:info@capitallashing.com" className="text-xl font-bold text-slate-800 hover:text-primary transition-colors block">
-                    info@capitallashing.com
+                  <a href={`mailto:${BUSINESS.email}`} className="text-xl font-bold text-slate-800 hover:text-primary transition-colors block">
+                    {BUSINESS.email}
                   </a>
                 </div>
 
@@ -83,9 +86,9 @@ export default function Contact() {
                     </div>
                     <h3 className="text-xl font-bold font-heading text-white mb-2">Merkez Ofis</h3>
                     <p className="text-slate-400 text-sm mb-6">
-                      Abdurrahmangazi Mah. Ebubekir Cad. No:26<br />Sancaktepe / İstanbul
+                      {BUSINESS.address.street}<br />{BUSINESS.address.locality} / {BUSINESS.address.region}
                     </p>
-                    <a href="https://maps.google.com/?q=Abdurrahmangazi+Mah.+Ebubekir+Cad.+No:26+Sancaktepe+Istanbul" target="_blank" rel="noopener noreferrer">
+                    <a href={BUSINESS.address.mapsUrl} target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" className="w-full border-white/20 hover:bg-white/10 text-white hover:text-white">
                         Haritada Göster <Globe2 className="ml-2 h-4 w-4" />
                       </Button>

@@ -1,16 +1,21 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { useEffect } from "react";
 import { Shield, Lock, Eye, FileText } from "lucide-react";
 
 export default function Kvkk() {
   useEffect(() => {
-    document.title = "KVKK Aydınlatma Metni | Capital Lashing";
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 font-sans selection:bg-primary/30">
+      <SEO
+        title="KVKK Aydınlatma Metni | Capital Lashing"
+        description="Capital Lashing & Port Services KVKK aydınlatma metni. 6698 sayılı kanun kapsamında kişisel verilerin korunması hakkında bilgilendirme."
+        canonical="https://capitallashing.com/kvkk"
+      />
       <Navbar />
       
       <main className="flex-grow relative">

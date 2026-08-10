@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Home, ArrowRight, Anchor } from "lucide-react";
@@ -7,6 +8,11 @@ import { Home, ArrowRight, Anchor } from "lucide-react";
 export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans selection:bg-primary/30">
+      <SEO
+        title="Sayfa Bulunamadı | Capital Lashing & Port Services"
+        description="Aradığınız sayfa bulunamadı. Capital Lashing ana sayfasına dönerek lashing ve liman hizmetlerimizi inceleyebilirsiniz."
+        noindex
+      />
       <Navbar />
       
       <main className="flex-grow flex items-center justify-center py-20 relative overflow-hidden bg-slate-900 min-h-[80vh]">

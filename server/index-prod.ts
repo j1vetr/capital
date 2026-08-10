@@ -5,7 +5,7 @@ import path from "node:path";
 import express, { type Express } from "express";
 
 import runApp from "./app";
-import { getMetaForPath, buildMetaHtml } from "./seo";
+import { getMetaForPath, buildMetaHtml, isKnownPath } from "./seo";
 
 export async function serveStatic(app: Express, server: Server) {
   const distPath = path.resolve(import.meta.dirname, "public");
@@ -22,15 +22,16 @@ export async function serveStatic(app: Express, server: Server) {
   // All HTML routes: inject SEO meta tags before serving index.html
   app.use("*", (req, res) => {
     const indexPath = path.resolve(distPath, "index.html");
+    const pathname = req.originalUrl.split("?")[0];
+    const known = isKnownPath(pathname);
     try {
       let html = fs.readFileSync(indexPath, "utf-8");
-      const pathname = req.originalUrl.split("?")[0];
       const meta = getMetaForPath(pathname);
-      const metaHtml = buildMetaHtml(meta);
+      const metaHtml = buildMetaHtml(meta, pathname, !known);
       html = html.replace("<!-- SEO_PLACEHOLDER -->", metaHtml);
-      res.set("Content-Type", "text/html").send(html);
+      res.status(known ? 200 : 404).set("Content-Type", "text/html").send(html);
     } catch {
-      res.sendFile(indexPath);
+      res.status(known ? 200 : 404).sendFile(indexPath);
     }
   });
 }

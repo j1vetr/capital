@@ -1,16 +1,21 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { useEffect } from "react";
 import { ShieldCheck, Lock, FileText } from "lucide-react";
 
 export default function Privacy() {
   useEffect(() => {
-    document.title = "Gizlilik Politikası | Capital Lashing";
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 font-sans selection:bg-primary/30">
+      <SEO
+        title="Gizlilik Politikası | Capital Lashing"
+        description="Capital Lashing & Port Services gizlilik politikası. Kişisel verilerinizin nasıl işlendiği ve korunduğu hakkında bilgi alın."
+        canonical="https://capitallashing.com/privacy"
+      />
       <Navbar />
       
       <main className="flex-grow relative">

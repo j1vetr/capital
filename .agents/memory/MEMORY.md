@@ -1,0 +1,1 @@
+- [SEO decisions](seo-architecture.md) — forbidden schema fields, route catalog sync rule, no em dash or semicolon in content.

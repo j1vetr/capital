@@ -89,13 +89,13 @@ export default function ServiceDetail() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/90 font-medium uppercase tracking-wider text-xs mb-8">
+              <nav aria-label="breadcrumb" className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white/90 font-medium uppercase tracking-wider text-xs mb-8">
                 <Link href="/" className="hover:text-primary transition-colors">Ana Sayfa</Link>
-                <span className="text-primary">•</span>
+                <span className="text-primary" aria-hidden="true">•</span>
                 <Link href="/hizmetler" className="hover:text-primary transition-colors">Hizmetler</Link>
-                <span className="text-primary">•</span>
-                <span className="text-primary font-bold">{service.title}</span>
-              </div>
+                <span className="text-primary" aria-hidden="true">•</span>
+                <span className="text-primary font-bold" aria-current="page">{service.title}</span>
+              </nav>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-white uppercase mb-8 leading-tight tracking-tighter">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/80 pb-2">

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck } from "lucide-react";
 import logoImage from "@assets/logo-white-text.webp";
+import { BUSINESS } from "@shared/business";
 
 export function Footer() {
   return (
@@ -30,16 +31,17 @@ export function Footer() {
                 </p>
                 <div className="flex gap-4">
                     {[
-                        { icon: Linkedin, href: "https://www.linkedin.com/company/capital-lashing/", color: "hover:bg-[#0077b5]" },
-                        { icon: Instagram, href: "https://www.instagram.com/capitallashing/", color: "hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600" },
-                        { icon: Facebook, href: "https://www.facebook.com/capitallashing/", color: "hover:bg-[#1877f2]" },
-                        { icon: Youtube, href: "https://www.youtube.com/@capitallashing", color: "hover:bg-[#ff0000]" }
+                        { icon: Linkedin, href: BUSINESS.social.linkedin, label: "LinkedIn", color: "hover:bg-[#0077b5]" },
+                        { icon: Instagram, href: BUSINESS.social.instagram, label: "Instagram", color: "hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600" },
+                        { icon: Facebook, href: BUSINESS.social.facebook, label: "Facebook", color: "hover:bg-[#1877f2]" },
+                        { icon: Youtube, href: BUSINESS.social.youtube, label: "YouTube", color: "hover:bg-[#ff0000]" }
                     ].map((social, index) => (
                         <a 
                             key={index}
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={social.label}
                             className={`w-12 h-12 rounded-xl bg-slate-900/50 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${social.color}`}
                         >
                             <social.icon className="h-5 w-5" />
@@ -113,7 +115,7 @@ export function Footer() {
                         </div>
                         <div>
                             <span className="block text-white text-sm font-bold mb-1">Merkez Ofis</span>
-                            <p className="text-sm text-slate-400 leading-relaxed">Abdurrahmangazi Mah. Ebubekir Cad. No:26 Sancaktepe / İstanbul</p>
+                            <p className="text-sm text-slate-400 leading-relaxed">{BUSINESS.address.full}</p>
                         </div>
                     </div>
                     
@@ -123,7 +125,7 @@ export function Footer() {
                         </div>
                         <div>
                             <span className="block text-white text-sm font-bold mb-1">Telefon</span>
-                            <a href="tel:+902163120612" className="text-sm text-slate-400 hover:text-white transition-colors">+90 216 312 06 12</a>
+                            <a href={`tel:${BUSINESS.phone.e164}`} className="text-sm text-slate-400 hover:text-white transition-colors">{BUSINESS.phone.display}</a>
                         </div>
                     </div>
 
@@ -133,7 +135,7 @@ export function Footer() {
                         </div>
                         <div>
                             <span className="block text-white text-sm font-bold mb-1">E-posta</span>
-                            <a href="mailto:info@capitallashing.com" className="text-sm text-slate-400 hover:text-white transition-colors">info@capitallashing.com</a>
+                            <a href={`mailto:${BUSINESS.email}`} className="text-sm text-slate-400 hover:text-white transition-colors">{BUSINESS.email}</a>
                         </div>
                     </div>
                 </div>

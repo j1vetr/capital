@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { servicesData } from "@/data/services";
 import logoImage from "@assets/logo-white-text.webp";
+import { BUSINESS } from "@shared/business";
 
 const navLinks = [
   { name: "Ana Sayfa", href: "/" },
@@ -45,28 +46,28 @@ export function Navbar() {
       )}>
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           <div className="flex items-center gap-6 text-sm font-medium">
-             <a href="mailto:info@capitallashing.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+             <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-2 hover:text-primary transition-colors">
                <Mail className="h-4 w-4" />
-               <span>info@capitallashing.com</span>
+               <span>{BUSINESS.email}</span>
              </a>
-             <a href="tel:+902163120612" className="flex items-center gap-2 hover:text-primary transition-colors">
+             <a href={`tel:${BUSINESS.phone.e164}`} className="flex items-center gap-2 hover:text-primary transition-colors">
                <Phone className="h-4 w-4" />
-               <span>+90 216 312 06 12</span>
+               <span>{BUSINESS.phone.display}</span>
              </a>
           </div>
           <div className="flex items-center gap-6">
             <span className="opacity-50 hidden lg:inline text-sm">Bizi Takip Edin:</span>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/capitallashing/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href={BUSINESS.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/company/capital-lashing/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href={BUSINESS.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://www.facebook.com/capitallashing/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href={BUSINESS.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.youtube.com/@capitallashing" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href={BUSINESS.social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-primary transition-colors">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
@@ -193,6 +194,8 @@ export function Navbar() {
           <button
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <X className={cn("h-6 w-6", isScrolled ? "text-foreground" : "text-white")} />
@@ -253,16 +256,16 @@ export function Navbar() {
               </div>
               
               <div className="flex justify-center gap-6 mt-4 pb-4 border-t pt-4">
-                <a href="https://www.instagram.com/capitallashing/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                <a href={BUSINESS.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="https://www.linkedin.com/company/capital-lashing/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                <a href={BUSINESS.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary">
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="https://www.facebook.com/capitallashing/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                <a href={BUSINESS.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary">
                   <Facebook className="h-5 w-5" />
                 </a>
-                 <a href="https://www.youtube.com/@capitallashing" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                 <a href={BUSINESS.social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary">
                   <Youtube className="h-5 w-5" />
                 </a>
               </div>

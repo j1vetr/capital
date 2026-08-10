@@ -1,5 +1,6 @@
 import { Phone, Mail } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
+import { BUSINESS } from "@shared/business";
 
 export function ContactSection() {
   return (
@@ -30,7 +31,7 @@ export function ContactSection() {
                     </div>
                     <div>
                       <p className="text-xs text-blue-200 uppercase font-bold tracking-wider">Bizi Arayın</p>
-                      <p className="text-lg font-bold">+90 216 312 06 12</p>
+                      <a href={`tel:${BUSINESS.phone.e164}`} className="text-lg font-bold hover:underline">{BUSINESS.phone.display}</a>
                     </div>
                   </div>
 
@@ -40,7 +41,7 @@ export function ContactSection() {
                     </div>
                     <div>
                       <p className="text-xs text-blue-200 uppercase font-bold tracking-wider">E-Posta Gönderin</p>
-                      <p className="text-lg font-bold">info@capitallashing.com</p>
+                      <a href={`mailto:${BUSINESS.email}`} className="text-lg font-bold hover:underline">{BUSINESS.email}</a>
                     </div>
                   </div>
                 </div>

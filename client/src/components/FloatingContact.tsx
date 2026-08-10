@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, Mail, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { BUSINESS } from "@shared/business";
 
 export function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +10,9 @@ export function FloatingContact() {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   const contactInfo = {
-    phone: "+902163120612",
-    whatsapp: "902163120612", // Using same number for now
-    email: "info@capitallashing.com"
+    phone: BUSINESS.phone.e164,
+    whatsapp: BUSINESS.phone.whatsapp,
+    email: BUSINESS.email
   };
 
   return (
@@ -75,6 +76,7 @@ export function FloatingContact() {
       <Button 
         size="icon"
         onClick={toggleOpen}
+        aria-label={isOpen ? "İletişim menüsünü kapat" : "İletişim menüsünü aç"}
         className="w-16 h-16 rounded-full shadow-2xl bg-slate-900 hover:bg-slate-800 border-2 border-white/20 relative flex items-center justify-center overflow-hidden group transition-all duration-300 hover:scale-105"
       >
         {isOpen ? (
