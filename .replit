@@ -65,3 +65,7 @@ SMTP_USER = "no-reply@toov.com.tr"
 SMTP_FROM = "no-reply@toov.com.tr"
 ADMIN_EMAIL = "info@capitallashing.com"
 RECAPTCHA_SITE_KEY = "6LeznqQsAAAAACFTkHNuJYxlNDBC3f_w_mEnHH5u"
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 300000
