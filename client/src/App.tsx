@@ -15,6 +15,8 @@ import Kvkk from "@/pages/Kvkk";
 import Projects from "@/pages/Projects";
 import ServiceAreas from "@/pages/ServiceAreas";
 import LocationDetail from "@/pages/LocationDetail";
+import GuideHub from "@/pages/GuideHub";
+import GuideDetail from "@/pages/GuideDetail";
 
 function Router() {
   return (
@@ -26,6 +28,8 @@ function Router() {
       <Route path="/projeler" component={Projects} />
       <Route path="/hizmet-bolgeleri" component={ServiceAreas} />
       <Route path="/lashing/:slug" component={LocationDetail} />
+      <Route path="/rehber" component={GuideHub} />
+      <Route path="/rehber/:slug" component={GuideDetail} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />

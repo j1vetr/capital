@@ -11,7 +11,9 @@ interface SEOProps {
   description: string;
   canonical?: string;
   noindex?: boolean;
-  type?: "website" | "service" | "local_business";
+  type?: "website" | "service" | "local_business" | "article";
+  articleHeadline?: string;
+  datePublished?: string;
   serviceName?: string;
   serviceDescription?: string;
   serviceType?: string;
@@ -31,7 +33,7 @@ function injectJsonLd(id: string, schema: object) {
   document.head.appendChild(script);
 }
 
-export function SEO({ title, description, canonical, noindex = false, type = "website", serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs }: SEOProps) {
+export function SEO({ title, description, canonical, noindex = false, type = "website", articleHeadline, datePublished, serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs }: SEOProps) {
   useEffect(() => {
     document.title = title;
 
@@ -89,6 +91,22 @@ export function SEO({ title, description, canonical, noindex = false, type = "we
       injectJsonLd("ld-service", serviceSchema);
     }
 
+    if (type === "article" && articleHeadline) {
+      const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": articleHeadline,
+        "description": description,
+        "url": canonical || BASE_URL,
+        "mainEntityOfPage": canonical || BASE_URL,
+        "inLanguage": "tr",
+        ...(datePublished ? { "datePublished": datePublished } : {}),
+        "author": { "@id": `${BASE_URL}/#organization` },
+        "publisher": { "@id": `${BASE_URL}/#organization` },
+      };
+      injectJsonLd("ld-article", articleSchema);
+    }
+
     if (breadcrumbs && breadcrumbs.length > 0) {
       const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -120,11 +138,11 @@ export function SEO({ title, description, canonical, noindex = false, type = "we
     }
 
     return () => {
-      ["ld-org", "ld-website", "ld-service", "ld-breadcrumb", "ld-faq"].forEach(id => {
+      ["ld-org", "ld-website", "ld-service", "ld-article", "ld-breadcrumb", "ld-faq"].forEach(id => {
         document.getElementById(id)?.remove();
       });
     };
-  }, [title, description, canonical, noindex, type, serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs]);
+  }, [title, description, canonical, noindex, type, articleHeadline, datePublished, serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs]);
 
   return null;
 }

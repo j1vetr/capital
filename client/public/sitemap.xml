@@ -135,6 +135,68 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Rehber -->
+  <url>
+    <loc>https://capitallashing.com/rehber</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/lashing-nedir</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/konteyner-lashing-nedir</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/proje-kargo-lashing-nedir</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/flat-rack-lashing-nedir</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/yuk-sabitleme-nedir</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/shrink-wrap-paketleme-nedir</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/lashing-sertifikasi-nedir</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/css-code-nedir</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/rehber/ctu-code-yuk-sabitleme</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
   <!-- Yasal Sayfalar -->
   <url>
     <loc>https://capitallashing.com/privacy</loc>

@@ -63,14 +63,13 @@ export function Footer() {
                         { name: "Hizmetler", href: "/hizmetler" },
                         { name: "Referanslar", href: "/projeler" },
                         { name: "Hizmet Bölgeleri", href: "/hizmet-bolgeleri" },
+                        { name: "Rehber", href: "/rehber" },
                         { name: "İletişim", href: "/iletisim" }
                     ].map((link) => (
                         <li key={link.name}>
-                            <Link href={link.href}>
-                                <a className="text-slate-400 hover:text-primary transition-colors flex items-center gap-2 group text-sm font-medium">
-                                    <span className="w-1.5 h-1.5 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform scale-0 group-hover:scale-100"></span>
-                                    {link.name}
-                                </a>
+                            <Link href={link.href} className="text-slate-400 hover:text-primary transition-colors flex items-center gap-2 group text-sm font-medium">
+                                <span className="w-1.5 h-1.5 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform scale-0 group-hover:scale-100"></span>
+                                {link.name}
                             </Link>
                         </li>
                     ))}

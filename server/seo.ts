@@ -1,5 +1,6 @@
 import { servicesData } from "../client/src/data/services";
 import { locationsData } from "../client/src/data/locations";
+import { guidesData } from "../client/src/data/guides";
 import {
   BASE_URL,
   buildOrganizationSchema,
@@ -55,6 +56,11 @@ const routesMeta: Record<string, PageMeta> = {
     description: "Capital Lashing hizmet bölgeleri. İstanbul, Ambarlı, Haydarpaşa, Tekirdağ, İzmir Aliağa ve Mersin bölgelerinde lashing, yük sabitleme ve paketleme operasyonları.",
     canonical: `${BASE_URL}/hizmet-bolgeleri`,
   },
+  "/rehber": {
+    title: "Lashing Rehberi | Yük Sabitleme ve Denizcilik Bilgi Merkezi - Capital Lashing",
+    description: "Lashing, yük sabitleme, CSS Code, CTU Code ve paketleme konularında teknik rehberler. Deniz taşımacılığında yük emniyeti hakkında merak edilenler tek merkezde.",
+    canonical: `${BASE_URL}/rehber`,
+  },
   "/kvkk": {
     title: "KVKK Aydınlatma Metni | Capital Lashing",
     description: "Capital Lashing & Port Services KVKK aydınlatma metni. 6698 sayılı kanun kapsamında kişisel verilerin korunması hakkında bilgilendirme.",
@@ -78,11 +84,18 @@ function getLocationForPath(cleanPath: string) {
   return locationsData.find((l) => l.slug === locationMatch[1]);
 }
 
+function getGuideForPath(cleanPath: string) {
+  const guideMatch = cleanPath.match(/^\/rehber\/([^/]+)$/);
+  if (!guideMatch) return undefined;
+  return guidesData.find((g) => g.slug === guideMatch[1]);
+}
+
 export function isKnownPath(pathname: string): boolean {
   const cleanPath = normalizePath(pathname);
   if (routesMeta[cleanPath]) return true;
   if (getServiceForPath(cleanPath)) return true;
-  return Boolean(getLocationForPath(cleanPath));
+  if (getLocationForPath(cleanPath)) return true;
+  return Boolean(getGuideForPath(cleanPath));
 }
 
 export function getMetaForPath(pathname: string): PageMeta {
@@ -105,6 +118,15 @@ export function getMetaForPath(pathname: string): PageMeta {
       title: location.seoTitle,
       description: location.metaDescription,
       canonical: `${BASE_URL}/lashing/${location.slug}`,
+    };
+  }
+
+  const guide = getGuideForPath(cleanPath);
+  if (guide) {
+    return {
+      title: guide.seoTitle,
+      description: guide.metaDescription,
+      canonical: `${BASE_URL}/rehber/${guide.slug}`,
     };
   }
 
@@ -220,6 +242,39 @@ export function getSchemasForPath(pathname: string): JsonLdEntry[] {
         },
       });
     }
+    return schemas;
+  }
+
+  const guide = getGuideForPath(cleanPath);
+  if (guide) {
+    const canonical = `${BASE_URL}/rehber/${guide.slug}`;
+    schemas.push({
+      id: "ld-article",
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: guide.title,
+        description: guide.metaDescription,
+        url: canonical,
+        mainEntityOfPage: canonical,
+        inLanguage: "tr",
+        datePublished: guide.datePublished,
+        author: { "@id": `${BASE_URL}/#organization` },
+        publisher: { "@id": `${BASE_URL}/#organization` },
+      },
+    });
+    schemas.push({
+      id: "ld-breadcrumb",
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: BASE_URL },
+          { "@type": "ListItem", position: 2, name: "Rehber", item: `${BASE_URL}/rehber` },
+          { "@type": "ListItem", position: 3, name: guide.title, item: canonical },
+        ],
+      },
+    });
     return schemas;
   }
 

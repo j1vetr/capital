@@ -219,6 +219,13 @@ export default function Home() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
+            <p className="text-slate-500 text-sm mt-8">
+              Lashing ve yük sabitleme hakkında merak ettikleriniz için{" "}
+              <Link href="/rehber" className="text-primary font-bold hover:underline">
+                lashing rehberimize
+              </Link>{" "}
+              göz atabilirsiniz.
+            </p>
           </div>
         </section>
 

@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle2, ChevronRight, Shield, Anchor, FileText, Zap, 
 import { Link, useRoute } from "wouter";
 import { servicesData } from "@/data/services";
 import { portNameToLocationSlug } from "@/data/locations";
+import { getGuidesForService } from "@/data/guides";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -359,6 +360,27 @@ export default function ServiceDetail() {
                 })}
                 <Link href="/hizmet-bolgeleri" className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-sm font-bold rounded-full shadow-sm hover:bg-blue-600 transition-colors">
                   Tüm hizmet bölgeleri
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Related Guides */}
+        {getGuidesForService(service.id).length > 0 && (
+          <div className="bg-slate-50 border-b border-slate-100 py-8">
+            <div className="container px-4 md:px-6">
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="text-sm font-bold text-slate-500 uppercase tracking-widest shrink-0">
+                  İlgili Rehberler:
+                </div>
+                {getGuidesForService(service.id).map(guide => (
+                  <Link key={guide.slug} href={`/rehber/${guide.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-slate-200 text-slate-700 text-sm font-semibold rounded-full shadow-sm hover:border-primary hover:text-primary transition-colors">
+                    {guide.title.split("?")[0]}?
+                  </Link>
+                ))}
+                <Link href="/rehber" className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-900 text-white text-sm font-bold rounded-full shadow-sm hover:bg-slate-700 transition-colors">
+                  Tüm rehberler
                 </Link>
               </div>
             </div>
