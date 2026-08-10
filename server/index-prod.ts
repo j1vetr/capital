@@ -5,7 +5,7 @@ import path from "node:path";
 import express, { type Express } from "express";
 
 import runApp from "./app";
-import { getMetaForPath, buildMetaHtml, isKnownPath } from "./seo";
+import { getMetaForPath, buildMetaHtml, isKnownPath, isEnglishPath } from "./seo";
 
 export async function serveStatic(app: Express, server: Server) {
   const distPath = path.resolve(import.meta.dirname, "public");
@@ -29,6 +29,9 @@ export async function serveStatic(app: Express, server: Server) {
       const meta = getMetaForPath(pathname);
       const metaHtml = buildMetaHtml(meta, pathname, !known);
       html = html.replace("<!-- SEO_PLACEHOLDER -->", metaHtml);
+      if (isEnglishPath(pathname)) {
+        html = html.replace(`<html lang="tr">`, `<html lang="en">`);
+      }
       res.status(known ? 200 : 404).set("Content-Type", "text/html").send(html);
     } catch {
       res.status(known ? 200 : 404).sendFile(indexPath);

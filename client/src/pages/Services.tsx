@@ -21,6 +21,7 @@ export default function Services() {
         title="Lashing Hizmetleri | Gemi, Konteyner, Flat Rack, Shrink Wrap – Capital Lashing"
         description="Gemi proje lashing, konteyner lashing, flat rack sabitleme, shrink wrap, brandalama, sandıklama ve unlashing. İstanbul ve Türkiye genelinde 7/24 profesyonel operasyon."
         canonical="https://capitallashing.com/hizmetler"
+        alternates={{ tr: "https://capitallashing.com/hizmetler", en: "https://capitallashing.com/en/services" }}
         breadcrumbs={[
           { name: "Ana Sayfa", url: "https://capitallashing.com" },
           { name: "Hizmetler", url: "https://capitallashing.com/hizmetler" },

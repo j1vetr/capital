@@ -17,6 +17,7 @@ export default function Home() {
         title="Capital Lashing & Port Services | İstanbul Lashing Firması – Yük Sabitleme"
         description="İstanbul merkezli lashing ve liman hizmetleri firması. Gemi proje lashing, konteyner sabitleme, shrink wrap, sandıklama. DNV-GL onaylı ekipman, 7/24 operasyon. Teklif alın."
         canonical="https://capitallashing.com"
+        alternates={{ tr: "https://capitallashing.com", en: "https://capitallashing.com/en" }}
         type="local_business"
         breadcrumbs={[{ name: "Ana Sayfa", url: "https://capitallashing.com" }]}
       />

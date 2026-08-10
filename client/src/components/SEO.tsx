@@ -11,6 +11,8 @@ interface SEOProps {
   description: string;
   canonical?: string;
   noindex?: boolean;
+  lang?: "tr" | "en";
+  alternates?: { tr: string; en: string };
   type?: "website" | "service" | "local_business" | "article";
   articleHeadline?: string;
   datePublished?: string;
@@ -33,9 +35,10 @@ function injectJsonLd(id: string, schema: object) {
   document.head.appendChild(script);
 }
 
-export function SEO({ title, description, canonical, noindex = false, type = "website", articleHeadline, datePublished, serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs }: SEOProps) {
+export function SEO({ title, description, canonical, noindex = false, lang = "tr", alternates, type = "website", articleHeadline, datePublished, serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs }: SEOProps) {
   useEffect(() => {
     document.title = title;
+    document.documentElement.lang = lang;
 
     const setMeta = (selector: string, content: string) => {
       let el = document.querySelector<HTMLMetaElement>(selector);
@@ -70,6 +73,22 @@ export function SEO({ title, description, canonical, noindex = false, type = "we
     setMeta('meta[name="twitter:title"]', title);
     setMeta('meta[name="twitter:description"]', description);
 
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+    if (alternates) {
+      const entries: [string, string][] = [
+        ["tr-TR", alternates.tr],
+        ["en", alternates.en],
+        ["x-default", alternates.tr],
+      ];
+      for (const [hreflang, href] of entries) {
+        const el = document.createElement("link");
+        el.rel = "alternate";
+        el.setAttribute("hreflang", hreflang);
+        el.href = href;
+        document.head.appendChild(el);
+      }
+    }
+
     if (type === "local_business") {
       injectJsonLd("ld-org", buildOrganizationSchema());
       injectJsonLd("ld-website", buildWebSiteSchema());
@@ -99,7 +118,7 @@ export function SEO({ title, description, canonical, noindex = false, type = "we
         "description": description,
         "url": canonical || BASE_URL,
         "mainEntityOfPage": canonical || BASE_URL,
-        "inLanguage": "tr",
+        "inLanguage": lang,
         ...(datePublished ? { "datePublished": datePublished } : {}),
         "author": { "@id": `${BASE_URL}/#organization` },
         "publisher": { "@id": `${BASE_URL}/#organization` },
@@ -141,8 +160,10 @@ export function SEO({ title, description, canonical, noindex = false, type = "we
       ["ld-org", "ld-website", "ld-service", "ld-article", "ld-breadcrumb", "ld-faq"].forEach(id => {
         document.getElementById(id)?.remove();
       });
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+      document.documentElement.lang = "tr";
     };
-  }, [title, description, canonical, noindex, type, articleHeadline, datePublished, serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs]);
+  }, [title, description, canonical, noindex, lang, alternates, type, articleHeadline, datePublished, serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs]);
 
   return null;
 }

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, MapPin, HelpCircle, Anchor } from "lucide-react";
 import { Link, useRoute } from "wouter";
 import { locationsData } from "@/data/locations";
+import { trLocationSlugToEnSlug } from "@/data/en";
 import { servicesData } from "@/data/services";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
@@ -48,6 +49,14 @@ export default function LocationDetail() {
         title={location.seoTitle}
         description={location.metaDescription}
         canonical={canonical}
+        alternates={
+          trLocationSlugToEnSlug[location.slug]
+            ? {
+                tr: canonical,
+                en: `https://capitallashing.com/en/locations/${trLocationSlugToEnSlug[location.slug]}`,
+              }
+            : undefined
+        }
         type="service"
         serviceName={location.title}
         serviceDescription={location.metaDescription}

@@ -8,6 +8,7 @@ import { Link, useRoute } from "wouter";
 import { servicesData } from "@/data/services";
 import { portNameToLocationSlug } from "@/data/locations";
 import { getGuidesForService } from "@/data/guides";
+import { trServiceIdToEnSlug } from "@/data/en";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -59,6 +60,14 @@ export default function ServiceDetail() {
         title={service.seoTitle}
         description={service.metaDescription}
         canonical={`https://capitallashing.com/hizmetler/${service.id}`}
+        alternates={
+          trServiceIdToEnSlug[service.id]
+            ? {
+                tr: `https://capitallashing.com/hizmetler/${service.id}`,
+                en: `https://capitallashing.com/en/services/${trServiceIdToEnSlug[service.id]}`,
+              }
+            : undefined
+        }
         type="service"
         serviceName={service.title}
         serviceDescription={service.shortDescription}

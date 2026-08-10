@@ -7,7 +7,7 @@ import { nanoid } from "nanoid";
 import { createServer as createViteServer, createLogger } from "vite";
 
 import runApp from "./app";
-import { getMetaForPath, buildMetaHtml, isKnownPath } from "./seo";
+import { getMetaForPath, buildMetaHtml, isKnownPath, isEnglishPath } from "./seo";
 
 import viteConfig from "../vite.config";
 
@@ -60,6 +60,9 @@ export async function setupVite(app: Express, server: Server) {
         const meta = getMetaForPath(pathname);
         const metaHtml = buildMetaHtml(meta, pathname, !known);
         template = template.replace("<!-- SEO_PLACEHOLDER -->", metaHtml);
+        if (isEnglishPath(pathname)) {
+          template = template.replace(`<html lang="tr">`, `<html lang="en">`);
+        }
       } catch {
         template = template.replace("<!-- SEO_PLACEHOLDER -->", "");
       }

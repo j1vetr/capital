@@ -17,6 +17,10 @@ import ServiceAreas from "@/pages/ServiceAreas";
 import LocationDetail from "@/pages/LocationDetail";
 import GuideHub from "@/pages/GuideHub";
 import GuideDetail from "@/pages/GuideDetail";
+import EnHome from "@/pages/en/EnHome";
+import EnServices from "@/pages/en/EnServices";
+import EnServiceDetail from "@/pages/en/EnServiceDetail";
+import EnLocationDetail from "@/pages/en/EnLocationDetail";
 
 function Router() {
   return (
@@ -30,6 +34,10 @@ function Router() {
       <Route path="/lashing/:slug" component={LocationDetail} />
       <Route path="/rehber" component={GuideHub} />
       <Route path="/rehber/:slug" component={GuideDetail} />
+      <Route path="/en" component={EnHome} />
+      <Route path="/en/services" component={EnServices} />
+      <Route path="/en/services/:slug" component={EnServiceDetail} />
+      <Route path="/en/locations/:slug" component={EnLocationDetail} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
