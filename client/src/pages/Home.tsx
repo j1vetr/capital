@@ -6,7 +6,9 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
-import { SearchCheck, Ruler, HardHat, BadgeCheck } from "lucide-react";
+import { SearchCheck, Ruler, HardHat, BadgeCheck, MapPin, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
+import { locationsData } from "@/data/locations";
 
 export default function Home() {
   return (
@@ -181,6 +183,42 @@ export default function Home() {
                 </div>
               );
             })()}
+          </div>
+        </section>
+
+        {/* Hizmet Bölgeleri */}
+        <section className="py-20 bg-slate-50 border-b border-slate-100">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+              <div>
+                <span className="text-xs font-black tracking-[0.3em] uppercase text-primary mb-3 inline-block">Nerede Çalışıyoruz?</span>
+                <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase text-slate-900 leading-none">
+                  Hizmet Bölgelerimiz
+                </h2>
+              </div>
+              <p className="text-slate-500 max-w-xl text-sm md:text-base leading-relaxed">
+                İstanbul merkezli ekiplerimizle Marmara, Ege ve Akdeniz'deki liman bölgelerinde fabrika, depo ve dolum sahalarına giderek yerinde lashing ve yük sabitleme hizmeti veriyoruz.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {locationsData.map(location => (
+                <Link
+                  key={location.slug}
+                  href={`/lashing/${location.slug}`}
+                  className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-slate-200 rounded-full text-slate-700 font-semibold text-sm shadow-sm hover:border-primary hover:text-primary hover:-translate-y-0.5 transition-all"
+                >
+                  <MapPin className="h-4 w-4 text-primary" />
+                  {location.name} Lashing
+                </Link>
+              ))}
+              <Link
+                href="/hizmet-bolgeleri"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-white rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:bg-blue-600 hover:-translate-y-0.5 transition-all"
+              >
+                Tüm Hizmet Bölgeleri
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
 

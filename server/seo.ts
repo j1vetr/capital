@@ -1,4 +1,5 @@
 import { servicesData } from "../client/src/data/services";
+import { locationsData } from "../client/src/data/locations";
 import {
   BASE_URL,
   buildOrganizationSchema,
@@ -49,6 +50,11 @@ const routesMeta: Record<string, PageMeta> = {
     description: "Capital Lashing & Port Services web sitesi kullanım koşulları ve hizmet şartları hakkında detaylı bilgi.",
     canonical: `${BASE_URL}/terms`,
   },
+  "/hizmet-bolgeleri": {
+    title: "Hizmet Bölgeleri | İstanbul, Ambarlı, Tekirdağ, Aliağa, Mersin - Capital Lashing",
+    description: "Capital Lashing hizmet bölgeleri. İstanbul, Ambarlı, Haydarpaşa, Tekirdağ, İzmir Aliağa ve Mersin bölgelerinde lashing, yük sabitleme ve paketleme operasyonları.",
+    canonical: `${BASE_URL}/hizmet-bolgeleri`,
+  },
   "/kvkk": {
     title: "KVKK Aydınlatma Metni | Capital Lashing",
     description: "Capital Lashing & Port Services KVKK aydınlatma metni. 6698 sayılı kanun kapsamında kişisel verilerin korunması hakkında bilgilendirme.",
@@ -66,10 +72,17 @@ function getServiceForPath(cleanPath: string) {
   return servicesData.find((s) => s.id === serviceMatch[1]);
 }
 
+function getLocationForPath(cleanPath: string) {
+  const locationMatch = cleanPath.match(/^\/lashing\/([^/]+)$/);
+  if (!locationMatch) return undefined;
+  return locationsData.find((l) => l.slug === locationMatch[1]);
+}
+
 export function isKnownPath(pathname: string): boolean {
   const cleanPath = normalizePath(pathname);
   if (routesMeta[cleanPath]) return true;
-  return Boolean(getServiceForPath(cleanPath));
+  if (getServiceForPath(cleanPath)) return true;
+  return Boolean(getLocationForPath(cleanPath));
 }
 
 export function getMetaForPath(pathname: string): PageMeta {
@@ -83,6 +96,15 @@ export function getMetaForPath(pathname: string): PageMeta {
       title: service.seoTitle,
       description: service.metaDescription,
       canonical: `${BASE_URL}/hizmetler/${service.id}`,
+    };
+  }
+
+  const location = getLocationForPath(cleanPath);
+  if (location) {
+    return {
+      title: location.seoTitle,
+      description: location.metaDescription,
+      canonical: `${BASE_URL}/lashing/${location.slug}`,
     };
   }
 
@@ -146,6 +168,51 @@ export function getSchemasForPath(pathname: string): JsonLdEntry[] {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           mainEntity: service.faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        },
+      });
+    }
+    return schemas;
+  }
+
+  const location = getLocationForPath(cleanPath);
+  if (location) {
+    const canonical = `${BASE_URL}/lashing/${location.slug}`;
+    schemas.push({
+      id: "ld-service",
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: location.title,
+        description: location.metaDescription,
+        url: canonical,
+        provider: { "@id": `${BASE_URL}/#organization` },
+        serviceType: "Lashing ve Yük Sabitleme",
+        areaServed: { "@type": "Place", name: location.areaName },
+      },
+    });
+    schemas.push({
+      id: "ld-breadcrumb",
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: BASE_URL },
+          { "@type": "ListItem", position: 2, name: "Hizmet Bölgeleri", item: `${BASE_URL}/hizmet-bolgeleri` },
+          { "@type": "ListItem", position: 3, name: location.name, item: canonical },
+        ],
+      },
+    });
+    if (location.faq.length > 0) {
+      schemas.push({
+        id: "ld-faq",
+        schema: {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: location.faq.map((item) => ({
             "@type": "Question",
             name: item.q,
             acceptedAnswer: { "@type": "Answer", text: item.a },

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, ChevronRight, Shield, Anchor, FileText, Zap, HelpCircle } from "lucide-react";
 import { Link, useRoute } from "wouter";
 import { servicesData } from "@/data/services";
+import { portNameToLocationSlug } from "@/data/locations";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -60,6 +61,7 @@ export default function ServiceDetail() {
         type="service"
         serviceName={service.title}
         serviceDescription={service.shortDescription}
+        areaServedPlaces={service.ports}
         faq={service.faq}
         breadcrumbs={[
           { name: "Ana Sayfa", url: "https://capitallashing.com" },
@@ -341,12 +343,23 @@ export default function ServiceDetail() {
                 <div className="text-sm font-bold text-slate-500 uppercase tracking-widest shrink-0">
                   Hizmet Bölgeleri:
                 </div>
-                {service.ports.map(port => (
-                  <span key={port} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-primary/20 text-slate-700 text-sm font-semibold rounded-full shadow-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                    {port}
-                  </span>
-                ))}
+                {service.ports.map(port => {
+                  const locationSlug = portNameToLocationSlug[port];
+                  return locationSlug ? (
+                    <Link key={port} href={`/lashing/${locationSlug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-primary/20 text-slate-700 text-sm font-semibold rounded-full shadow-sm hover:border-primary hover:text-primary transition-colors">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      {port}
+                    </Link>
+                  ) : (
+                    <span key={port} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-primary/20 text-slate-700 text-sm font-semibold rounded-full shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      {port}
+                    </span>
+                  );
+                })}
+                <Link href="/hizmet-bolgeleri" className="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-sm font-bold rounded-full shadow-sm hover:bg-blue-600 transition-colors">
+                  Tüm hizmet bölgeleri
+                </Link>
               </div>
             </div>
           </div>

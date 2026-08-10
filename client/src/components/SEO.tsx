@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BASE_URL, BUSINESS, buildOrganizationSchema, buildWebSiteSchema } from "@shared/business";
+import { BASE_URL, buildOrganizationSchema, buildWebSiteSchema } from "@shared/business";
 
 interface FAQItem {
   q: string;
@@ -14,6 +14,9 @@ interface SEOProps {
   type?: "website" | "service" | "local_business";
   serviceName?: string;
   serviceDescription?: string;
+  serviceType?: string;
+  areaServedName?: string;
+  areaServedPlaces?: string[];
   faq?: FAQItem[];
   breadcrumbs?: { name: string; url: string }[];
 }
@@ -28,7 +31,7 @@ function injectJsonLd(id: string, schema: object) {
   document.head.appendChild(script);
 }
 
-export function SEO({ title, description, canonical, noindex = false, type = "website", serviceName, serviceDescription, faq, breadcrumbs }: SEOProps) {
+export function SEO({ title, description, canonical, noindex = false, type = "website", serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs }: SEOProps) {
   useEffect(() => {
     document.title = title;
 
@@ -76,15 +79,12 @@ export function SEO({ title, description, canonical, noindex = false, type = "we
         "@type": "Service",
         "name": serviceName,
         "description": serviceDescription,
+        "url": canonical || BASE_URL,
         "provider": { "@id": `${BASE_URL}/#organization` },
-        "serviceType": serviceName,
-        "areaServed": { "@type": "Country", "name": "Turkey" },
-        "availableChannel": {
-          "@type": "ServiceChannel",
-          "servicePhone": BUSINESS.phone.schema,
-          "serviceUrl": canonical || BASE_URL,
-          "availableLanguage": ["Turkish", "English"],
-        },
+        "serviceType": serviceType || serviceName,
+        "areaServed": areaServedName
+          ? { "@type": "Place", "name": areaServedName }
+          : (areaServedPlaces || []).map((p) => ({ "@type": "Place", "name": p })),
       };
       injectJsonLd("ld-service", serviceSchema);
     }
@@ -124,7 +124,7 @@ export function SEO({ title, description, canonical, noindex = false, type = "we
         document.getElementById(id)?.remove();
       });
     };
-  }, [title, description, canonical, noindex, type, serviceName, serviceDescription, faq, breadcrumbs]);
+  }, [title, description, canonical, noindex, type, serviceName, serviceDescription, serviceType, areaServedName, areaServedPlaces, faq, breadcrumbs]);
 
   return null;
 }

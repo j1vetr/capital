@@ -62,6 +62,7 @@ export function Footer() {
                         { name: "Hakkımızda", href: "/hakkimizda" },
                         { name: "Hizmetler", href: "/hizmetler" },
                         { name: "Referanslar", href: "/projeler" },
+                        { name: "Hizmet Bölgeleri", href: "/hizmet-bolgeleri" },
                         { name: "İletişim", href: "/iletisim" }
                     ].map((link) => (
                         <li key={link.name}>

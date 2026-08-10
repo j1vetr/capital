@@ -91,6 +91,50 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- Hizmet Bölgeleri -->
+  <url>
+    <loc>https://capitallashing.com/hizmet-bolgeleri</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/lashing/istanbul</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/lashing/ambarli-limani</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/lashing/haydarpasa-limani</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/lashing/tekirdag-limani</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/lashing/aliaga</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://capitallashing.com/lashing/mersin-limani</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Yasal Sayfalar -->
   <url>
     <loc>https://capitallashing.com/privacy</loc>

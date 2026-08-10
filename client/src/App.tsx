@@ -13,6 +13,8 @@ import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import Kvkk from "@/pages/Kvkk";
 import Projects from "@/pages/Projects";
+import ServiceAreas from "@/pages/ServiceAreas";
+import LocationDetail from "@/pages/LocationDetail";
 
 function Router() {
   return (
@@ -22,6 +24,8 @@ function Router() {
       <Route path="/hizmetler" component={Services} />
       <Route path="/hizmetler/:id" component={ServiceDetail} />
       <Route path="/projeler" component={Projects} />
+      <Route path="/hizmet-bolgeleri" component={ServiceAreas} />
+      <Route path="/lashing/:slug" component={LocationDetail} />
       <Route path="/iletisim" component={Contact} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
