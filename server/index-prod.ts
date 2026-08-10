@@ -6,6 +6,7 @@ import express, { type Express } from "express";
 
 import runApp from "./app";
 import { getMetaForPath, buildMetaHtml, isKnownPath, isEnglishPath } from "./seo";
+import { sendSitemap } from "./sitemap";
 
 export async function serveStatic(app: Express, server: Server) {
   const distPath = path.resolve(import.meta.dirname, "public");
@@ -15,6 +16,8 @@ export async function serveStatic(app: Express, server: Server) {
       `Could not find the build directory: ${distPath}, make sure to build the client first`,
     );
   }
+
+  app.get("/sitemap.xml", sendSitemap);
 
   // Serve static assets (JS, CSS, images) but NOT index.html automatically
   app.use(express.static(distPath, { index: false }));

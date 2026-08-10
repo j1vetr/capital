@@ -1,0 +1,185 @@
+Capital Lashing SEO implementasyonunda metadata, canonical, hreflang, JSON-LD, sitemap, robots.txt, llms.txt ve true HTTP 404 tarafı başarılı şekilde çalışıyor.
+
+Ancak production curl testi kritik bir eksik gösteriyor:
+
+FULL SSR / PRERENDER BODY CONTENT HALA YOK.
+
+Örnek:
+
+curl -sL https://capitallashing.com/lashing/istanbul
+
+isteğinde `<head>` içerisinde doğru title, description, canonical, hreflang ve JSON-LD geliyor.
+
+Fakat `<body>` içerisinde gerçek İstanbul landing page içeriği gelmiyor.
+
+Şu yapı geliyor:
+
+<div id="root">
+  <div class="initial-loader">
+    ...
+    <h1 style="position:absolute;width:1px;...">
+      Capital Lashing & Port Services - Profesyonel Yük Sabitleme ve Liman Hizmetleri
+    </h1>
+  </div>
+</div>
+
+Aynı problem şu sayfalarda da görülüyor:
+
+https://capitallashing.com/
+https://capitallashing.com/hizmetler
+https://capitallashing.com/hizmetler/gemi-proje-lashing
+https://capitallashing.com/hizmetler/konteyner-lashing
+https://capitallashing.com/hizmetler/proje-kargo-lashing
+https://capitallashing.com/hizmetler/flat-rack-lashing
+https://capitallashing.com/lashing/istanbul
+https://capitallashing.com/lashing/ambarli-limani
+ve diğer location sayfaları
+https://capitallashing.com/en
+https://capitallashing.com/en/services
+https://capitallashing.com/en/services/container-lashing
+https://capitallashing.com/en/locations/istanbul
+ve diğer English sayfalar.
+
+Şu anda sadece SEO HEAD prerender edilmiş durumda.
+
+Bunu FULL PAGE SSR / SSG / PRERENDER yapısına dönüştür.
+
+HEDEF:
+
+JavaScript execute edilmeden curl ile alınan production HTML içerisinde kullanıcının sayfada gördüğü gerçek semantik içerik bulunmalıdır.
+
+Örneğin:
+
+curl -sL https://capitallashing.com/hizmetler/gemi-proje-lashing
+
+çıktısının BODY kısmında gerçekten:
+
+<h1>Gemi Proje Lashing...</h1>
+
+sayfanın intro metinleri
+
+hizmet açıklamaları
+
+<h2> bölümleri
+
+FAQ görünür içeriği
+
+internal links
+
+breadcrumb
+
+CTA metinleri
+
+ilgili hizmet bağlantıları
+
+bulunmalıdır.
+
+Aynı şekilde:
+
+curl -sL https://capitallashing.com/lashing/istanbul
+
+raw HTML içinde gerçek:
+
+<h1>İstanbul Lashing...</h1>
+
+ve İstanbul sayfasının görünür body içeriğini döndürmelidir.
+
+English sayfalarda da English body SSR edilmelidir.
+
+Örneğin:
+
+curl -sL https://capitallashing.com/en/services/container-lashing
+
+raw HTML'de gerçek English H1 ve container lashing body content bulunmalıdır.
+
+CRITICAL:
+
+Mevcut React uygulamasını veya görsel tasarımı bozma.
+
+Client-side hydration devam edebilir.
+
+Ama ilk HTTP response gerçek route içeriğini içermeli.
+
+Sadece loader + generic hidden H1 göndermek kabul edilmiyor.
+
+Generic hidden SEO H1 kullanma.
+
+Her route'un gerçek page-specific H1'i server HTML'de yer almalı.
+
+Head tarafında şu anda çalışan yapıları KORU:
+
+unique title
+unique description
+meta robots
+canonical
+hreflang
+Open Graph
+Twitter meta
+Organization JSON-LD
+WebSite JSON-LD
+Service JSON-LD
+BreadcrumbList
+FAQPage
+Article schema
+robots.txt
+sitemap.xml
+llms.txt
+true 404
+
+Bunları yeniden bozma veya kaldırma.
+
+Ayrıca English sayfalarda:
+
+<meta property="og:locale" content="tr_TR">
+
+kullanılıyorsa bunu düzelt.
+
+English pages uygun English Open Graph locale kullanmalı.
+
+Örneğin en_US veya kullanılan İngilizce standardına göre tutarlı bir locale.
+
+Türkçe sayfalarda tr_TR kalabilir.
+
+URL NORMALIZATION:
+
+/en ve /en/ gibi iki URL aynı içeriği HTTP 200 ile sunuyorsa tek canonical URL formatına server-side 301 normalize et.
+
+Sitemap, canonical, hreflang ve internal links aynı final URL formatını kullanmalı.
+
+Mevcut sitemap şu anda /en formatını kullanıyor. Eğer bu format korunacaksa /en/ -> /en 301 yap.
+
+Aynı standardı ilgili diğer route'larda da kontrol et.
+
+FINAL TEST:
+
+Implementasyon bittikten sonra aşağıdakileri production/build preview üzerinde çalıştır ve çıktıyı incele:
+
+curl -sL https://capitallashing.com/
+curl -sL https://capitallashing.com/hizmetler/gemi-proje-lashing
+curl -sL https://capitallashing.com/hizmetler/konteyner-lashing
+curl -sL https://capitallashing.com/lashing/istanbul
+curl -sL https://capitallashing.com/lashing/ambarli-limani
+curl -sL https://capitallashing.com/en
+curl -sL https://capitallashing.com/en/services
+curl -sL https://capitallashing.com/en/services/container-lashing
+curl -sL https://capitallashing.com/en/locations/istanbul
+
+Her response'un raw HTML body kısmında gerçek görünür page content olmalı.
+
+Test ayrıca şunu doğrulamalı:
+
+* Page-specific H1 raw HTML'de
+* Page paragraphs raw HTML'de
+* H2 sections raw HTML'de
+* Internal links raw HTML'de
+* JSON-LD raw HTML'de
+* canonical raw HTML'de
+* hreflang raw HTML'de
+
+Son olarak fake URL:
+
+curl -I https://capitallashing.com/seo-test-bu-sayfa-yok-918273
+
+404 olarak kalmalı.
+
+Mevcut SEO implementasyonunu yeniden yazma. Sadece eksik olan FULL SSR/PRERENDER body rendering'i tamamla ve English og:locale / URL normalization gibi küçük tutarsızlıkları düzelt.

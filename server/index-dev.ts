@@ -8,6 +8,7 @@ import { createServer as createViteServer, createLogger } from "vite";
 
 import runApp from "./app";
 import { getMetaForPath, buildMetaHtml, isKnownPath, isEnglishPath } from "./seo";
+import { sendSitemap } from "./sitemap";
 
 import viteConfig from "../vite.config";
 
@@ -34,6 +35,7 @@ export async function setupVite(app: Express, server: Server) {
     appType: "custom",
   });
 
+  app.get("/sitemap.xml", sendSitemap);
   app.use(vite.middlewares);
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
