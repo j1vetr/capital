@@ -1,0 +1,67 @@
+# Capital Lashing & Port Services
+
+> Istanbul merkezli profesyonel lashing ve liman hizmetleri firmasi. Gemi proje lashing, konteyner sabitleme, flat rack lashing, shrink wrap paketleme, sandiklama ve unlashing hizmetleri. Turkiye'nin buyuk limanlarinda 7/24 operasyon.
+
+## Iletisim
+
+- Telefon: +90 216 312 06 12
+- E-posta: info@capitallashing.com
+- Adres: Abdurrahmangazi Mah. Ebubekir Cad. No:26 Sancaktepe / Istanbul, 34887, Turkiye
+- Web: https://capitallashing.com
+- Ingilizce site: https://capitallashing.com/en
+
+## Ana Hizmetler
+
+- [Gemi Proje Lashing](https://capitallashing.com/hizmetler/gemi-proje-lashing): Gemi ambari ve guverte ustu agir tonajli proje yuklerinin IMO CSS Code uyumlu sabitlenmesi
+- [Konteyner Lashing](https://capitallashing.com/hizmetler/konteyner-lashing): Konteyner ici yuk sabitleme, airbag uygulamasi ve arac baglama, CTU Code uyumlu
+- [Proje Kargo Lashing](https://capitallashing.com/hizmetler/proje-kargo-lashing): Gabari disi (OOG) ve agir sanayi yuklerinin ozel sabitleme cozumleri
+- [Flat Rack Lashing](https://capitallashing.com/hizmetler/flat-rack-lashing): Flat rack konteynerlere tasmali yuk sabitleme, gemi ve survey onayli
+- [Brandalama](https://capitallashing.com/hizmetler/brandalama): UV dayanimli ve su gecirmez PVC branda ile yuk koruma
+- [Shrink Wrap Paketleme](https://capitallashing.com/hizmetler/shrink-wrap): Isiyla daralan film ile endustriyel paketleme, VCI katkili secenekler
+- [Sandiklama](https://capitallashing.com/hizmetler/sandiklama): ISPM-15 standartlarinda ahsap sandik ve kasa uretimi
+- [Tekne ve Yat Lashing](https://capitallashing.com/hizmetler/tekne-yat-lashing): Tekne ve yatlarin denizasiri tasima icin sabitlenmesi
+- [Unlashing ve Tahliye](https://capitallashing.com/hizmetler/unlashing-tahliye): Varis limaninda lashing sokumu ve tahliye destegi
+
+## Hizmet Bolgeleri
+
+Merkez ofis Istanbul Sancaktepe'dedir. Asagidaki bolgeler hizmet verilen operasyon sahalaridir, sube degildir.
+
+- [Istanbul](https://capitallashing.com/lashing/istanbul)
+- [Ambarli Limani](https://capitallashing.com/lashing/ambarli-limani)
+- [Haydarpasa Limani](https://capitallashing.com/lashing/haydarpasa-limani)
+- [Tekirdag Limani](https://capitallashing.com/lashing/tekirdag-limani)
+- [Izmir Aliaga](https://capitallashing.com/lashing/aliaga)
+- [Mersin Limani](https://capitallashing.com/lashing/mersin-limani)
+
+## Rehber
+
+- [Rehber Ana Sayfa](https://capitallashing.com/rehber)
+- [Lashing Nedir](https://capitallashing.com/rehber/lashing-nedir)
+- [Konteyner Lashing Nedir](https://capitallashing.com/rehber/konteyner-lashing-nedir)
+- [Proje Kargo Lashing Nedir](https://capitallashing.com/rehber/proje-kargo-lashing-nedir)
+- [Flat Rack Lashing Nedir](https://capitallashing.com/rehber/flat-rack-lashing-nedir)
+- [Yuk Sabitleme Nedir](https://capitallashing.com/rehber/yuk-sabitleme-nedir)
+- [Shrink Wrap Paketleme Nedir](https://capitallashing.com/rehber/shrink-wrap-paketleme-nedir)
+- [Lashing Sertifikasi Nedir](https://capitallashing.com/rehber/lashing-sertifikasi-nedir)
+- [CSS Code Nedir](https://capitallashing.com/rehber/css-code-nedir)
+- [CTU Code ve Yuk Sabitleme](https://capitallashing.com/rehber/ctu-code-yuk-sabitleme)
+
+## English
+
+- [English Homepage](https://capitallashing.com/en)
+- [Services in English](https://capitallashing.com/en/services)
+- English service and location pages are available under /en/services and /en/locations
+
+## Diger Sayfalar
+
+- [Hakkimizda](https://capitallashing.com/hakkimizda)
+- [Projeler](https://capitallashing.com/projeler)
+- [Hizmet Bolgeleri](https://capitallashing.com/hizmet-bolgeleri)
+- [Iletisim](https://capitallashing.com/iletisim)
+
+## Important Notes
+
+- Capital Lashing operasyonlarini IMO CSS Code ve CTU Code standartlarina uygun yurutur
+- Listelenen limanlar sube degil hizmet verilen operasyon bolgeleridir
+- Fiyatlar yukun tonaji, boyutlari ve operasyon kapsamina gore teklif ile belirlenir
+- Guncel iletisim icin https://capitallashing.com/iletisim adresini kullanin

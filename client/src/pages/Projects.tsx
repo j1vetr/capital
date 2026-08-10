@@ -279,7 +279,7 @@ export default function Projects() {
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
-            alt="Projects Hero"
+            alt="Capital Lashing tamamlanan lashing ve yük sabitleme projeleri"
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />

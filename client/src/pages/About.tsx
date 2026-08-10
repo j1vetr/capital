@@ -1,3 +1,6 @@
+import { Link } from "wouter";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { BUSINESS } from "@shared/business";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
@@ -53,8 +56,8 @@ export default function About() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans selection:bg-primary/30">
       <SEO
-        title="Hakkımızda | Capital Lashing & Port Services – 10 Yıllık Deneyim"
-        description="Capital Lashing; 10+ yıllık tecrübesi, 5.000+ tamamlanmış operasyonu ve DNV-GL onaylı ekipmanlarıyla Türkiye'nin lider lashing ve liman hizmetleri firmasıdır."
+        title="Hakkımızda | Capital Lashing & Port Services – 2010'dan Beri Lashing Uzmanı"
+        description="Capital Lashing, 2010 yılından bu yana 15+ yıllık tecrübesi ve 2500+ tamamlanan projesiyle İstanbul merkezli lashing ve liman hizmetleri firmasıdır. DNV-GL onaylı ekipman, 7/24 operasyon."
         canonical="https://capitallashing.com/hakkimizda"
         breadcrumbs={[
           { name: "Ana Sayfa", url: "https://capitallashing.com" },
@@ -69,7 +72,9 @@ export default function About() {
           <div className="absolute inset-0 z-0">
             <img 
               src={heroImage} 
-              alt="Capital Lashing Port Operations" 
+              alt="Capital Lashing ekibinin limanda flat rack lashing operasyonu" 
+              width={2048}
+              height={1536}
               className="w-full h-full object-cover opacity-40"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900" />
@@ -108,8 +113,8 @@ export default function About() {
                 <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl -z-10" />
                 
                 <div className="relative z-10 grid grid-cols-2 gap-4">
-                  <img src={teamImg} alt="Project Lashing Operation" className="rounded-2xl shadow-xl w-full h-64 object-cover translate-y-8" />
-                  <img src={portImg} alt="Port Lashing Services" className="rounded-2xl shadow-xl w-full h-64 object-cover -translate-y-8" />
+                  <img src={teamImg} alt="Gemi güvertesinde proje yükü lashing uygulaması" loading="lazy" className="rounded-2xl shadow-xl w-full h-64 object-cover translate-y-8" />
+                  <img src={portImg} alt="Liman sahasında konteyner içi yük sabitleme çalışması" loading="lazy" className="rounded-2xl shadow-xl w-full h-64 object-cover -translate-y-8" />
                 </div>
                 
                 {/* Experience Badge */}
@@ -202,10 +207,24 @@ export default function About() {
             <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-10">
               Projeniz için en uygun çözümü üretmek üzere uzmanlarımız sizi bekliyor.
             </p>
-            <div className="flex justify-center gap-4">
-              <a href="/iletisim" className="px-8 py-4 bg-white text-primary font-bold uppercase tracking-wide rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
+            <div className="flex flex-col items-center gap-8">
+              <Link href="/iletisim" className="px-8 py-4 bg-white text-primary font-bold uppercase tracking-wide rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
                 İletişime Geçin
-              </a>
+              </Link>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-blue-100">
+                <a href={`tel:${BUSINESS.phone.e164}`} className="flex items-center gap-2 font-semibold hover:text-white transition-colors">
+                  <Phone className="h-5 w-5" />
+                  {BUSINESS.phone.display}
+                </a>
+                <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-2 font-semibold hover:text-white transition-colors">
+                  <Mail className="h-5 w-5" />
+                  {BUSINESS.email}
+                </a>
+                <address className="flex items-center gap-2 font-semibold not-italic">
+                  <MapPin className="h-5 w-5" />
+                  {BUSINESS.address.locality} / {BUSINESS.address.region}
+                </address>
+              </div>
             </div>
           </div>
         </section>

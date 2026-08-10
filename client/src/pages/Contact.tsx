@@ -30,7 +30,7 @@ export default function Contact() {
       {/* Page Header */}
       <div className="relative h-[450px] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">
-          <img src={heroImage} alt="Contact Hero" className="w-full h-full object-cover opacity-40" />
+          <img src={heroImage} alt="Liman sahasında yük güvenliği kontrolü yapan Capital Lashing ekibi" className="w-full h-full object-cover opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
         </div>
         <div className="container relative z-10 px-4 md:px-6 text-center pt-32">
@@ -85,9 +85,9 @@ export default function Contact() {
                       <MapPin className="h-6 w-6" />
                     </div>
                     <h3 className="text-xl font-bold font-heading text-white mb-2">Merkez Ofis</h3>
-                    <p className="text-slate-400 text-sm mb-6">
-                      {BUSINESS.address.street}<br />{BUSINESS.address.locality} / {BUSINESS.address.region}
-                    </p>
+                    <address className="text-slate-400 text-sm mb-6 not-italic">
+                      {BUSINESS.address.street}<br />{BUSINESS.address.postalCode} {BUSINESS.address.locality} / {BUSINESS.address.region}
+                    </address>
                     <a href={BUSINESS.address.mapsUrl} target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" className="w-full border-white/20 hover:bg-white/10 text-white hover:text-white">
                         Haritada Göster <Globe2 className="ml-2 h-4 w-4" />

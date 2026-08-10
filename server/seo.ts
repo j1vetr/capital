@@ -23,8 +23,8 @@ const routesMeta: Record<string, PageMeta> = {
     canonical: BASE_URL,
   },
   "/hakkimizda": {
-    title: "Hakkımızda | Capital Lashing & Port Services – 10 Yıllık Deneyim",
-    description: "Capital Lashing 10+ yıllık tecrübesi, 5.000+ tamamlanmış operasyonu ve DNV-GL onaylı ekipmanlarıyla Türkiye'nin lider lashing ve liman hizmetleri firmasıdır.",
+    title: "Hakkımızda | Capital Lashing & Port Services – 2010'dan Beri Lashing Uzmanı",
+    description: "Capital Lashing, 2010 yılından bu yana 15+ yıllık tecrübesi ve 2500+ tamamlanan projesiyle İstanbul merkezli lashing ve liman hizmetleri firmasıdır. DNV-GL onaylı ekipman, 7/24 operasyon.",
     canonical: `${BASE_URL}/hakkimizda`,
   },
   "/hizmetler": {
