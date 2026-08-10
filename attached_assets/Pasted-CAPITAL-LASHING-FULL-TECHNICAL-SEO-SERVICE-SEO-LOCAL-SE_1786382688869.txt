@@ -1,0 +1,1537 @@
+CAPITAL LASHING – FULL TECHNICAL SEO + SERVICE SEO + LOCAL SEO + LLM / AI SEARCH OPTIMIZATION
+
+Website:
+https://capitallashing.com
+
+GOAL
+
+Bu projede sadece birkaç meta tag düzenlemesi istemiyorum.
+
+Mevcut Capital Lashing web sitesini BOZMADAN, tasarımını ve çalışan fonksiyonlarını koruyarak, Yurdan Carpet / gelişmiş kurumsal SEO projelerinde uygulanan seviyede kapsamlı bir SEO altyapısı kur.
+
+Hedefimiz Capital Lashing'i şu konularda Google, Bing ve AI tabanlı arama sistemlerinin mümkün olduğunca net anlayabileceği bir yapıya getirmek:
+
+* lashing
+* lashing firması
+* İstanbul lashing firması
+* lashing hizmeti
+* yük sabitleme
+* yük sabitleme firması
+* cargo lashing
+* cargo securing
+* ship lashing
+* project cargo lashing
+* gemi lashing
+* gemi proje lashing
+* konteyner lashing
+* container lashing
+* proje kargo lashing
+* flat rack lashing
+* shrink wrap paketleme
+* endüstriyel paketleme
+* brandalama
+* ağır yük sabitleme
+* heavy cargo securing
+* port services
+* lashing services Istanbul
+* lashing services Turkey
+* cargo securing Istanbul
+* cargo securing Turkey
+
+Bu işi TAMAMEN UYGULA.
+
+Sadece yapılacaklar listesi veya öneri raporu verme.
+
+Önce mevcut kodu, framework'ü, route yapısını, build/deploy sistemini ve çalışan fonksiyonları incele. Ardından gerekli değişiklikleri doğrudan projeye uygula.
+
+======================================================================
+
+1. KRİTİK KURAL – MEVCUT SİTEYİ BOZMA
+   ======================================================================
+
+Aşağıdaki şeyleri bozma:
+
+* mevcut tasarım
+* responsive yapı
+* header
+* footer
+* menüler
+* teklif formu
+* reCAPTCHA
+* telefon bağlantıları
+* WhatsApp bağlantıları
+* e-posta bağlantıları
+* mevcut hizmet sayfaları
+* mevcut referanslar
+* mevcut görseller
+* mevcut URL'lerin çalışan yapısı
+
+SEO yapacağım diye siteyi yeniden tasarlama.
+
+Görsel değişiklik yalnızca SEO için semantik HTML veya küçük içerik blokları eklemek gerekiyorsa yapılabilir.
+
+Mevcut indexlenmiş URL'leri mümkün olduğunca koru.
+
+Bir URL'nin değişmesi gerçekten zorunluysa eski URL'den yeni URL'ye server-side 301 redirect oluştur.
+
+======================================================================
+2. BUSINESS FACT SAFETY
+=======================
+
+Google için içerik üretirken gerçek olmayan kurumsal bilgiler UYDURMA.
+
+Özellikle şunları kendi kendine üretme:
+
+* yeni ofis adresleri
+* limanlarda fiziksel şubeler
+* çalışan sayısı
+* sertifikalar
+* müşteri logoları
+* partnerlikler
+* review/yorum
+* rating
+* AggregateRating
+* proje sayıları
+* garanti
+* fiyat
+* çalışma saatleri
+* kuruluş tarihi
+* liman yetkileri
+* terminal anlaşmaları
+* özel izinler
+* resmi kurum ortaklıkları
+
+Mevcut sitede zaten bulunan iddiaları sebepsiz yere değiştirme veya kaldırma.
+
+Ancak yeni SEO içeriği oluştururken doğrulanmamış yeni iddialar ekleme.
+
+Özellikle liman landing page'leri FİZİKSEL ŞUBE olarak gösterilmemeli.
+
+Bunlar sadece SERVICE AREA / HİZMET BÖLGESİ sayfaları olmalı.
+
+======================================================================
+3. PRIMARY ENTITY
+=================
+
+Ana entity:
+
+Capital Lashing & Port Services
+
+Primary website:
+https://capitallashing.com/
+
+Ana sektör:
+Cargo securing / lashing / project cargo / port services / industrial packaging.
+
+Site genelinde marka ismini tutarlı kullan.
+
+Footer, Contact, About, schema ve llms.txt içindeki işletme bilgileri tek bir source-of-truth üzerinden gelmeli.
+
+Mevcut production sitedeki doğru telefon, e-posta ve adres değerlerini kullan.
+
+Harici sitelerden farklı bir adres veya telefon bulursan otomatik değiştirme.
+
+Production site / proje içindeki onaylı işletme verisini source of truth kabul et.
+
+======================================================================
+4. SEO KEYWORD ARCHITECTURE
+===========================
+
+Keyword stuffing YAPMA.
+
+Her sayfanın ayrı search intent'i olsun.
+
+HOME PAGE
+
+Ana hedef:
+
+* lashing firması
+* İstanbul lashing firması
+* profesyonel lashing hizmetleri
+* yük sabitleme
+* cargo securing
+* Capital Lashing
+* port services
+* proje kargo sabitleme
+
+Homepage diğer spesifik hizmet kelimelerini desteklemeli ancak her hizmetin esas hedefi kendi landing page'i olmalı.
+
+---
+
+GEMİ PROJE LASHING
+
+Primary:
+
+* gemi proje lashing
+* gemi lashing
+* proje yükü sabitleme
+* ship lashing
+* ship project lashing
+* heavy cargo securing
+
+---
+
+KONTEYNER LASHING
+
+Primary:
+
+* konteyner lashing
+* konteyner içi yük sabitleme
+* container lashing
+* container cargo securing
+* konteyner araç sabitleme
+
+---
+
+PROJE KARGO LASHING
+
+Primary:
+
+* proje kargo lashing
+* project cargo lashing
+* ağır yük sabitleme
+* heavy cargo securing
+* oversized cargo securing
+* gabari dışı yük sabitleme
+
+---
+
+FLAT RACK
+
+Primary:
+
+* flat rack lashing
+* flat rack yük sabitleme
+* flat rack cargo securing
+* taşmalı yük sabitleme
+* OOG cargo securing
+
+---
+
+SHRINK WRAP
+
+Primary:
+
+* shrink wrap paketleme
+* shrink wrapping
+* endüstriyel shrink wrap
+* ihracat paketleme
+* denizaşırı paketleme
+
+---
+
+BRANDALAMA
+
+Primary:
+
+* yük brandalama
+* endüstriyel brandalama
+* açık yük koruma
+* cargo covering
+* weather protection cargo
+
+---
+
+ENDÜSTRİYEL SANDIKLAMA
+
+Bu hizmet mevcut projede gerçekten bulunuyorsa optimize et.
+
+Primary:
+
+* endüstriyel sandıklama
+* ihracat sandığı
+* ahşap sandıklama
+* industrial crating
+* export packing
+
+Mevcut projede hizmet olarak yoksa uydurma.
+
+---
+
+SURVEY / GÖZETİM
+
+Sadece mevcut site/proje içinde gerçekten bir hizmet olarak bulunuyorsa optimize et.
+
+Yeni hizmet uydurma.
+
+======================================================================
+5. URL ARCHITECTURE
+===================
+
+Önce mevcut route'ları tespit et.
+
+Mevcut güçlü/indexlenmiş service URL'lerini koru.
+
+Tercih edilen servis mimarisi mevcut yapıyla uyumlu olarak:
+
+/hizmetler
+/hizmetler/gemi-proje-lashing
+/hizmetler/konteyner-lashing
+/hizmetler/proje-kargo-lashing
+/hizmetler/flat-rack-lashing
+/hizmetler/brandalama
+/hizmetler/shrink-wrap-paketleme
+
+Mevcut projede varsa:
+
+/hizmetler/endustriyel-sandiklama
+/hizmetler/survey-gozetim
+
+Ancak sadece SEO için eski URL'leri gereksiz yere değiştirme.
+
+Örneğin daha önce indexlenmiş:
+
+/konteyner-lashing-nedir/
+
+gibi URL'ler varsa:
+
+* içerik gerçekten guide ise guide olarak bırak
+  veya
+* taşınması gerekiyorsa doğru hedefe 301 yap.
+
+Asla eski indexlenmiş URL'yi sessizce 404'e düşürme.
+
+======================================================================
+6. LOCAL / PORT SEO ARCHITECTURE
+================================
+
+Mevcut site içeriğinde operasyon/hizmet bölgesi olarak belirtilmiş yerleri kullan.
+
+Capital Lashing'ın gerçek fiziksel şubesi varmış gibi davranma.
+
+Service-area landing page mimarisi kur:
+
+/lashing/istanbul
+/lashing/ambarli-limani
+/lashing/haydarpasa-limani
+/lashing/tekirdag-limani
+/lashing/aliaga
+/lashing/mersin-limani
+
+URL isimlerini mevcut proje routing standardına göre trailing slash kullanmadan veya kullanarak TUTARLI hale getir.
+
+Bu sayfaların amacı:
+
+İstanbul:
+
+* lashing İstanbul
+* İstanbul lashing firması
+* cargo securing Istanbul
+* lashing services Istanbul
+
+Ambarlı:
+
+* Ambarlı lashing
+* Ambarlı Limanı lashing
+* cargo securing Ambarlı
+* project cargo lashing Ambarlı
+
+Haydarpaşa:
+
+* Haydarpaşa lashing
+* Haydarpaşa Limanı yük sabitleme
+
+Tekirdağ:
+
+* Tekirdağ lashing
+* Tekirdağ Limanı lashing
+
+Aliağa:
+
+* Aliağa lashing
+* İzmir Aliağa lashing
+* Aliağa project cargo securing
+
+Mersin:
+
+* Mersin lashing
+* Mersin Limanı lashing
+* Mersin cargo securing
+
+CRITICAL:
+
+Bu sayfalar birbirinin şehir ismi değiştirilmiş kopyaları olmasın.
+
+Her sayfa gerçekten unique olsun.
+
+Ancak unique yapacağım diye limanla ilgili doğrulanmamış şu tarz bilgiler uydurma:
+
+* limanda sürekli ekibimiz vardır
+* şu terminalle anlaşmamız vardır
+* 30 dakikada müdahale ederiz
+* liman içinde ofisimiz vardır
+* şu terminalin resmi çözüm ortağıyız
+
+Bunun yerine güvenli ifadeler kullan:
+
+"Bu bölgedeki lashing ve yük sabitleme operasyon talepleri için Capital Lashing ile iletişime geçebilirsiniz."
+
+Gerçek operasyon fotoğrafı/projesi varsa ilgili lokasyon sayfasında kullanılabilir.
+
+======================================================================
+7. SERVICE AREA HUB
+===================
+
+Gerekirse:
+
+/hizmet-bolgeleri
+
+sayfası oluştur.
+
+H1 örneği:
+
+Capital Lashing Hizmet Bölgeleri
+
+Buradan bütün gerçek service-area sayfalarına semantik internal link ver.
+
+Homepage, service pages ve footer'dan da doğal şekilde Hizmet Bölgeleri sayfasına link ver.
+
+======================================================================
+8. ENGLISH SEO
+==============
+
+Capital Lashing uluslararası B2B denizcilik ve lojistik müşterilerine hizmet veren bir marka olduğundan İngilizce SEO mimarisi de oluştur.
+
+ANCAK mevcut Türkçe URL'leri değiştirme.
+
+Türkçe mevcut yapıda devam etsin.
+
+İngilizce:
+
+/en/
+/en/services
+/en/services/ship-project-lashing
+/en/services/container-lashing
+/en/services/project-cargo-lashing
+/en/services/flat-rack-lashing
+/en/services/cargo-covering
+/en/services/shrink-wrap-packaging
+
+Mevcut hizmetse:
+
+/en/services/industrial-crating
+/en/services/survey-services
+
+Location:
+
+/en/locations/istanbul
+/en/locations/ambarli-port
+/en/locations/haydarpasa-port
+/en/locations/tekirdag-port
+/en/locations/aliaga-port
+/en/locations/mersin-port
+
+English keyword cluster:
+
+* lashing services Turkey
+* lashing services Istanbul
+* cargo securing Turkey
+* cargo securing Istanbul
+* project cargo securing
+* project cargo lashing
+* ship lashing services
+* vessel cargo securing
+* container lashing service
+* flat rack lashing
+* OOG cargo securing
+* heavy cargo securing
+* industrial shrink wrapping
+* export packing
+* port lashing services
+
+Çeviri Google Translate hissi vermesin.
+
+Profesyonel maritime / logistics B2B İngilizcesi kullan.
+
+======================================================================
+9. HREFLANG
+===========
+
+İngilizce sayfalar oluşturulursa Türkçe/İngilizce karşılıklarını reciprocal hreflang ile bağla.
+
+Örnek:
+
+Türkçe:
+hreflang="tr-TR"
+
+İngilizce:
+hreflang="en"
+
+x-default:
+Ana dil stratejisine uygun tek bir tutarlı default URL kullan.
+
+Örneğin root Türkçe olarak kalıyorsa x-default root olabilir.
+
+Her hreflang URL:
+
+* HTTP 200 dönmeli
+* indexable olmalı
+* canonical olarak kendisini göstermeli
+* karşı sayfadan reciprocal link almalı
+
+Yanlış eşleşmiş hreflang oluşturma.
+
+======================================================================
+10. SSR / PRERENDER – ÇOK KRİTİK
+================================
+
+Framework'ü önce incele.
+
+Eğer sayfalar şu anda raw curl HTML içinde:
+
+* title
+* description
+* canonical
+* H1
+* body content
+* JSON-LD
+
+döndürmüyorsa SSR / SSG / prerender uygula.
+
+Framework zaten SSR/SSG kullanıyorsa yeniden mimari kurma.
+
+Hedef:
+
+curl ile:
+
+curl -sL https://capitallashing.com/
+curl -sL https://capitallashing.com/hizmetler/gemi-proje-lashing
+curl -sL https://capitallashing.com/lashing/istanbul
+
+çalıştırıldığında JavaScript execute edilmeden:
+
+* gerçek sayfa metni
+* title
+* meta description
+* canonical
+* H1
+* internal links
+* JSON-LD
+
+raw server HTML içinde bulunmalı.
+
+SEO metadata client-side JavaScript çalıştıktan sonra ekleniyor olmamalı.
+
+======================================================================
+11. TRUE 404
+============
+
+SPA fallback yüzünden olmayan tüm URL'lerin 200 dönmesi KESİNLİKLE yasak.
+
+Örneğin:
+
+/olmayan-sayfa-918273
+/hizmetler/fake-service-918273
+/lashing/fake-port-918273
+/en/services/fake-service-918273
+
+gerçek:
+
+HTTP 404
+
+dönmeli.
+
+Soft 404 yapma.
+
+404 sayfası kullanıcıya tasarımlı gösterilebilir ancak HTTP status kesinlikle 404 olmalı.
+
+======================================================================
+12. CANONICAL / REDIRECT STANDARD
+=================================
+
+Tek canonical host kullan:
+
+https://capitallashing.com
+
+HTTP -> HTTPS:
+301
+
+www -> non-www:
+301
+
+Canonical tag her indexable sayfada bulunmalı.
+
+Her indexable sayfa mümkün olduğunca self-referencing canonical kullanmalı.
+
+Query parameter'lı audit/tracking URL'leri canonical olarak temiz ana URL'yi göstermeli.
+
+Trailing slash stratejisini mevcut production URL yapısını dikkate alarak belirle.
+
+Gereksiz redirect zincirleri yaratma.
+
+Maksimum:
+
+old -> final
+
+tek 301 tercih et.
+
+======================================================================
+13. META TITLE STRATEGY
+=======================
+
+Her indexable sayfaya UNIQUE title oluştur.
+
+Homepage örneği:
+
+Lashing Firması İstanbul | Yük Sabitleme | Capital Lashing
+
+Alternatif test:
+
+Capital Lashing | Lashing & Yük Sabitleme Hizmetleri
+
+Service examples:
+
+Gemi Proje Lashing | Ağır Yük Sabitleme | Capital Lashing
+
+Konteyner Lashing | Konteyner İçi Yük Sabitleme | Capital Lashing
+
+Proje Kargo Lashing | Ağır Yük Sabitleme | Capital Lashing
+
+Flat Rack Lashing | OOG Yük Sabitleme | Capital Lashing
+
+Shrink Wrap Paketleme | Endüstriyel Koruma | Capital Lashing
+
+Location examples:
+
+İstanbul Lashing Firması | Yük Sabitleme | Capital Lashing
+
+Ambarlı Limanı Lashing | Capital Lashing
+
+Tekirdağ Limanı Lashing & Yük Sabitleme | Capital Lashing
+
+İngilizce örnek:
+
+Lashing Services Istanbul & Turkey | Capital Lashing
+
+Project Cargo Lashing | Heavy Cargo Securing | Capital Lashing
+
+Bunları körü körüne kullanma.
+
+Sayfa içeriği ve intent'e göre optimize et.
+
+Title'ları keyword listesine çevirmeden doğal tut.
+
+======================================================================
+14. META DESCRIPTION
+====================
+
+Her önemli URL unique meta description alsın.
+
+Yaklaşık 140-165 karakter hedeflenebilir ancak bu katı bir kural değildir.
+
+Description içinde:
+
+* hizmet
+* lokasyon gerekiyorsa lokasyon
+* Capital Lashing
+* kullanıcı faydası
+
+doğal biçimde geçsin.
+
+Aynı description'ı 20 sayfaya kopyalama.
+
+======================================================================
+15. H1 / HEADING STRUCTURE
+==========================
+
+Her ana sayfada bir tane anlamlı H1 bulunmalı.
+
+H1 tercihen görünür olsun.
+
+Keyword stuffing yapan hidden SEO heading kullanma.
+
+Örnek homepage:
+
+Profesyonel Lashing ve Yük Sabitleme Hizmetleri
+
+veya mevcut marka tasarımına uyumlu semantik bir varyasyon.
+
+Hiyerarşi:
+
+H1
+-> H2
+-> H3
+
+Headingleri sadece font boyutu için kullanma.
+
+======================================================================
+16. CONTENT QUALITY
+===================
+
+Service pages thin olmamalı.
+
+Her service page gerçek kullanıcı sorularını cevaplamalı:
+
+* hizmet nedir?
+* hangi yük tiplerinde kullanılır?
+* operasyon nasıl ilerler?
+* hangi teknik yöntemler kullanılabilir?
+* hangi bilgiler teklif için gerekir?
+* hangi service area'larda talep alınabilir?
+* Capital Lashing ile nasıl iletişim kurulur?
+* ilgili diğer hizmetler nelerdir?
+
+İçerik profesyonel B2B olmalı.
+
+AI yazısı gibi tekrar eden:
+
+"günümüz dünyasında"
+"en kaliteli hizmet"
+"sektörün lideri"
+"müşteri memnuniyeti odaklı"
+
+tarzı boş içerikleri kullanma.
+
+Mevcut teknik denizcilik terminolojisini koru.
+
+======================================================================
+17. FAQ CONTENT
+===============
+
+Her önemli hizmet için gerçekten yararlı görünür FAQ bölümü eklenebilir.
+
+Örneğin Gemi Proje Lashing:
+
+* Gemi proje lashing nedir?
+* Lashing planı için hangi bilgiler gerekir?
+* Ağır proje yüklerinde hangi sabitleme yöntemleri kullanılır?
+* Lashing operasyonu için teklif nasıl alınır?
+* Hangi liman bölgelerinde hizmet talep edilebilir?
+
+Konteyner:
+
+* Konteyner lashing nedir?
+* Konteyner içinde araç nasıl sabitlenir?
+* Flat rack ile standart konteyner lashing farkı nedir?
+* Teklif için hangi yük bilgileri gerekir?
+
+FAQ cevaplarında kesin süre/fiyat/garanti UYDURMA.
+
+======================================================================
+18. GUIDE / TOPICAL AUTHORITY CLUSTER
+=====================================
+
+Bilgilendirici SEO için rehber merkezi kur.
+
+Tercihen:
+
+/rehber
+
+Aşağıdaki içerikleri oluştur veya mevcut içerikler varsa optimize et:
+
+/lashing-nedir veya /rehber/lashing-nedir
+/konteyner-lashing-nedir veya mevcut indexli URL
+/rehber/proje-kargo-lashing-nedir
+/rehber/flat-rack-lashing-nedir
+/rehber/yuk-sabitleme-nedir
+/rehber/shrink-wrap-paketleme-nedir
+/rehber/lashing-sertifikasi-nedir
+/rehber/css-code-nedir
+/rehber/ctu-code-yuk-sabitleme
+
+Ancak mevcut indexlenmiş blog/guide URL'lerini gereksiz yere değiştirme.
+
+Mevcut `/konteyner-lashing-nedir/` gibi URL SEO değeri taşıyorsa koru.
+
+Guide içerikleri ticari service pages ile yarışmamalı.
+
+Örnek:
+
+"Konteyner lashing" ticari intent:
+service page.
+
+"Konteyner lashing nedir?" informational:
+guide.
+
+Guide içinden ilgili service page'e doğal CTA/internal link ver.
+
+======================================================================
+19. INTERNAL LINKING
+====================
+
+İç link yapısını sistematik hale getir.
+
+Homepage:
+-> Hizmetler
+-> ana service pages
+-> Hizmet Bölgeleri
+-> Rehber
+-> Hakkımızda
+-> İletişim
+
+Service page:
+-> ilgili service
+-> relevant port/service area
+-> relevant guide
+-> teklif/contact
+
+Location:
+-> ilgili hizmetler
+-> diğer gerçek service areas
+-> contact
+
+Guide:
+-> ilgili commercial service
+-> ilgili diğer guides
+-> contact/quote
+
+Anchor text doğal olsun.
+
+Her yerde "buraya tıklayın" kullanma.
+
+Örnek:
+
+"Konteyner lashing hizmetimizi inceleyin"
+
+"İstanbul lashing operasyonları"
+
+"Flat rack yük sabitleme"
+
+======================================================================
+20. STRUCTURED DATA / JSON-LD
+=============================
+
+Structured data raw HTML içinde server-delivered olarak bulunmalı.
+
+Homepage:
+
+* Organization
+* WebSite
+
+Organization için:
+
+@id:
+https://capitallashing.com/#organization
+
+WebSite:
+https://capitallashing.com/#website
+
+Organization alanları yalnızca gerçek veriler:
+
+* name
+* url
+* logo
+* telephone
+* email
+* postalAddress
+* contactPoint
+* sameAs yalnızca gerçek resmi profiller
+* areaServed yalnızca doğrulanabilir genel servis alanı
+
+---
+
+SERVICE PAGES
+
+* Organization reference
+* Service
+* BreadcrumbList
+* FAQPage yalnızca sayfada FAQ gerçekten görünüyorsa
+
+Service:
+
+provider:
+https://capitallashing.com/#organization
+
+serviceType:
+sayfanın gerçek hizmeti
+
+areaServed:
+gerçek hizmet alanı
+
+---
+
+LOCATION PAGES
+
+Organization için SAHTE port adresi oluşturma.
+
+Örneğin Ambarlı page:
+
+Service
+areaServed:
+Place name = Ambarlı / Istanbul
+
+Provider:
+Capital Lashing organization.
+
+Ambarlı'da LocalBusiness branch üretme.
+
+---
+
+GUIDES
+
+* Article
+* BreadcrumbList
+* Organization publisher
+
+Alanlar:
+
+headline
+description
+datePublished
+dateModified
+inLanguage
+url
+publisher
+author yalnızca gerçek organizasyon/author bilgisine göre
+
+Fake tarih kullanma.
+
+Build sırasında her seferinde dateModified=bugün yapma.
+
+Sadece içerik gerçekten değiştiğinde değiştir.
+
+---
+
+YASAK SCHEMA
+
+Uydurma:
+
+* Review
+* AggregateRating
+* ratingValue
+* reviewCount
+* Offer
+* price
+* priceRange
+* openingHours
+* award
+* certification
+
+ekleme.
+
+Mevcut gerçek veri yoksa schema'da da olmasın.
+
+======================================================================
+21. BREADCRUMBS
+===============
+
+Service, location ve guide pages için görünür breadcrumb ekle.
+
+Örnek:
+
+Ana Sayfa
+
+>
+
+Hizmetler
+
+>
+
+Gemi Proje Lashing
+
+Schema'da da BreadcrumbList oluştur.
+
+======================================================================
+22. OPEN GRAPH / SOCIAL META
+============================
+
+Her önemli page:
+
+og:title
+og:description
+og:url
+og:type
+og:image
+
+Twitter/X:
+
+twitter:card
+twitter:title
+twitter:description
+twitter:image
+
+Kullan.
+
+Canonical ve OG URL birbirine uygun olsun.
+
+======================================================================
+23. IMAGE SEO
+=============
+
+Mevcut görselleri optimize et.
+
+* descriptive alt text
+* width
+* height
+* lazy loading below fold
+* hero/LCP image'i gereksiz lazy load yapma
+* WebP/AVIF mümkünse
+* responsive srcset mümkünse
+* dosya boyutlarını optimize et
+
+Alt text keyword spam olmasın.
+
+Örnek iyi:
+
+"Flat rack konteyner üzerinde proje yükü lashing operasyonu"
+
+Örnek kötü:
+
+"lashing lashing firması istanbul lashing yük sabitleme"
+
+Görsel dosya isimlerini mümkün olduğunda anlamlı kullan:
+
+gemi-proje-lashing.webp
+container-lashing-operation.webp
+flat-rack-cargo-securing.webp
+
+Ancak URL değişimi mevcut asset referanslarını bozacaksa kontrollü yap.
+
+======================================================================
+24. IMAGE SITEMAP
+=================
+
+Önemli gerçek operasyon/service görsellerini XML sitemap içinde image metadata ile destekle.
+
+Mümkünse:
+
+image:image
+image:loc
+image:title
+image:caption
+
+kullan.
+
+Sadece gerçek görseller.
+
+======================================================================
+25. XML SITEMAP
+===============
+
+/sitemap.xml
+
+HTTP 200
+application/xml
+
+dönmeli.
+
+Sadece:
+
+* canonical
+* indexable
+* HTTP 200
+
+URL'leri sitemap'e ekle.
+
+404, redirect, noindex veya duplicate URL koyma.
+
+Türkçe + İngilizce bütün canonical pages dahil olsun.
+
+Location pages dahil olsun.
+
+Guides dahil olsun.
+
+lastmod yalnızca gerçek içerik güncelleme tarihine göre değişsin.
+
+Her deploy'da tüm sitemap'i bugünün tarihiyle güncelleme.
+
+======================================================================
+26. ROBOTS.TXT
+==============
+
+/robots.txt
+
+HTTP 200
+text/plain
+
+Public pages crawlable olsun.
+
+Genel mantık:
+
+User-agent: *
+Allow: /
+
+Gerekiyorsa:
+
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+Ama gerçekten mevcut olmayan route'ları sırf görünüş için eklemene gerek yok.
+
+Sitemap:
+
+Sitemap: https://capitallashing.com/sitemap.xml
+
+======================================================================
+27. OPENAI / AI CRAWLER ACCESS
+==============================
+
+ChatGPT Search görünürlüğü için OAI-SearchBot'u engelleme.
+
+robots.txt içinde açıkça izin verilebilir:
+
+User-agent: OAI-SearchBot
+Allow: /
+
+GPTBot politikasını da açık hale getir.
+
+Bu projede erişime izin ver:
+
+User-agent: GPTBot
+Allow: /
+
+Ancak kod yorumlarında veya site metninde:
+
+"GPTBot ranking sağlar"
+"ChatGPT sıralaması yükselir"
+
+gibi yanlış iddialar oluşturma.
+
+OAI-SearchBot search/discovery crawler,
+GPTBot ise ayrı bir crawler politikasıdır.
+
+Googlebot ve Bingbot public siteyi normal şekilde crawl edebilmeli.
+
+WAF/bot protection varsa legitimate crawler'lara 403 üretmemesine dikkat et.
+
+======================================================================
+28. LLMS.TXT
+============
+
+Root:
+
+https://capitallashing.com/llms.txt
+
+oluştur.
+
+Response:
+
+HTTP 200
+Content-Type: text/plain; charset=utf-8
+
+LLMS dosyası sade Markdown/plain text formatında olsun.
+
+Amaç:
+
+AI sistemlerinin Capital Lashing entity'sini, hizmetlerini ve önemli canonical
+URL'lerini daha kolay anlamasına yardımcı olacak temiz bir machine-readable
+site overview sunmak.
+
+llms.txt BİR RANKING GARANTİSİ olarak ele alınmasın.
+
+İçerik örnek yapısı:
+
+# Capital Lashing & Port Services
+
+> Capital Lashing provides professional cargo securing, lashing, project cargo
+> securing and related port services.
+
+## Brand
+
+Brand:
+Capital Lashing & Port Services
+
+Website:
+https://capitallashing.com/
+
+Market:
+Turkey / Türkiye
+
+Head Office:
+Production sitedeki doğrulanmış adres
+
+Phone:
+Production sitedeki doğrulanmış telefon
+
+Email:
+Production sitedeki doğrulanmış e-posta
+
+## Main Services
+
+* Gemi Proje Lashing
+  canonical URL
+
+* Konteyner Lashing
+  canonical URL
+
+* Proje Kargo Lashing
+  canonical URL
+
+* Flat Rack Lashing
+  canonical URL
+
+* Brandalama
+  canonical URL
+
+* Shrink Wrap Paketleme
+  canonical URL
+
+Mevcutsa:
+
+* Industrial Crating
+* Survey Services
+
+## Service Areas
+
+Sadece mevcut site tarafından doğrulanan hizmet alanları:
+
+* Istanbul
+* Ambarlı
+* Haydarpaşa
+* Tekirdağ
+* Aliağa
+* Mersin
+
+Her service area için canonical page varsa URL ekle.
+
+Şunu açıkça belirt:
+
+These are service areas and do not necessarily represent separate Capital
+Lashing branch offices.
+
+## Guides
+
+Guide URLs.
+
+## Contact
+
+Contact canonical URL.
+
+## Important Notes
+
+* Do not invent pricing.
+* Project scope depends on cargo and operation details.
+* Contact Capital Lashing for an operation-specific quotation.
+
+llms.txt içinde SEO keyword spam yapma.
+
+Kısa, factual, structured ve authoritative olsun.
+
+======================================================================
+29. OPTIONAL LLMS-FULL
+======================
+
+İhtiyaç varsa:
+
+/llms-full.txt
+
+oluşturulabilir.
+
+Ancak gereksiz 100 KB spam üretme.
+
+llms.txt esas temiz index dosyası olsun.
+
+llms-full varsa önemli service/guide açıklamalarının daha detaylı textual
+summary'sini içerebilir.
+
+======================================================================
+30. SEMANTIC AI-FRIENDLY HTML
+=============================
+
+AI için hidden keyword text üretme.
+
+Bunun yerine gerçek semantic HTML kullan:
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<h1>
+<h2>
+<p>
+<ul>
+<address>
+<footer>
+
+Her önemli page'in başlarında kullanıcıya da görünür, kısa ve factual bir
+özet paragrafı bulunabilir.
+
+Örneğin service page:
+
+"Capital Lashing, gemi ambarı ve güverte üstündeki proje yükleri için gemi
+proje lashing ve yük sabitleme hizmetleri sunar."
+
+Bu tarz factual intro hem kullanıcı hem crawler için değerlidir.
+
+======================================================================
+31. CONTACT / ENTITY PAGE
+=========================
+
+Contact page'i güçlü entity page yap.
+
+Mevcut doğrulanmış:
+
+* firma adı
+* telefon
+* e-posta
+* adres
+* website
+* iletişim formu
+
+tutarlı olsun.
+
+Telefon clickable tel:
+
+E-posta mailto:
+
+Adres Google Maps linkine gidebilir.
+
+Ancak yanlış/farklı harici adresi otomatik kullanma.
+
+======================================================================
+32. ABOUT PAGE
+==============
+
+Hakkımızda sayfası generic şirket metni olmaktan çıkarılabilir.
+
+Mevcut gerçek bilgiler çerçevesinde:
+
+* ne yapıyoruz
+* hangi cargo/security problemlerini çözüyoruz
+* operasyon süreci
+* sektör odağı
+* teknik yaklaşım
+* hizmet bölgeleri
+* ana hizmetler
+* iletişim
+
+konularını açıkça anlat.
+
+Kuruluş yılı, proje sayısı, sertifika vs. yalnızca mevcut doğrulanmış içerikte
+varsa kullan.
+
+======================================================================
+33. CORE WEB VITALS / PERFORMANCE
+=================================
+
+Mevcut UI'yi değiştirmeden:
+
+* JS bundle kontrolü
+* unused JS
+* unnecessary dependencies
+* oversized images
+* render-blocking assets
+* font loading
+* hero image LCP
+* CLS
+* lazy loading
+* preload
+
+kontrol et.
+
+Ama SEO yapmak için çalışan uygulamayı komple rewrite etme.
+
+Önce düşük riskli optimizasyon.
+
+======================================================================
+34. ACCESSIBILITY / SEO
+=======================
+
+* logo meaningful alt
+* buttons accessible names
+* navigation aria-label
+* form labels
+* heading hierarchy
+* links descriptive
+* image alt
+* language attribute
+
+kontrol et.
+
+======================================================================
+35. DUPLICATE / CANNIBALIZATION
+===============================
+
+Aynı keyword için 5 sayfa üretme.
+
+Keyword ownership:
+
+Homepage:
+broad lashing company / cargo securing
+
+Service:
+specific commercial service intent
+
+Location:
+service + place
+
+Guide:
+informational questions
+
+Örneğin:
+
+/hizmetler/konteyner-lashing
+=> "konteyner lashing hizmeti"
+
+/konteyner-lashing-nedir
+=> "konteyner lashing nedir"
+
+Bu iki page birbirini yemesin.
+
+İç link ve headingleri buna göre ayarla.
+
+======================================================================
+36. LEGACY / EXISTING CONTENT
+=============================
+
+Google'da daha önce indexlenmiş olabilecek route'ları tara.
+
+Mevcut projedeki:
+
+* hizmet sayfaları
+* blog/guide
+* reference/project pages
+
+için route inventory çıkar.
+
+SEO implementasyonu sırasında URL kaybı yaratma.
+
+Eski duplicate content varsa:
+
+* merge + 301
+  veya
+* canonical
+
+stratejisini page intent'e göre uygula.
+
+Rastgele delete etme.
+
+======================================================================
+37. NO FAKE SEO
+===============
+
+Kesinlikle yapma:
+
+* keyword stuffing
+* hidden SEO paragraphs
+* doorway pages
+* yüzlerce sahte şehir sayfası
+* sahte liman şubeleri
+* fake Google reviews
+* fake testimonials
+* fake AggregateRating
+* fake project counts
+* fake certifications
+* fake authors
+* fake dates
+* fake prices
+* copied competitor text
+
+======================================================================
+38. FINAL VERIFICATION – CURL
+=============================
+
+Implementation bittikten sonra canlı veya build preview üzerinde gerçek curl
+testi yap.
+
+En az:
+
+curl -I https://capitallashing.com/
+
+curl -sL https://capitallashing.com/
+
+curl -sL https://capitallashing.com/hizmetler/gemi-proje-lashing
+
+curl -sL https://capitallashing.com/hizmetler/konteyner-lashing
+
+curl -sL https://capitallashing.com/lashing/istanbul
+
+curl -sL https://capitallashing.com/robots.txt
+
+curl -sL https://capitallashing.com/sitemap.xml
+
+curl -sL https://capitallashing.com/llms.txt
+
+ve fake:
+
+curl -I https://capitallashing.com/seo-test-bu-sayfa-yok-918273
+
+test et.
+
+Raw HTML'de şunların bulunduğunu doğrula:
+
+<title>
+<meta name="description">
+<meta name="robots">
+<link rel="canonical">
+hreflang gerekiyorsa
+<h1>
+visible content
+application/ld+json
+
+Fake URL:
+
+404
+
+dönmeli.
+
+======================================================================
+39. BOT TESTS
+=============
+
+Test:
+
+curl -A "Googlebot" -I https://capitallashing.com/
+
+curl -A "Bingbot" -I https://capitallashing.com/
+
+curl -A "OAI-SearchBot" -I https://capitallashing.com/
+
+curl -A "OAI-SearchBot" https://capitallashing.com/robots.txt
+
+curl -A "OAI-SearchBot" https://capitallashing.com/llms.txt
+
+Public URL'ler bot user agent ile de başarılı HTTP response vermeli.
+
+======================================================================
+40. FINAL REPORT
+================
+
+İşi bitirdikten sonra bana sadece "SEO tamamlandı" deme.
+
+Final response içinde aşağıdakileri ver:
+
+1. Değiştirilen dosyalar
+2. Oluşturulan yeni URL'ler
+3. Korunan/eski URL'ler
+4. 301 redirect oluşturulan URL'ler
+5. Homepage title/description/H1
+6. Her service page'in primary keyword'ü
+7. Location/service-area page listesi
+8. English page listesi
+9. Schema matrix
+10. sitemap URL count
+11. robots.txt final içeriği
+12. llms.txt final içeriğinin özeti
+13. OAI-SearchBot test sonucu
+14. Googlebot test sonucu
+15. Fake URL 404 test sonucu
+16. Raw HTML'de JSON-LD bulunduğunu gösteren test
+17. Raw HTML'de H1/body content bulunduğunu gösteren test
+18. Bilgi eksikliği nedeniyle özellikle UYDURMADIĞIN business facts listesi
+19. Manuel olarak benim doğrulamam gereken herhangi bir işletme bilgisi varsa ayrı liste
+
+HEDEF SONUÇ:
+
+Capital Lashing sadece güzel görünen bir kurumsal site olmayacak.
+
+Arama motorları ve AI sistemleri tarafından net şekilde:
+
+"Turkey / Istanbul merkezli profesyonel cargo securing, lashing, project cargo,
+container lashing, flat rack lashing ve ilgili port services sağlayıcısı"
+
+olarak anlaşılabilecek; service intent, local service-area intent ve
+informational authority yapıları birbirinden ayrılmış güçlü bir teknik SEO
+mimarisi olacak.
+
+Öncelik sırası:
+
+1. Mevcut siteyi bozmamak
+2. SSR/prerender crawlability
+3. indexability + true 404
+4. canonical
+5. title/meta/H1
+6. service page intent
+7. structured data
+8. sitemap/robots
+9. internal linking
+10. local/service-area SEO
+11. English SEO
+12. guide/topical authority
+13. llms.txt + OAI-SearchBot accessibility
+14. performance
+15. final curl verification
+
+Şimdi projeyi incele ve bu planı doğrudan uygula.
