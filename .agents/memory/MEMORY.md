@@ -1,2 +1,3 @@
 - [SEO decisions](seo-architecture.md) — forbidden schema fields, route catalog sync rule, no em dash or semicolon in content.
+- [Lockfile registry hygiene](lockfile-registry.md) — after any npm install, strip Replit-internal registry URLs from package-lock.json; user self-hosts on Ubuntu and install hangs otherwise.
 - [SSR prerender setup](ssr-prerender.md) — single route catalog from sitemap entries; wouter Link needs asChild over <a>; recaptcha must be ssr.noExternal.

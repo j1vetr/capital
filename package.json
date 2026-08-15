@@ -10,6 +10,7 @@
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
     "sitemap:check": "tsx scripts/validate-sitemap.ts",
+    "lockfile:fix": "sed -i 's|http://package-firewall.replit.local/npm|https://registry.npmjs.org|g' package-lock.json && ! grep -q package-firewall package-lock.json && echo lockfile clean",
     "db:push": "drizzle-kit push"
   },
   "notes": "removed framer motion dependency",
