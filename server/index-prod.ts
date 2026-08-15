@@ -11,6 +11,19 @@ import { sendSitemap } from "./sitemap";
 const NOT_FOUND_TR = "__404__";
 const NOT_FOUND_EN = "__404_en__";
 
+function loadCriticalCss(distDir: string): Record<string, string> {
+  const prerenderDir = path.resolve(distDir, "prerendered");
+  const manifest = JSON.parse(
+    fs.readFileSync(path.join(prerenderDir, "manifest.json"), "utf-8"),
+  ) as Record<string, string>;
+  const css: Record<string, string> = {};
+  for (const [route, fileName] of Object.entries(manifest)) {
+    const p = path.join(prerenderDir, `${fileName}.critical.css`);
+    if (fs.existsSync(p)) css[route] = fs.readFileSync(p, "utf-8");
+  }
+  return css;
+}
+
 function loadPrerenderedBodies(distDir: string): Record<string, string> {
   const prerenderDir = path.resolve(distDir, "prerendered");
   const manifestPath = path.join(prerenderDir, "manifest.json");
@@ -38,6 +51,7 @@ export async function serveStatic(app: Express, server: Server) {
 
   const template = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
   const bodies = loadPrerenderedBodies(path.resolve(import.meta.dirname));
+  const criticalCss = loadCriticalCss(path.resolve(import.meta.dirname));
 
   app.get("/sitemap.xml", sendSitemap);
 
@@ -89,9 +103,12 @@ export async function serveStatic(app: Express, server: Server) {
       );
     }
 
-    const body = known
-      ? bodies[pathname]
-      : bodies[english ? NOT_FOUND_EN : NOT_FOUND_TR];
+    const bodyKey = known ? pathname : english ? NOT_FOUND_EN : NOT_FOUND_TR;
+    const body = bodies[bodyKey];
+    const critical = criticalCss[bodyKey];
+    if (critical) {
+      html = html.replace("</head>", `<style>${critical}</style></head>`);
+    }
     html = html.replace("<!-- SSR_BODY -->", body ?? "");
 
     res.status(known ? 200 : 404).set("Content-Type", "text/html").send(html);

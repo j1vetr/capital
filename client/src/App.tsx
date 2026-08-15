@@ -2,8 +2,6 @@ import { Suspense } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { routes, NotFoundRoute } from "./routes";
 import { FloatingContact } from "@/components/FloatingContact";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -24,12 +22,9 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <ScrollToTop />
-        <Toaster />
-        <Router />
-        <FloatingContact />
-      </TooltipProvider>
+      <ScrollToTop />
+      <Router />
+      <FloatingContact />
     </QueryClientProvider>
   );
 }

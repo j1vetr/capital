@@ -8,11 +8,31 @@
 @import "@fontsource/montserrat/700.css";
 @import "@fontsource/montserrat/900.css";
 
+/* Metric-matched fallbacks: while the webfonts load (font-display: swap),
+   text renders in Arial adjusted to the webfont's metrics, so the swap does
+   not shift layout (CLS) and the LCP heading paints at its final size. */
+@font-face {
+  font-family: 'Montserrat Fallback';
+  src: local('Arial');
+  size-adjust: 112.94%;
+  ascent-override: 85.79%;
+  descent-override: 22.25%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 107.12%;
+  ascent-override: 90.44%;
+  descent-override: 22.52%;
+  line-gap-override: 0%;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: 'Inter', sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-heading: 'Montserrat', 'Montserrat Fallback', sans-serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
