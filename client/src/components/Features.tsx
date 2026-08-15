@@ -78,7 +78,7 @@ export function Features() {
                     <item.icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold font-heading text-white uppercase text-sm mb-1 group-hover:text-primary transition-colors">{item.title}</h4>
+                    <h3 className="font-bold font-heading text-white uppercase text-sm mb-1 group-hover:text-primary transition-colors">{item.title}</h3>
                     <p className="text-slate-500 text-sm leading-snug">{item.desc}</p>
                   </div>
                 </motion.div>

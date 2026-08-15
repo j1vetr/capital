@@ -1,5 +1,6 @@
 import { type Server } from "node:http";
 
+import compression from "compression";
 import express, { type Express, type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 
@@ -15,6 +16,10 @@ export function log(message: string, source = "express") {
 }
 
 export const app = express();
+
+// Gzip compression for all responses (HTML, CSS, JS, SVG, JSON).
+// Without this, mobile Lighthouse reports full raw transfer sizes.
+app.use(compression());
 
 declare module 'http' {
   interface IncomingMessage {

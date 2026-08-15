@@ -29,7 +29,7 @@ for await (const file of walk(SERVICES_DIR)) {
     const out = file.replace(/\.webp$/, `_w${w}.webp`);
     await sharp(file)
       .resize({ width: w, withoutEnlargement: true })
-      .webp({ quality: 72 })
+      .webp({ quality: 62 })
       .toFile(out);
   }
 

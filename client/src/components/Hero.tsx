@@ -11,8 +11,15 @@ export function Hero() {
   const [showVideo, setShowVideo] = useState(false);
 
   // Defer video loading until the browser is idle so the poster image is the
-  // LCP element and the video never blocks first paint.
+  // LCP element and the video never blocks first paint. On small screens,
+  // with Save-Data, or with reduced motion the 1 MB video is never loaded —
+  // the poster alone is shown.
   useEffect(() => {
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const saveData = (navigator as any).connection?.saveData === true;
+    if (!isDesktop || reducedMotion || saveData) return;
+
     let done = false;
     const load = () => {
       if (done) return;

@@ -56,7 +56,7 @@ export async function serveStatic(app: Express, server: Server) {
           !filePath.includes(`${path.sep}assets${path.sep}images${path.sep}`);
         res.setHeader(
           "Cache-Control",
-          hashed ? "public, max-age=31536000, immutable" : "public, max-age=86400",
+          hashed ? "public, max-age=31536000, immutable" : "public, max-age=2592000",
         );
       },
     }),

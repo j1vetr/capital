@@ -148,7 +148,7 @@ export function ContactForm({ defaultService, readFromUrl = false }: ContactForm
         <p className="text-slate-500 text-base max-w-md mb-2 leading-relaxed">
           Uzman ekibimiz en geç <span className="text-primary font-bold">2 saat içinde</span> sizinle iletişime geçecektir.
         </p>
-        <p className="text-slate-400 text-sm mb-8">E-posta girdiyseniz onay maili de gönderildi.</p>
+        <p className="text-slate-600 text-sm mb-8">E-posta girdiyseniz onay maili de gönderildi.</p>
         <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
           <Button variant="outline" onClick={() => setStatus("idle")} className="uppercase font-bold tracking-wide">
             Yeni Talep Oluştur
@@ -270,7 +270,7 @@ export function ContactForm({ defaultService, readFromUrl = false }: ContactForm
         )}
       </Button>
 
-      <p className="text-center text-xs text-slate-400">
+      <p className="text-center text-xs text-slate-600">
         Bu form Google reCAPTCHA ile korunmaktadır.
       </p>
     </form>

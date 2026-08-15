@@ -1,6 +1,47 @@
 import { Phone, Mail } from "lucide-react";
-import { ContactForm } from "@/components/ContactForm";
 import { BUSINESS } from "@shared/business";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
+
+// The form (react-hook-form + zod + radix select ≈ 200 KB of JS) is only
+// loaded when the section scrolls near the viewport. SSR and the first
+// client render both show the same placeholder, so hydration matches.
+const ContactForm = lazy(() =>
+  import("@/components/ContactForm").then((m) => ({ default: m.ContactForm })),
+);
+
+function LazyContactForm() {
+  const holderRef = useRef<HTMLDivElement>(null);
+  const [load, setLoad] = useState(false);
+
+  useEffect(() => {
+    const el = holderRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setLoad(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "400px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={holderRef} className="min-h-[730px] md:min-h-[520px]">
+      {load && (
+        <Suspense fallback={null}>
+          <ContactForm />
+        </Suspense>
+      )}
+    </div>
+  );
+}
 
 export function ContactSection() {
   return (
@@ -20,7 +61,7 @@ export function ContactSection() {
                 <h3 className="text-3xl font-heading font-black uppercase mb-6 leading-tight">
                   Projenizi<br />Başlatalım
                 </h3>
-                <p className="text-blue-50 mb-12 text-lg">
+                <p className="text-white mb-12 text-lg">
                   Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli taşıma planını oluştursun.
                 </p>
 
@@ -30,7 +71,7 @@ export function ContactSection() {
                       <Phone className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-blue-50 uppercase font-bold tracking-wider">Bizi Arayın</p>
+                      <p className="text-xs text-white uppercase font-bold tracking-wider">Bizi Arayın</p>
                       <a href={`tel:${BUSINESS.phone.e164}`} className="text-lg font-bold hover:underline">{BUSINESS.phone.display}</a>
                     </div>
                   </div>
@@ -40,7 +81,7 @@ export function ContactSection() {
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-blue-50 uppercase font-bold tracking-wider">E-Posta Gönderin</p>
+                      <p className="text-xs text-white uppercase font-bold tracking-wider">E-Posta Gönderin</p>
                       <a href={`mailto:${BUSINESS.email}`} className="text-lg font-bold hover:underline">{BUSINESS.email}</a>
                     </div>
                   </div>
@@ -48,7 +89,7 @@ export function ContactSection() {
               </div>
 
               <div className="mt-12 relative z-10">
-                <p className="text-sm text-blue-50">
+                <p className="text-sm text-white">
                   © Capital Lashing 7/24 Operasyon Merkezi
                 </p>
               </div>
@@ -58,7 +99,7 @@ export function ContactSection() {
             <div className="lg:col-span-3 p-10 md:p-16 bg-white">
               <div className="max-w-lg">
                 <h3 className="text-2xl font-heading font-bold text-slate-900 uppercase mb-8">Hızlı Teklif Formu</h3>
-                <ContactForm />
+                <LazyContactForm />
               </div>
             </div>
 
