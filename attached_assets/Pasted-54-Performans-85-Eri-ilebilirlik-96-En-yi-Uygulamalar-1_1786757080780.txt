@@ -1,0 +1,344 @@
+54
+Performans
+85
+Erişilebilirlik
+96
+En İyi Uygulamalar
+100
+SEO
+2/3
+Ajan Tabanlı Tarama
+54
+FCP
++0
+LCP
++0
+TBT
++29
+CLS
++25
+SI
++0
+Performans
+Değerler tahminidir ve değişiklik gösterebilir. Performance skorunun hesaplanması , doğrudan bu metriklerle yapılır.Hesap makinesini göster.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Metrikler
+Görünümü genişlet
+First Contentful Paint
+11,8 sn.
+Largest Contentful Paint
+18,2 sn.
+Total Blocking Time
+130 ms.
+Cumulative Layout Shift
+0.004
+Speed Index
+11,8 sn.
+Captured at 15 Ağu 2026 04:20 GMT+3
+Emülasyonlu Moto G Power with Lighthouse 13.4.1
+Tek sayfalık oturum
+İlk sayfa yükleme
+Yavaş 4G kısıtlaması
+Using HeadlessChromium 150.0.7871.186 with lr
+Ağaç grafiği göster
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Şunlarla alakalı denetimleri göster:
+
+All
+
+FCP
+
+LCP
+
+TBT
+
+CLS
+Analizler
+Oluşturma engelleme istekleri Tahmini tasarruf: 2.440 ms.
+İstekler sayfanın ilk oluşturma işlemini engelliyor. Bu durum, LCP'yi geciktirebilir. Erteleme veya satır içine yerleştirme, bu ağ isteklerini kritik yoldan uzaklaştırabilir.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Süre
+capitallashing.com 1. taraf
+143,7 KiB	4.940 msn
+/assets/index-Bf8Ar2w9.css(capitallashing.com)
+143,7 KiB
+4.940 msn
+Google Fonts cdn 
+1,7 KiB	750 msn
+/css2?family=…(fonts.googleapis.com)
+1,7 KiB
+750 msn
+LCP dökümü
+Her alt bölüm için belirli iyileştirme stratejileri vardır. İdeal olarak LCP süresinin çoğu gecikmeler için değil, kaynakları yüklemek için harcanmalıdır.LCPPuanlanmamış
+Alt bölüm
+Süre
+Time to First Byte
+0 msn
+Öğe oluşturma gecikmesi
+2.590 msn
+LASHINGDE CAPITAL İMZASI
+<h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leadin…">
+Ağ bağımlılık ağacı
+Sayfaların daha kolay yüklenmesi için zincir uzunluğunu azaltarak, kaynakların indirme boyutunu küçülterek veya gereksiz kaynakların indirilmesini erteleyerek kritik istek zinciri oluşturmaktan kaçının.LCPPuanlanmamış
+Maksimum kritik yol gecikmesi: 1.208 msn
+İlk Gezinme
+https://capitallashing.com - 437 msn, 16,48 KiB
+/css2?family=…(fonts.googleapis.com) - 446 msn, 1,74 KiB
+…v20/UcC73FwrK….woff2(fonts.gstatic.com) - 1.208 msn, 84,06 KiB
+…v20/UcC73FwrK….woff2(fonts.gstatic.com) - 1.207 msn, 48,09 KiB
+…v31/JTUSjIg1_….woff2(fonts.gstatic.com) - 1.208 msn, 67,42 KiB
+…v31/JTUSjIg1_….woff2(fonts.gstatic.com) - 1.208 msn, 35,47 KiB
+/assets/index-CZLvbxhI.js(capitallashing.com) - 1.125 msn, 901,73 KiB
+/assets/index-Bf8Ar2w9.css(capitallashing.com) - 933 msn, 143,71 KiB
+Önceden bağlanmış kaynaklar
+Önceden bağlanma ipuçları, sayfa yüklenirken tarayıcının gerekli bağlantıları önceden kurmasına yardımcı olarak ilgili kaynağa yapılacak ilk istekte zaman kazandırır. Sayfanın önceden bağlantı kurduğu kaynaklar aşağıda verilmiştir.
+Kaynak
+Kaynak
+https://fonts.googleapis.com/
+head > link
+<link rel="preconnect" href="https://fonts.googleapis.com">
+https://fonts.gstatic.com/
+head > link
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+Önceden bağlanma adayları
+En önemli kaynaklarınıza önceden bağlanma ipuçları ekleyin ancak 4'ten az ipucu kullanmaya çalışın.
+Kaynak
+Tahmini LCP tasarrufu
+https://grainy-gradients.vercel.app
+300 msn
+Verimli önbellek sürelerini kullanın Tahmini tasarruf: 0 KiB
+Uzun önbellek ömrü, sayfanızda tekrarlanan ziyaretleri hızlandırabilir. Önbelleğe alma hakkında daha fazla bilgi edinin.LCPFCPPuanlanmamış
+İstek
+TTL'yi Önbelleğe Alma
+Aktarım Boyutu
+Google CDN cdn 
+3 KiB
+…api2/logo_48.png(www.gstatic.com)
+7g
+3 KiB
+Yazı tipi görüntüleme Tahmini tasarruf: 10 ms.
+Metnin her zaman görünmesini sağlamak için font-display özelliğini swap veya optional olarak ayarlayabilirsiniz. swap, yazı tipi metriği geçersiz kılmalarıyla düzen kaymalarını azaltmak için daha fazla optimize edilebilir.FCPPuanlanmamış
+URL
+Tahmini Tasarruf
+Google Fonts cdn 
+…v48/KFO7CnqEu….woff2(fonts.gstatic.com)
+10 msn
+Resim yayınlamayı kolaylaştırın Tahmini tasarruf: 1.229 KiB
+Resimlerin indirme süresini kısaltmak, sayfanın algılanan yükleme süresini ve LCP'yi daha iyi hale getirebilir. Resim boyutunu optimize etme hakkında daha fazla bilgi edinin.LCPFCPPuanlanmamış
+URL
+Kaynak Boyutu
+Tahmini Tasarruf
+capitallashing.com 1. taraf
+1.608,0 KiB	1.229,4 KiB
+Proje Kargo Lashing Hizmeti - Profesyonel Yük Sabitleme
+<img src="/assets/images/services/proje-kargo-lashing/proje-kargo-lashing_1.webp" alt="Proje Kargo Lashing Hizmeti - Profesyonel Yük Sabitleme" loading="lazy" width="400" height="300" class="w-full h-full object-cover transition-transform duration-700 group-hover:s…">
+…proje-kargo-lashing/proje-kargo-lashing_1.webp(capitallashing.com)
+494,0 KiB
+399,0 KiB
+Resim sıkıştırma faktörünü artırarak bu resmin indirme boyutunu küçültebilirsiniz.
+211,8 KiB
+Bu resim dosyası, görüntülenen boyutlarına (662x882) göre olması gerekenden (1600x1083) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+327,7 KiB
+Brandalama Hizmeti - Profesyonel Yük Sabitleme
+<img src="/assets/images/services/brandalama/brandalama_1.webp" alt="Brandalama Hizmeti - Profesyonel Yük Sabitleme" loading="lazy" width="400" height="300" class="w-full h-full object-cover transition-transform duration-700 group-hover:s…">
+…brandalama/brandalama_1.webp(capitallashing.com)
+334,4 KiB
+290,4 KiB
+Bu resim dosyası, görüntülenen boyutlarına (662x496) göre olması gerekenden (1920x1298) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+290,4 KiB
+Konteyner Lashing Hizmeti - Profesyonel Yük Sabitleme
+<img src="/assets/images/services/konteyner-lashing/konteyner-lashing_1.webp" alt="Konteyner Lashing Hizmeti - Profesyonel Yük Sabitleme" loading="lazy" width="400" height="300" class="w-full h-full object-cover transition-transform duration-700 group-hover:s…">
+…konteyner-lashing/konteyner-lashing_1.webp(capitallashing.com)
+307,0 KiB
+212,1 KiB
+Resim sıkıştırma faktörünü artırarak bu resmin indirme boyutunu küçültebilirsiniz.
+47,0 KiB
+Bu resim dosyası, görüntülenen boyutlarına (662x882) göre olması gerekenden (1536x1040) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+194,9 KiB
+Flat Rack (FR) Lashing Hizmeti - Profesyonel Yük Sabitleme
+<img src="/assets/images/services/flat-rack-lashing/flat-rack-lashing_1.webp" alt="Flat Rack (FR) Lashing Hizmeti - Profesyonel Yük Sabitleme" loading="lazy" width="400" height="300" class="w-full h-full object-cover transition-transform duration-700 group-hover:s…">
+…flat-rack-lashing/flat-rack-lashing_1.webp(capitallashing.com)
+253,1 KiB
+160,7 KiB
+Bu resim dosyası, görüntülenen boyutlarına (662x882) göre olması gerekenden (1536x1040) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+160,7 KiB
+Gemi Proje Lashing Hizmeti - Profesyonel Yük Sabitleme
+<img src="/assets/images/services/gemi-proje-lashing/gemi-proje-lashing_1.webp" alt="Gemi Proje Lashing Hizmeti - Profesyonel Yük Sabitleme" loading="lazy" width="400" height="300" class="w-full h-full object-cover transition-transform duration-700 group-hover:s…">
+…gemi-proje-lashing/gemi-proje-lashing_1.webp(capitallashing.com)
+136,4 KiB
+86,6 KiB
+Bu resim dosyası, görüntülenen boyutlarına (662x882) göre olması gerekenden (1536x1040) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+86,6 KiB
+Capital Lashing
+<img src="/assets/logo-white-text-DqG5iigX.webp" alt="Capital Lashing" class="transition-all duration-300 object-contain h-16 brightness-0 invert" style="filter:none">
+/assets/logo-whit….webp(capitallashing.com)
+43,2 KiB
+41,0 KiB
+Bu resim dosyası, görüntülenen boyutlarına (465x112) göre olması gerekenden (2048x493) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+41,0 KiB
+Logo
+<img src="/favicon.png" alt="Logo" class="w-6 h-6 object-contain">
+/favicon.png(capitallashing.com)
+40,0 KiB
+39,7 KiB
+Bu resim dosyası, görüntülenen boyutlarına (42x42) göre olması gerekenden (512x512) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+39,7 KiB
+Düzen kayması sorununun nedenleri
+3. taraflar
+Bu analizler Chrome Geliştirici Araçları Performans Paneli'nde de mevcuttur. Daha ayrıntılı bilgi görüntülemek için izleme kaydı oluşturun.
+Teşhis
+Kullanılmayan JavaScript'i azaltın Tahmini tasarruf: 810 KiB
+Ağ etkinliğinin kullandığı bayt sayısını azaltılmaları gerekene kadar kullanılmayan JavaScript'i azaltıp komut dosyalarını erteleyin. Kullanılmayan JavaScript'i nasıl azaltacağınızı öğrenin.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Tahmini Tasarruf
+capitallashing.com 1. taraf
+894,8 KiB	445,8 KiB
+/assets/index-CZLvbxhI.js(capitallashing.com)
+894,8 KiB
+445,8 KiB
+Google CDN cdn 
+671,1 KiB	364,3 KiB
+…XOqlk8PL_…/recaptcha__en.js(www.gstatic.com)
+335,6 KiB
+183,3 KiB
+…XOqlk8PL_…/recaptcha__en.js(www.gstatic.com)
+335,6 KiB
+181,0 KiB
+Kullanılmayan CSS'yi azaltın Tahmini tasarruf: 40 KiB
+Ağ etkinliğinin kullandığı bayt sayısını azaltmak üzere stil sayfalarında kullanılmayan kuralları azaltıp ekranın üst kısmında içerik için kullanılmayan CSS'yi erteleyin. Kullanılmayan CSS'yi nasıl azaltacağınızı öğrenin.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Tahmini Tasarruf
+Google CDN cdn 
+41,3 KiB	39,8 KiB
+…XOqlk8PL_…/styles__ltr.css(www.gstatic.com)
+41,3 KiB
+39,8 KiB
+Resim öğelerinin açıkça belirtilmiş width ve height değerleri yok
+Düzen kaymalarını azaltıp CLS'yi iyileştirmek için görsel öğelerde genişliği ve yüksekliği açıkça belirtilmiş şekilde ayarlayın. Resim boyutlarını nasıl belirleyeceğinizi öğrenin.CLSPuanlanmamış
+URL
+capitallashing.com 1. taraf
+Capital Lashing
+<img src="/assets/logo-white-text-DqG5iigX.webp" alt="Capital Lashing" class="transition-all duration-300 object-contain h-16 brightness-0 invert" style="filter:none">
+/assets/logo-whit….webp(capitallashing.com)
+Capital Lashing
+<img src="/assets/logo-white-text-DqG5iigX.webp" alt="Capital Lashing" class="h-16 object-contain brightness-0 invert opacity-95 hover:opacity-100 trans…">
+/assets/logo-whit….webp(capitallashing.com)
+TOOV
+<img src="/toov-logo.png" alt="TOOV" class="h-5 w-auto opacity-40 group-hover:opacity-100 transition-all duration-500 …">
+/toov-logo.png(capitallashing.com)
+Çok büyük ağ yüklerinden kaçının Toplam boyut 14.954 KiB'tı
+Büyük ağ yükleri kullanıcılar için parasal maliyet anlamına gelir ve yükleme sürelerinin uzamasında yüksek bir etkiye sahiptir. Yük boyutlarını nasıl düşüreceğinizi öğrenin.Puanlanmamış
+URL
+Aktarım Boyutu
+capitallashing.com 1. taraf
+13.115,0 KiB
+/assets/cinematic….mp4(capitallashing.com)
+6.947,8 KiB
+/assets/cinematic….mp4(capitallashing.com)
+3.875,8 KiB
+/assets/index-CZLvbxhI.js(capitallashing.com)
+901,7 KiB
+…proje-kargo-lashing/proje-kargo-lashing_1.webp(capitallashing.com)
+494,3 KiB
+…brandalama/brandalama_1.webp(capitallashing.com)
+334,7 KiB
+…konteyner-lashing/konteyner-lashing_1.webp(capitallashing.com)
+307,3 KiB
+…flat-rack-lashing/flat-rack-lashing_1.webp(capitallashing.com)
+253,4 KiB
+Google CDN cdn 
+1.009,6 KiB
+…XOqlk8PL_…/recaptcha__en.js(www.gstatic.com)
+336,5 KiB
+…XOqlk8PL_…/recaptcha__en.js(www.gstatic.com)
+336,5 KiB
+…XOqlk8PL_…/recaptcha__en.js(www.gstatic.com)
+336,5 KiB
+Uzun ana ileti dizisi görevlerinden kaçının 5 uzun görev bulundu
+Birleştirilmemiş animasyonlardan kaçının Animasyonlu 1 öğe bulundu
+Uygulamanızın performansı hakkında daha fazla bilgi. Bu sayılar Performan skoruna doğrudan etki etmezler.
+Başarılı denetimler (13)
+Göster
+85
+Erişilebilirlik
+Bu kontroller, web uygulamanızın erişilebilirliğini iyileştirme fırsatlarını öne çıkarır. Otomatik algılama, sorunların yalnızca bir alt kümesini algılayabilir ve web uygulamanızın erişilebilirliğini garanti etmez. Bu nedenle, manuel test yapmanız da önerilir.
+Adlar ve etiketler
+Düğmelerin erişilebilir adları yok
+Düğmelerin erişilebilir özellikli adı olmadığında ekran okuyucular bu düğmeyi yalnızca "düğme" olarak okur. Bu da, ekran okuyuculardan yararlanan kullanıcılar için yararlı olmaz. Düğmeleri nasıl daha erişilebilir yapabileceğinizi öğrenin.
+Başarısız Öğeler
+Hizmet Seçiniz
+<button type="button" role="combobox" aria-controls="radix-_R_kter_" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder="" class="flex w-full items-center justify-between whitespace-nowrap rounded-md bord…" data-testid="select-service">
+Bu fırsatlar, uygulamanızdaki kontrollerin anlamının iyileştirilmesine olanak tanır. Bu durum, ekran okuyucu gibi yardımcı teknolojilerin kullanıcılarına daha iyi bir deneyim sunulmasını sağlayabilir.
+En iyi uygulamalar
+[user-scalable="no"], <meta name="viewport"> öğesinde kullanılmış veya [maximum-scale] özelliği 5'ten küçük.
+Yakınlaştırmanın devre dışı bırakılması, az gören ve bir web sayfasının içeriğini düzgün bir şekilde görebilmek için ekran büyütme özelliğinden yararlanan kullanıcılar için sorun teşkil eder. Görüntü alanı meta etiketi hakkında daha fazla bilgi edinin.
+Başarısız Öğeler
+head > meta
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+Özdeş bağlantılar aynı amaca sahiptir.
+Bu öğeler, erişilebilirlikle ilgili yaygın en iyi uygulamaları öne çıkarır.
+Kontrast
+Arka plan ve ön plan renkleri yeterli kontrast oranına sahip değil.
+Birçok kullanıcı, düşük kontrastlı metni okumakta zorlanır veya okuyamaz. Yeterli renk kontrastını nasıl sağlayacağınızı öğrenin.
+Başarısız Öğeler
+HEMEN TEKLİF AL
+<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap focus-visi…">
+NEREDE ÇALIŞIYORUZ?
+<span class="text-xs font-black tracking-[0.3em] uppercase text-primary mb-3 inline-blo…">
+NEREDE ÇALIŞIYORUZ? HİZMET BÖLGELERİMİZ İstanbul merkezli ekiplerimizle Marmar…
+<section class="py-20 bg-slate-50 border-b border-slate-100">
+Tüm Hizmet Bölgeleri
+<a href="/hizmet-bolgeleri" class="inline-flex items-center gap-2 px-5 py-3 bg-primary text-white rounded-ful…">
+lashing rehberimize
+<a href="/rehber" class="text-primary font-bold hover:underline">
+NEREDE ÇALIŞIYORUZ? HİZMET BÖLGELERİMİZ İstanbul merkezli ekiplerimizle Marmar…
+<section class="py-20 bg-slate-50 border-b border-slate-100">
+PROJENİZİ BAŞLATALIM
+<h3 class="text-3xl font-heading font-black uppercase mb-6 leading-tight">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
+BİZİ ARAYIN
+<p class="text-xs text-blue-200 uppercase font-bold tracking-wider">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
++90 216 312 06 12
+<a href="tel:+902163120612" class="text-lg font-bold hover:underline">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
+E-POSTA GÖNDERİN
+<p class="text-xs text-blue-200 uppercase font-bold tracking-wider">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
+info@capitallashing.com
+<a href="mailto:info@capitallashing.com" class="text-lg font-bold hover:underline">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
+© Capital Lashing 7/24 Operasyon Merkezi
+<p class="text-sm text-blue-100 opacity-80">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
+Bu form Google reCAPTCHA ile korunmaktadır.
+<p class="text-center text-xs text-slate-400">
+HIZLI TEKLİF FORMU AD SOYAD * FİRMA İLETİŞİM * HİZMET * Hizmet Seçiniz Gemi & P…
+<div class="lg:col-span-3 p-10 md:p-16 bg-white">
+Bu fırsatlar, içeriğinizin daha rahat okunmasına olanak tanır.
+Gezinme
+Başlık öğeleri sırayla azalan düzende sıralı değil
+Düzey atlamayan gerektiği gibi sıralanmış başlıklar sayfanın anlamsal yapısını iletir. Böylece, yardımcı teknolojiler kullanılırken gezinmeyi ve anlaşılmayı kolaylaştırır. Başlık sıralaması hakkında daha fazla bilgi edinin.
+Başarısız Öğeler
+7/24 OPERASYON
+<h4 class="font-bold font-heading text-white uppercase text-sm mb-1 group-hover:text-…">
