@@ -13,7 +13,7 @@ async function main() {
     throw new Error(`SSR entry not found: ${ssrEntry}. Run the SSR build first.`);
   }
   const { render } = (await import(pathToFileURL(ssrEntry).href)) as {
-    render: (url: string) => string;
+    render: (url: string) => Promise<string>;
   };
 
   const outDir = path.resolve(process.cwd(), "dist/prerendered");
@@ -23,8 +23,8 @@ async function main() {
   const routes = buildSitemapEntries().map((entry) => entry.path);
   const manifest: Record<string, string> = {};
 
-  const writeRoute = (routePath: string, renderPath: string, key: string) => {
-    const html = render(renderPath);
+  const writeRoute = async (routePath: string, renderPath: string, key: string) => {
+    const html = await render(renderPath);
     if (!html || html.length < 200) {
       throw new Error(`Prerendered body for ${routePath} looks empty (${html.length} chars)`);
     }
@@ -34,12 +34,12 @@ async function main() {
   };
 
   for (const route of routes) {
-    writeRoute(route, route, route);
+    await writeRoute(route, route, route);
   }
 
   // Not found bodies, Turkish and English variants
-  writeRoute(NOT_FOUND_TR, "/__seo-not-found__", NOT_FOUND_TR);
-  writeRoute(NOT_FOUND_EN, "/en/__seo-not-found__", NOT_FOUND_EN);
+  await writeRoute(NOT_FOUND_TR, "/__seo-not-found__", NOT_FOUND_TR);
+  await writeRoute(NOT_FOUND_EN, "/en/__seo-not-found__", NOT_FOUND_EN);
 
   fs.writeFileSync(path.join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2), "utf-8");
   console.log(`Prerendered ${routes.length} routes plus 404 bodies into ${outDir}`);

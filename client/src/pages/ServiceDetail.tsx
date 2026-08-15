@@ -1,3 +1,4 @@
+import { serviceSrcSet, CARD_SIZES } from "@/lib/responsiveImage";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
@@ -17,11 +18,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.png";
-import containerImg from "@assets/generated_images/container_lashing_detail_shot.png";
-import projectImg from "@assets/generated_images/project_cargo_being_secured.png";
-import shrinkImg from "@assets/generated_images/industrial_shrink_wrap_packaging.png";
-import yachtImg from "@assets/generated_images/luxury_yacht_transport_lashing.png";
+import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.webp";
+import containerImg from "@assets/generated_images/container_lashing_detail_shot.webp";
+import projectImg from "@assets/generated_images/project_cargo_being_secured.webp";
+import shrinkImg from "@assets/generated_images/industrial_shrink_wrap_packaging.webp";
+import yachtImg from "@assets/generated_images/luxury_yacht_transport_lashing.webp";
 
 export default function ServiceDetail() {
   const [match, params] = useRoute("/hizmetler/:id");
@@ -281,10 +282,14 @@ export default function ServiceDetail() {
                       <div key={i} className={`rounded-xl overflow-hidden shadow-sm border border-slate-100 group h-64 ${i === 0 ? 'md:col-span-2 md:h-96' : ''}`}>
                         <img 
                           src={img} 
+                          srcSet={serviceSrcSet(img)}
+                          sizes="(max-width: 768px) 100vw, 40vw"
                           alt={`${service.title} Operasyon Görseli ${i+1} - Capital Lashing`} 
                           title={`${service.title} Referans Uygulama ${i+1}`}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                           loading="lazy"
+                          width="640"
+                          height="480"
                         />
                       </div>
                     ))}

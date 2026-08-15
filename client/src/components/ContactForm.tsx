@@ -1,8 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import ReCAPTCHA from "react-google-recaptcha";
+import type ReCAPTCHA from "react-google-recaptcha";
+
+// reCAPTCHA (~1MB of third-party script) is only loaded once the form is
+// actually visible in the viewport or the user interacts with it.
+const LazyReCAPTCHA = lazy(() => import("react-google-recaptcha"));
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -56,7 +60,29 @@ interface ContactFormProps {
 export function ContactForm({ defaultService, readFromUrl = false }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [captchaEnabled, setCaptchaEnabled] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    const el = formRef.current;
+    if (!el || captchaEnabled) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setCaptchaEnabled(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setCaptchaEnabled(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [captchaEnabled, status]);
 
   const { register, handleSubmit, setValue, watch, reset, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -78,7 +104,13 @@ export function ContactForm({ defaultService, readFromUrl = false }: ContactForm
     setErrorMsg("");
     let recaptchaToken = "";
     try {
-      recaptchaToken = await recaptchaRef.current!.executeAsync() || "";
+      setCaptchaEnabled(true);
+      // Wait briefly for the lazily loaded reCAPTCHA widget if needed
+      for (let i = 0; i < 50 && !recaptchaRef.current; i++) {
+        await new Promise((r) => setTimeout(r, 100));
+      }
+      if (!recaptchaRef.current) throw new Error("recaptcha not ready");
+      recaptchaToken = await recaptchaRef.current.executeAsync() || "";
       recaptchaRef.current!.reset();
     } catch {
       setStatus("error");
@@ -132,18 +164,23 @@ export function ContactForm({ defaultService, readFromUrl = false }: ContactForm
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" data-testid="contact-form">
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        sitekey={RECAPTCHA_SITE_KEY}
-        size="invisible"
-        badge="bottomright"
-      />
+    <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-6" data-testid="contact-form">
+      {captchaEnabled && (
+        <Suspense fallback={null}>
+          <LazyReCAPTCHA
+            ref={recaptchaRef}
+            sitekey={RECAPTCHA_SITE_KEY}
+            size="invisible"
+            badge="bottomright"
+          />
+        </Suspense>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">Ad Soyad *</label>
+          <label htmlFor="contact-name" className="text-sm font-bold text-slate-700 uppercase tracking-wide">Ad Soyad *</label>
           <Input
+            id="contact-name"
             {...register("name")}
             className={`bg-slate-50 border-slate-200 h-14 text-base ${errors.name ? "border-red-400 focus-visible:ring-red-400" : ""}`}
             placeholder="İsim Soyisim"
@@ -152,8 +189,9 @@ export function ContactForm({ defaultService, readFromUrl = false }: ContactForm
           {errors.name && <p className="text-red-500 text-xs">{errors.name.message}</p>}
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">Firma</label>
+          <label htmlFor="contact-company" className="text-sm font-bold text-slate-700 uppercase tracking-wide">Firma</label>
           <Input
+            id="contact-company"
             {...register("company")}
             className="bg-slate-50 border-slate-200 h-14 text-base"
             placeholder="Firma Unvanı"
@@ -164,8 +202,9 @@ export function ContactForm({ defaultService, readFromUrl = false }: ContactForm
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">İletişim *</label>
+          <label htmlFor="contact-contact" className="text-sm font-bold text-slate-700 uppercase tracking-wide">İletişim *</label>
           <Input
+            id="contact-contact"
             {...register("contact")}
             className={`bg-slate-50 border-slate-200 h-14 text-base ${errors.contact ? "border-red-400 focus-visible:ring-red-400" : ""}`}
             placeholder="Telefon veya E-posta"
@@ -179,7 +218,7 @@ export function ContactForm({ defaultService, readFromUrl = false }: ContactForm
             value={selectedService}
             onValueChange={(val) => setValue("service", val, { shouldValidate: true })}
           >
-            <SelectTrigger className={`bg-slate-50 border-slate-200 h-14 text-base ${errors.service ? "border-red-400" : ""}`} data-testid="select-service">
+            <SelectTrigger aria-label="Hizmet Seçiniz" className={`bg-slate-50 border-slate-200 h-14 text-base ${errors.service ? "border-red-400" : ""}`} data-testid="select-service">
               <SelectValue placeholder="Hizmet Seçiniz" />
             </SelectTrigger>
             <SelectContent>
@@ -200,8 +239,9 @@ export function ContactForm({ defaultService, readFromUrl = false }: ContactForm
       </div>
 
       <div className="space-y-2">
-        <label className="text-sm font-bold text-slate-700 uppercase tracking-wide">Detaylar *</label>
+        <label htmlFor="contact-message" className="text-sm font-bold text-slate-700 uppercase tracking-wide">Detaylar *</label>
         <Textarea
+          id="contact-message"
           {...register("message")}
           placeholder="Yük hakkında kısa bilgi (tonaj, boyut, yükleme limanı vs.)"
           className={`min-h-[140px] bg-slate-50 border-slate-200 resize-none text-base p-4 ${errors.message ? "border-red-400 focus-visible:ring-red-400" : ""}`}

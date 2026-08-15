@@ -8,6 +8,26 @@ import heroVideo from "@assets/generated_videos/cinematic_industrial_port_scene_
 export function Hero() {
   const [displayText, setDisplayText] = useState("GÜVENİN");
   const [isGlitching, setIsGlitching] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+
+  // Defer video loading until the browser is idle so the poster image is the
+  // LCP element and the video never blocks first paint.
+  useEffect(() => {
+    let done = false;
+    const load = () => {
+      if (done) return;
+      done = true;
+      setShowVideo(true);
+    };
+    if ("requestIdleCallback" in window) {
+      (window as any).requestIdleCallback(load, { timeout: 3000 });
+    } else {
+      setTimeout(load, 2000);
+    }
+    return () => {
+      done = true;
+    };
+  }, []);
 
   useEffect(() => {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
@@ -58,15 +78,30 @@ export function Hero() {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src="/hero-poster.webp"
+          srcSet="/hero-poster-mobile.webp 720w, /hero-poster.webp 1280w"
+          sizes="100vw"
+          alt=""
+          aria-hidden="true"
+          width={1280}
+          height={720}
+          fetchPriority="high"
           className="w-full h-full object-cover"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        />
+        {showVideo && (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster="/hero-poster.webp"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+        )}
         {/* Darker overlay for better text readability */}
         <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/70 via-transparent to-black/80" />
       </div>
@@ -81,7 +116,7 @@ export function Hero() {
           >
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
               LASHINGDE <br className="md:hidden" />
-              <span className={`inline-block min-w-[200px] transition-colors duration-100 ${isGlitching ? 'text-red-500 skew-x-12 scale-110' : 'text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400'}`}>
+              <span className={`inline-block min-w-[200px] transition-colors duration-100 ${isGlitching ? 'text-red-500 skew-x-12 scale-110' : 'text-transparent bg-clip-text bg-gradient-to-r from-primary-bright to-blue-400'}`}>
                 {displayText}
               </span> <br className="md:hidden" />
               İMZASI

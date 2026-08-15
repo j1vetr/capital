@@ -1,13 +1,14 @@
+import { serviceSrcSet, CARD_SIZES } from "@/lib/responsiveImage";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { servicesData } from "@/data/services";
-import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.png";
-import containerImg from "@assets/generated_images/container_lashing_detail_shot.png";
-import projectImg from "@assets/generated_images/project_cargo_being_secured.png";
-import shrinkImg from "@assets/generated_images/industrial_shrink_wrap_packaging.png";
-import yachtImg from "@assets/generated_images/luxury_yacht_transport_lashing.png";
+import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.webp";
+import containerImg from "@assets/generated_images/container_lashing_detail_shot.webp";
+import projectImg from "@assets/generated_images/project_cargo_being_secured.webp";
+import shrinkImg from "@assets/generated_images/industrial_shrink_wrap_packaging.webp";
+import yachtImg from "@assets/generated_images/luxury_yacht_transport_lashing.webp";
 
 export function ServiceGrid() {
   return (
@@ -46,6 +47,8 @@ export function ServiceGrid() {
                   {bgImage ? (
                     <img 
                       src={bgImage} 
+                      srcSet={serviceSrcSet(bgImage)}
+                      sizes={CARD_SIZES}
                       alt={`${service.title} Hizmeti - Profesyonel Yük Sabitleme`}
                       title={`${service.title} Hizmeti Detayları`}
                       loading="lazy"

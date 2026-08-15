@@ -1,6 +1,19 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Self-hosted fonts (woff2, font-display: swap) - no external font requests */
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/500.css";
+@import "@fontsource/montserrat/600.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/montserrat/800.css";
+@import "@fontsource/montserrat/900.css";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -12,6 +25,8 @@
   
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
+  /* Original light brand tone, for decorative use on dark backgrounds */
+  --color-primary-bright: #38aae1;
   
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
@@ -50,7 +65,7 @@
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
 
-  --primary: 200 75% 55%; /* #38aae1 Capital Lashing Blue */
+  --primary: 200 75% 38%; /* #1879aa Capital Lashing Blue (WCAG AA with white text) */
   --primary-foreground: 210 40% 98%; /* White text on blue */
 
   --secondary: 217 33% 17%; /* Dark slate/navy for secondary elements */

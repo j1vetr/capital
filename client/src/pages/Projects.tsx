@@ -1,3 +1,4 @@
+import { serviceSrcSet, CARD_SIZES } from "@/lib/responsiveImage";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -315,9 +316,13 @@ export default function Projects() {
               <div className="relative h-64 overflow-hidden shrink-0">
                 <img 
                   src={project.image} 
+                  srcSet={serviceSrcSet(project.image)}
+                  sizes={CARD_SIZES}
                   alt={project.title} 
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"
+                  width="640"
+                  height="480"
                 />
                 <div className="absolute top-4 left-4 bg-slate-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider backdrop-blur-sm shadow-lg">
                   {project.category}

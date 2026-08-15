@@ -41,8 +41,26 @@ export async function serveStatic(app: Express, server: Server) {
 
   app.get("/sitemap.xml", sendSitemap);
 
-  // Serve static assets (JS, CSS, images) but NOT index.html automatically
-  app.use(express.static(distPath, { index: false }));
+  // Serve static assets (JS, CSS, images) but NOT index.html automatically.
+  // Only Vite-hashed build files get immutable long-term caching; unhashed
+  // public files (service images, favicons, video, noise.svg) get a shorter
+  // cache so updated content is not stale for a year.
+  app.use(
+    express.static(distPath, {
+      index: false,
+      setHeaders: (res, filePath) => {
+        // Vite emits hashed filenames like name-AbC12xYz.ext into dist/public/assets
+        const hashed =
+          /[-.][A-Za-z0-9_-]{8,}\.(js|css|woff2?|mp4|webp|png|jpe?g|svg)$/.test(filePath) &&
+          filePath.includes(`${path.sep}assets${path.sep}`) &&
+          !filePath.includes(`${path.sep}assets${path.sep}images${path.sep}`);
+        res.setHeader(
+          "Cache-Control",
+          hashed ? "public, max-age=31536000, immutable" : "public, max-age=86400",
+        );
+      },
+    }),
+  );
 
   // All HTML routes: inject SEO meta tags and prerendered body content
   app.use("*", (req, res) => {

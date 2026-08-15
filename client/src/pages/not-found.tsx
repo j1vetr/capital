@@ -18,7 +18,7 @@ export default function NotFound() {
       <main className="flex-grow flex items-center justify-center py-20 relative overflow-hidden bg-slate-900 min-h-[80vh]">
          {/* Background Elements */}
          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+            <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20"></div>
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
             
@@ -44,7 +44,7 @@ export default function NotFound() {
             </div>
             
             <h2 className="text-3xl md:text-5xl font-heading font-black text-white mb-6 uppercase tracking-tight">
-              Rota <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Bulunamadı</span>
+              Rota <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-bright to-blue-400">Bulunamadı</span>
             </h2>
             
             <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">

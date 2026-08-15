@@ -20,7 +20,7 @@ export function ContactSection() {
                 <h3 className="text-3xl font-heading font-black uppercase mb-6 leading-tight">
                   Projenizi<br />Başlatalım
                 </h3>
-                <p className="text-blue-100 mb-12 text-lg">
+                <p className="text-blue-50 mb-12 text-lg">
                   Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli taşıma planını oluştursun.
                 </p>
 
@@ -30,7 +30,7 @@ export function ContactSection() {
                       <Phone className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-blue-200 uppercase font-bold tracking-wider">Bizi Arayın</p>
+                      <p className="text-xs text-blue-50 uppercase font-bold tracking-wider">Bizi Arayın</p>
                       <a href={`tel:${BUSINESS.phone.e164}`} className="text-lg font-bold hover:underline">{BUSINESS.phone.display}</a>
                     </div>
                   </div>
@@ -40,7 +40,7 @@ export function ContactSection() {
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-blue-200 uppercase font-bold tracking-wider">E-Posta Gönderin</p>
+                      <p className="text-xs text-blue-50 uppercase font-bold tracking-wider">E-Posta Gönderin</p>
                       <a href={`mailto:${BUSINESS.email}`} className="text-lg font-bold hover:underline">{BUSINESS.email}</a>
                     </div>
                   </div>
@@ -48,7 +48,7 @@ export function ContactSection() {
               </div>
 
               <div className="mt-12 relative z-10">
-                <p className="text-sm text-blue-100 opacity-80">
+                <p className="text-sm text-blue-50">
                   © Capital Lashing 7/24 Operasyon Merkezi
                 </p>
               </div>

@@ -1,13 +1,13 @@
 import { Link } from "wouter";
 import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck } from "lucide-react";
-import logoImage from "@assets/logo-white-text.webp";
+import logoImage from "@assets/logo-white-text-128.webp";
 import { BUSINESS } from "@shared/business";
 
 export function Footer() {
   return (
     <footer className="bg-[#020617] text-slate-300 pt-24 pb-12 relative overflow-hidden font-sans border-t border-slate-800">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-5 pointer-events-none"></div>
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none translate-y-1/2 -translate-x-1/3" />
       
@@ -52,10 +52,10 @@ export function Footer() {
 
             {/* Links Column 1 */}
             <div className="lg:col-span-2">
-                <h4 className="text-white font-bold text-lg mb-8 relative inline-block">
+                <p className="text-white font-bold text-lg mb-8 relative inline-block">
                     Hızlı Erişim
                     <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
-                </h4>
+                </p>
                 <ul className="space-y-4">
                     {[
                         { name: "Ana Sayfa", href: "/" },
@@ -79,10 +79,10 @@ export function Footer() {
 
             {/* Links Column 2 */}
             <div className="lg:col-span-3">
-                <h4 className="text-white font-bold text-lg mb-8 relative inline-block">
+                <p className="text-white font-bold text-lg mb-8 relative inline-block">
                     Hizmetlerimiz
                     <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
-                </h4>
+                </p>
                 <ul className="space-y-4">
                     {[
                         { name: "Gemi & Proje Lashing", href: "/hizmetler/gemi-proje-lashing" },
@@ -105,10 +105,10 @@ export function Footer() {
 
             {/* Contact Column */}
             <div className="lg:col-span-3">
-                <h4 className="text-white font-bold text-lg mb-8 relative inline-block">
+                <p className="text-white font-bold text-lg mb-8 relative inline-block">
                     İletişim
                     <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full"></span>
-                </h4>
+                </p>
                 <div className="space-y-6">
                     <div className="flex items-start gap-4 group">
                         <div className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors border border-slate-800 shadow-sm">
@@ -180,8 +180,10 @@ export function Footer() {
                 title="TOOV – Yazılım & Dijital Çözümler"
               >
                 <img
-                  src="/toov-logo.png"
+                  src="/toov-logo-small.png"
                   alt="TOOV"
+                  width={87}
+                  height={20}
                   className="h-5 w-auto opacity-40 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(56,170,225,0.7)]"
                 />
                 <span className="absolute -inset-2 rounded-lg bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />

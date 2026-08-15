@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { guidesData } from "@/data/guides";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.png";
+import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.webp";
 
 export default function GuideHub() {
   useEffect(() => {

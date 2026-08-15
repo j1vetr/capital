@@ -13,7 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { servicesData } from "@/data/services";
-import logoImage from "@assets/logo-white-text.webp";
+import logoImage from "@assets/logo-white-text-128.webp";
 import { BUSINESS } from "@shared/business";
 
 const navLinks = [

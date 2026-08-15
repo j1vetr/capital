@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { useEffect } from "react";
-import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.png";
+import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.webp";
 import { Phone, Mail, MapPin, Globe2 } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";

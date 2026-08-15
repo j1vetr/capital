@@ -16,7 +16,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.png";
+import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.webp";
 import NotFound from "@/pages/not-found";
 
 export default function LocationDetail() {

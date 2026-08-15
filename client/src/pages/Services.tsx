@@ -1,3 +1,4 @@
+import { serviceSrcSet, CARD_SIZES } from "@/lib/responsiveImage";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
@@ -8,7 +9,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { servicesData } from "@/data/services";
 import { motion } from "framer-motion";
-import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.png";
+import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.webp";
 
 export default function Services() {
   useEffect(() => {
@@ -82,10 +83,14 @@ export default function Services() {
                     {service.image ? (
                       <img
                         src={service.image}
+                        srcSet={serviceSrcSet(service.image)}
+                        sizes={CARD_SIZES}
                         alt={`${service.title} – Capital Lashing İstanbul`}
                         title={service.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         loading="lazy"
+                        width="640"
+                        height="480"
                       />
                     ) : (
                       <div className="w-full h-full bg-slate-200 flex items-center justify-center">

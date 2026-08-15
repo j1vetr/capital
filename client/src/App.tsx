@@ -1,55 +1,25 @@
+import { Suspense } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/Home";
-import Services from "@/pages/Services";
-import Contact from "@/pages/Contact";
-import ServiceDetail from "@/pages/ServiceDetail";
-import About from "@/pages/About";
-import Privacy from "@/pages/Privacy";
-import Terms from "@/pages/Terms";
-import Kvkk from "@/pages/Kvkk";
-import Projects from "@/pages/Projects";
-import ServiceAreas from "@/pages/ServiceAreas";
-import LocationDetail from "@/pages/LocationDetail";
-import GuideHub from "@/pages/GuideHub";
-import GuideDetail from "@/pages/GuideDetail";
-import EnHome from "@/pages/en/EnHome";
-import EnServices from "@/pages/en/EnServices";
-import EnServiceDetail from "@/pages/en/EnServiceDetail";
-import EnLocationDetail from "@/pages/en/EnLocationDetail";
+import { routes, NotFoundRoute } from "./routes";
+import { FloatingContact } from "@/components/FloatingContact";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/hakkimizda" component={About} />
-      <Route path="/hizmetler" component={Services} />
-      <Route path="/hizmetler/:id" component={ServiceDetail} />
-      <Route path="/projeler" component={Projects} />
-      <Route path="/hizmet-bolgeleri" component={ServiceAreas} />
-      <Route path="/lashing/:slug" component={LocationDetail} />
-      <Route path="/rehber" component={GuideHub} />
-      <Route path="/rehber/:slug" component={GuideDetail} />
-      <Route path="/en" component={EnHome} />
-      <Route path="/en/services" component={EnServices} />
-      <Route path="/en/services/:slug" component={EnServiceDetail} />
-      <Route path="/en/locations/:slug" component={EnLocationDetail} />
-      <Route path="/iletisim" component={Contact} />
-      <Route path="/privacy" component={Privacy} />
-      <Route path="/terms" component={Terms} />
-      <Route path="/kvkk" component={Kvkk} />
-      
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={null}>
+      <Switch>
+        {routes.map((route) => (
+          <Route key={route.path} path={route.path} component={route.component} />
+        ))}
+        <Route component={NotFoundRoute} />
+      </Switch>
+    </Suspense>
   );
 }
-
-import { FloatingContact } from "@/components/FloatingContact";
-import { ScrollToTop } from "@/components/ScrollToTop";
 
 function App() {
   return (

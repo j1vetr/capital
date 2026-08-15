@@ -20,7 +20,7 @@ export default function Privacy() {
       
       <main className="flex-grow relative">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-5 pointer-events-none"></div>
         <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-slate-900 to-slate-950 pointer-events-none" />
 
         <div className="container px-4 md:px-6 py-24 relative z-10 max-w-4xl mx-auto">
@@ -45,31 +45,31 @@ export default function Privacy() {
                   <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
                     <FileText className="h-6 w-6" />
                   </div>
-                  <h3 className="text-white font-bold mb-2">Veri Toplama</h3>
+                  <h2 className="text-white font-bold mb-2 text-base">Veri Toplama</h2>
                   <p className="text-slate-400 text-xs">Sadece gerekli verileri topluyoruz.</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-xl border border-white/5 text-center">
                   <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
                     <Lock className="h-6 w-6" />
                   </div>
-                  <h3 className="text-white font-bold mb-2">Güvenlik</h3>
+                  <h2 className="text-white font-bold mb-2 text-base">Güvenlik</h2>
                   <p className="text-slate-400 text-xs">Verileriniz şifrelenerek korunur.</p>
                 </div>
                 <div className="bg-white/5 p-6 rounded-xl border border-white/5 text-center">
                   <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
                     <ShieldCheck className="h-6 w-6" />
                   </div>
-                  <h3 className="text-white font-bold mb-2">Kontrol</h3>
+                  <h2 className="text-white font-bold mb-2 text-base">Kontrol</h2>
                   <p className="text-slate-400 text-xs">Verileriniz sizin kontrolünüzdedir.</p>
                 </div>
               </div>
 
-              <h3 className="text-white mt-12 border-l-4 border-primary pl-4">1. Toplanan Veriler</h3>
+              <h2 className="text-white mt-12 border-l-4 border-primary pl-4 text-2xl font-bold">1. Toplanan Veriler</h2>
               <p className="text-slate-400">
                 Web sitemizi ziyaret ettiğinizde veya bizimle iletişime geçtiğinizde, adınız, e-posta adresiniz, telefon numaranız gibi kişisel bilgileri toplayabiliriz. Ayrıca, tarayıcı türü, IP adresi ve ziyaret ettiğiniz sayfalar gibi teknik veriler de otomatik olarak toplanabilir.
               </p>
 
-              <h3 className="text-white mt-8 border-l-4 border-primary pl-4">2. Verilerin Kullanımı</h3>
+              <h2 className="text-white mt-8 border-l-4 border-primary pl-4 text-2xl font-bold">2. Verilerin Kullanımı</h2>
               <p className="text-slate-400">Toplanan veriler aşağıdaki amaçlarla kullanılabilir:</p>
               <ul className="text-slate-400">
                 <li>Hizmetlerimizi sunmak ve iyileştirmek</li>
@@ -78,23 +78,23 @@ export default function Privacy() {
                 <li>Site güvenliğini sağlamak</li>
               </ul>
 
-              <h3 className="text-white mt-8 border-l-4 border-primary pl-4">3. Çerezler (Cookies)</h3>
+              <h2 className="text-white mt-8 border-l-4 border-primary pl-4 text-2xl font-bold">3. Çerezler (Cookies)</h2>
               <p className="text-slate-400">
                 Web sitemizde kullanıcı deneyimini geliştirmek için çerezler kullanılmaktadır. Çerezleri tarayıcı ayarlarınızdan dilediğiniz zaman engelleyebilirsiniz, ancak bu durumda sitenin bazı özellikleri düzgün çalışmayabilir.
               </p>
 
-              <h3 className="text-white mt-8 border-l-4 border-primary pl-4">4. Veri Paylaşımı</h3>
+              <h2 className="text-white mt-8 border-l-4 border-primary pl-4 text-2xl font-bold">4. Veri Paylaşımı</h2>
               <p className="text-slate-400">
                 Kişisel verileriniz, yasal zorunluluklar haricinde üçüncü taraflarla paylaşılmamaktadır. Hizmet sağlayıcılarımızla (hosting, teknik destek vb.) yapılan paylaşımlar, gizlilik sözleşmeleri çerçevesinde gerçekleştirilir.
               </p>
 
-              <h3 className="text-white mt-8 border-l-4 border-primary pl-4">5. Haklarınız</h3>
+              <h2 className="text-white mt-8 border-l-4 border-primary pl-4 text-2xl font-bold">5. Haklarınız</h2>
               <p className="text-slate-400">
                 Kişisel verileriniz üzerinde; erişme, düzeltme, silme ve işlemeyi kısıtlama gibi haklara sahipsiniz. Bu haklarınızı kullanmak için bizimle iletişime geçebilirsiniz.
               </p>
 
               <div className="mt-12 p-8 bg-slate-800/50 rounded-2xl border border-white/5 text-center">
-                <h4 className="text-white font-bold mb-2">Sorularınız mı var?</h4>
+                <h3 className="text-white font-bold mb-2">Sorularınız mı var?</h3>
                 <p className="text-slate-400 mb-4">
                   Gizlilik politikamızla ilgili her türlü sorunuz için bize ulaşabilirsiniz.
                 </p>

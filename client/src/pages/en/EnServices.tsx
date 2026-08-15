@@ -8,7 +8,7 @@ import { enServicesData } from "@/data/en";
 import { servicesData } from "@/data/services";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.png";
+import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.webp";
 
 export default function EnServices() {
   useEffect(() => {

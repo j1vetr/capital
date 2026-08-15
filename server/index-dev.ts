@@ -82,7 +82,7 @@ export async function setupVite(app: Express, server: Server) {
 
       // Server-side render the page body
       const { render } = await vite.ssrLoadModule("/src/entry-server.tsx");
-      const bodyHtml = render(pathname) as string;
+      const bodyHtml = (await render(pathname)) as string;
       template = template.replace("<!-- SSR_BODY -->", bodyHtml);
 
       const page = await vite.transformIndexHtml(url, template);

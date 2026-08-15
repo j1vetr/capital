@@ -85,7 +85,7 @@ export function FloatingContact() {
           <>
             <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
                <div className="flex items-center gap-1">
-                 <img src="/favicon.png" alt="Logo" className="w-6 h-6 object-contain" />
+                 <img src="/favicon-48.png" alt="Logo" width={24} height={24} className="w-6 h-6 object-contain" />
                  <Phone className="w-5 h-5 text-primary" />
                </div>
             </div>
