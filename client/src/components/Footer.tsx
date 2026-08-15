@@ -22,6 +22,8 @@ export function Footer() {
                     <img 
                       src={logoImage} 
                       alt="Capital Lashing" 
+                      width={532}
+                      height={128}
                       className="h-16 object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
                     />
                   </a>

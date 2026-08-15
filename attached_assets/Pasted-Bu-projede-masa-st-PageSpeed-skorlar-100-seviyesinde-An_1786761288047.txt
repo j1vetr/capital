@@ -1,0 +1,259 @@
+Bu projede masaüstü PageSpeed skorları 100 seviyesinde. Ancak mobil performans skoru yaklaşık 64.
+
+Tasarımı, içerikleri, SEO yapısını, URL yapısını ve mevcut işlevleri BOZMADAN sadece mobil performans optimizasyonu yap.
+
+Mevcut PageSpeed mobil verileri:
+
+* Performance: 64
+* FCP: 4.8 sn
+* LCP: 6.0 sn
+* TBT: 0 ms
+* CLS: 0.002
+* Speed Index: 5.7 sn
+
+Önemli tespitler:
+
+* Sunucu yanıt süresi çok iyi, TTFB problemi yok.
+* TBT 0 ms olduğu için ana problem JavaScript CPU kullanımı değil.
+* LCP öğesi hero alanındaki H1:
+  "LASHINGDE CAPITAL İMZASI"
+* LCP element render delay yaklaşık 3380 ms.
+* Render blocking CSS yaklaşık 2640 ms potansiyel gecikme oluşturuyor.
+* Gereğinden fazla font dosyası yükleniyor.
+* Kullanılmayan JavaScript yaklaşık 62 KB.
+* Radix bundle büyük oranda kullanılmıyor.
+* Hero görselinde yaklaşık 39 KB tasarruf potansiyeli var.
+* Bazı hizmet görselleri gösterildiği boyuttan daha büyük dosya olarak yükleniyor.
+* Logo görsellerinde width ve height eksik.
+* Hero içindeki CAPITAL yazısında composited olmayan color/gradient animasyonu bulunuyor.
+
+Yapmanı istediğim işlemler:
+
+1. Öncelikle hero alanını optimize et.
+
+Hero H1 ilk sayfa yüklenmesinde kesinlikle opacity:0, visibility:hidden veya benzeri şekilde gizlenmemeli.
+
+Hero H1 üzerinde Framer Motion veya başka bir animasyon varsa ve bu animasyon metnin ilk görünmesini geciktiriyorsa kaldır.
+
+Özellikle şu tip yapıları kaldır:
+
+```jsx
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+transition={{ delay: ... }}
+```
+
+Hero H1 sayfanın ilk render'ında direkt görünür olmalı.
+
+Animasyon gerekiyorsa yalnızca sayfa tamamen görünür olduktan sonra uygulanmalı ve LCP'yi geciktirmemeli.
+
+Hero H1, hero açıklaması ve ana CTA butonlarında ilk görünürlüğü geciktiren animasyon kullanma.
+
+2. React/Vite ilk render zincirini kontrol et.
+
+Ana sayfanın hero alanının yalnızca Home JS chunk yüklendikten sonra ortaya çıkmasını mümkün olduğunca engelle.
+
+Above-the-fold içeriğin HTML'de mümkün olduğunca erken bulunmasını sağla.
+
+Projede mevcut mimari uygunsa SSR, prerender veya static HTML yaklaşımı kullan.
+
+Ancak bu değişiklik routing, SEO veya mevcut sayfa davranışlarını bozacaksa büyük mimari değişiklik yapma.
+
+3. Font optimizasyonu yap.
+
+Şu anda çok fazla Inter ve Montserrat font weight yükleniyor.
+
+Gerçekten kullanılmayan font weight'leri kaldır.
+
+Mümkünse yalnızca gerekli weight'leri bırak:
+
+* Inter 400
+* Inter 600 veya gerçekten gereken diğer tek weight
+* Montserrat hero başlığı için kullanılan weight
+
+latin ve latin-ext dosyalarının gereksiz çift yüklenmesini kontrol et.
+
+Mümkünse variable font kullan.
+
+Sadece above-the-fold için gerçekten kritik olan tek fontu preload et.
+
+Tüm fontları preload etme.
+
+Fontlarda:
+
+```css
+font-display: swap;
+```
+
+kullan.
+
+4. CSS render blocking sorununu azalt.
+
+Mevcut ana CSS dosyası:
+
+/assets/index-*.css
+
+yaklaşık 23 KB ve render-blocking olarak raporlanıyor.
+
+Header ve hero için gereken kritik stillerin mümkün olduğunca erken uygulanmasını sağla.
+
+Gerekirse critical CSS yaklaşımı kullan.
+
+Ancak Tailwind veya mevcut CSS sistemini bozma.
+
+Flash of unstyled content oluşturma.
+
+5. Hero görsellerini optimize et.
+
+Mevcut hero responsive image mantığını koru.
+
+Mobil kullanıcıların gerçekten mobile hero dosyasını aldığından emin ol.
+
+Hero görsellerini kaliteyi gözle görülür şekilde bozmadan daha fazla sıkıştır.
+
+Mümkünse AVIF varyantları oluştur ve picture/source ile AVIF + WebP fallback kullan.
+
+Hero görselinde:
+
+* fetchpriority="high"
+* loading="eager"
+
+kullanılması gerekiyorsa doğru şekilde kullan.
+
+Hero görselini lazy load yapma.
+
+6. Aşağıdaki hizmet görsellerini responsive optimize et.
+
+Şu anda bazı 662px civarında gösterilen görseller için 960px dosyalar indiriliyor.
+
+480, 720 ve 960 gibi uygun srcset boyutları oluştur.
+
+Tarayıcının ekranda ihtiyaç duyduğundan gereksiz büyük görsel indirmesini engelle.
+
+Below-the-fold tüm hizmet görselleri loading="lazy" olarak kalmalı.
+
+7. Kullanılmayan JavaScript'i azalt.
+
+PageSpeed yaklaşık şu tasarrufları gösteriyor:
+
+* main index JS: yaklaşık 32 KB unused
+* radix bundle: yaklaşık 29 KB unused
+
+Tree shaking ve code splitting uygula.
+
+Radix bileşenlerinden yalnızca kullanılan modülleri import et.
+
+Şu tip toplu importlardan kaçın:
+
+```js
+import * as ...
+```
+
+eğer bütün paket bundle'a giriyorsa.
+
+Modal, dialog, accordion veya yalnızca kullanıcı etkileşiminden sonra gereken bileşenleri lazy/dynamic import et.
+
+Ana sayfanın ilk ekranında gerekli olmayan JS'leri initial bundle'dan çıkar.
+
+8. Footer ve aşağıdaki sectionları kontrol et.
+
+Footer ve sayfanın çok aşağısındaki componentlerin JS kodu ilk ekranda gerekli değilse lazy load/code split uygulanabilir.
+
+Ancak içerikleri SEO crawler'lardan tamamen gizleme.
+
+9. Logo görsellerine width ve height ekle.
+
+PageSpeed'in raporladığı header/footer Capital Lashing logolarına doğru intrinsic width ve height değerlerini ekle.
+
+CSS responsive davranışı devam etsin.
+
+Örnek:
+
+```jsx
+<img
+  ...
+  width="..."
+  height="..."
+  className="..."
+/>
+```
+
+10. CAPITAL yazısındaki animasyonu düzelt.
+
+PageSpeed composited olmayan color/gradient animasyonu raporluyor.
+
+CSS color veya Tailwind gradient custom property'lerini sürekli animate etme.
+
+Mümkünse bu animasyonu kaldır.
+
+Animasyon korunacaksa transform ve opacity gibi composited özellikler kullan.
+
+Tasarımın görünümü mümkün olduğunca aynı kalsın.
+
+11. SEO'ya dokunma.
+
+Aşağıdakileri değiştirme veya silme:
+
+* title
+* meta description
+* canonical
+* hreflang
+* schema
+* structured data
+* heading yapısı
+* sayfa URL'leri
+* robots.txt
+* sitemap
+* mevcut SEO metinleri
+
+12. Desktop görünümünü ve performansını bozma.
+
+Desktop şu anda çok iyi çalışıyor.
+
+Mobil optimizasyon yaparken desktop layout, responsive tasarım, animasyonlar ve görsel kalite bozulmamalı.
+
+13. Build sonrasında projeyi kontrol et.
+
+Değişiklikleri yaptıktan sonra production build çalıştır.
+
+Build error varsa düzelt.
+
+Console error bırakma.
+
+Bozuk import bırakma.
+
+Eksik asset bırakma.
+
+Son olarak bana kısa bir rapor ver:
+
+* Hangi dosyaları değiştirdin?
+* H1 LCP gecikmesi için ne yaptın?
+* Hangi fontları kaldırdın?
+* Hangi JS bundle'ları lazy load/code split yaptın?
+* Görsellerde ne optimize ettin?
+* Tasarımda herhangi bir değişiklik oldu mu?
+* SEO tarafında herhangi bir değişiklik oldu mu?
+
+ÖNEMLİ:
+
+PageSpeed skorunu yükseltmek için tasarımı sadeleştirme veya bölümleri silme.
+
+İçerik kaldırma.
+
+Hero'yu değiştirme.
+
+Mobil menüyü bozma.
+
+Animasyonları sadece performans sorunu yaratıyorsa ve özellikle ilk render/LCP'yi geciktiriyorsa optimize et.
+
+Öncelikli hedef:
+
+FCP: 4.8 sn → 2 sn altı
+
+LCP: 6.0 sn → 2.5 sn civarı veya altı
+
+TBT: 0 ms seviyesini koru
+
+CLS: 0.002 seviyesini koru
+
+Mobil PageSpeed Performance skorunu mümkün olduğunca 90+ seviyesine çıkar.

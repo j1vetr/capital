@@ -5,7 +5,7 @@ import { readdir, stat } from "fs/promises";
 import path from "path";
 
 const SERVICES_DIR = "client/public/assets/images/services";
-const WIDTHS = [480, 960];
+const WIDTHS = [480, 720, 960];
 
 async function* walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
