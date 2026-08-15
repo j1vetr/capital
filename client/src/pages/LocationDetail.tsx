@@ -9,7 +9,7 @@ import { locationsData } from "@/data/locations";
 import { trLocationSlugToEnSlug } from "@/data/en";
 import { servicesData } from "@/data/services";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import {
   Accordion,
   AccordionContent,

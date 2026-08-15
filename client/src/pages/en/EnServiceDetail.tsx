@@ -7,7 +7,7 @@ import { Link, useRoute } from "wouter";
 import { enServicesData, enPortToLocationSlug } from "@/data/en";
 import { servicesData } from "@/data/services";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import NotFound from "@/pages/not-found";
 import {
   Accordion,

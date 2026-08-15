@@ -11,7 +11,7 @@ import { portNameToLocationSlug } from "@/data/locations";
 import { getGuidesForService } from "@/data/guides";
 import { trServiceIdToEnSlug } from "@/data/en";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import {
   Accordion,
   AccordionContent,

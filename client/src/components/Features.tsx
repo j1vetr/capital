@@ -1,5 +1,5 @@
 import { CheckCircle2, Clock, Globe2, Shield, Award, BarChart3, ShieldCheck, Anchor, Users, Trophy } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { useEffect, useState } from "react";
 
 const Counter = ({ from, to, duration = 2 }: { from: number, to: number, duration?: number }) => {

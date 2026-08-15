@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { enServicesData, enLocationsData } from "@/data/en";
 import { servicesData } from "@/data/services";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import heroImage from "@assets/generated_images/hero_image_of_a_cargo_ship_at_port.webp";
 
 export default function EnHome() {

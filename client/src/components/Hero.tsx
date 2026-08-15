@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { useEffect, useState } from "react";
 import heroVideo from "@assets/generated_videos/cinematic_industrial_port_scene_with_shipping_containers.mp4";
 

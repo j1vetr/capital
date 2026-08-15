@@ -5,7 +5,7 @@ import { Features } from "@/components/Features";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { SearchCheck, Ruler, HardHat, BadgeCheck, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { locationsData } from "@/data/locations";

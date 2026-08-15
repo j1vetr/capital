@@ -42,6 +42,16 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          // Split lucide-react icons into their own cacheable chunk
+          if (id.includes("lucide-react")) return "lucide";
+          // Split @radix-ui primitives (used only in ui/ components) separately
+          if (id.includes("@radix-ui")) return "radix";
+        },
+      },
+    },
   },
   server: {
     host: "0.0.0.0",

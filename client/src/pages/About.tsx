@@ -5,7 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { SEO } from "@/components/SEO";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { Shield, Target, Users, TrendingUp, Heart, Lightbulb, CheckCircle2, HelpCircle, Award, Globe, Truck } from "lucide-react";
 import { useEffect } from "react";
 import {

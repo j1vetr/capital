@@ -8,7 +8,7 @@ import { Link, useRoute } from "wouter";
 import { guidesData } from "@/data/guides";
 import { servicesData } from "@/data/services";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import NotFound from "@/pages/not-found";
 
 export default function GuideDetail() {

@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2, HelpCircle, MapPin } from "lucide-react";
 import { Link, useRoute } from "wouter";
 import { enLocationsData, enServicesData } from "@/data/en";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import NotFound from "@/pages/not-found";
 import {
   Accordion,
