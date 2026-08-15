@@ -47,8 +47,16 @@ export default defineConfig({
         manualChunks(id: string) {
           // Split lucide-react icons into their own cacheable chunk
           if (id.includes("lucide-react")) return "lucide";
-          // Split @radix-ui primitives (used only in ui/ components) separately
-          if (id.includes("@radix-ui")) return "radix";
+          // Split @radix-ui primitives (used only in ui/ components) separately.
+          // react-slot is tiny and used by Button (loaded on every page); keep
+          // it out of the radix chunk so the heavy primitives stay lazy.
+          // Split per package so a page only downloads the primitives it
+          // actually renders (e.g. home's accordion doesn't pull in select,
+          // dialog, dropdown, ...).
+          if (id.includes("@radix-ui") && !id.includes("react-slot")) {
+            const m = id.match(/@radix-ui\/((?:react-)?[a-z-]+)/);
+            return m ? `radix-${m[1].replace(/^react-/, "")}` : "radix";
+          }
         },
       },
     },

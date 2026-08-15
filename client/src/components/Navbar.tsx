@@ -94,7 +94,7 @@ export function Navbar() {
                   width={532}
                   height={128}
                   className={cn(
-                    "transition-all duration-300 object-contain",
+                    "w-auto transition-all duration-300 object-contain",
                     isScrolled ? "h-12 invert-0 dark:invert-0" : "h-16 brightness-0 invert" 
                   )}
                   style={{

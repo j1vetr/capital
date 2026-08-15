@@ -24,7 +24,7 @@ export function Footer() {
                       alt="Capital Lashing" 
                       width={532}
                       height={128}
-                      className="h-16 object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+                      className="h-16 w-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
                     />
                   </a>
                 </Link>

@@ -1,0 +1,162 @@
+65
+Performans
+100
+Erişilebilirlik
+100
+En İyi Uygulamalar
+100
+SEO
+3/3
+Ajan Tabanlı Tarama
+65
+FCP
++1
+LCP
++3
+TBT
++30
+CLS
++25
+SI
++6
+Performans
+Değerler tahminidir ve değişiklik gösterebilir. Performance skorunun hesaplanması , doğrudan bu metriklerle yapılır.Hesap makinesini göster.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Metrikler
+Görünümü genişlet
+First Contentful Paint
+4,8 sn.
+Largest Contentful Paint
+6,0 sn.
+Total Blocking Time
+0 ms.
+Cumulative Layout Shift
+0.002
+Speed Index
+5,5 sn.
+Captured at 15 Ağu 2026 05:41 GMT+3
+Emülasyonlu Moto G Power with Lighthouse 13.4.1
+Tek sayfalık oturum
+İlk sayfa yükleme
+Yavaş 4G kısıtlaması
+Using HeadlessChromium 150.0.7871.186 with lr
+Ağaç grafiği göster
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Şunlarla alakalı denetimleri göster:
+
+All
+
+FCP
+
+LCP
+
+CLS
+Analizler
+Oluşturma engelleme istekleri Tahmini tasarruf: 2.640 ms.
+İstekler sayfanın ilk oluşturma işlemini engelliyor. Bu durum, LCP'yi geciktirebilir. Erteleme veya satır içine yerleştirme, bu ağ isteklerini kritik yoldan uzaklaştırabilir.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Süre
+capitallashing.com 1. taraf
+22,9 KiB	450 msn
+/assets/index-CtYm2FuC.css(capitallashing.com)
+22,9 KiB
+450 msn
+Resim yayınlamayı kolaylaştırın Tahmini tasarruf: 63 KiB
+Resimlerin indirme süresini kısaltmak, sayfanın algılanan yükleme süresini ve LCP'yi daha iyi hale getirebilir. Resim boyutunu optimize etme hakkında daha fazla bilgi edinin.LCPFCPPuanlanmamış
+URL
+Kaynak Boyutu
+Tahmini Tasarruf
+capitallashing.com 1. taraf
+131,1 KiB	62,8 KiB
+main.flex-grow > div.relative > div.absolute > img.w-full
+<img src="/hero-poster.webp" srcset="/hero-poster-mobile.webp 720w, /hero-poster.webp 1280w" sizes="100vw" alt="" aria-hidden="true" width="1280" height="720" fetchpriority="high" class="w-full h-full object-cover">
+/hero-poster.webp(capitallashing.com)
+81,6 KiB
+39,4 KiB
+Resim sıkıştırma faktörünü artırarak bu resmin indirme boyutunu küçültebilirsiniz.
+39,4 KiB
+Brandalama Hizmeti - Profesyonel Yük Sabitleme
+<img src="https://capitallashing.com/assets/images/services/brandalama/brandalama_1_…" srcset="/assets/images/services/brandalama/brandalama_1_w480.webp 480w, /assets/im…" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" alt="Brandalama Hizmeti - Profesyonel Yük Sabitleme" loading="lazy" width="400" height="300" class="w-full h-full object-cover transition-transform duration-700 group-hover:s…">
+…brandalama/brandalama_1_w960.webp(capitallashing.com)
+49,5 KiB
+23,4 KiB
+Bu resim dosyası, görüntülenen boyutlarına (662x496) göre olması gerekenden (960x649) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+23,4 KiB
+Zorunlu yeniden düzenleme
+DOM durumunda yapılan bir değişiklik nedeniyle stiller geçersiz kılındıktan sonra JavaScript, geometrik özellikler (ör. offsetWidth) sorguladığında zorunlu yeniden düzenleme gerçekleşir. Bu durum, performansın düşmesine neden olabilir. Zorunlu yeniden düzenlemeler ve olası çözümleri hakkında daha fazla bilgi edinin.Puanlanmamış
+Kaynak
+Toplam yeniden düzenleme süresi
+[ilişkilendirilmemiş]
+34 msn
+Ağ bağımlılık ağacı
+Sayfaların daha kolay yüklenmesi için zincir uzunluğunu azaltarak, kaynakların indirme boyutunu küçülterek veya gereksiz kaynakların indirilmesini erteleyerek kritik istek zinciri oluşturmaktan kaçının.LCPPuanlanmamış
+Maksimum kritik yol gecikmesi: 1.252 msn
+İlk Gezinme
+https://capitallashing.com - 292 msn, 13,29 KiB
+/assets/index-BcAs9TEW.js(capitallashing.com) - 640 msn, 79,94 KiB
+/assets/Home-wEKW2WSB.js(capitallashing.com) - 907 msn, 7,33 KiB
+/assets/Footer-mvMlTw-K.js(capitallashing.com) - 905 msn, 5,01 KiB
+/assets/SEO-jn50kRqQ.js(capitallashing.com) - 892 msn, 12,22 KiB
+/assets/responsiv….js(capitallashing.com) - 899 msn, 0,64 KiB
+/assets/hero_imag….js(capitallashing.com) - 898 msn, 0,45 KiB
+/assets/motion-Df-iCVhD.js(capitallashing.com) - 895 msn, 1,36 KiB
+/assets/ContactSe….js(capitallashing.com) - 893 msn, 1,68 KiB
+/assets/locations-BhU-LAzv.js(capitallashing.com) - 899 msn, 5,62 KiB
+/assets/index-CtYm2FuC.css(capitallashing.com) - 586 msn, 22,86 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.183 msn, 35,72 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 915 msn, 24,11 KiB
+/assets/montserra….woff2(capitallashing.com) - 1.233 msn, 33,07 KiB
+/assets/montserra….woff2(capitallashing.com) - 941 msn, 18,71 KiB
+/assets/montserra….woff2(capitallashing.com) - 1.178 msn, 31,98 KiB
+/assets/montserra….woff2(capitallashing.com) - 894 msn, 17,92 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.224 msn, 35,36 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 947 msn, 23,68 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.234 msn, 34,50 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 953 msn, 23,43 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.252 msn, 35,50 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 954 msn, 24,03 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 947 msn, 35,73 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 905 msn, 24,20 KiB
+Önceden bağlanmış kaynaklar
+Önceden bağlanma ipuçları, sayfa yüklenirken tarayıcının gerekli bağlantıları önceden kurmasına yardımcı olarak ilgili kaynağa yapılacak ilk istekte zaman kazandırır. Sayfanın önceden bağlantı kurduğu kaynaklar aşağıda verilmiştir.
+hiçbir kaynak önceden bağlanmadı
+Önceden bağlanma adayları
+En önemli kaynaklarınıza önceden bağlanma ipuçları ekleyin ancak 4'ten az ipucu kullanmaya çalışın.
+Ön bağlantı için uygun ek kaynak bulunmamaktadır
+Düzen kayması sorununun nedenleri
+LCP dökümü
+Bu analizler Chrome Geliştirici Araçları Performans Paneli'nde de mevcuttur. Daha ayrıntılı bilgi görüntülemek için izleme kaydı oluşturun.
+Teşhis
+Kullanılmayan JavaScript'i azaltın Tahmini tasarruf: 62 KiB
+Ağ etkinliğinin kullandığı bayt sayısını azaltılmaları gerekene kadar kullanılmayan JavaScript'i azaltıp komut dosyalarını erteleyin. Kullanılmayan JavaScript'i nasıl azaltacağınızı öğrenin.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Tahmini Tasarruf
+capitallashing.com 1. taraf
+117,1 KiB	61,6 KiB
+/assets/index-BcAs9TEW.js(capitallashing.com)
+79,5 KiB
+32,2 KiB
+/assets/radix-D0qU2rM_.js(capitallashing.com)
+37,6 KiB
+29,4 KiB
+JavaScript'i küçült Tahmini tasarruf: 2 KiB
+JavaScript dosyalarının küçültülmesi yük boyutlarını azaltıp komut dosyası ayrıştırma süresini kısaltabilir. JavaScript'i nasıl sadeleştireceğinizi öğrenin.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Tahmini Tasarruf
+capitallashing.com 1. taraf
+7,5 KiB	2,5 KiB
+/assets/lucide-Drd6fEc_.js(capitallashing.com)

@@ -87,7 +87,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-poster.webp"
-          srcSet="/hero-poster-mobile.webp 720w, /hero-poster.webp 1280w"
+          srcSet="/hero-poster-mobile.webp 828w, /hero-poster.webp 1280w"
           sizes="100vw"
           alt=""
           aria-hidden="true"
