@@ -1,0 +1,273 @@
+57
+Performans
+95
+Erişilebilirlik
+100
+En İyi Uygulamalar
+100
+SEO
+3/3
+Ajan Tabanlı Tarama
+57
+FCP
++0
+LCP
++0
+TBT
++30
+CLS
++25
+SI
++2
+Performans
+Değerler tahminidir ve değişiklik gösterebilir. Performance skorunun hesaplanması , doğrudan bu metriklerle yapılır.Hesap makinesini göster.
+0–49
+50–89
+90–100
+Final Screenshot
+
+Metrikler
+Görünümü genişlet
+First Contentful Paint
+7,8 sn.
+Largest Contentful Paint
+10,0 sn.
+Total Blocking Time
+0 ms.
+Cumulative Layout Shift
+0.002
+Speed Index
+7,8 sn.
+Captured at 15 Ağu 2026 05:16 GMT+3
+Emülasyonlu Moto G Power with Lighthouse 13.4.1
+Tek sayfalık oturum
+İlk sayfa yükleme
+Yavaş 4G kısıtlaması
+Using HeadlessChromium 150.0.7871.186 with lr
+Ağaç grafiği göster
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Şunlarla alakalı denetimleri göster:
+
+All
+
+FCP
+
+LCP
+
+CLS
+Analizler
+Oluşturma engelleme istekleri Tahmini tasarruf: 3.450 ms.
+İstekler sayfanın ilk oluşturma işlemini engelliyor. Bu durum, LCP'yi geciktirebilir. Erteleme veya satır içine yerleştirme, bu ağ isteklerini kritik yoldan uzaklaştırabilir.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Süre
+capitallashing.com 1. taraf
+165,4 KiB	2.550 msn
+/assets/index-C_w81QvO.css(capitallashing.com)
+165,4 KiB
+2.550 msn
+Resim yayınlamayı kolaylaştırın Tahmini tasarruf: 112 KiB
+Resimlerin indirme süresini kısaltmak, sayfanın algılanan yükleme süresini ve LCP'yi daha iyi hale getirebilir. Resim boyutunu optimize etme hakkında daha fazla bilgi edinin.LCPFCPPuanlanmamış
+URL
+Kaynak Boyutu
+Tahmini Tasarruf
+capitallashing.com 1. taraf
+288,3 KiB	111,5 KiB
+main.flex-grow > div.relative > div.absolute > video.absolute
+<video autoplay="" loop="" playsinline="" preload="auto" poster="/hero-poster.webp" class="absolute inset-0 w-full h-full object-cover">
+/hero-poster.webp(capitallashing.com)
+98,9 KiB
+56,7 KiB
+Resim sıkıştırma faktörünü artırarak bu resmin indirme boyutunu küçültebilirsiniz.
+56,7 KiB
+Brandalama Hizmeti - Profesyonel Yük Sabitleme
+<img src="https://capitallashing.com/assets/images/services/brandalama/brandalama_1_…" srcset="/assets/images/services/brandalama/brandalama_1_w480.webp 480w, /assets/im…" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" alt="Brandalama Hizmeti - Profesyonel Yük Sabitleme" loading="lazy" width="400" height="300" class="w-full h-full object-cover transition-transform duration-700 group-hover:s…">
+…brandalama/brandalama_1_w960.webp(capitallashing.com)
+62,5 KiB
+29,6 KiB
+Bu resim dosyası, görüntülenen boyutlarına (662x496) göre olması gerekenden (960x649) daha büyük. Resim indirme boyutunu küçültmek için duyarlı resimler kullanın.
+29,6 KiB
+Proje Kargo Lashing Hizmeti - Profesyonel Yük Sabitleme
+<img src="https://capitallashing.com/assets/images/services/proje-kargo-lashing/proj…" srcset="/assets/images/services/proje-kargo-lashing/proje-kargo-lashing_1_w480.web…" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" alt="Proje Kargo Lashing Hizmeti - Profesyonel Yük Sabitleme" loading="lazy" width="400" height="300" class="w-full h-full object-cover transition-transform duration-700 group-hover:s…">
+…proje-kargo-lashing/proje-kargo-lashing_1_w960.webp(capitallashing.com)
+126,8 KiB
+25,3 KiB
+Resim sıkıştırma faktörünü artırarak bu resmin indirme boyutunu küçültebilirsiniz.
+25,3 KiB
+Verimli önbellek sürelerini kullanın Tahmini tasarruf: 187 KiB
+Uzun önbellek ömrü, sayfanızda tekrarlanan ziyaretleri hızlandırabilir. Önbelleğe alma hakkında daha fazla bilgi edinin.LCPFCPPuanlanmamış
+İstek
+TTL'yi Önbelleğe Alma
+Aktarım Boyutu
+capitallashing.com 1. taraf
+467 KiB
+…proje-kargo-lashing/proje-kargo-lashing_1_w960.webp(capitallashing.com)
+1g
+127 KiB
+/hero-poster.webp(capitallashing.com)
+1g
+99 KiB
+…konteyner-lashing/konteyner-lashing_1_w960.webp(capitallashing.com)
+1g
+72 KiB
+…brandalama/brandalama_1_w960.webp(capitallashing.com)
+1g
+63 KiB
+…flat-rack-lashing/flat-rack-lashing_1_w960.webp(capitallashing.com)
+1g
+61 KiB
+…gemi-proje-lashing/gemi-proje-lashing_1_w960.webp(capitallashing.com)
+1g
+37 KiB
+/toov-logo-small.png(capitallashing.com)
+1g
+4 KiB
+/favicon-48.png(capitallashing.com)
+1g
+3 KiB
+/noise.svg(capitallashing.com)
+1g
+1 KiB
+LCP dökümü
+Her alt bölüm için belirli iyileştirme stratejileri vardır. İdeal olarak LCP süresinin çoğu gecikmeler için değil, kaynakları yüklemek için harcanmalıdır.LCPPuanlanmamış
+Alt bölüm
+Süre
+Time to First Byte
+0 msn
+Öğe oluşturma gecikmesi
+3.490 msn
+LASHINGDE CAPITAL İMZASI
+<h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leadin…">
+Ağ bağımlılık ağacı
+Sayfaların daha kolay yüklenmesi için zincir uzunluğunu azaltarak, kaynakların indirme boyutunu küçülterek veya gereksiz kaynakların indirilmesini erteleyerek kritik istek zinciri oluşturmaktan kaçının.LCPPuanlanmamış
+Maksimum kritik yol gecikmesi: 1.374 msn
+İlk Gezinme
+https://capitallashing.com - 399 msn, 17,94 KiB
+/assets/index-BspT1Yup.js(capitallashing.com) - 923 msn, 248,10 KiB
+/assets/Home-BXoJr9kZ.js(capitallashing.com) - 1.315 msn, 24,47 KiB
+/assets/Footer-DwnPyhiK.js(capitallashing.com) - 1.316 msn, 19,03 KiB
+/assets/SEO-DymfhKIW.js(capitallashing.com) - 1.357 msn, 37,48 KiB
+/assets/motion-BRyD1Poa.js(capitallashing.com) - 1.269 msn, 2,13 KiB
+/assets/responsiv….js(capitallashing.com) - 1.277 msn, 0,60 KiB
+/assets/hero_imag….js(capitallashing.com) - 1.263 msn, 0,43 KiB
+/assets/ContactSection-VdSUAvZ_.js(capitallashing.com) - 1.272 msn, 2,86 KiB
+/assets/ContactForm-DEufrRUa.js(capitallashing.com) - 1.374 msn, 88,26 KiB
+/assets/locations-BhU-LAzv.js(capitallashing.com) - 1.326 msn, 17,64 KiB
+/assets/index-C_w81QvO.css(capitallashing.com) - 873 msn, 165,40 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.325 msn, 35,72 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.330 msn, 24,11 KiB
+/assets/montserra….woff2(capitallashing.com) - 1.172 msn, 33,07 KiB
+/assets/montserra….woff2(capitallashing.com) - 1.161 msn, 18,71 KiB
+/assets/montserra….woff2(capitallashing.com) - 1.325 msn, 31,98 KiB
+/assets/montserra….woff2(capitallashing.com) - 1.167 msn, 17,92 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.330 msn, 35,36 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.219 msn, 23,68 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.166 msn, 34,50 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.308 msn, 23,43 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.313 msn, 35,50 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.219 msn, 24,03 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.213 msn, 35,73 KiB
+/assets/inter-lat….woff2(capitallashing.com) - 1.221 msn, 24,20 KiB
+Önceden bağlanmış kaynaklar
+Önceden bağlanma ipuçları, sayfa yüklenirken tarayıcının gerekli bağlantıları önceden kurmasına yardımcı olarak ilgili kaynağa yapılacak ilk istekte zaman kazandırır. Sayfanın önceden bağlantı kurduğu kaynaklar aşağıda verilmiştir.
+hiçbir kaynak önceden bağlanmadı
+Önceden bağlanma adayları
+En önemli kaynaklarınıza önceden bağlanma ipuçları ekleyin ancak 4'ten az ipucu kullanmaya çalışın.
+Ön bağlantı için uygun ek kaynak bulunmamaktadır
+Düzen kayması sorununun nedenleri
+Bu analizler Chrome Geliştirici Araçları Performans Paneli'nde de mevcuttur. Daha ayrıntılı bilgi görüntülemek için izleme kaydı oluşturun.
+Teşhis
+Kullanılmayan JavaScript'i azaltın Tahmini tasarruf: 247 KiB
+Ağ etkinliğinin kullandığı bayt sayısını azaltılmaları gerekene kadar kullanılmayan JavaScript'i azaltıp komut dosyalarını erteleyin. Kullanılmayan JavaScript'i nasıl azaltacağınızı öğrenin.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Tahmini Tasarruf
+capitallashing.com 1. taraf
+462,3 KiB	246,6 KiB
+/assets/index-BspT1Yup.js(capitallashing.com)
+247,7 KiB
+92,4 KiB
+/assets/radix-BIsRbTgF.js(capitallashing.com)
+126,7 KiB
+91,2 KiB
+/assets/ContactForm-DEufrRUa.js(capitallashing.com)
+87,9 KiB
+63,0 KiB
+JavaScript'i küçült Tahmini tasarruf: 9 KiB
+JavaScript dosyalarının küçültülmesi yük boyutlarını azaltıp komut dosyası ayrıştırma süresini kısaltabilir. JavaScript'i nasıl sadeleştireceğinizi öğrenin.LCPFCPPuanlanmamış
+URL
+Aktarım Boyutu
+Tahmini Tasarruf
+capitallashing.com 1. taraf
+28,1 KiB	9,1 KiB
+/assets/lucide-CCoQb4ST.js(capitallashing.com)
+28,1 KiB
+9,1 KiB
+Resim öğelerinin açıkça belirtilmiş width ve height değerleri yok
+Çok büyük ağ yüklerinden kaçının Toplam boyut 2.713 KiB'tı
+Büyük ağ yükleri kullanıcılar için parasal maliyet anlamına gelir ve yükleme sürelerinin uzamasında yüksek bir etkiye sahiptir. Yük boyutlarını nasıl düşüreceğinizi öğrenin.Puanlanmamış
+URL
+Aktarım Boyutu
+capitallashing.com 1. taraf
+2.109,6 KiB
+/assets/cinematic….mp4(capitallashing.com)
+1.058,4 KiB
+/assets/index-BspT1Yup.js(capitallashing.com)
+248,1 KiB
+/assets/index-C_w81QvO.css(capitallashing.com)
+165,4 KiB
+…proje-kargo-lashing/proje-kargo-lashing_1_w960.webp(capitallashing.com)
+127,2 KiB
+/assets/radix-BIsRbTgF.js(capitallashing.com)
+127,0 KiB
+/hero-poster.webp(capitallashing.com)
+99,2 KiB
+/assets/ContactForm-DEufrRUa.js(capitallashing.com)
+88,3 KiB
+…konteyner-lashing/konteyner-lashing_1_w960.webp(capitallashing.com)
+72,3 KiB
+…brandalama/brandalama_1_w960.webp(capitallashing.com)
+62,8 KiB
+…flat-rack-lashing/flat-rack-lashing_1_w960.webp(capitallashing.com)
+60,9 KiB
+Birleştirilmemiş animasyonlardan kaçının Animasyonlu 1 öğe bulundu
+Uygulamanızın performansı hakkında daha fazla bilgi. Bu sayılar Performan skoruna doğrudan etki etmezler.
+Başarılı denetimler (16)
+Göster
+95
+Erişilebilirlik
+Bu kontroller, web uygulamanızın erişilebilirliğini iyileştirme fırsatlarını öne çıkarır. Otomatik algılama, sorunların yalnızca bir alt kümesini algılayabilir ve web uygulamanızın erişilebilirliğini garanti etmez. Bu nedenle, manuel test yapmanız da önerilir.
+Kontrast
+Arka plan ve ön plan renkleri yeterli kontrast oranına sahip değil.
+Birçok kullanıcı, düşük kontrastlı metni okumakta zorlanır veya okuyamaz. Yeterli renk kontrastını nasıl sağlayacağınızı öğrenin.
+Başarısız Öğeler
+BİZİ ARAYIN
+<p class="text-xs text-blue-50 uppercase font-bold tracking-wider">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
+E-POSTA GÖNDERİN
+<p class="text-xs text-blue-50 uppercase font-bold tracking-wider">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
+© Capital Lashing 7/24 Operasyon Merkezi
+<p class="text-sm text-blue-50">
+PROJENİZİ BAŞLATALIM Uzman ekibimiz yükünüzü incelesin, size en uygun güvenli …
+<div class="lg:col-span-2 p-10 md:p-16 bg-primary text-white flex flex-col justify-bet…">
+Bu form Google reCAPTCHA ile korunmaktadır.
+<p class="text-center text-xs text-slate-400">
+HIZLI TEKLİF FORMU AD SOYAD * FİRMA İLETİŞİM * HİZMET * Hizmet Seçiniz Gemi & P…
+<div class="lg:col-span-3 p-10 md:p-16 bg-white">
+Bu fırsatlar, içeriğinizin daha rahat okunmasına olanak tanır.
+Gezinme
+Başlık öğeleri sırayla azalan düzende sıralı değil
+Düzey atlamayan gerektiği gibi sıralanmış başlıklar sayfanın anlamsal yapısını iletir. Böylece, yardımcı teknolojiler kullanılırken gezinmeyi ve anlaşılmayı kolaylaştırır. Başlık sıralaması hakkında daha fazla bilgi edinin.
+Başarısız Öğeler
+7/24 OPERASYON
+<h4 class="font-bold font-heading text-white uppercase text-sm mb-1 group-hover:text-…">
