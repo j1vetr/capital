@@ -1,0 +1,474 @@
+CapitalLashing.com projesinde SEO odaklı bir revizyon yapmanı istiyorum.
+
+## ANA HEDEF
+
+Bu çalışmanın en önemli iki anahtar kelimesi:
+
+1. **lashing**
+2. **lashing firması**
+
+Ana hedef URL:
+
+`https://capitallashing.com/`
+
+Bu iki anahtar kelime için ayrı yeni landing page oluşturma. Ana sayfa bu iki kelimenin ana hedef sayfası olacak.
+
+`İstanbul lashing`, `İstanbul lashing firması` vb. kelimeler ana hedef değildir. Lokasyon ifadeleri destekleyici olabilir ancak ana SEO kurgusunu İstanbul üzerine kurma.
+
+## ÇOK ÖNEMLİ KURALLAR
+
+* Mevcut sitenin tasarımını bozma.
+* Header, hero, renkler, marka kimliği ve genel UI yapısını mümkün olduğunca koru.
+* Mobil uyumluluğu bozma.
+* Mevcut PageSpeed/Lighthouse performansını düşürecek ağır kütüphaneler ekleme.
+* Gereksiz JavaScript ekleme.
+* Yeni içerikler mevcut tasarım diline uygun şekilde yerleştirilsin.
+* Keyword stuffing yapma.
+* Metinler yapay, spam veya yalnızca SEO amacıyla yazılmış gibi görünmesin.
+* Kullanıcı deneyimi SEO'dan önce gelsin.
+* Sayfanın ana konusu Google tarafından çok açık şekilde "lashing hizmetleri" olarak anlaşılmalı.
+* `lashing` ve `lashing firması` için başka bir sayfanın ana sayfayla keyword cannibalization oluşturmasına izin verme.
+* Mevcut hizmet URL'lerini değiştirme.
+* Mevcut çalışan linkleri bozma.
+* URL değişikliği gerekmedikçe yapma.
+
+# 1. ANA SAYFA TITLE
+
+Ana sayfanın title etiketini SEO açısından düzenle.
+
+Önerilen yapı:
+
+`Lashing Firması | Profesyonel Lashing Hizmetleri | Capital Lashing`
+
+Yaklaşık 50-60 karakter civarında kalmaya çalış ancak anlamı bozmak için zorla kısaltma.
+
+# 2. META DESCRIPTION
+
+Ana sayfa için doğal, satış odaklı ve SEO uyumlu bir description oluştur.
+
+Şu kavramları doğal şekilde kapsasın:
+
+* lashing
+* lashing firması
+* profesyonel lashing hizmetleri
+* yük sabitleme
+* gemi
+* konteyner
+* proje yükleri
+
+Yaklaşık 150-160 karakter hedeflenebilir.
+
+# 3. HERO H1 DEĞİŞİKLİĞİ
+
+Mevcut:
+
+`LASHINGDE GÜVENİN İMZASI`
+
+ifadesini ana H1 olarak kullanma.
+
+Yeni H1:
+
+`Lashing Firması ve Profesyonel Lashing Hizmetleri`
+
+Mevcut "Lashingde Güvenin İmzası" sloganını tamamen silmek zorunda değilsin. İstersen H1'in üstünde veya altında marka sloganı olarak daha küçük bir element şeklinde bırakabilirsin.
+
+Sayfada yalnızca **bir adet H1** olduğundan emin ol.
+
+# 4. HERO AÇIKLAMA METNİ
+
+Hero alanındaki ilk açıklama Google'ın site konusunu hemen anlayacağı şekilde düzenlensin.
+
+Anlam olarak şuna yakın, ancak mevcut marka diliyle uyumlu doğal bir metin kullanılabilir:
+
+"Capital Lashing, gemi, konteyner, flat rack ve proje yükleri için profesyonel lashing hizmetleri sunan uzman bir lashing firmasıdır. Deneyimli operasyon ekibimiz ve uygun sabitleme ekipmanlarıyla yüklerin güvenli şekilde taşınmasını sağlıyoruz."
+
+Burada:
+
+* lashing
+* lashing firması
+
+ifadeleri doğal şekilde geçsin.
+
+Aynı kelimeyi gereksiz tekrar etme.
+
+# 5. ANA SAYFAYA SEO DESTEKLEYİCİ BÖLÜMLER EKLE
+
+Mevcut sayfa yapısını incele.
+
+Aşağıdaki konular zaten varsa tekrar eden yeni bölümler oluşturma. Mevcut alanları geliştir.
+
+Eksikse aşağıdaki bölümleri mevcut UI tasarımına uygun şekilde ekle.
+
+## H2: Profesyonel Lashing Firması
+
+Capital Lashing'in ne yaptığı açık şekilde anlatılsın.
+
+Yaklaşık 150-250 kelime yeterli.
+
+Şunlardan bahsedilebilir:
+
+* yük sabitleme
+* deniz ve kara taşımacılığı
+* gemi operasyonları
+* konteyner yükleri
+* flat rack
+* proje kargo
+* ağır yük
+* deneyimli ekip
+* güvenlik
+* uygun ekipman kullanımı
+
+Metin insanlara hizmeti anlatmalı, sadece SEO metni olmamalı.
+
+## H2: Lashing Hizmetlerimiz
+
+Mevcut hizmet kartlarını mümkünse kullan.
+
+Şu hizmetlere internal link oluştur:
+
+* Gemi / Proje Lashing
+* Konteyner Lashing
+* Flat Rack Lashing
+* Ağır Yük / Proje Kargo ile ilgili mevcut hizmet
+* varsa diğer gerçek lashing hizmetleri
+
+Linklerin gerçek mevcut URL'lere gittiğinden emin ol.
+
+Anchor textler doğal olsun:
+
+* Konteyner Lashing
+* Gemi Lashing
+* Flat Rack Lashing
+* Profesyonel Yük Sabitleme
+
+gibi.
+
+## H2: Lashing Nedir?
+
+Ana sayfaya kısa bir 100-150 kelimelik özet koy.
+
+Ancak detaylı bilgi ana sayfada bulunmasın.
+
+Devamında:
+
+`Lashing nedir?`
+
+anchor textiyle:
+
+`/lashing-nedir/`
+
+sayfasına internal link ver.
+
+# 6. /LASHING-NEDIR/ SAYFASI
+
+Şu URL mutlaka çalışır durumda olsun:
+
+`https://capitallashing.com/lashing-nedir/`
+
+Eğer route şu anda yoksa yeniden oluştur.
+
+Bu URL geçmişte çok sayıda backlink aldığı için URL'yi değiştirme.
+
+ANA SAYFAYA 301 YÖNLENDİRME YAPMA.
+
+Sayfanın temel hedef kelimeleri:
+
+* lashing nedir
+* lashing ne demek
+* lashing nasıl yapılır
+* lashing işlemi
+* lashing malzemeleri
+* yük sabitleme
+
+Bu sayfanın ana hedefi `lashing firması` olmasın.
+
+Bilgilendirici rehber niteliğinde olsun.
+
+Önerilen yapı:
+
+H1:
+`Lashing Nedir? Lashing Nasıl Yapılır?`
+
+H2:
+
+* Lashing Ne Demek?
+* Lashing Neden Yapılır?
+* Lashing Nasıl Yapılır?
+* Lashing Malzemeleri Nelerdir?
+* Konteyner Lashing Nedir?
+* Gemi Lashing Nedir?
+* Flat Rack Lashing Nedir?
+* Profesyonel Lashing Hizmeti Neden Önemlidir?
+* Sık Sorulan Sorular
+
+İçerik mümkünse gerçek teknik bilgilerden hareketle hazırlanmalı.
+
+Bilmediğin sertifikasyon, standart, şirket deneyimi veya rakamları uydurma.
+
+Bu sayfadan ana sayfaya doğal şekilde link ver.
+
+Örneğin:
+
+`profesyonel lashing hizmetleri`
+
+veya
+
+`Capital Lashing`
+
+anchorları kullanılabilir.
+
+# 7. INTERNAL LINK YAPISI
+
+Projede bulunan tüm lashing hizmet sayfalarını incele.
+
+Özellikle:
+
+* konteyner lashing
+* gemi/proje lashing
+* flat rack lashing
+* diğer yük sabitleme hizmetleri
+
+sayfalarından ana sayfaya doğal internal linkler oluştur.
+
+Ancak her sayfada exact match `lashing firması` anchorını tekrar tekrar kullanma.
+
+Anchor çeşitliliği kullan:
+
+* Capital Lashing
+* profesyonel lashing hizmetleri
+* lashing çözümleri
+* yük sabitleme hizmetleri
+* uzman lashing ekibi
+
+Ama ana sayfanın konu otoritesini güçlendirecek bir yapı oluştur.
+
+Breadcrumb varsa koru ve düzgün çalıştığını kontrol et.
+
+# 8. HEADING HİYERARŞİSİ
+
+Tüm ana sayfayı kontrol et.
+
+* Tek H1
+* Ana bölümler H2
+* H2 altındaki başlıklar H3
+
+olacak şekilde semantik yapıyı düzelt.
+
+Sadece font boyutu için heading etiketi kullanma.
+
+# 9. SCHEMA
+
+Mevcut schema yapısını incele.
+
+Çalışan schema'yı bozma veya gereksiz tekrar oluşturma.
+
+Uygunsa:
+
+* Organization
+* LocalBusiness veya daha doğru mevcut şirket schema türü
+* Service
+* BreadcrumbList
+
+kullanılabilir.
+
+Ana sayfaya sırf rich result almak için sahte FAQ schema ekleme.
+
+Schema içinde şirket hakkında projede bulunmayan bilgi uydurma.
+
+Firma adı tutarlı şekilde:
+
+`Capital Lashing`
+
+olsun.
+
+Canonical URL'leri kontrol et.
+
+Ana sayfanın canonical'ı:
+
+`https://capitallashing.com/`
+
+olmalı.
+
+# 10. OPEN GRAPH VE SOSYAL META
+
+Ana sayfada eksikse:
+
+* og:title
+* og:description
+* og:url
+* og:type
+* twitter card
+
+meta etiketlerini doğru oluştur.
+
+SEO title ve description ile mantıksal olarak uyumlu olsun.
+
+# 11. GÖRSEL SEO
+
+Mevcut lashing operasyon görsellerinde:
+
+* anlamlı filename
+* width/height
+* lazy loading
+* descriptive alt text
+
+kullan.
+
+Ancak alt etiketlerini keyword doldurmak için kullanma.
+
+Örnek:
+
+`Konteyner üzerinde profesyonel lashing uygulaması`
+
+gibi fotoğrafı gerçekten tanımlayan alt textler kullanılabilir.
+
+Hero/LCP görselini lazy-load yapma.
+
+Hero dışındaki aşağıda bulunan görseller lazy-load olabilir.
+
+Mevcut WebP/AVIF optimizasyonunu bozma.
+
+# 12. PERFORMANS
+
+SEO revizyonu sonrası:
+
+* render blocking kaynak oluşturma
+* gereksiz npm paketi ekleme
+* büyük JS bundle oluşturma
+* gereksiz animasyon kütüphanesi ekleme
+* büyük görseller ekleme
+
+Lighthouse performansını mümkün olduğunca koru.
+
+Mevcut SSR/prerender yapısı varsa devam ettir.
+
+SEO içeriğinin kaynak HTML'de Google tarafından görülebilir olduğundan emin ol.
+
+Sadece client-side sonradan inject edilen metinler oluşturma.
+
+# 13. KEYWORD KULLANIMI
+
+Ana sayfanın temel konusu:
+
+`lashing`
+
+İkinci temel commercial keyword:
+
+`lashing firması`
+
+Ancak kelime yoğunluğu hesaplayarak spam yapma.
+
+Google'ın sayfanın konusunu anlayabileceği kadar doğal kullan.
+
+Şu terimler de semantik olarak doğal yerlerde kullanılabilir:
+
+* lashing hizmetleri
+* yük sabitleme
+* yük güvenliği
+* konteyner lashing
+* gemi lashing
+* flat rack lashing
+* proje kargo
+* ağır yük
+* sabitleme ekipmanları
+
+# 14. KANİBALİZASYON KONTROLÜ
+
+Tüm projeyi tara.
+
+`lashing`
+
+ve
+
+`lashing firması`
+
+kelimelerine agresif şekilde optimize edilmiş birden fazla landing page varsa raporla ve düzelt.
+
+Ana hedef bu kelimeler için ana sayfa olmalı.
+
+Hizmet sayfalarının hedefleri kendi hizmet kelimeleri olmalı.
+
+Örneğin:
+
+Ana Sayfa:
+
+* lashing
+* lashing firması
+
+Konteyner sayfası:
+
+* konteyner lashing
+
+Flat Rack:
+
+* flat rack lashing
+
+Gemi:
+
+* gemi lashing
+
+/lashing-nedir/:
+
+* lashing nedir
+
+Bu ayrımı koru.
+
+# 15. DEĞİŞİKLİKLERİ YAPMADAN ÖNCE
+
+Önce mevcut kod tabanını incele:
+
+* framework
+* routing
+* meta yönetimi
+* component yapısı
+* mevcut schema
+* sitemap
+* robots.txt
+* canonical
+* SSR/SSG durumu
+
+mevcut mimariye uygun şekilde düzenleme yap.
+
+Projeyi başka framework'e taşıma.
+
+# 16. DEĞİŞİKLİKLER SONRASI TEST
+
+İşlem bittikten sonra:
+
+* build çalıştır
+* build hatalarını düzelt
+* kırık route kontrolü yap
+* `/`
+* `/lashing-nedir/`
+* mevcut lashing hizmet sayfaları
+
+200 dönüyor mu kontrol et.
+
+Ayrıca:
+
+* title
+* description
+* canonical
+* H1
+* internal links
+* schema
+
+çıktılarını kontrol et.
+
+Mobil görünümde taşma veya layout bozukluğu bırakma.
+
+# 17. SONUNDA BANA RAPOR VER
+
+Kodları tamamladıktan sonra kısa bir rapor ver:
+
+1. Değiştirilen dosyalar
+2. Ana sayfada yapılan SEO değişiklikleri
+3. `/lashing-nedir/` sayfasında yapılanlar
+4. Oluşturulan internal linkler
+5. Schema değişiklikleri
+6. Canonical / meta değişiklikleri
+7. Keyword cannibalization konusunda buldukların
+8. Build/test sonucu
+9. Benim manuel olarak Search Console'da yapmam gereken işlemler
+
+Sadece öneri sunma. Kod tabanını inceleyip uygun değişiklikleri **doğrudan uygula**.
