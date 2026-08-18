@@ -25,7 +25,7 @@ export const servicesData: ServiceData[] = [
   {
     id: "gemi-proje-lashing",
     title: "Gemi Proje Lashing",
-    seoTitle: "Gemi Proje Lashing | İstanbul Lashing Firması – Capital Lashing",
+    seoTitle: "Gemi Proje Lashing | Gemi Üstü Yük Sabitleme – Capital Lashing",
     metaDescription: "İstanbul, Ambarlı ve Türkiye genelinde gemi proje lashing hizmeti. DNV-GL onaylı ekipman, IMO CSS Code uyumlu operasyon, 7/24 sertifikalı lasher ekibi. Ücretsiz teklif alın.",
     shortDescription: "Gemi ambarı ve güverte üstü ağır tonajlı proje yüklerinin sabitlenmesi.",
     ports: ["Ambarlı Limanı", "Haydarpaşa Limanı", "Tekirdağ Limanı", "İzmir Aliağa", "Mersin Limanı", "İstanbul"],

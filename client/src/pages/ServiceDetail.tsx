@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2, ChevronRight, Shield, Anchor, FileText, Zap, 
 import { Link, useRoute } from "wouter";
 import { servicesData } from "@/data/services";
 import { portNameToLocationSlug } from "@/data/locations";
-import { getGuidesForService } from "@/data/guides";
+import { getGuidesForService, guidePath } from "@/data/guides";
 import { trServiceIdToEnSlug } from "@/data/en";
 import { useEffect } from "react";
 import { motion } from "@/lib/motion";
@@ -54,6 +54,40 @@ export default function ServiceDetail() {
 
   // Determine background image: use service.image if available, otherwise fallback
   const bgImage = service.image || heroImage;
+
+  // Varied anchor texts pointing back to the home page. Each service picks a
+  // stable variant so the same anchor is not repeated across every page.
+  const homeLinkVariants = [
+    {
+      before: "Bu operasyon türü,",
+      anchor: "Capital Lashing",
+      after: "ekibinin sahada en sık uyguladığı çalışmalar arasındadır. Yükünüz için doğru sabitleme planını birlikte belirleyelim.",
+    },
+    {
+      before: "Gemi, konteyner ve proje yükleriniz için sunduğumuz",
+      anchor: "profesyonel lashing hizmetleri",
+      after: "hakkında genel bilgiye ana sayfamızdan ulaşabilirsiniz.",
+    },
+    {
+      before: "Tüm yük tipleri için geliştirdiğimiz",
+      anchor: "lashing çözümleri",
+      after: "ile operasyonunuzu tek noktadan planlıyoruz.",
+    },
+    {
+      before: "Liman sahasından varış noktasına kadar sunduğumuz",
+      anchor: "yük sabitleme hizmetleri",
+      after: "ile sevkiyatınız güvence altındadır.",
+    },
+    {
+      before: "Operasyonun her adımında",
+      anchor: "uzman lashing ekibimiz",
+      after: "kurallara uygun ekipman ve belgelenmiş uygulama ile yanınızdadır.",
+    },
+  ];
+  const homeLink =
+    homeLinkVariants[
+      servicesData.findIndex(s => s.id === service.id) % homeLinkVariants.length
+    ];
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans selection:bg-primary/30">
@@ -270,6 +304,15 @@ export default function ServiceDetail() {
                 </div>
               </div>
 
+              {/* Natural internal link to home page with varied anchor text */}
+              <p className="text-slate-600 leading-relaxed mb-12">
+                {homeLink.before}{" "}
+                <Link href="/" className="text-primary font-bold hover:underline">
+                  {homeLink.anchor}
+                </Link>{" "}
+                {homeLink.after}
+              </p>
+
               {/* Gallery Section */}
               {service.gallery && service.gallery.length > 0 && (
                 <div className="mb-20">
@@ -389,7 +432,7 @@ export default function ServiceDetail() {
                   İlgili Rehberler:
                 </div>
                 {getGuidesForService(service.id).map(guide => (
-                  <Link key={guide.slug} href={`/rehber/${guide.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-slate-200 text-slate-700 text-sm font-semibold rounded-full shadow-sm hover:border-primary hover:text-primary transition-colors">
+                  <Link key={guide.slug} href={guidePath(guide.slug)} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-slate-200 text-slate-700 text-sm font-semibold rounded-full shadow-sm hover:border-primary hover:text-primary transition-colors">
                     {guide.title.split("?")[0]}?
                   </Link>
                 ))}

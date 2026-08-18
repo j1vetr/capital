@@ -3,6 +3,15 @@ export interface GuideSection {
   heading: string;
   paragraphs: string[];
   bullets?: string[];
+  qa?: { q: string; a: string }[];
+}
+
+// The lashing-nedir guide lives at the root URL /lashing-nedir because that
+// URL has an external backlink history. All other guides live under /rehber.
+// Use this helper everywhere a guide URL is built so client links, sitemap,
+// canonicals and prerender routes stay in sync.
+export function guidePath(slug: string): string {
+  return slug === "lashing-nedir" ? "/lashing-nedir" : `/rehber/${slug}`;
 }
 
 export interface GuideData {
@@ -21,15 +30,15 @@ export interface GuideData {
 export const guidesData: GuideData[] = [
   {
     slug: "lashing-nedir",
-    title: "Lashing Nedir? Deniz Taşımacılığında Yük Bağlama Rehberi",
-    seoTitle: "Lashing Nedir? Yük Bağlama ve Sabitleme Rehberi | Capital Lashing",
-    metaDescription: "Lashing nedir, hangi ekipmanlarla yapılır, hangi kurallara tabidir? Deniz taşımacılığında yük bağlama yöntemlerini, ekipman türlerini ve uygulama adımlarını anlatan teknik rehber.",
-    summary: "Lashing kavramının tanımı, kullanılan ekipmanlar, uygulama yöntemleri ve uluslararası kurallar üzerine kapsamlı bir başlangıç rehberi.",
+    title: "Lashing Nedir? Lashing Nasıl Yapılır?",
+    seoTitle: "Lashing Nedir? Lashing Nasıl Yapılır? | Capital Lashing",
+    metaDescription: "Lashing nedir, lashing ne demek, lashing nasıl yapılır? Yük sabitleme mantığını, lashing malzemelerini ve uygulama adımlarını anlatan teknik rehber.",
+    summary: "Lashing kavramının tanımı, lashing işleminin adımları, kullanılan malzemeler ve uluslararası kurallar üzerine kapsamlı bir başlangıç rehberi.",
     datePublished: "2026-08-10",
     sections: [
       {
         id: "tanim",
-        heading: "Lashing Kavramının Tanımı",
+        heading: "Lashing Ne Demek?",
         paragraphs: [
           "Lashing, bir yükün taşıma aracı üzerinde hareket etmesini önlemek amacıyla halat, zincir, spanzet veya kaynaklı aparatlarla bağlanması işlemidir. Terim denizcilik kökenlidir ve Türkçede yük bağlama veya yük sabitleme karşılığıyla kullanılır. Gemi, konteyner, tır ve vagon üzerindeki her türlü bağlama işlemi bu kavramın kapsamına girer.",
           "Deniz yolculuğu sırasında gemi altı serbestlik derecesinde hareket eder. Yalpa, baş kıç vurma ve savrulma hareketleri yüke sürekli değişen ivme kuvvetleri uygular. Lashing bu kuvvetleri karşılayacak bağlantı noktaları ve bağlama elemanları kurarak yükün kaymasını, devrilmesini ve sıçramasını engeller.",
@@ -37,7 +46,7 @@ export const guidesData: GuideData[] = [
       },
       {
         id: "neden-gerekli",
-        heading: "Lashing Neden Gereklidir",
+        heading: "Lashing Neden Yapılır?",
         paragraphs: [
           "Sabitlenmemiş veya yetersiz sabitlenmiş bir yük yalnızca kendisine zarar vermez. Kayan yük geminin dengesini bozabilir, diğer yüklere hasar verebilir ve mürettebat için can güvenliği riski oluşturur. Bu nedenle uluslararası denizcilik kuralları yük sabitlemeyi taşımanın zorunlu bir parçası olarak tanımlar.",
           "Sigorta tarafında da lashing belirleyicidir. Taşıma sırasında hasar oluştuğunda sigorta şirketleri ve sörvey firmaları ilk olarak bağlama planını ve uygulamanın fotoğraflı kayıtlarını inceler. Kurallara uygun yapılmış ve belgelenmiş bir lashing, hasar tazmin sürecinde taşıtanın en güçlü dayanağıdır.",
@@ -51,7 +60,7 @@ export const guidesData: GuideData[] = [
       },
       {
         id: "ekipmanlar",
-        heading: "Lashing Ekipmanları",
+        heading: "Lashing Malzemeleri Nelerdir?",
         paragraphs: [
           "Bağlama elemanı seçimi yükün ağırlığına, formuna ve taşıma moduna göre yapılır. Her ekipmanın üretici tarafından belgelenmiş bir kopma yükü (breaking load) ve emniyetli çalışma yükü (safe working load) vardır. Hesaplamalar bu değerler üzerinden yürütülür.",
         ],
@@ -66,18 +75,63 @@ export const guidesData: GuideData[] = [
       },
       {
         id: "yontemler",
-        heading: "Temel Bağlama Yöntemleri",
+        heading: "Lashing Nasıl Yapılır?",
         paragraphs: [
+          "Lashing işlemi keşif ve hesaplama ile başlar. Yükün ağırlığı, boyutları ve ağırlık merkezi belirlenir, taşıma modu ve rota dikkate alınarak yüke etkiyecek kuvvetler hesaplanır. Bu hesaba göre bağlama noktalarının sayısı, açıları ve kullanılacak malzemelerin kapasitesi planlanır. Uygulama sahasında yük konumlandırılır, bağlama elemanları plana uygun şekilde bağlanıp gerdirilir ve son kontrolde her elemanın gerginliği ile bağlantı noktalarının sağlamlığı doğrulanır.",
           "Uygulamada iki temel prensip vardır. Doğrudan bağlama yönteminde bağlama elemanı yük üzerindeki bağlantı noktasından taşıma aracındaki bağlantı noktasına gerilir ve kuvveti doğrudan karşılar. Sürtünme bağlaması olarak bilinen yöntemde ise bağlama elemanı yükün üzerinden aşırtılarak yükü zemine bastırır ve sürtünme kuvvetini artırır.",
           "Ağır proje yüklerinde bu yöntemler kaynaklı stoper, takozlama ve destekleme ile birlikte kullanılır. Doğru kombinasyon yükün ağırlık merkezi, sefer rotası ve beklenen deniz koşulları dikkate alınarak mühendislik hesabıyla belirlenir.",
         ],
       },
       {
-        id: "kurallar",
-        heading: "Uluslararası Kurallar ve Standartlar",
+        id: "konteyner-lashing",
+        heading: "Konteyner Lashing Nedir?",
         paragraphs: [
-          "Gemi üzerindeki yük sabitleme işlemleri IMO tarafından yayımlanan CSS Code kurallarına tabidir. Her geminin onaylı bir Cargo Securing Manual dokümanı bulunur ve bağlama uygulamaları bu dokümana uygun yapılmak zorundadır. Konteyner içi yüklemelerde ise IMO, ILO ve UNECE ortak yayını olan CTU Code esas alınır.",
-          "Profesyonel lashing firmaları bu kurallara uygun bağlama planı hazırlar, sertifikalı ekipman kullanır ve operasyon sonunda uygulamayı belgeleyen rapor düzenler. Bu belgeler gemi kaptanı ve sörvey firması onayıyla resmiyet kazanır.",
+          "Konteyner lashing, konteyner içine yüklenen kargonun taşıma boyunca hareket etmemesi için sabitlenmesidir. Konteynerin kapalı yapısı yükü dış etkenlerden korur ancak içerideki hareketi engellemez. Spanzet, hava yastığı, takozlama ve boşluk doldurma malzemeleri bir arada kullanılarak yük konteynerin taşıyıcı noktalarına bağlanır. Konteyner içi yüklemelerde IMO, ILO ve UNECE ortak yayını olan CTU Code esas alınır.",
+        ],
+      },
+      {
+        id: "gemi-lashing",
+        heading: "Gemi Lashing Nedir?",
+        paragraphs: [
+          "Gemi lashing, gemi güvertesine veya ambarına yüklenen kargonun sefer boyunca sabit kalması için bağlanmasıdır. Gemi üzerindeki yük sabitleme işlemleri IMO tarafından yayımlanan CSS Code kurallarına tabidir. Her geminin onaylı bir Cargo Securing Manual dokümanı bulunur ve bağlama uygulamaları bu dokümana uygun yapılmak zorundadır. Ağır tonajlı proje yüklerinde zincir, çelik halat ve kaynaklı aparatlar birlikte kullanılır.",
+        ],
+      },
+      {
+        id: "flat-rack-lashing",
+        heading: "Flat Rack Lashing Nedir?",
+        paragraphs: [
+          "Flat rack lashing, standart konteynere sığmayan geniş veya yüksek yüklerin flat rack konteyner üzerine sabitlenmesidir. Flat rack yükleri yanlardan ve üstten açıkta kaldığı için deniz koşullarının etkisine doğrudan maruz kalır. Bu nedenle bağlama planı, zincir ve spanzet kombinasyonu, takozlama ve gerekirse kaynaklı stoper uygulaması standart konteyner yüklemesine göre daha kapsamlı hazırlanır.",
+        ],
+      },
+      {
+        id: "profesyonel-hizmet",
+        heading: "Profesyonel Lashing Hizmeti Neden Önemlidir?",
+        paragraphs: [
+          "Yetersiz bağlama en sık hasar nedenlerinden biridir ve sonuçları yükün değerini aşan maliyetler doğurur. Profesyonel bir ekip kurallara uygun bağlama planı hazırlar, sertifikalı ekipman kullanır ve operasyon sonunda uygulamayı belgeleyen rapor düzenler. Bu belgeler gemi kaptanı ve sörvey firması onayıyla resmiyet kazanır.",
+          "Hasar durumunda sigorta şirketleri ilk olarak bağlama planını ve fotoğraflı uygulama kayıtlarını inceler. Kurallara uygun yapılmış ve belgelenmiş bir uygulama, tazmin sürecinde yük sahibinin en güçlü dayanağıdır. Bu nedenle deneyimli bir ekiple çalışmak yalnızca operasyon güvenliği için değil ticari güvence için de gereklidir.",
+        ],
+      },
+      {
+        id: "sss",
+        heading: "Sık Sorulan Sorular",
+        paragraphs: [],
+        qa: [
+          {
+            q: "Lashing hangi yüklerde gereklidir?",
+            a: "Gemi, konteyner, tır veya vagonla taşınan ve taşıma sırasında kayma, devrilme veya sıçrama riski bulunan her yük için gereklidir. Ağır makineler, proje kargolar, bobinler ve paletli yükler en sık sabitlenen yük tipleridir.",
+          },
+          {
+            q: "Lashing işlemini kim yapar?",
+            a: "Uygulamayı bu konuda eğitimli ve sertifikalı lasher ekipleri yapar. Bağlama planı ve kapasite hesapları operasyon öncesinde hazırlanır, uygulama sonrası fotoğraflı rapor düzenlenir.",
+          },
+          {
+            q: "Lashing sertifikası nedir?",
+            a: "Yükün belirli bir standarda uygun sabitlendiğini belgeleyen dokümandır. Uygulamayı yapan firma tarafından düzenlenir ve çoğu durumda gemi kaptanı ile bağımsız sörvey firmasının onayını taşır.",
+          },
+          {
+            q: "Lashing ile yük sabitleme aynı şey midir?",
+            a: "Türkçede yük sabitleme ve yük bağlama, lashing teriminin karşılığı olarak kullanılır. Uygulamada lashing, sabitleme işleminin halat, zincir ve spanzet gibi bağlama elemanlarıyla yapılan bölümünü ifade eder.",
+          },
         ],
       },
     ],

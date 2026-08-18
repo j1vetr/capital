@@ -26,6 +26,9 @@ export const routeDefs: RouteDef[] = [
   { path: "/lashing/:slug", load: () => import("@/pages/LocationDetail") },
   { path: "/rehber", load: () => import("@/pages/GuideHub") },
   { path: "/rehber/:slug", load: () => import("@/pages/GuideDetail") },
+  // Root-level guide URL with backlink history. GuideDetail resolves the
+  // slug from the current location, so it serves this route too.
+  { path: "/lashing-nedir", load: () => import("@/pages/GuideDetail") },
   { path: "/en", load: () => import("@/pages/en/EnHome") },
   { path: "/en/services", load: () => import("@/pages/en/EnServices") },
   { path: "/en/services/:slug", load: () => import("@/pages/en/EnServiceDetail") },

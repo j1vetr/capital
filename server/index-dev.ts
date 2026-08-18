@@ -48,6 +48,13 @@ export async function setupVite(app: Express, server: Server) {
         return;
       }
 
+      // The lashing-nedir guide moved from /rehber/lashing-nedir to the
+      // root-level /lashing-nedir (URL with backlink history).
+      if (rawPath === "/rehber/lashing-nedir") {
+        res.redirect(301, "/lashing-nedir" + (query ? `?${query}` : ""));
+        return;
+      }
+
       const clientTemplate = path.resolve(
         import.meta.dirname,
         "..",

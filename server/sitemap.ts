@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { enLocationsData, enServicesData } from "../client/src/data/en";
-import { guidesData } from "../client/src/data/guides";
+import { guidePath, guidesData } from "../client/src/data/guides";
 import { locationsData } from "../client/src/data/locations";
 import { servicesData } from "../client/src/data/services";
 import { BASE_URL } from "../shared/business";
@@ -12,6 +12,7 @@ const SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9";
 const IMAGE_NS = "http://www.google.com/schemas/sitemap-image/1.1";
 const LEGACY_CONTENT_LASTMOD = "2026-04-03";
 const SEO_CONTENT_LASTMOD = "2026-08-10";
+const SEO_REVISION_LASTMOD = "2026-08-18";
 
 type ChangeFrequency = "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
 
@@ -29,7 +30,7 @@ export interface SitemapEntry {
 }
 
 const staticEntries: SitemapEntry[] = [
-  { path: "/", lastmod: LEGACY_CONTENT_LASTMOD, changefreq: "weekly", priority: "1.0" },
+  { path: "/", lastmod: SEO_REVISION_LASTMOD, changefreq: "weekly", priority: "1.0" },
   { path: "/hakkimizda", lastmod: SEO_CONTENT_LASTMOD, changefreq: "monthly", priority: "0.8" },
   { path: "/hizmetler", lastmod: LEGACY_CONTENT_LASTMOD, changefreq: "weekly", priority: "0.9" },
   { path: "/projeler", lastmod: LEGACY_CONTENT_LASTMOD, changefreq: "weekly", priority: "0.8" },
@@ -84,10 +85,10 @@ const locationEntries: SitemapEntry[] = [
 ];
 
 const guideEntries: SitemapEntry[] = guidesData.map((guide) => ({
-  path: `/rehber/${guide.slug}`,
-  lastmod: guide.datePublished,
+  path: guidePath(guide.slug),
+  lastmod: guide.slug === "lashing-nedir" ? SEO_REVISION_LASTMOD : guide.datePublished,
   changefreq: "monthly",
-  priority: "0.65",
+  priority: guide.slug === "lashing-nedir" ? "0.8" : "0.65",
 }));
 
 const englishServiceEntries: SitemapEntry[] = enServicesData.map((service, index) => ({

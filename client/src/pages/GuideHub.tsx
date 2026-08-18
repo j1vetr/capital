@@ -4,7 +4,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { SEO } from "@/components/SEO";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "wouter";
-import { guidesData } from "@/data/guides";
+import { guidesData, guidePath } from "@/data/guides";
 import { useEffect } from "react";
 import { motion } from "@/lib/motion";
 import heroImage from "@assets/generated_images/port_workers_checking_cargo_safety.webp";
@@ -69,7 +69,7 @@ export default function GuideHub() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.04 }}
                 >
-                  <Link href={`/rehber/${guide.slug}`} className="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 group h-full p-8">
+                  <Link href={guidePath(guide.slug)} className="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 group h-full p-8">
                     <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                       <BookOpen className="h-6 w-6" />
                     </div>

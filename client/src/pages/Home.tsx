@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans">
       <SEO
-        title="Capital Lashing & Port Services | İstanbul Lashing Firması – Yük Sabitleme"
-        description="İstanbul merkezli lashing ve liman hizmetleri firması. Gemi proje lashing, konteyner sabitleme, shrink wrap, sandıklama. DNV-GL onaylı ekipman, 7/24 operasyon. Teklif alın."
+        title="Lashing Firması | Profesyonel Lashing Hizmetleri | Capital Lashing"
+        description="Capital Lashing, gemi, konteyner ve proje yükleri için profesyonel lashing hizmetleri sunan lashing firmasıdır. Yük sabitlemede 7/24 operasyon. Teklif alın."
         canonical="https://capitallashing.com"
         alternates={{ tr: "https://capitallashing.com", en: "https://capitallashing.com/en" }}
         type="local_business"
@@ -48,6 +48,36 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Profesyonel Lashing Firması */}
+        <section className="py-20 md:py-24 bg-white">
+          <div className="container px-4 md:px-6">
+            <div className="max-w-4xl mx-auto">
+              <span className="text-xs font-black tracking-[0.3em] uppercase text-primary mb-3 inline-block">Capital Lashing</span>
+              <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase text-slate-900 leading-none mb-6">
+                Profesyonel Lashing Firması
+              </h2>
+              <div className="h-1.5 w-24 bg-gradient-to-r from-primary to-blue-600 rounded-full mb-8" />
+              <div className="space-y-5 text-slate-600 text-lg leading-relaxed">
+                <p>
+                  Capital Lashing, deniz ve kara taşımacılığında yük sabitleme alanında uzmanlaşmış bir lashing firmasıdır. Gemi operasyonlarında, konteyner yüklerinde, flat rack taşımalarında ve proje kargo sevkiyatlarında yüklerin taşıma boyunca sabit kalması için bağlama planı hazırlıyor ve sahada uyguluyoruz.
+                </p>
+                <p>
+                  Ağır yük ve proje kargo operasyonlarında bağlama noktaları, ekipman kapasiteleri ve yük dağılımı mühendislik hesabıyla belirlenir. Deneyimli lasher ekibimiz{" "}
+                  <Link href="/hizmetler/gemi-proje-lashing" className="text-primary font-bold hover:underline">gemi lashing</Link>,{" "}
+                  <Link href="/hizmetler/konteyner-lashing" className="text-primary font-bold hover:underline">konteyner lashing</Link> ve{" "}
+                  <Link href="/hizmetler/flat-rack-lashing" className="text-primary font-bold hover:underline">flat rack lashing</Link>{" "}
+                  operasyonlarını uluslararası kurallara uygun ekipmanlarla gerçekleştirir.
+                </p>
+                <p>
+                  Her operasyon sonunda uygulama fotoğraflı raporla belgelenir ve talep edilmesi halinde lashing sertifikası düzenlenir. Güvenlik bizim için yalnızca bir prosedür değil, işin kendisidir. Türbin ve trafo gibi ağır makinelerden paletli ihracat yüklerine kadar her yük tipi için{" "}
+                  <Link href="/hizmetler/proje-kargo-lashing" className="text-primary font-bold hover:underline">profesyonel yük sabitleme</Link>{" "}
+                  çözümü sunuyoruz. Yükünüzün türü ne olursa olsun, doğru ekipman ve doğru uygulama ile limandan varış noktasına kadar güvenle taşınmasını sağlıyoruz.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <ServiceGrid />
         <Features />
@@ -227,6 +257,30 @@ export default function Home() {
               </Link>{" "}
               göz atabilirsiniz.
             </p>
+          </div>
+        </section>
+
+        {/* Lashing Nedir? */}
+        <section className="py-20 bg-white">
+          <div className="container px-4 md:px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-heading font-black uppercase text-slate-900 leading-none mb-6">
+                Lashing Nedir?
+              </h2>
+              <div className="h-1.5 w-24 bg-gradient-to-r from-primary to-blue-600 rounded-full mb-8" />
+              <div className="space-y-5 text-slate-600 text-lg leading-relaxed">
+                <p>
+                  Lashing, bir yükün taşıma aracı üzerinde hareket etmesini önlemek amacıyla halat, zincir, spanzet veya kaynaklı aparatlarla bağlanması işlemidir. Türkçede yük bağlama veya yük sabitleme karşılığıyla kullanılır. Deniz yolculuğunda gemi sürekli hareket eder ve yüke değişen ivme kuvvetleri uygular. Doğru yapılmış bir bağlama, yükün kaymasını, devrilmesini ve hasar görmesini engeller.
+                </p>
+                <p>
+                  Uygulama, yükün ağırlığına ve taşıma moduna göre hesaplanan bir bağlama planına dayanır. Konunun detaylarını, kullanılan malzemeleri ve uygulama adımlarını{" "}
+                  <Link href="/lashing-nedir" className="text-primary font-bold hover:underline">
+                    Lashing nedir?
+                  </Link>{" "}
+                  rehberimizde bulabilirsiniz.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 

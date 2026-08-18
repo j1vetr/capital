@@ -36,7 +36,7 @@ Merkez ofis Istanbul Sancaktepe'dedir. Asagidaki bolgeler hizmet verilen operasy
 ## Rehber
 
 - [Rehber Ana Sayfa](https://capitallashing.com/rehber)
-- [Lashing Nedir](https://capitallashing.com/rehber/lashing-nedir)
+- [Lashing Nedir](https://capitallashing.com/lashing-nedir)
 - [Konteyner Lashing Nedir](https://capitallashing.com/rehber/konteyner-lashing-nedir)
 - [Proje Kargo Lashing Nedir](https://capitallashing.com/rehber/proje-kargo-lashing-nedir)
 - [Flat Rack Lashing Nedir](https://capitallashing.com/rehber/flat-rack-lashing-nedir)

@@ -19,7 +19,7 @@ export function ServiceGrid() {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-heading font-black text-slate-900 uppercase tracking-tight mb-6">
-            Hizmetlerimiz
+            Lashing Hizmetlerimiz
           </h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-primary to-blue-600 rounded-full mb-6" />
           <p className="text-slate-500 text-xl leading-relaxed">

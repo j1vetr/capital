@@ -4,16 +4,21 @@ import { ContactSection } from "@/components/ContactSection";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, BookOpen, List, Anchor } from "lucide-react";
-import { Link, useRoute } from "wouter";
-import { guidesData } from "@/data/guides";
+import { Link, useLocation } from "wouter";
+import { guidesData, guidePath } from "@/data/guides";
 import { servicesData } from "@/data/services";
 import { useEffect } from "react";
 import { motion } from "@/lib/motion";
 import NotFound from "@/pages/not-found";
 
 export default function GuideDetail() {
-  const [, params] = useRoute("/rehber/:slug");
-  const guide = guidesData.find(g => g.slug === params?.slug);
+  const [location] = useLocation();
+  const cleanLocation = location.split("?")[0].replace(/\/+$/, "") || "/";
+  const slug =
+    cleanLocation === "/lashing-nedir"
+      ? "lashing-nedir"
+      : cleanLocation.match(/^\/rehber\/([^/]+)$/)?.[1];
+  const guide = guidesData.find(g => g.slug === slug);
 
   useEffect(() => {
     if (guide) {
@@ -34,7 +39,7 @@ export default function GuideDetail() {
     .filter((g): g is NonNullable<typeof g> => Boolean(g));
 
   const primaryService = relatedServices[0];
-  const canonical = `https://capitallashing.com/rehber/${guide.slug}`;
+  const canonical = `https://capitallashing.com${guidePath(guide.slug)}`;
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans selection:bg-primary/30">
@@ -128,8 +133,28 @@ export default function GuideDetail() {
                       ))}
                     </ul>
                   )}
+                  {section.qa && (
+                    <div className="space-y-8 mt-2">
+                      {section.qa.map((item, qi) => (
+                        <div key={qi}>
+                          <h3 className="text-lg md:text-xl font-heading font-bold text-slate-900 mb-3">{item.q}</h3>
+                          <p className="text-slate-600 text-lg leading-relaxed">{item.a}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </section>
               ))}
+
+              {guide.slug === "lashing-nedir" && (
+                <p className="text-slate-600 text-lg leading-relaxed mb-14">
+                  Capital Lashing olarak gemi, konteyner ve proje yükleriniz için{" "}
+                  <Link href="/" className="text-primary font-bold hover:underline">
+                    profesyonel lashing hizmetleri
+                  </Link>{" "}
+                  sunuyoruz. Kurallara uygun bir bağlama planı için ekibimizle iletişime geçebilirsiniz.
+                </p>
+              )}
 
               {/* Service CTA */}
               {primaryService && (
@@ -195,7 +220,7 @@ export default function GuideDetail() {
                   </div>
                   <div className="space-y-3">
                     {relatedGuides.map(rg => (
-                      <Link key={rg.slug} href={`/rehber/${rg.slug}`} className="flex items-center justify-between gap-3 py-3 px-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-primary/40 hover:bg-primary/5 transition-colors group">
+                      <Link key={rg.slug} href={guidePath(rg.slug)} className="flex items-center justify-between gap-3 py-3 px-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-primary/40 hover:bg-primary/5 transition-colors group">
                         <span className="text-slate-700 font-medium text-sm leading-snug">{rg.title.split("?")[0]}?</span>
                         <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform shrink-0" />
                       </Link>

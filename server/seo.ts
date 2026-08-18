@@ -1,6 +1,6 @@
 import { servicesData } from "../client/src/data/services";
 import { locationsData } from "../client/src/data/locations";
-import { guidesData } from "../client/src/data/guides";
+import { guidesData, guidePath } from "../client/src/data/guides";
 import { enServicesData, enLocationsData } from "../client/src/data/en";
 import {
   BASE_URL,
@@ -18,8 +18,8 @@ export interface PageMeta {
 
 const routesMeta: Record<string, PageMeta> = {
   "/": {
-    title: "Capital Lashing & Port Services | İstanbul Lashing Firması – Yük Sabitleme",
-    description: "İstanbul merkezli lashing ve liman hizmetleri firması. Gemi proje lashing, konteyner sabitleme, shrink wrap, sandıklama. DNV-GL onaylı ekipman, 7/24 operasyon. Teklif alın.",
+    title: "Lashing Firması | Profesyonel Lashing Hizmetleri | Capital Lashing",
+    description: "Capital Lashing, gemi, konteyner ve proje yükleri için profesyonel lashing hizmetleri sunan lashing firmasıdır. Yük sabitlemede 7/24 operasyon. Teklif alın.",
     canonical: BASE_URL,
   },
   "/hakkimizda": {
@@ -115,9 +115,16 @@ function getLocationForPath(cleanPath: string) {
 }
 
 function getGuideForPath(cleanPath: string) {
+  if (cleanPath === "/lashing-nedir") {
+    return guidesData.find((g) => g.slug === "lashing-nedir");
+  }
   const guideMatch = cleanPath.match(/^\/rehber\/([^/]+)$/);
   if (!guideMatch) return undefined;
-  return guidesData.find((g) => g.slug === guideMatch[1]);
+  const guide = guidesData.find((g) => g.slug === guideMatch[1]);
+  // /rehber/lashing-nedir is 301-redirected to /lashing-nedir by the server,
+  // so it must not be treated as a servable path here.
+  if (guide && guide.slug === "lashing-nedir") return undefined;
+  return guide;
 }
 
 function getEnServiceForPath(cleanPath: string) {
@@ -170,7 +177,7 @@ export function getMetaForPath(pathname: string): PageMeta {
     return {
       title: guide.seoTitle,
       description: guide.metaDescription,
-      canonical: `${BASE_URL}/rehber/${guide.slug}`,
+      canonical: `${BASE_URL}${guidePath(guide.slug)}`,
     };
   }
 
@@ -422,7 +429,7 @@ export function getSchemasForPath(pathname: string): JsonLdEntry[] {
 
   const guide = getGuideForPath(cleanPath);
   if (guide) {
-    const canonical = `${BASE_URL}/rehber/${guide.slug}`;
+    const canonical = `${BASE_URL}${guidePath(guide.slug)}`;
     schemas.push({
       id: "ld-article",
       schema: {

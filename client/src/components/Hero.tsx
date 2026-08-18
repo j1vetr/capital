@@ -119,16 +119,25 @@ export function Hero() {
           {/* No entry animation: the H1 is the LCP element and must be
               visible in the very first paint (SSR HTML included). */}
           <div>
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
-              LASHINGDE <br className="md:hidden" />
-              <span className={`inline-block min-w-[200px] ${isGlitching ? 'text-red-500 skew-x-12 scale-110' : 'text-transparent bg-clip-text bg-gradient-to-r from-primary-bright to-blue-400'}`}>
+            {/* Brand slogan kept above the H1 as a small element, with the
+                original glitch animation moved here so the H1 stays static
+                (SEO target text + LCP element, no animation allowed). */}
+            <p className="font-heading text-sm md:text-base font-black uppercase tracking-[0.3em] text-white/80 mb-5 drop-shadow-md" aria-hidden="true">
+              LASHINGDE{" "}
+              <span className={`inline-block min-w-[90px] md:min-w-[110px] ${isGlitching ? 'text-red-500 skew-x-12 scale-110' : 'text-transparent bg-clip-text bg-gradient-to-r from-primary-bright to-blue-400'}`}>
                 {displayText}
-              </span> <br className="md:hidden" />
+              </span>{" "}
               İMZASI
+            </p>
+
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tighter mb-8 uppercase drop-shadow-2xl">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-bright to-blue-400">Lashing Firması</span>
+              <br />
+              ve Profesyonel Lashing Hizmetleri
             </h1>
-            
+
             <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
-              Denizcilik ve ağır sanayi operasyonlarında, uluslararası standartlarda yük sabitleme ve koruma hizmetleriyle ticaretinizi güvence altına alıyoruz.
+              Capital Lashing, gemi, konteyner, flat rack ve proje yükleri için profesyonel lashing hizmetleri sunan uzman bir lashing firmasıdır. Deneyimli operasyon ekibimiz ve sertifikalı sabitleme ekipmanlarıyla yüklerinizin güvenli şekilde taşınmasını sağlıyoruz.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">

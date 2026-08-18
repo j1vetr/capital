@@ -87,6 +87,13 @@ export async function serveStatic(app: Express, server: Server) {
       return;
     }
 
+    // The lashing-nedir guide moved from /rehber/lashing-nedir to the
+    // root-level /lashing-nedir (URL with backlink history).
+    if (rawPath === "/rehber/lashing-nedir") {
+      res.redirect(301, "/lashing-nedir" + (query ? `?${query}` : ""));
+      return;
+    }
+
     const pathname = rawPath;
     const known = isKnownPath(pathname);
     const english = isEnglishPath(pathname);
