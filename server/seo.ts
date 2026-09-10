@@ -18,7 +18,7 @@ export interface PageMeta {
 
 const routesMeta: Record<string, PageMeta> = {
   "/": {
-    title: "Lashing Firması | Profesyonel Lashing Hizmetleri | Capital Lashing",
+    title: "Capital Lashing | Yük Sabitleme Hizmetleri",
     description: "Capital Lashing, gemi, konteyner ve proje yükleri için profesyonel lashing hizmetleri sunan lashing firmasıdır. Yük sabitlemede 7/24 operasyon. Teklif alın.",
     canonical: BASE_URL,
   },

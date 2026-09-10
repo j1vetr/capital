@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans">
       <SEO
-        title="Lashing Firması | Profesyonel Lashing Hizmetleri | Capital Lashing"
+        title="Capital Lashing | Yük Sabitleme Hizmetleri"
         description="Capital Lashing, gemi, konteyner ve proje yükleri için profesyonel lashing hizmetleri sunan lashing firmasıdır. Yük sabitlemede 7/24 operasyon. Teklif alın."
         canonical="https://capitallashing.com"
         alternates={{ tr: "https://capitallashing.com", en: "https://capitallashing.com/en" }}
